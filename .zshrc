@@ -17,6 +17,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 100
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
