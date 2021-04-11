@@ -14,8 +14,7 @@ call dein#begin('~/.cache/dein')
 call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
-"call dein#add('Shougo/neosnippet.vim')
-"call dein#add('Shougo/neosnippet-snippets')
+call dein#load_toml('~/.vim/dein.toml', {'lazy':0})
 
 " Required:
 call dein#end()
@@ -30,3 +29,5 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+set ttimeoutlen=50
