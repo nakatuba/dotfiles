@@ -19,6 +19,9 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 100
 
+eval "`pip completion --zsh`"
+compctl -K _pip_completion pip3
+
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
