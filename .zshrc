@@ -29,7 +29,6 @@ function _pip_completion {
              PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
 }
 compctl -K _pip_completion pip
-compctl -K _pip_completion pip3
 # pip zsh completion end
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
