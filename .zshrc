@@ -13,6 +13,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+export PATH="$HOME/.poetry/bin:$PATH"
+
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
