@@ -15,6 +15,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+eval "$(pip completion --zsh)"
+
 export PATH="$HOME/.poetry/bin:$PATH"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -22,18 +24,6 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 100
-
-# pip zsh completion start
-function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
-}
-compctl -K _pip_completion pip
-# pip zsh completion end
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
@@ -95,3 +85,5 @@ fzf-icloud-widget() {
 }
 zle     -N    fzf-icloud-widget
 bindkey '\ei' fzf-icloud-widget
+
+bindkey '^u' backward-kill-line
