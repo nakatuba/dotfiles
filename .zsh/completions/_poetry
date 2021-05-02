@@ -2,7 +2,7 @@
 
 _poetry_2574fc2c8d353faa_complete()
 {
-    local state com cur
+    local state com cur opts
 
     cur=${words[${#words[@]}]}
 
