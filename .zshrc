@@ -5,8 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-fpath=(~/.zsh/completions(N-/) $fpath)
-
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export LS_COLORS="di=36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 
@@ -14,8 +12,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-eval "$(pip completion --zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -32,8 +28,9 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-for widget in ~/.zsh/widgets/*; do
-  source $widget
-done
-
-bindkey '^u' backward-kill-line
+source ~/.zsh/bindkey.zsh
+source ~/.zsh/completion.zsh
+source ~/.zsh/fzf-cdr.zsh
+source ~/.zsh/fzf-ghq.zsh
+source ~/.zsh/fzf-git.zsh
+source ~/.zsh/fzf-icloud.zsh
