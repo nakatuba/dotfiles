@@ -20,17 +20,6 @@ fzf-ghq-widget() {
 zle     -N   fzf-ghq-widget
 bindkey '^g' fzf-ghq-widget
 
-fzf-git-add-widget() {
-  local file="$(_gf)"
-  if [[ -n "$file" ]]; then
-    BUFFER="git add $file"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle     -N    fzf-git-add-widget
-bindkey '^ga' fzf-git-add-widget
-
 fzf-git-checkout-widget() {
   local branch="$(_gb)"
   if [[ -n "$branch" ]]; then
@@ -40,4 +29,4 @@ fzf-git-checkout-widget() {
   zle reset-prompt
 }
 zle     -N   fzf-git-checkout-widget
-bindkey '^gc' fzf-git-checkout-widget
+bindkey '^g^o' fzf-git-checkout-widget
