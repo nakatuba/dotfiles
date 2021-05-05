@@ -40,9 +40,12 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+source ~/.zsh/alias.zsh
+
 source ~/.zsh/bindkey.zsh
+
 source ~/.zsh/completion.zsh
-source ~/.zsh/fzf-cdr.zsh
-source ~/.zsh/fzf-ghq.zsh
+
 source ~/.zsh/fzf-git.zsh
-source ~/.zsh/fzf-icloud.zsh
+
+source ~/.zsh/widget.zsh
