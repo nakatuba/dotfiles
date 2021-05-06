@@ -18,7 +18,7 @@ fzf-ghq-widget() {
   zle reset-prompt
 }
 zle     -N   fzf-ghq-widget
-bindkey '^g' fzf-ghq-widget
+bindkey '^g^g' fzf-ghq-widget
 
 fzf-git-checkout-widget() {
   local branch="$(_gb)"
