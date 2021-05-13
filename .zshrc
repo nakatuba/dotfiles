@@ -37,7 +37,6 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS="--bind tab:toggle-out,shift-tab:toggle-in"
 
 source ~/.zsh/alias.zsh
 
