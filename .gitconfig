@@ -2,5 +2,8 @@
 	name = nakatuba
 	email = nakatuba@gmail.com
 
+[init]
+	defaultBranch = master
+
 [pull]
 	rebase = false
