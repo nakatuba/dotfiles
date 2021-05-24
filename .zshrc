@@ -48,8 +48,6 @@ if command -v fd > /dev/null; then
   export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git'
 fi
 
-source ~/.zsh/alias.zsh
-
 source ~/.zsh/bindkey.zsh
 
 source ~/.zsh/completion.zsh
