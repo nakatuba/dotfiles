@@ -54,4 +54,4 @@ source ~/.zsh/completion.zsh
 
 source ~/.zsh/fzf-git.zsh
 
-source ~/.zsh/widget.zsh
+source ~/.zsh/fzf-widget.zsh
