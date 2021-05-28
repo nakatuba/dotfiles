@@ -28,7 +28,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
+export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
