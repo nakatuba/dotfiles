@@ -21,7 +21,8 @@ zle     -N     fzf-ghq-widget
 bindkey '^g^g' fzf-ghq-widget
 
 fzf-git-checkout-widget() {
-  local branch=$(_gb)
+  git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
+  local branch=$(git branch -v | grep -v '^\*' | sed 's/^  *//' | fzf --height 40% --reverse | awk '{print $1}')
   if [ -n "$branch" ]; then
     BUFFER="git checkout $branch"
     zle accept-line
