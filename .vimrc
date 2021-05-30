@@ -9,3 +9,5 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 
 set ttimeoutlen=50
+
+nnoremap <silent> <Space><Space> :Files<CR>
