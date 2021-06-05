@@ -1,5 +1,6 @@
 *
 !/.config/nvim/
+!/.vim/coc-settings.json
 !/.zsh/
 !/.gitconfig
 !/.gitignore
