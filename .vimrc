@@ -32,6 +32,14 @@ highlight LineNr ctermbg=none
 
 let mapleader = "\<Space>"
 
+" Emacs key bindings
+map! <C-f> <Right>
+map! <C-b> <Left>
+map! <C-p> <Up>
+map! <C-n> <Down>
+map! <C-a> <HOME>
+map! <C-e> <END>
+
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 map <Leader>/ <Plug>NERDCommenterToggle
 nnoremap <silent> <Leader>p :Files<CR>
