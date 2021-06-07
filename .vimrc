@@ -5,9 +5,9 @@ Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
-Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Vimjas/vim-python-pep8-indent'
 
@@ -20,9 +20,6 @@ let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 let g:NERDTreeQuitOnOpen = 1
-let g:NERDCreateDefaultMappings = 0
-let g:NERDSpaceDelims = 1
-let g:NERDDefaultAlign = 'left'
 
 set number
 set cursorline
@@ -53,5 +50,3 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
-map <silent> cc <Plug>NERDCommenterToggle
-nnoremap <silent> <Leader>p :Files<CR>
