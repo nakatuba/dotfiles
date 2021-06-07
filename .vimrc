@@ -41,20 +41,17 @@ highlight SignColumn ctermbg=none
 let mapleader = "\<Space>"
 
 " Emacs key bindings
-map! <C-f> <Right>
-map! <C-b> <Left>
-map! <C-p> <Up>
-map! <C-n> <Down>
-map! <C-a> <HOME>
-map! <C-e> <END>
-map! <C-d> <Del>
+noremap! <C-f> <Right>
+noremap! <C-b> <Left>
+noremap! <C-p> <Up>
+noremap! <C-n> <Down>
+noremap! <C-a> <HOME>
+noremap! <C-e> <END>
+noremap! <C-d> <Del>
 
-if has('nvim')
-  inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-endif
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
-map cc <Plug>NERDCommenterToggle
+map <silent> cc <Plug>NERDCommenterToggle
 nnoremap <silent> <Leader>p :Files<CR>
