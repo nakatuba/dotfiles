@@ -49,7 +49,10 @@ map! <C-a> <HOME>
 map! <C-e> <END>
 map! <C-d> <Del>
 
-inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
+if has('nvim')
+  inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+endif
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
