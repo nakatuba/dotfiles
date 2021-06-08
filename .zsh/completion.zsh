@@ -1,1 +1,1 @@
-eval "$(pip completion --zsh)"
+command -v pip > /dev/null && eval "$(pip completion --zsh)"
