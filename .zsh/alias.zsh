@@ -1,4 +1,1 @@
-if command -v nvim > /dev/null; then
-  alias vi='nvim'
-  alias vim='nvim'
-fi
+command -v nvim > /dev/null && alias vi='nvim'
