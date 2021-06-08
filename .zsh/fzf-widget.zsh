@@ -18,7 +18,7 @@ fzf-ghq-widget() {
   zle reset-prompt
 }
 zle     -N     fzf-ghq-widget
-bindkey '^g' fzf-ghq-widget
+bindkey '^g^g' fzf-ghq-widget
 
 fzf-git-checkout-widget() {
   git rev-parse HEAD > /dev/null 2>&1 || return
@@ -30,4 +30,4 @@ fzf-git-checkout-widget() {
   zle reset-prompt
 }
 zle     -N     fzf-git-checkout-widget
-bindkey '^o' fzf-git-checkout-widget
+bindkey '^g^o' fzf-git-checkout-widget
