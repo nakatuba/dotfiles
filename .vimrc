@@ -7,7 +7,12 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Vimjas/vim-python-pep8-indent'
 
@@ -27,6 +32,7 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 set belloff=all
+set updatetime=100
 set ttimeoutlen=50
 
 colorscheme molokai
