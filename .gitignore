@@ -1,4 +1,4 @@
-/.config/*
-!/.config/nvim/
-/.vim/*
-!/.vim/coc-settings.json
+.config/*
+!.config/nvim/
+.vim/*
+!.vim/coc-settings.json
