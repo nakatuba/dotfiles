@@ -13,7 +13,7 @@ _gf() {
   is_in_git_repo || return
   git -c color.status=always status --short |
   fzf-down -m --ansi --nth 2..,.. \
-    --preview '(git diff --color=always -- {-1} | sed 1,4d; cat {-1})' |
+    --preview '(git diff --color=always -- {-1} | sed 1,4d)' |
   cut -c4- | sed 's/.* -> //'
 }
 
@@ -46,7 +46,7 @@ _gr() {
   is_in_git_repo || return
   git remote -v | awk '{print $1 "\t" $2}' | uniq |
   fzf-down --tac \
-    --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" {1}' |
+    --preview 'git log --oneline --graph --date=short --color=always --pretty="format:%C(auto)%cd %h%d %s" {1}' |
   cut -d$'\t' -f1
 }
 
