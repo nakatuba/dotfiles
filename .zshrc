@@ -44,6 +44,8 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export FZF_DEFAULT_OPTS='--bind ctrl-j:preview-down,ctrl-k:preview-up'
+
 if command -v fd > /dev/null; then
   export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
   export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
