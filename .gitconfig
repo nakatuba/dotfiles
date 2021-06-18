@@ -5,8 +5,11 @@
 [init]
 	defaultBranch = master
 
+[fetch]
+	prune = true
+
 [pull]
-	rebase = false
+	ff = only
 
 [alias]
 	co = checkout
