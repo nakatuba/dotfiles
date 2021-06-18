@@ -30,4 +30,4 @@ fzf-git-checkout-widget() {
   zle reset-prompt
 }
 zle     -N     fzf-git-checkout-widget
-bindkey '^g^o' fzf-git-checkout-widget
+bindkey '^g^]' fzf-git-checkout-widget
