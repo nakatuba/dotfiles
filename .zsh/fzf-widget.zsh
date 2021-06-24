@@ -23,7 +23,7 @@ bindkey '^g^g' fzf-ghq-widget
 fzf-git-checkout-widget() {
   git rev-parse HEAD > /dev/null 2>&1 || return
   local branch=$(git branch -a --color=always | grep -v HEAD | sort |
-    fzf --height 50% --min-height 20 --border --bind ctrl-/:toggle-preview "$@" --ansi --reverse --tac --preview-window right:70% \
+    fzf --height 50% --min-height 20 --border --bind ctrl-/:toggle-preview "$@" --ansi --tac --preview-window right:70% \
         --preview 'git log --oneline --graph --date=short --color=always --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1)' |
     sed 's/^..//' | cut -d' ' -f1 |
     sed 's#remotes/[^/]*/##')
