@@ -35,3 +35,15 @@ fzf-git-checkout-widget() {
 }
 zle     -N     fzf-git-checkout-widget
 bindkey '^g^]' fzf-git-checkout-widget
+
+fzf-tmux-attach-widget() {
+  [ -z "$TMUX" ] || return
+  local session=$(tmux list-sessions 2>/dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
+  if [ -n "$session" ]; then
+    BUFFER="tmux attach -t $session"
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle     -N   fzf-tmux-attach-widget
+bindkey '^q' fzf-tmux-attach-widget
