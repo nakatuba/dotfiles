@@ -53,6 +53,7 @@ noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+nmap <Leader>rn <Plug>(coc-rename)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
