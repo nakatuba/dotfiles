@@ -31,6 +31,8 @@ set cursorline
 set shiftwidth=4
 set tabstop=4
 set expandtab
+set splitbelow
+set splitright
 set belloff=all
 set updatetime=100
 set ttimeoutlen=50
