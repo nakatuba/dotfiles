@@ -54,8 +54,16 @@ noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
+noremap ss <C-w>s
+noremap sv <C-w>v
+noremap sj <C-w>j
+noremap sk <C-w>k
+noremap sh <C-w>h
+noremap sl <C-w>l
+
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 nmap <Leader>rn <Plug>(coc-rename)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
+nnoremap <silent> <Leader><Leader> :Files<CR>
