@@ -26,6 +26,8 @@ let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 let g:NERDTreeQuitOnOpen = 1
 
+source ~/.vim/coc.vim
+
 set number
 set cursorline
 set shiftwidth=4
@@ -34,7 +36,6 @@ set expandtab
 set splitbelow
 set splitright
 set belloff=all
-set updatetime=100
 set ttimeoutlen=50
 
 colorscheme molokai
@@ -44,6 +45,7 @@ highlight LineNr ctermbg=none
 highlight SignColumn ctermbg=none
 
 let mapleader = "\<Space>"
+noremap s <C-w>
 
 " Emacs key bindings
 noremap! <C-f> <Right>
@@ -54,16 +56,7 @@ noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
-noremap ss <C-w>s
-noremap sv <C-w>v
-noremap sj <C-w>j
-noremap sk <C-w>k
-noremap sh <C-w>h
-noremap sl <C-w>l
-
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-nmap <Leader>rn <Plug>(coc-rename)
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
-nnoremap <silent> <Leader><Leader> :Files<CR>
+nnoremap <silent> <Leader>f :Files<CR>

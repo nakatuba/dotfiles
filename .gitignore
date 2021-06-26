@@ -2,3 +2,4 @@
 !.config/nvim/
 .vim/*
 !.vim/coc-settings.json
+!.vim/coc.vim
