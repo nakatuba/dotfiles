@@ -52,12 +52,14 @@ if command -v fd > /dev/null; then
   export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git'
 fi
 
-source ~/.zsh/alias.zsh
+[ -f ~/.zsh/alias.zsh ] && source ~/.zsh/alias.zsh
 
-source ~/.zsh/bindkey.zsh
+[ -f ~/.zsh/bindkey.zsh ] && source ~/.zsh/bindkey.zsh
 
-source ~/.zsh/completion.zsh
+[ -f ~/.zsh/completion.zsh ] && source ~/.zsh/completion.zsh
 
-source ~/.zsh/fzf-git.zsh
+[ -f ~/.zsh/fzf-git.zsh ] && source ~/.zsh/fzf-git.zsh
 
-source ~/.zsh/fzf-widget.zsh
+[ -f ~/.zsh/fzf-widget.zsh ] && source ~/.zsh/fzf-widget.zsh
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
