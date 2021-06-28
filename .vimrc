@@ -22,6 +22,7 @@ let g:airline_powerline_fonts = 1
 let g:coc_config_home = '~/.vim'
 let g:coc_global_extensions = ['coc-pyright']
 let g:ale_linters = {'python': ['flake8']}
+let g:ale_python_flake8_options="--ignore=E501,W503"
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 let g:NERDTreeQuitOnOpen = 1
