@@ -7,6 +7,7 @@ fi
 
 path=(
   $HOME/.local/bin(N-/)
+  $HOME/.cargo/bin(N-/)
   $path
 )
 
@@ -61,5 +62,3 @@ fi
 [ -f ~/.zsh/fzf-git.zsh ] && source ~/.zsh/fzf-git.zsh
 
 [ -f ~/.zsh/fzf-widget.zsh ] && source ~/.zsh/fzf-widget.zsh
-
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
