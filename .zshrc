@@ -7,7 +7,6 @@ fi
 
 path=(
   $HOME/.local/bin(N-/)
-  $HOME/.cargo/bin(N-/)
   $path
 )
 
