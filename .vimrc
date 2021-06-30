@@ -67,7 +67,8 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>h :History<CR>
-nnoremap <silent> <Leader>t :Ttoggle<CR>
+nnoremap <silent> <C-s> :Ttoggle<CR>
+tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
 nmap ghs <Plug>(GitGutterStageHunk)
 nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
