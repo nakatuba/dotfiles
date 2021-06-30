@@ -42,6 +42,7 @@ set expandtab
 set splitbelow
 set splitright
 set belloff=all
+set updatetime=100
 set ttimeoutlen=50
 
 colorscheme molokai
