@@ -5,6 +5,7 @@ Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
+Plug 'kassio/neoterm'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -26,6 +27,8 @@ let g:ale_python_flake8_options="--ignore=E501,W503"
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 let g:NERDTreeQuitOnOpen = 1
+let g:neoterm_default_mod = 'belowright'
+let g:neoterm_autoinsert = 1
 
 let mapleader = "\<Space>"
 
@@ -63,6 +66,7 @@ nmap <Leader>n <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>t :Ttoggle<CR>
 nmap ghs <Plug>(GitGutterStageHunk)
 nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
