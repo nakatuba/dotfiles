@@ -61,8 +61,8 @@ noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
-nmap <Leader>p <Plug>(ale_previous_wrap)
-nmap <Leader>n <Plug>(ale_next_wrap)
+nmap <C-p> <Plug>(ale_previous_wrap)
+nmap <C-n> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>h :History<CR>
