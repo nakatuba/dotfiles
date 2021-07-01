@@ -17,6 +17,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
+Plug 'troydm/zoomwintab.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
@@ -54,8 +55,8 @@ highlight Normal ctermbg=none
 highlight LineNr ctermbg=none
 highlight SignColumn ctermbg=none
 
-noremap s <C-w>
-noremap q <Nop>
+map s <C-w>
+map q <Nop>
 
 " Emacs key bindings
 noremap! <C-f> <Right>
