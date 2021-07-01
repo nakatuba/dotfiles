@@ -41,7 +41,6 @@ set tabstop=4
 set expandtab
 set splitbelow
 set splitright
-set clipboard=unnamed
 set belloff=all
 set updatetime=100
 set ttimeoutlen=50
