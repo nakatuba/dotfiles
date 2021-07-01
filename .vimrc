@@ -5,9 +5,9 @@ Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
-Plug 'kassio/neoterm'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kassio/neoterm'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -41,6 +41,7 @@ set tabstop=4
 set expandtab
 set splitbelow
 set splitright
+set clipboard=unnamed
 set belloff=all
 set updatetime=100
 set ttimeoutlen=50
@@ -52,6 +53,8 @@ highlight LineNr ctermbg=none
 highlight SignColumn ctermbg=none
 
 noremap s <C-w>
+noremap x "_x
+noremap X "_X
 
 " Emacs key bindings
 noremap! <C-f> <Right>
