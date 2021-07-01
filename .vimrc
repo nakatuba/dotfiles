@@ -52,8 +52,6 @@ highlight LineNr ctermbg=none
 highlight SignColumn ctermbg=none
 
 noremap s <C-w>
-noremap x "_x
-noremap X "_X
 
 " Emacs key bindings
 noremap! <C-f> <Right>
