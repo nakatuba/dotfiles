@@ -72,6 +72,8 @@ nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>g :GFiles?<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <C-s> :Ttoggle<CR>
 tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
