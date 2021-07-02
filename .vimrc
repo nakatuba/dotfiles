@@ -17,7 +17,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'troydm/zoomwintab.vim'
+Plug 'pmalek/toogle-maximize.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
@@ -58,6 +58,7 @@ highlight SignColumn ctermbg=none
 
 map s <C-w>
 map q <Nop>
+map <silent> <C-w>m :call ToggleMaximizeCurrentWindow()<CR>
 
 " Emacs key bindings
 noremap! <C-f> <Right>
