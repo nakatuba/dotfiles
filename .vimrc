@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
@@ -51,11 +52,9 @@ set belloff=all
 set updatetime=100
 set ttimeoutlen=50
 
-colorscheme molokai
+colorscheme onedark
 
 highlight Normal ctermbg=none
-highlight LineNr ctermbg=none
-highlight SignColumn ctermbg=none
 
 map s <C-w>
 map q <Nop>
