@@ -35,6 +35,8 @@ let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeShowHidden = 1
 let g:neoterm_autoinsert = 1
 let g:neoterm_default_mod = 'botright'
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
 
 let mapleader = "\<Space>"
 
@@ -59,6 +61,7 @@ highlight Normal ctermbg=none
 
 map s <C-w>
 map q <Nop>
+map <Leader>s <Plug>(easymotion-s)
 map <silent> <C-w>m :call ToggleMaximizeCurrentWindow()<CR>
 
 " Emacs key bindings
