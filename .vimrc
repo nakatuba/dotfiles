@@ -61,7 +61,7 @@ highlight Normal ctermbg=none
 
 map s <C-w>
 map q <Nop>
-map <Leader>s <Plug>(easymotion-s)
+map f <Plug>(easymotion-bd-f)
 map <silent> <C-w>m :call ToggleMaximizeCurrentWindow()<CR>
 
 " Emacs key bindings
