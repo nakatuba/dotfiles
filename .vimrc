@@ -42,9 +42,10 @@ source ~/.vim/coc.vim
 
 set number
 set cursorline
+set scrolloff=5
 set nowrap
-set shiftwidth=4
-set tabstop=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set splitbelow
 set splitright
