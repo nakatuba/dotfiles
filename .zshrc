@@ -64,5 +64,3 @@ fi
 [ -f ~/.zsh/fzf-git.zsh ] && source ~/.zsh/fzf-git.zsh
 
 [ -f ~/.zsh/fzf-widget.zsh ] && source ~/.zsh/fzf-widget.zsh
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
