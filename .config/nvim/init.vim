@@ -6,11 +6,12 @@ Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'kassio/neoterm'
+Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -19,6 +20,10 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
+Plug 'mbbill/undotree'
+Plug 'kassio/neoterm'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-replace'
 Plug 'pmalek/toogle-maximize.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 
@@ -61,6 +66,7 @@ highlight Normal ctermbg=none
 map s <C-w>
 map q <Nop>
 map f <Plug>(easymotion-bd-f)
+map _ <Plug>(operator-replace)
 map <silent> <C-w>m :call ToggleMaximizeCurrentWindow()<CR>
 
 " Emacs key bindings
@@ -80,6 +86,7 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>u :UndotreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>g :GFiles?<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
