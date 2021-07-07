@@ -59,7 +59,7 @@ set splitbelow
 set splitright
 set updatetime=100
 
-autocmd BufEnter * checktime
+autocmd CursorHold * checktime
 
 colorscheme onedark
 
