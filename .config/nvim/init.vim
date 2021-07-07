@@ -51,6 +51,7 @@ set number
 set cursorline
 set scrolloff=5
 set nowrap
+set autoread
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -59,6 +60,8 @@ set splitright
 set belloff=all
 set updatetime=100
 set ttimeoutlen=50
+
+autocmd BufEnter * checktime
 
 colorscheme onedark
 
