@@ -42,4 +42,4 @@ fzf-tmux-attach-widget() {
   zle reset-prompt
 }
 zle     -N   fzf-tmux-attach-widget
-bindkey '^q' fzf-tmux-attach-widget
+bindkey '^s' fzf-tmux-attach-widget
