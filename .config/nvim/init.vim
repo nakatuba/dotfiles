@@ -30,6 +30,7 @@ Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:coc_global_extensions = ['coc-pyright']
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_python_flake8_options="--ignore=E501,W503"
@@ -78,6 +79,8 @@ noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 nmap [w <Plug>(ale_previous_wrap)
 nmap ]w <Plug>(ale_next_wrap)
 nmap ghs <Plug>(GitGutterStageHunk)
@@ -89,7 +92,6 @@ nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>u :UndotreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>g :GFiles?<CR>
-nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>h :History<CR>
 nnoremap <silent> <C-s> :Ttoggle<CR>
 tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
