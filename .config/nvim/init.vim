@@ -24,7 +24,6 @@ Plug 'mbbill/undotree'
 Plug 'kassio/neoterm'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
-Plug 'pmalek/toogle-maximize.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
@@ -68,7 +67,6 @@ map s <C-w>
 map q <Nop>
 map , <Plug>(easymotion-prefix)
 map _ <Plug>(operator-replace)
-map <silent> <C-w>m :call ToggleMaximizeCurrentWindow()<CR>
 
 " Emacs key bindings
 noremap! <C-f> <Right>
