@@ -25,11 +25,12 @@ Plug 'kassio/neoterm'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 
 call plug#end()
 
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:coc_global_extensions = ['coc-pyright']
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_python_flake8_options="--ignore=E501,W503"
@@ -55,12 +56,13 @@ set expandtab
 set splitbelow
 set splitright
 set updatetime=100
+set termguicolors
 
 autocmd BufEnter * checktime
 
 colorscheme onedark
 
-highlight Normal ctermbg=none
+highlight Normal ctermbg=none guibg=none
 
 map s <C-w>
 map q <Nop>
@@ -91,3 +93,8 @@ nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <C-s> :Ttoggle<CR>
 tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
+nnoremap <silent> <C-p> :BufferPrevious<CR>
+nnoremap <silent> <C-n> :BufferNext<CR>
+nnoremap <silent> <C-[> :BufferMovePrevious<CR>
+nnoremap <silent> <C-]> :BufferMoveNext<CR>
+nnoremap <silent> <C-q> :BufferClose<CR>
