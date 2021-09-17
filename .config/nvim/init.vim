@@ -11,7 +11,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-peekaboo'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -20,7 +19,6 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mbbill/undotree'
 Plug 'kassio/neoterm'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
@@ -88,7 +86,6 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>u :UndotreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <C-s> :Ttoggle<CR>
