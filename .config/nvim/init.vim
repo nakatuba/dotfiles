@@ -19,12 +19,12 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kassio/neoterm'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim'
+Plug 'akinsho/toggleterm.nvim'
 
 call plug#end()
 
@@ -36,9 +36,6 @@ let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeShowHidden = 1
-let g:neoterm_size = 50
-let g:neoterm_autoinsert = 1
-let g:neoterm_default_mod = 'botright'
 
 let mapleader = "\<Space>"
 
@@ -86,10 +83,16 @@ nnoremap Y y$
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
-nnoremap <silent> <C-s> :Ttoggle<CR>
-tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
-nnoremap <silent> <C-p> :BufferPrevious<CR>
-nnoremap <silent> <C-n> :BufferNext<CR>
-nnoremap <silent> <C-[> :BufferMovePrevious<CR>
-nnoremap <silent> <C-]> :BufferMoveNext<CR>
-nnoremap <silent> <C-q> :BufferClose<CR>
+nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
+nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
+nnoremap <silent> <C-]> :BufferLineMoveNext<CR>
+nnoremap <silent> <C-[> :BufferLineMovePrev<CR>
+nnoremap <silent> <C-q> :bdelete<CR>
+
+lua << EOF
+require("bufferline").setup {}
+require("toggleterm").setup {
+  open_mapping = [[<c-\>]],
+  direction = 'tab'
+}
+EOF
