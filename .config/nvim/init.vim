@@ -88,7 +88,6 @@ nnoremap Y y$
 nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>u :UndotreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <silent> <Leader>g :GFiles?<CR>
-nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <C-s> :Ttoggle<CR>
 tnoremap <silent> <C-s> <C-\><C-n>:Ttoggle<CR>
