@@ -49,7 +49,6 @@ set number
 set cursorline
 set scrolloff=5
 set nowrap
-set cmdheight=1
 set tabstop=2
 set shiftwidth=2
 set expandtab
