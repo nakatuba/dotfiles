@@ -2,7 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
+Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
@@ -58,9 +58,11 @@ set termguicolors
 
 autocmd BufEnter * checktime
 
-colorscheme onedark
+colorscheme molokai
 
 highlight Normal ctermbg=none guibg=none
+highlight LineNr ctermbg=none guibg=none
+highlight SignColumn ctermbg=none guibg=none
 
 map s <C-w>
 map q <Nop>
