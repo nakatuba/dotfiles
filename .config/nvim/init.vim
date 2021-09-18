@@ -22,6 +22,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 
 call plug#end()
 
@@ -82,7 +83,7 @@ nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-]> :BufferLineMoveNext<CR>
 nnoremap <silent> <C-[> :BufferLineMovePrev<CR>
-nnoremap <silent> <C-q> :bdelete<CR>
+nnoremap <silent> <C-q> :Sayonara<CR>
 
 lua << EOF
 require("bufferline").setup {
