@@ -5,10 +5,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -23,6 +19,7 @@ Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 
@@ -34,8 +31,6 @@ let g:ale_linters = {'python': ['flake8']}
 let g:ale_python_flake8_options="--ignore=E501,W503"
 let g:ale_fixers = {'python': ['black', 'isort']}
 let g:ale_fix_on_save = 1
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeShowHidden = 1
 
 let mapleader = "\<Space>"
 
@@ -80,7 +75,7 @@ nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
-nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
@@ -90,7 +85,18 @@ nnoremap <silent> <C-[> :BufferLineMovePrev<CR>
 nnoremap <silent> <C-q> :bdelete<CR>
 
 lua << EOF
-require("bufferline").setup {}
+require("bufferline").setup {
+  options = {
+    offsets = {
+      {
+        filetype = "NvimTree",
+        text = "File Explorer",
+        highlight = "Directory",
+        text_align = "left"
+      }
+    }
+  }
+}
 require("toggleterm").setup {
   open_mapping = "<C-Space>",
   direction = "tab"
