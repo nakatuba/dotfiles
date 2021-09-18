@@ -76,6 +76,8 @@ nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
+nnoremap <C-j> 2j
+nnoremap <C-k> 2k
 nnoremap <silent> <Leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
