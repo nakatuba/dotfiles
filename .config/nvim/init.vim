@@ -81,11 +81,11 @@ nnoremap <C-k> 2k
 nnoremap <silent> <Leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>w :Sayonara<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-]> :BufferLineMoveNext<CR>
 nnoremap <silent> <C-[> :BufferLineMovePrev<CR>
-nnoremap <silent> <C-q> :Sayonara<CR>
 
 lua << EOF
 require("bufferline").setup {
