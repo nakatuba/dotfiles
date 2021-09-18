@@ -92,7 +92,7 @@ nnoremap <silent> <C-q> :bdelete<CR>
 lua << EOF
 require("bufferline").setup {}
 require("toggleterm").setup {
-  open_mapping = [[<C-Space>]],
-  direction = 'tab'
+  open_mapping = "<C-Space>",
+  direction = "tab"
 }
 EOF
