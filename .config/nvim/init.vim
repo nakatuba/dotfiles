@@ -16,13 +16,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
+Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 
