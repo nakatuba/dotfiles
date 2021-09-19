@@ -80,8 +80,8 @@ nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
-nnoremap <silent> <C-]> :BufferLineMoveNext<CR>
-nnoremap <silent> <C-[> :BufferLineMovePrev<CR>
+nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
+nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 
 lua << EOF
 require("bufferline").setup {
