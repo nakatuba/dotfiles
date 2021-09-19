@@ -14,7 +14,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'jiangmiao/auto-pairs'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -22,6 +21,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'windwp/nvim-autopairs'
 Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 
 call plug#end()
@@ -102,4 +102,5 @@ require("toggleterm").setup {
   open_mapping = "<C-Space>",
   direction = "float"
 }
+require('nvim-autopairs').setup()
 EOF
