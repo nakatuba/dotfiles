@@ -21,7 +21,6 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'mhinz/vim-sayonara', { 'on': 'Sayonara' }
 Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
@@ -79,7 +78,6 @@ nnoremap Y y$
 nnoremap <silent> <Leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
-nnoremap <silent> <Leader>w :Sayonara<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-]> :BufferLineMoveNext<CR>
