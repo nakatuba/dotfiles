@@ -100,5 +100,5 @@ require("toggleterm").setup {
   open_mapping = "<C-Space>",
   direction = "float"
 }
-require('nvim-autopairs').setup()
+require("nvim-autopairs").setup {}
 EOF
