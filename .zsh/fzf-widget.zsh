@@ -43,23 +43,3 @@ fzf-tmux-attach-widget() {
 }
 zle     -N   fzf-tmux-attach-widget
 bindkey '^s' fzf-tmux-attach-widget
-
-fzf-cd-parent-directory-widget() {
-  local declare dirs=()
-  get_parent_dirs() {
-    if [[ -d "${1}" ]]; then dirs+=("$1"); else return; fi
-    if [[ "${1}" == '/' ]]; then
-      for _dir in "${dirs[@]}"; do echo $_dir; done
-    else
-      get_parent_dirs $(dirname "$1")
-    fi
-  }
-  local dir=$(get_parent_dirs $(dirname $PWD) | fzf --height 40%)
-  if [ -n "$dir" ]; then
-    BUFFER="cd $dir"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle     -N    fzf-cd-parent-directory-widget
-bindkey '^[p' fzf-cd-parent-directory-widget
