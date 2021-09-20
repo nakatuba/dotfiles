@@ -52,9 +52,12 @@ autocmd BufEnter * checktime
 
 colorscheme molokai
 
-highlight Normal ctermbg=none guibg=none
-highlight LineNr ctermbg=none guibg=none
-highlight SignColumn ctermbg=none guibg=none
+highlight Normal          guibg=none
+highlight LineNr          guibg=none
+highlight SignColumn      guibg=none
+highlight GitGutterAdd    guifg=#009900
+highlight GitGutterChange guifg=#bbbb00
+highlight GitGutterDelete guifg=#ff2222
 
 map s <C-w>
 map q <Nop>
