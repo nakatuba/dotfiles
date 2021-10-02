@@ -3,8 +3,12 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -19,25 +23,17 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'Vimjas/vim-python-pep8-indent'
 
 call plug#end()
 
 let g:airline_powerline_fonts = 1
-let g:coc_global_extensions = ['coc-pyright']
-let g:ale_linters = {'python': ['flake8']}
-let g:ale_python_flake8_options="--ignore=E501,W503"
-let g:ale_fixers = {'python': ['black', 'isort']}
-let g:ale_fix_on_save = 1
-
-let mapleader = "\<Space>"
-
-source ~/.config/nvim/coc.vim
 
 set number
 set cursorline
 set scrolloff=5
 set nowrap
+set hidden
+set signcolumn=number
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -56,6 +52,8 @@ highlight SignColumn      guibg=none
 highlight GitGutterAdd    guifg=#009900
 highlight GitGutterChange guifg=#bbbb00
 highlight GitGutterDelete guifg=#ff2222
+
+let mapleader = "\<Space>"
 
 map s <C-w>
 map q <Nop>
@@ -84,23 +82,3 @@ nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
-
-lua << EOF
-require("bufferline").setup {
-  options = {
-    offsets = {
-      {
-        filetype = "NvimTree",
-        text = "File Explorer",
-        highlight = "Directory",
-        text_align = "left"
-      }
-    }
-  }
-}
-require("toggleterm").setup {
-  open_mapping = "<C-Space>",
-  direction = "float"
-}
-require("nvim-autopairs").setup {}
-EOF
