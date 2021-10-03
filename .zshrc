@@ -37,6 +37,8 @@ export PATH="$PATH:$GOPATH/bin"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
+export PATH="$HOME/.yarn/bin:$PATH"
+
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 1000
