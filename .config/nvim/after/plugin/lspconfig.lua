@@ -59,6 +59,13 @@ end
 
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
+  settings = {
+    python = {
+      analysis = {
+        autoImportCompletions = false
+      }
+    }
+  },
   before_init = function(_, config)
     config.settings.python.pythonPath = get_python_path(config.root_dir)
   end
