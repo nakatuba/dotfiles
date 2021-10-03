@@ -78,7 +78,7 @@ nvim_lsp.diagnosticls.setup {
       flake8 = {
         command = 'flake8',
         debounce = 100,
-        args = { '--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s', '-' },
+        args = { '--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s', '--ignore=E501,W503', '-' },
         offsetLine = 0,
         offsetColumn = 0,
         sourceName = 'flake8',
