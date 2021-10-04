@@ -73,6 +73,15 @@ nvim_lsp.pyright.setup {
   end
 }
 
+nvim_lsp.vuels.setup {
+  on_attach = on_attach,
+  settings = {
+    vetur = {
+      ignoreProjectWarning = true
+    }
+  }
+}
+
 nvim_lsp.diagnosticls.setup {
   filetypes = { 'python' },
   init_options = {
