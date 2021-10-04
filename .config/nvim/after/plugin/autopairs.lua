@@ -3,19 +3,23 @@ require('nvim-autopairs').setup()
 local remap = vim.api.nvim_set_keymap
 local npairs = require('nvim-autopairs')
 
--- skip it, if you use another global object
-_G.MUtils= {}
+_G.MUtils = {}
 
-MUtils.completion_confirm=function()
-  if vim.fn.pumvisible() ~= 0  then
-      return npairs.esc("<cr>")
+MUtils.completion_confirm = function()
+  if vim.fn.pumvisible() ~= 0 then
+    return npairs.esc("<cr>")
   else
     return npairs.autopairs_cr()
   end
 end
 
+remap('i' , '<CR>', 'v:lua.MUtils.completion_confirm()', { expr = true, noremap = true })
 
-remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+MUtils.autopairs_bs = function()
+  return npairs.autopairs_bs()
+end
+
+remap('i' , '<C-h>', 'v:lua.MUtils.autopairs_bs()', { expr = true, noremap = true })
 
 local Rule   = require('nvim-autopairs.rule')
 
