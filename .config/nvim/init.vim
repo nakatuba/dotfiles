@@ -25,6 +25,7 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
