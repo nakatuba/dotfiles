@@ -4,6 +4,9 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     disable = { 'vue' }
   },
+  indent = {
+    enable = true
+  },
   autotag = {
     enable = true
   }
