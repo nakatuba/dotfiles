@@ -78,10 +78,13 @@ nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
-nnoremap <silent> <Leader>e :NvimTreeToggle<CR>
-nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
+nnoremap <silent> <Leader>f  :Files<CR>
+nnoremap <silent> <Leader>l  :Lines<CR>
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
+
+xnoremap <silent> <Leader>rg y:Rg <C-R>"<CR>
