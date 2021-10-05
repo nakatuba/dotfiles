@@ -81,8 +81,7 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Files<CR>
-nnoremap <silent> <Leader>l  :Lines<CR>
-nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+nnoremap <silent> <Leader>rg :Rg<CR>
 nnoremap <silent> <Leader>rn <cmd>lua require('lspsaga.rename').rename()<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
