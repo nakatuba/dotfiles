@@ -52,7 +52,9 @@ colorscheme molokai
 
 highlight Normal          guibg=none
 highlight LineNr          guibg=none
-highlight SignColumn      guibg=none
+highlight Conceal         guibg=none
+highlight Pmenu           guifg=#e2e2e3 guibg=#363944
+highlight PmenuSel        guifg=#2c2e34 guibg=#85d3f2
 highlight GitGutterAdd    guifg=#009900
 highlight GitGutterChange guifg=#bbbb00
 highlight GitGutterDelete guifg=#ff2222
