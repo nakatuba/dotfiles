@@ -4,12 +4,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 Plug 'neovim/nvim-lspconfig'
+Plug 'glepnir/lspsaga.nvim'
+Plug 'ray-x/lsp_signature.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'ray-x/lsp_signature.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -82,6 +83,7 @@ nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Files<CR>
 nnoremap <silent> <Leader>l  :Lines<CR>
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+nnoremap <silent> <Leader>rn <cmd>lua require('lspsaga.rename').rename()<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
