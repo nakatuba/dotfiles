@@ -5,8 +5,5 @@ cmp.setup {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' }
-  },
-  completion = {
-    completeopt = 'menu,menuone,noinsert'
   }
 }
