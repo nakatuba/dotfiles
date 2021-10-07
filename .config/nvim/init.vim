@@ -76,8 +76,6 @@ noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
 
-nmap [d  <Plug>(ale_previous_wrap)
-nmap ]d  <Plug>(ale_next_wrap)
 nmap ghs <Plug>(GitGutterStageHunk)
 nmap ghu <Plug>(GitGutterUndoHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
