@@ -20,6 +20,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-operator-replace'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
@@ -66,6 +68,7 @@ let mapleader = "\<Space>"
 map s <C-w>
 map q <Nop>
 map , <Plug>(easymotion-prefix)
+map _ <Plug>(operator-replace)
 
 " Emacs key bindings
 noremap! <C-f> <Right>
