@@ -1,3 +1,4 @@
 .config/*
 !.config/git/
 !.config/nvim/
+!.config/zsh/

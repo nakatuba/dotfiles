@@ -11,7 +11,7 @@ path=(
 )
 
 fpath=(
-  $HOME/.zsh/completions(N-/)
+  $HOME/.config/zsh/completions(N-/)
   $fpath
 )
 
@@ -60,12 +60,12 @@ fi
 
 command -v bat  > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
 
-[ -f ~/.zsh/alias.zsh ] && source ~/.zsh/alias.zsh
+[ -f ~/.config/zsh/alias.zsh ] && source ~/.config/zsh/alias.zsh
 
-[ -f ~/.zsh/bindkey.zsh ] && source ~/.zsh/bindkey.zsh
+[ -f ~/.config/zsh/bindkey.zsh ] && source ~/.config/zsh/bindkey.zsh
 
-[ -f ~/.zsh/completion.zsh ] && source ~/.zsh/completion.zsh
+[ -f ~/.config/zsh/completion.zsh ] && source ~/.config/zsh/completion.zsh
 
-[ -f ~/.zsh/fzf-git.zsh ] && source ~/.zsh/fzf-git.zsh
+[ -f ~/.config/zsh/fzf-git.zsh ] && source ~/.config/zsh/fzf-git.zsh
 
-[ -f ~/.zsh/fzf-widget.zsh ] && source ~/.zsh/fzf-widget.zsh
+[ -f ~/.config/zsh/fzf-widget.zsh ] && source ~/.config/zsh/fzf-widget.zsh
