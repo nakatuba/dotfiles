@@ -66,7 +66,8 @@ nvim_lsp.pyright.setup {
   settings = {
     python = {
       analysis = {
-        autoImportCompletions = false
+        autoImportCompletions = false,
+        useLibraryCodeForTypes = false
       }
     }
   },
