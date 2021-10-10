@@ -1,8 +1,8 @@
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'sainnhe/sonokai'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'sainnhe/sonokai'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
@@ -30,11 +30,11 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'xiyaowong/nvim-transparent'
 Plug 'posva/vim-vue'
 
 call plug#end()
 
+let g:sonokai_transparent_background = 1
 let g:airline_powerline_fonts = 1
 
 set number
