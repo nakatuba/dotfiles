@@ -2,7 +2,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tomasr/molokai'
+Plug 'sainnhe/sonokai'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
@@ -30,6 +30,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'xiyaowong/nvim-transparent'
 Plug 'posva/vim-vue'
 
 call plug#end()
@@ -52,16 +53,7 @@ set termguicolors
 
 autocmd BufEnter * checktime
 
-colorscheme molokai
-
-highlight Normal          guibg=none
-highlight LineNr          guibg=none
-highlight Conceal         guibg=none
-highlight Pmenu           guifg=#e2e2e3 guibg=#363944
-highlight PmenuSel        guifg=#2c2e34 guibg=#85d3f2
-highlight GitGutterAdd    guifg=#009900
-highlight GitGutterChange guifg=#bbbb00
-highlight GitGutterDelete guifg=#ff2222
+colorscheme sonokai
 
 let mapleader = "\<Space>"
 
@@ -87,7 +79,8 @@ nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Files<CR>
 nnoremap <silent> <Leader>rg :Rg<CR>
-nnoremap <silent> <Leader>rn <cmd>lua require('lspsaga.rename').rename()<CR>
+nnoremap <silent> <Leader>rn :Lspsaga rename<CR>
+nnoremap <silent> <Leader>t  :TransparentToggle<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
