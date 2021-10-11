@@ -1,8 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'sainnhe/sonokai'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'navarasu/onedark.nvim'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
@@ -34,8 +33,8 @@ Plug 'posva/vim-vue'
 
 call plug#end()
 
-let g:sonokai_transparent_background = 1
-let g:airline_powerline_fonts = 1
+let g:onedark_transparent_background = 1
+let g:onedark_disable_terminal_colors = 1
 
 set number
 set cursorline
@@ -53,7 +52,7 @@ set termguicolors
 
 autocmd BufEnter * checktime
 
-colorscheme sonokai
+colorscheme onedark
 
 let mapleader = "\<Space>"
 
@@ -80,7 +79,6 @@ nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Files<CR>
 nnoremap <silent> <Leader>rg :Rg<CR>
 nnoremap <silent> <Leader>rn :Lspsaga rename<CR>
-nnoremap <silent> <Leader>t  :TransparentToggle<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
