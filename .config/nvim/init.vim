@@ -86,3 +86,8 @@ nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
 
 xnoremap <silent> <Leader>rg y:Rg <C-R>"<CR>
+
+if executable('nvr')
+  let $EDITOR = "nvr -cc split -c only --remote-wait"
+  let $VISUAL = "nvr -cc split -c only --remote-wait"
+endif
