@@ -10,6 +10,15 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'akinsho/bufferline.nvim'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'xiyaowong/nvim-transparent'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
@@ -21,20 +30,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'akinsho/bufferline.nvim'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'windwp/nvim-autopairs'
-Plug 'windwp/nvim-ts-autotag'
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'xiyaowong/nvim-transparent'
 Plug 'posva/vim-vue'
 
 call plug#end()
 
 let g:onedark_disable_terminal_colors = 1
+
+colorscheme onedark
 
 set number
 set cursorline
@@ -51,8 +53,6 @@ set updatetime=100
 set termguicolors
 
 autocmd BufEnter * checktime
-
-colorscheme onedark
 
 let mapleader = "\<Space>"
 
