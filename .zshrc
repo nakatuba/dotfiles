@@ -58,7 +58,7 @@ if command -v fd > /dev/null; then
   export FZF_CTRL_T_COMMAND='fd --type f --type d --hidden --follow --exclude .git'
 fi
 
-command -v bat  > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
+command -v bat > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
 
 [ -f ~/.config/zsh/alias.zsh ] && source ~/.config/zsh/alias.zsh
 
