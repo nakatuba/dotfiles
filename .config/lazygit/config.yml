@@ -1,0 +1,8 @@
+quitOnTopLevelReturn: true
+keybinding:
+  universal:
+    scrollUpMain-alt1: '<c-k>'
+    scrollDownMain-alt1: '<c-j>'
+  commits:
+    moveDownCommit: 'J'
+    moveUpCommit: 'K'
