@@ -29,11 +29,11 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'xiyaowong/nvim-transparent'
 Plug 'posva/vim-vue'
 
 call plug#end()
 
-let g:onedark_transparent_background = 1
 let g:onedark_disable_terminal_colors = 1
 
 set number
@@ -79,6 +79,7 @@ nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Files<CR>
 nnoremap <silent> <Leader>rg :Rg<CR>
 nnoremap <silent> <Leader>rn :Lspsaga rename<CR>
+nnoremap <silent> <Leader>t  :TransparentToggle<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
