@@ -1,7 +1,4 @@
 .config/*
 !.config/git/
-!.config/lazygit/
-.config/lazygit/*
-!.config/lazygit/config.yml
 !.config/nvim/
 !.config/zsh/

@@ -86,7 +86,3 @@ nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
 
 xnoremap <silent> <Leader>rg y:Rg <C-R>"<CR>
-
-if has('nvim') && executable('nvr')
-  let $GIT_EDITOR = "nvr -cc 'split | only | set number' --remote-wait"
-endif
