@@ -1,1 +1,18 @@
-require('nvim-tree').setup()
+require('nvim-tree').setup {
+  auto_close = true,
+  diagnostics = {
+    enable = true
+  },
+  update_focused_file = {
+    enable = true
+  },
+  view = {
+    mappings = {
+      list = {
+        { key = 's', cb = '<C-w>' }
+      }
+    }
+  }
+}
+
+vim.cmd('let g:nvim_tree_quit_on_open = 1')
