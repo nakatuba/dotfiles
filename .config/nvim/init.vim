@@ -11,6 +11,8 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
@@ -20,8 +22,6 @@ Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'xiyaowong/nvim-transparent'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
@@ -78,13 +78,16 @@ nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
-nnoremap <silent> <Leader>f  :Files<CR>
-nnoremap <silent> <Leader>rg :Rg<CR>
 nnoremap <silent> <Leader>rn :Lspsaga rename<CR>
 nnoremap <silent> <Leader>t  :TransparentToggle<CR>
+nnoremap <silent> <Leader>f  :Telescope find_files<CR>
+nnoremap <silent> <Leader>*  :Telescope grep_string<CR>
+nnoremap <silent> <Leader>/  :Telescope live_grep<CR>
+nnoremap <silent> <C-g><C-f> :Telescope git_status<CR>
+nnoremap <silent> <C-g><C-b> :Telescope git_branches<CR>
+nnoremap <silent> <C-g><C-h> :Telescope git_commits<CR>
+nnoremap <silent> <C-g><C-s> :Telescope git_stash<CR>
 nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
-
-xnoremap <silent> <Leader>rg y:Rg <C-R>"<CR>
