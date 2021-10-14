@@ -17,6 +17,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -27,7 +28,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
@@ -45,7 +45,7 @@ set cursorline
 set scrolloff=5
 set nowrap
 set hidden
-set signcolumn=number
+set signcolumn=yes
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -71,10 +71,6 @@ noremap! <C-n> <Down>
 noremap! <C-a> <HOME>
 noremap! <C-e> <END>
 noremap! <C-d> <Del>
-
-nmap ghs <Plug>(GitGutterStageHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
-nmap ghp <Plug>(GitGutterPreviewHunk)
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
