@@ -14,14 +14,9 @@ MUtils.completion_confirm = function()
 end
 
 remap('i' , '<CR>', 'v:lua.MUtils.completion_confirm()', { expr = true, noremap = true })
+remap('i' , '<C-h>', 'v:lua.MPairs.autopairs_bs()', { expr = true, noremap = true })
 
-MUtils.autopairs_bs = function()
-  return npairs.autopairs_bs()
-end
-
-remap('i' , '<C-h>', 'v:lua.MUtils.autopairs_bs()', { expr = true, noremap = true })
-
-local Rule   = require('nvim-autopairs.rule')
+local Rule = require('nvim-autopairs.rule')
 
 npairs.add_rules {
   Rule(' ', ' ')
@@ -30,21 +25,21 @@ npairs.add_rules {
       return vim.tbl_contains({ '()', '[]', '{}' }, pair)
     end),
   Rule('( ', ' )')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-          return opts.prev_char:match('.%)') ~= nil
-      end)
-      :use_key(')'),
+    :with_pair(function() return false end)
+    :with_move(function(opts)
+      return opts.prev_char:match('.%)') ~= nil
+    end)
+    :use_key(')'),
   Rule('{ ', ' }')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-          return opts.prev_char:match('.%}') ~= nil
-      end)
-      :use_key('}'),
+    :with_pair(function() return false end)
+    :with_move(function(opts)
+      return opts.prev_char:match('.%}') ~= nil
+    end)
+    :use_key('}'),
   Rule('[ ', ' ]')
-      :with_pair(function() return false end)
-      :with_move(function(opts)
-          return opts.prev_char:match('.%]') ~= nil
-      end)
-      :use_key(']')
+    :with_pair(function() return false end)
+    :with_move(function(opts)
+      return opts.prev_char:match('.%]') ~= nil
+    end)
+    :use_key(']')
 }
