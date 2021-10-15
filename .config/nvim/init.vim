@@ -76,7 +76,6 @@ noremap! <C-d> <Del>
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
-nnoremap <silent> <Leader>rn :Lspsaga rename<CR>
 nnoremap <silent> <Leader>t  :TransparentToggle<CR>
 nnoremap <silent> <Leader>f  :Telescope find_files<CR>
 nnoremap <silent> <Leader>*  :Telescope grep_string<CR>
