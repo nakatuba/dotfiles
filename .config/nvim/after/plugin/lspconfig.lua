@@ -19,11 +19,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[e', "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<CR>", opts)
   buf_set_keymap('n', ']e', "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<CR>", opts)
 
-  require('lsp_signature').on_attach {
-    hint_enable = false
-  }
-
-  vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[autocmd CursorHoldI <buffer> lua require('lspsaga.signaturehelp').signature_help()]]
+  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 end
 
 nvim_lsp.pyright.setup {
