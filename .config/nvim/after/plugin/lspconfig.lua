@@ -6,7 +6,7 @@ local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
 
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>',      opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 
   require('lspsaga').init_lsp_saga {
@@ -15,9 +15,9 @@ local on_attach = function(client, bufnr)
     }
   }
 
-  buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
-  buf_set_keymap('n', '[e', "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<CR>", opts)
-  buf_set_keymap('n', ']e', "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<CR>", opts)
+  buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>",                       opts)
+  buf_set_keymap('n', '[e',         "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<CR>", opts)
+  buf_set_keymap('n', ']e',         "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<CR>", opts)
 
   vim.cmd [[autocmd CursorHoldI <buffer> lua require('lspsaga.signaturehelp').signature_help()]]
   vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]

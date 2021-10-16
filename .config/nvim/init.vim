@@ -79,7 +79,7 @@ nnoremap <silent> <Leader>/  :Telescope live_grep<CR>
 nnoremap <silent> <C-g><C-f> :Telescope git_status<CR>
 nnoremap <silent> <C-g><C-b> :Telescope git_branches<CR>
 nnoremap <silent> <C-g><C-h> :Telescope git_commits<CR>
-nnoremap <silent> <C-p> :BufferLineCyclePrev<CR>
-nnoremap <silent> <C-n> :BufferLineCycleNext<CR>
-nnoremap <silent> <M-p> :BufferLineMovePrev<CR>
-nnoremap <silent> <M-n> :BufferLineMoveNext<CR>
+nnoremap <silent> <C-p>      :BufferLineCyclePrev<CR>
+nnoremap <silent> <C-n>      :BufferLineCycleNext<CR>
+nnoremap <silent> <M-p>      :BufferLineMovePrev<CR>
+nnoremap <silent> <M-n>      :BufferLineMoveNext<CR>
