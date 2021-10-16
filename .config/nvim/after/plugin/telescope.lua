@@ -2,7 +2,6 @@ local actions = require('telescope.actions')
 
 require('telescope').setup {
   defaults = {
-    sorting_strategy = 'ascending',
     scroll_strategy = 'limit',
     layout_config = {
       scroll_speed = 1
@@ -33,24 +32,16 @@ require('telescope').setup {
   },
   pickers = {
     find_files = {
-      sorting_strategy = 'descending',
       find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
     },
-    git_status = {
-      sorting_strategy = 'descending'
+    grep_string = {
+      sorting_strategy = 'ascending'
     },
-    git_branches = {
-      sorting_strategy = 'descending'
-    }
-  }
-}
-
-require('telescope').load_extension('neoclip')
-
-require('neoclip').setup {
-  keys = {
-    i = {
-      paste = '<CR>'
+    live_grep = {
+      sorting_strategy = 'ascending'
+    },
+    git_commits = {
+      sorting_strategy = 'ascending'
     }
   }
 }
