@@ -56,10 +56,12 @@ autocmd BufEnter * checktime
 
 let mapleader = "\<Space>"
 
-map s <C-w>
-map q <Nop>
-map , <Plug>(easymotion-prefix)
-map _ <Plug>(operator-replace)
+map s         <C-w>
+map q         <Nop>
+map ,         <Plug>(easymotion-prefix)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map _         <Plug>(operator-replace)
 
 " Emacs key bindings
 noremap! <C-f> <Right>
