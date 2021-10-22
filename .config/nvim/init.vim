@@ -33,6 +33,7 @@ Plug 'posva/vim-vue'
 call plug#end()
 
 let g:onedark_disable_terminal_colors = 1
+let g:nvim_tree_quit_on_open = 1
 let g:EasyMotion_do_mapping = 0
 
 colorscheme onedark
