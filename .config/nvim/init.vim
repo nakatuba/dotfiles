@@ -21,22 +21,19 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'xiyaowong/nvim-transparent'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
-Plug 'posva/vim-vue'
 
 call plug#end()
 
+let g:onedark_transparent_background = 1
 let g:onedark_disable_terminal_colors = 1
 let g:nvim_tree_quit_on_open = 1
 let g:EasyMotion_do_mapping = 0
-
-colorscheme onedark
 
 set number
 set cursorline
@@ -52,6 +49,11 @@ set smartcase
 set splitbelow
 set splitright
 set termguicolors
+
+colorscheme onedark
+
+highlight NvimTreeNormal      guibg=none
+highlight NvimTreeEndOfBuffer guibg=none
 
 autocmd BufEnter * checktime
 
@@ -75,7 +77,6 @@ noremap! <C-d> <Del>
 
 nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
-nnoremap <silent> <Leader>t  :TransparentToggle<CR>
 nnoremap <silent> <Leader>f  :Telescope find_files<CR>
 nnoremap <silent> <Leader>*  :Telescope grep_string<CR>
 nnoremap <silent> <Leader>/  :Telescope live_grep<CR>
