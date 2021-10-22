@@ -1,18 +1,18 @@
 [user]
-	name = nakatuba
-	email = nakatuba0626@gmail.com
+  name = nakatuba
+  email = nakatuba0626@gmail.com
 
 [init]
-	defaultBranch = master
+  defaultBranch = master
 
 [fetch]
-	prune = true
+  prune = true
 
 [pull]
-	ff = only
+  ff = only
 
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
