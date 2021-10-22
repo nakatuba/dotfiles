@@ -34,6 +34,7 @@ call plug#end()
 
 let g:onedark_style = 'deep'
 let g:onedark_disable_terminal_colors = 1
+let g:EasyMotion_do_mapping = 0
 
 colorscheme onedark
 
@@ -58,9 +59,9 @@ let mapleader = "\<Space>"
 
 map s         <C-w>
 map q         <Nop>
-map ,         <Plug>(easymotion-prefix)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+map <Leader>s <Plug>(easymotion-s)
 map _         <Plug>(operator-replace)
 
 " Emacs key bindings
