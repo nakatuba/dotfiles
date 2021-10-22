@@ -32,7 +32,6 @@ Plug 'posva/vim-vue'
 
 call plug#end()
 
-let g:onedark_style = 'deep'
 let g:onedark_disable_terminal_colors = 1
 let g:EasyMotion_do_mapping = 0
 
