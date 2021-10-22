@@ -71,8 +71,8 @@ noremap! <C-f> <Right>
 noremap! <C-b> <Left>
 noremap! <C-p> <Up>
 noremap! <C-n> <Down>
-noremap! <C-a> <HOME>
-noremap! <C-e> <END>
+noremap! <C-a> <Home>
+noremap! <C-e> <End>
 noremap! <C-d> <Del>
 
 nnoremap Y y$

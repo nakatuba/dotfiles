@@ -26,7 +26,7 @@ require('telescope').setup {
         ['<C-j>'] = actions.preview_scrolling_down,
         ['<Tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<S-Tab>'] = actions.toggle_selection + actions.move_selection_previous,
-        ['<ESC>'] = actions.close
+        ['<Esc>'] = actions.close
       }
     }
   },
