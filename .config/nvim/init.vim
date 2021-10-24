@@ -1,7 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'navarasu/onedark.nvim'
-Plug 'hoob3rt/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'hrsh7th/nvim-cmp'
