@@ -48,6 +48,7 @@ set ignorecase
 set smartcase
 set splitbelow
 set splitright
+set updatetime=100
 set termguicolors
 
 colorscheme onedark
