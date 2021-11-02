@@ -21,8 +21,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
