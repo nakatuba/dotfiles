@@ -7,6 +7,7 @@ cmp.setup {
     end
   },
   mapping = {
+    ['<C-e>'] = cmp.config.disable,
     ['<CR>'] = cmp.mapping.confirm()
   },
   sources = {
