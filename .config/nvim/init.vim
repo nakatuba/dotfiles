@@ -25,7 +25,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'easymotion/vim-easymotion'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
 
@@ -34,7 +33,6 @@ call plug#end()
 let g:onedark_transparent_background = 1
 let g:onedark_disable_terminal_colors = 1
 let g:nvim_tree_quit_on_open = 1
-let g:EasyMotion_do_mapping = 0
 
 set number
 set cursorline
@@ -61,12 +59,9 @@ autocmd BufEnter * checktime
 
 let mapleader = "\<Space>"
 
-map s         <C-w>
-map q         <Nop>
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>s <Plug>(easymotion-s)
-map _         <Plug>(operator-replace)
+map s <C-w>
+map q <Nop>
+map _ <Plug>(operator-replace)
 
 " Emacs key bindings
 noremap! <C-f> <Right>
