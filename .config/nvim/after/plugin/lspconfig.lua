@@ -17,9 +17,7 @@ local on_attach = function(client, bufnr)
     }
   }
 
-  buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>",                       opts)
-  buf_set_keymap('n', '[e',         "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_prev()<CR>", opts)
-  buf_set_keymap('n', ']e',         "<cmd>lua require('lspsaga.diagnostic').lsp_jump_diagnostic_next()<CR>", opts)
+  buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
 
   vim.api.nvim_command [[autocmd CursorHoldI <buffer> lua require('lspsaga.signaturehelp').signature_help()]]
   vim.api.nvim_command [[autocmd CursorHold  <buffer> lua require('lspsaga.diagnostic').show_cursor_diagnostics()]]
