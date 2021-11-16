@@ -34,13 +34,7 @@ require('telescope').setup {
     find_files = {
       find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
     },
-    grep_string = {
-      sorting_strategy = 'ascending'
-    },
     live_grep = {
-      sorting_strategy = 'ascending'
-    },
-    git_commits = {
       sorting_strategy = 'ascending'
     }
   }
