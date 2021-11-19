@@ -26,6 +26,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
+Plug 'posva/vim-vue', { 'for': 'vue' }
 
 call plug#end()
 
