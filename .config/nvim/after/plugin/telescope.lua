@@ -1,10 +1,12 @@
 local actions = require('telescope.actions')
+local action_layout = require('telescope.actions.layout')
 
 require('telescope').setup {
   defaults = {
     scroll_strategy = 'limit',
     layout_config = {
-      scroll_speed = 1
+      scroll_speed = 1,
+      preview_width = 0.5
     },
     vimgrep_arguments = {
       'rg',
@@ -26,6 +28,7 @@ require('telescope').setup {
         ['<C-j>'] = actions.preview_scrolling_down,
         ['<Tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<S-Tab>'] = actions.toggle_selection + actions.move_selection_previous,
+        ['<C-_>'] = action_layout.toggle_preview,
         ['<Esc>'] = actions.close
       }
     }
