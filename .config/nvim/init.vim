@@ -30,8 +30,10 @@ Plug 'posva/vim-vue', { 'for': 'vue' }
 
 call plug#end()
 
-let g:onedark_transparent_background = 1
-let g:onedark_disable_terminal_colors = 1
+let g:onedark_transparent_background = v:true
+let g:onedark_darker_diagnostics = v:false
+let g:onedark_diagnostics_text_bg = v:false
+let g:onedark_disable_terminal_colors = v:true
 let g:nvim_tree_quit_on_open = 1
 
 set number
