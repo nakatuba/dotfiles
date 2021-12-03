@@ -52,9 +52,6 @@ set termguicolors
 
 colorscheme onedark
 
-highlight NvimTreeNormal      guibg=none
-highlight NvimTreeEndOfBuffer guibg=none
-
 autocmd BufEnter * checktime
 
 let mapleader = "\<Space>"
