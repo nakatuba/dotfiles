@@ -7,6 +7,14 @@ cmp.setup {
     end
   },
   mapping = {
+    ['<C-Space>'] = function()
+      if cmp.visible() then
+        cmp.close()
+      else
+        cmp.complete()
+      end
+    end,
+    ['<C-y>'] = cmp.config.disable,
     ['<C-e>'] = cmp.config.disable,
     ['<CR>'] = cmp.mapping.confirm()
   },
