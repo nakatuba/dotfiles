@@ -3,7 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'navarasu/onedark.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+Plug 'tami5/lspsaga.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -40,7 +40,6 @@ set number
 set cursorline
 set scrolloff=5
 set nowrap
-set hidden
 set signcolumn=yes
 set tabstop=2
 set shiftwidth=2
@@ -71,7 +70,6 @@ noremap! <C-a> <Home>
 noremap! <C-e> <End>
 noremap! <C-d> <Del>
 
-nnoremap Y y$
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Telescope find_files<CR>
 nnoremap <silent> <Leader>g  :Telescope live_grep<CR>
