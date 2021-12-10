@@ -34,6 +34,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$PATH"
 
+[ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 1000
