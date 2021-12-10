@@ -1,7 +1,7 @@
 if command -v nvim > /dev/null; then
   alias vi='nvim'
   alias vim='nvim'
-  [ -n "$VIM" ] && alias nvim='nvr'
+  [ -n "$VIM" ] && alias nvim='nvr -l'
 fi
 
 if command -v exa > /dev/null; then
