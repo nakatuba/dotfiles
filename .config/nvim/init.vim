@@ -73,7 +73,7 @@ noremap! <C-d> <Del>
 nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Telescope find_files<CR>
 nnoremap <silent> <Leader>g  :Telescope live_grep<CR>
-nnoremap <silent> <Leader>d  :Telescope lsp_workspace_diagnostics<CR>
+nnoremap <silent> <Leader>d  :Telescope diagnostics<CR>
 nnoremap <silent> <C-g><C-f> :Telescope git_status<CR>
 nnoremap <silent> <C-p>      :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n>      :BufferLineCycleNext<CR>
