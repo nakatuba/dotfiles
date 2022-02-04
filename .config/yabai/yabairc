@@ -1,9 +1,11 @@
-yabai -m config layout                     bsp
+yabai -m config layout                           bsp
 
-yabai -m rule --add app="^.*$"                                         manage=off
-yabai -m rule --add app="^Google Chrome$"  title!="^$"                 manage=on
-yabai -m rule --add app="^iTerm2$"         title!="(^Preferences$|^$)" manage=on
-yabai -m rule --add app="^DeepL$"          title="^DeepL$"             manage=on
-yabai -m rule --add app="^Code$"           title!="^$"                 manage=on
-yabai -m rule --add app="^Microsoft Word$" title!="^$"                 manage=on
-yabai -m rule --add app="^プレビュー$"     title!="^$"                 manage=on
+yabai -m rule --add app="^.*$"                                               manage=off
+yabai -m rule --add app="^Google Chrome$"        title!="^$"                 manage=on
+yabai -m rule --add app="^iTerm2$"               title!="(^Preferences$|^$)" manage=on
+yabai -m rule --add app="^DeepL$"                title="^DeepL$"             manage=on
+yabai -m rule --add app="^Code$"                 title!="^$"                 manage=on
+yabai -m rule --add app="^Microsoft Word$"       title!="^$"                 manage=on
+yabai -m rule --add app="^Microsoft Excel$"      title!="^$"                 manage=on
+yabai -m rule --add app="^Microsoft PowerPoint$" title!="^$"                 manage=on
+yabai -m rule --add app="^プレビュー$"           title!="^$"                 manage=on
