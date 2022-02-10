@@ -38,6 +38,10 @@ nvim_lsp.pyright.setup {
   end
 }
 
+nvim_lsp.gopls.setup {
+  on_attach = on_attach
+}
+
 nvim_lsp.vuels.setup {
   on_attach = on_attach,
   settings = {
