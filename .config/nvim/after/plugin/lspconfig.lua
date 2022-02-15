@@ -12,11 +12,15 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 
   require('lspsaga').init_lsp_saga {
+    code_action_keys = {
+      quit = '<Esc>'
+    },
     rename_action_keys = {
       quit = '<Esc>'
     }
   }
 
+  buf_set_keymap('n', '<leader>ca', "<cmd>lua require('lspsaga.codeaction').code_action()<CR>", opts)
   buf_set_keymap('n', '<leader>rn', "<cmd>lua require('lspsaga.rename').rename()<CR>", opts)
 
   vim.api.nvim_command [[autocmd CursorHoldI <buffer> lua require('lspsaga.signaturehelp').signature_help()]]
