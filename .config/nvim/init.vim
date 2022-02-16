@@ -1,6 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'navarasu/onedark.nvim'
+Plug 'sainnhe/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'tami5/lspsaga.nvim'
@@ -31,6 +31,8 @@ Plug 'kana/vim-operator-replace'
 
 call plug#end()
 
+let g:sonokai_transparent_background = 1
+
 set number
 set cursorline
 set scrolloff=5
@@ -45,6 +47,8 @@ set splitbelow
 set splitright
 set updatetime=100
 set termguicolors
+
+colorschem sonokai
 
 autocmd BufEnter * checktime
 
