@@ -28,6 +28,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
+Plug 'ojroques/vim-oscyank'
 
 call plug#end()
 
@@ -51,6 +52,7 @@ set termguicolors
 colorschem sonokai
 
 autocmd BufEnter * checktime
+autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
 
 let mapleader = "\<Space>"
 
