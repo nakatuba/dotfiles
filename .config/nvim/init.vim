@@ -1,6 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'sainnhe/sonokai'
+Plug 'nakatuba/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'tami5/lspsaga.nvim'
