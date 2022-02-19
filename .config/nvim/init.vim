@@ -33,6 +33,7 @@ Plug 'ojroques/vim-oscyank'
 call plug#end()
 
 let g:sonokai_transparent_background = 1
+let g:sonokai_diagnostic_virtual_text = 'colored'
 
 set number
 set cursorline
