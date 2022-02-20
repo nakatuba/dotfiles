@@ -6,7 +6,7 @@ require('nvim-tree').setup {
   view = {
     mappings = {
       list = {
-        { key = 's', cb = '<C-w>' }
+        { key = 's', action = '' }
       }
     }
   }
