@@ -40,7 +40,14 @@ require('lspconfig').pyright.setup {
 }
 
 require('lspconfig').gopls.setup {
-  on_attach = on_attach
+  on_attach = on_attach,
+  settings = {
+    gopls = {
+      analyses = {
+        staticcheck = true
+      }
+    }
+  }
 }
 
 require('lspconfig').vuels.setup {
