@@ -39,9 +39,6 @@ require('telescope').setup {
       sorting_strategy = 'descending',
       find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
     },
-    lsp_definitions = {
-      jump_type = 'never'
-    },
     git_status = {
       sorting_strategy = 'descending'
     }
