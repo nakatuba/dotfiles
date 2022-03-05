@@ -8,13 +8,6 @@ require('nvim-treesitter.configs').setup {
     disable = { 'python', 'go' }
   },
   textobjects = {
-    select = {
-      enable = true,
-      keymaps = {
-        ['a,'] = '@parameter.outer',
-        ['i,'] = '@parameter.inner'
-      }
-    },
     swap = {
       enable = true,
       swap_next = {
