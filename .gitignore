@@ -1,5 +1,6 @@
 .config/*
 !.config/git/
+!.config/limelight/
 !.config/nvim/
 !.config/skhd/
 !.config/yabai/

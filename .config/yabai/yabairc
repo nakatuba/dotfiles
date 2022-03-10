@@ -9,3 +9,6 @@ yabai -m rule --add app="^Microsoft Word$"       title!="^$"                 man
 yabai -m rule --add app="^Microsoft Excel$"      title!="^$"                 manage=on
 yabai -m rule --add app="^Microsoft PowerPoint$" title!="^$"                 manage=on
 yabai -m rule --add app="^プレビュー$"           title!="^$"                 manage=on
+
+killall ~/.local/bin/limelight &> /dev/null
+~/.local/bin/limelight &> /dev/null &
