@@ -19,6 +19,7 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'akinsho/bufferline.nvim'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'phaazon/hop.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -30,6 +31,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-operator-replace'
+Plug 'psliwka/vim-smoothie'
 Plug 'ojroques/vim-oscyank'
 
 call plug#end()
@@ -83,6 +85,7 @@ nnoremap <silent> <C-p>      :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n>      :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p>      :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n>      :BufferLineMoveNext<CR>
+nnoremap <silent> <Leader>l  :HopLine<CR>
 
 vnoremap <silent> <Leader>f  y:Telescope find_files default_text=<C-r>"<CR>
 vnoremap <silent> <Leader>g  y:Telescope live_grep  default_text=<C-r>"<CR>
