@@ -5,6 +5,6 @@ require('null-ls').setup {
       extra_args = { '--ignore=E501,W503' }
     },
     require('null-ls').builtins.formatting.black,
-    require('null-ls').builtins.formatting.isort,
+    require('null-ls').builtins.formatting.isort
   }
 }
