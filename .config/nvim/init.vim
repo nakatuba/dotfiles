@@ -85,7 +85,7 @@ nnoremap <silent> <C-p>      :BufferLineCyclePrev<CR>
 nnoremap <silent> <C-n>      :BufferLineCycleNext<CR>
 nnoremap <silent> <M-p>      :BufferLineMovePrev<CR>
 nnoremap <silent> <M-n>      :BufferLineMoveNext<CR>
-nnoremap <silent> <Leader>l  :HopLine<CR>
+nnoremap <silent> <Leader>w  :HopWord<CR>
 
 vnoremap <silent> <Leader>f  y:Telescope find_files default_text=<C-r>"<CR>
 vnoremap <silent> <Leader>g  y:Telescope live_grep  default_text=<C-r>"<CR>
