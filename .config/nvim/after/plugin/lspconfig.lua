@@ -21,6 +21,10 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
 end
 
+require('lspconfig').tsserver.setup {
+  on_attach = on_attach
+}
+
 require('lspconfig').pyright.setup {
   on_attach = on_attach,
   settings = {
