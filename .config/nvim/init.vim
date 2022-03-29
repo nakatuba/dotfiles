@@ -1,6 +1,6 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-Plug 'nakatuba/sonokai'
+Plug 'sainnhe/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'tami5/lspsaga.nvim'
@@ -38,6 +38,7 @@ call plug#end()
 
 let g:sonokai_transparent_background = 1
 let g:sonokai_diagnostic_virtual_text = 'colored'
+let g:sonokai_disable_terminal_colors = 1
 
 set number
 set cursorline
