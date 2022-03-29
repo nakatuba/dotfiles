@@ -1,4 +1,14 @@
 local on_attach = function(client, bufnr)
+  local opts = { noremap = true, silent = true }
+
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+
+  vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.api.nvim_command [[autocmd CursorHoldI <buffer> lua vim.lsp.buf.signature_help()]]
+  vim.api.nvim_command [[autocmd CursorHold  <buffer> lua vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })]]
+
   require('lspsaga').init_lsp_saga {
     code_action_keys = {
       quit = '<Esc>'
@@ -8,17 +18,8 @@ local on_attach = function(client, bufnr)
     }
   }
 
-  local opts = { noremap = true, silent = true }
-
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',          opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K',          '<cmd>Lspsaga hover_doc<CR>',            opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<CR>',               opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d',         '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d',         '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-
-  vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-  vim.api.nvim_command [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
-  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Lspsaga code_action<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<CR>', opts)
 end
 
 require('lspconfig').tsserver.setup {
