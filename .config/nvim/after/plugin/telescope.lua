@@ -39,6 +39,13 @@ require('telescope').setup {
       sorting_strategy = 'descending',
       find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
     },
+    buffers = {
+      mappings = {
+        i = {
+          ['<M-d>'] = actions.delete_buffer
+        }
+      }
+    },
     git_status = {
       sorting_strategy = 'descending'
     }
