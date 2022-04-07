@@ -44,6 +44,26 @@ fzf-git-delete-widget() {
 zle     -N    fzf-git-delete-widget
 bindkey '^gd' fzf-git-delete-widget
 
+fzf-tmux-new-widget() {
+  local dir=$(ghq list | fzf --height 40% --reverse)
+  if [ -n "$dir" ]; then
+    local session=$(basename $dir)
+    if [ -z "$TMUX" ]; then
+      BUFFER="tmux new -A -c $(ghq root)/$dir -s $session"
+    else
+      if tmux has -t $session 2>/dev/null; then
+        BUFFER="tmux switch -t $session"
+      else
+        BUFFER="tmux new -d -c $(ghq root)/$dir -s $session && tmux switch -t $session"
+      fi
+    fi
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle     -N   fzf-tmux-new-widget
+bindkey '^o' fzf-tmux-new-widget
+
 fzf-tmux-attach-widget() {
   [ -z "$TMUX" ] || return
   local session=$(tmux list-sessions 2>/dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
