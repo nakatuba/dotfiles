@@ -29,20 +29,8 @@ fzf-git-checkout-widget() {
   fi
   zle reset-prompt
 }
-zle     -N    fzf-git-checkout-widget
-bindkey '^gc' fzf-git-checkout-widget
-
-fzf-git-delete-widget() {
-  git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
-  local branch=$(git branch -v | grep -v '^\*' | sed 's/^  *//' | fzf --height 40% --reverse --multi | awk '{print $1}')
-  if [ -n "$branch" ]; then
-    BUFFER="git branch -d $(echo $branch | tr '\n' ' ')"
-    zle accept-line
-  fi
-  zle reset-prompt
-}
-zle     -N    fzf-git-delete-widget
-bindkey '^gd' fzf-git-delete-widget
+zle     -N     fzf-git-checkout-widget
+bindkey '^g^o' fzf-git-checkout-widget
 
 fzf-tmux-new-widget() {
   local dir=$(ghq list | fzf --height 40% --reverse)
