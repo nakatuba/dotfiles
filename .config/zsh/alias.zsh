@@ -9,4 +9,4 @@ if command -v exa > /dev/null; then
   alias la='exa --icons -la'
 fi
 
-command -v bat > /dev/null && alias cat='bat --paging=never'
+command -v bat > /dev/null && alias cat='bat'
