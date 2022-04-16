@@ -19,10 +19,8 @@ require('gitsigns').setup {
     map('n', 'ghR', '<cmd>Gitsigns reset_buffer<CR>')
     map('n', 'ghp', '<cmd>Gitsigns preview_hunk<CR>')
     map('n', 'ghb', '<cmd>lua require("gitsigns").blame_line { full = true }<CR>')
-    map('n', 'gtb', '<cmd>Gitsigns toggle_current_line_blame<CR>')
     map('n', 'ghd', '<cmd>Gitsigns diffthis<CR>')
     map('n', 'ghD', '<cmd>lua require("gitsigns").diffthis("~")<CR>')
-    map('n', 'gtd', '<cmd>Gitsigns toggle_deleted<CR>')
 
     -- Text object
     map('o', 'ih', ':<C-u>Gitsigns select_hunk<CR>')
