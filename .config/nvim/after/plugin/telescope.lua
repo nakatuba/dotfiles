@@ -4,7 +4,6 @@ local action_layout = require('telescope.actions.layout')
 require('telescope').setup {
   defaults = {
     scroll_strategy = 'limit',
-    sorting_strategy = 'ascending',
     layout_config = {
       scroll_speed = 1,
       preview_width = 0.5
@@ -36,8 +35,10 @@ require('telescope').setup {
   },
   pickers = {
     find_files = {
-      sorting_strategy = 'descending',
       find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
+    },
+    live_grep = {
+      sorting_strategy = 'ascending'
     },
     buffers = {
       mappings = {
@@ -46,8 +47,14 @@ require('telescope').setup {
         }
       }
     },
-    git_status = {
-      sorting_strategy = 'descending'
+    lsp_references = {
+      sorting_strategy = 'ascending'
+    },
+    diagnostics = {
+      sorting_strategy = 'ascending'
+    },
+    lsp_definitions = {
+      sorting_strategy = 'ascending'
     }
   }
 }
