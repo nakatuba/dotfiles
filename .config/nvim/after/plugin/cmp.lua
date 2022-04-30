@@ -6,7 +6,7 @@ cmp.setup {
       vim.fn["vsnip#anonymous"](args.body)
     end
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-Space>'] = function()
       if cmp.visible() then
         cmp.close()
@@ -17,10 +17,17 @@ cmp.setup {
     ['<C-y>'] = cmp.config.disable,
     ['<C-e>'] = cmp.config.disable,
     ['<CR>'] = cmp.mapping.confirm()
-  },
+  }),
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' }
   }
 }
+
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  completion = {
+    autocomplete = false
+  }
+})
