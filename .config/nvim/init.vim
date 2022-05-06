@@ -57,7 +57,7 @@ set splitright
 set updatetime=100
 set termguicolors
 
-colorschem sonokai
+colorscheme sonokai
 
 highlight ErrorFloat   ctermbg=none guibg=none
 highlight WarningFloat ctermbg=none guibg=none
