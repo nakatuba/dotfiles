@@ -47,6 +47,9 @@ require('telescope').setup {
         }
       }
     },
+    oldfiles = {
+      sorting_strategy = 'ascending'
+    },
     lsp_references = {
       sorting_strategy = 'ascending'
     },
