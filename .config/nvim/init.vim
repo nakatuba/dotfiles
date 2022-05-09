@@ -59,10 +59,11 @@ set termguicolors
 
 colorscheme sonokai
 
-highlight ErrorFloat   ctermbg=none guibg=none
-highlight WarningFloat ctermbg=none guibg=none
-highlight InfoFloat    ctermbg=none guibg=none
-highlight HintFloat    ctermbg=none guibg=none
+highlight ErrorFloat   guibg=none
+highlight WarningFloat guibg=none
+highlight InfoFloat    guibg=none
+highlight HintFloat    guibg=none
+highlight VertSplit    guifg=#595f6f
 
 autocmd BufEnter * checktime
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
