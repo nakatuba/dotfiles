@@ -63,7 +63,7 @@ highlight ErrorFloat   guibg=none
 highlight WarningFloat guibg=none
 highlight InfoFloat    guibg=none
 highlight HintFloat    guibg=none
-highlight VertSplit    guifg=#595f6f
+highlight VertSplit    guifg=#e2e2e3
 
 autocmd BufEnter * checktime
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
