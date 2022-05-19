@@ -1,4 +1,6 @@
 .config/*
 !.config/git/
 !.config/nvim/
+!.config/skhd/
+!.config/yabai/
 !.config/zsh/
