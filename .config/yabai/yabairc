@@ -5,7 +5,3 @@ yabai -m config active_window_border_color       0xff24ccaa
 yabai -m rule --add app="^.*$"                                               manage=off
 yabai -m rule --add app="^Google Chrome$"        title!="^$"                 manage=on
 yabai -m rule --add app="^iTerm2$"               title!="^Preferences$"      manage=on
-yabai -m rule --add app="^DeepL$"                title="^DeepL$"             manage=on
-yabai -m rule --add app="^Microsoft Word$"       title!="^$"                 manage=on
-yabai -m rule --add app="^Microsoft Excel$"      title!="^$"                 manage=on
-yabai -m rule --add app="^Microsoft PowerPoint$" title!="^$"                 manage=on
