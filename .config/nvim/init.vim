@@ -85,7 +85,6 @@ noremap! <C-a> <Home>
 noremap! <C-e> <End>
 noremap! <C-d> <Del>
 
-nnoremap <silent> <Leader>e  :NvimTreeToggle<CR>
 nnoremap <silent> <Leader>f  :Telescope find_files<CR>
 nnoremap <silent> <Leader>g  :Telescope live_grep<CR>
 nnoremap <silent> <Leader>b  :Telescope buffers<CR>
@@ -94,11 +93,6 @@ nnoremap <silent> gr         :Telescope lsp_references<CR>
 nnoremap <silent> <Leader>d  :Telescope diagnostics<CR>
 nnoremap <silent> gd         :Telescope lsp_definitions<CR>
 nnoremap <silent> <C-g><C-f> :Telescope git_status<CR>
-nnoremap <silent> <C-p>      :BufferLineCyclePrev<CR>
-nnoremap <silent> <C-n>      :BufferLineCycleNext<CR>
-nnoremap <silent> <M-p>      :BufferLineMovePrev<CR>
-nnoremap <silent> <M-n>      :BufferLineMoveNext<CR>
-nnoremap <silent> <Leader>w  :HopWord<CR>
 
 vnoremap <silent> <Leader>f  y:Telescope find_files default_text=<C-r>"<CR>
 vnoremap <silent> <Leader>g  y:Telescope live_grep  default_text=<C-r>"<CR>
