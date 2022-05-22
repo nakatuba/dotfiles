@@ -1,13 +1,14 @@
 require('nvim-tree').setup {
-  update_focused_file = {
-    enable = true
-  },
   view = {
+    width = '20%',
     mappings = {
       list = {
         { key = 's', action = '' }
       }
     }
+  },
+  update_focused_file = {
+    enable = true
   }
 }
 
