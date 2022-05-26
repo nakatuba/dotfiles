@@ -1,16 +1,18 @@
 # focus window
-ctrl + cmd - h : yabai -m window --focus west  || yabai -m display --focus west
-ctrl + cmd - j : yabai -m window --focus south || yabai -m display --focus south
-ctrl + cmd - k : yabai -m window --focus north || yabai -m display --focus north
-ctrl + cmd - l : yabai -m window --focus east  || yabai -m display --focus east
-ctrl + cmd - p : yabai -m window --focus prev  || yabai -m window  --focus last
-ctrl + cmd - n : yabai -m window --focus next  || yabai -m window  --focus first
+ctrl + cmd - h : yabai -m window --focus west
+ctrl + cmd - j : yabai -m window --focus south
+ctrl + cmd - k : yabai -m window --focus north
+ctrl + cmd - l : yabai -m window --focus east
+ctrl + cmd - p : yabai -m window --focus prev || yabai -m window  --focus last
+ctrl + cmd - n : yabai -m window --focus next || yabai -m window  --focus first
 
 # swap window
 shift + alt - h : yabai -m window --swap west
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
+shift + alt - p : yabai -m window --swap prev || yabai -m window  --swap last
+shift + alt - n : yabai -m window --swap next || yabai -m window  --swap first
 
 # rotate tree
 ctrl + cmd - r : yabai -m space --rotate 90
