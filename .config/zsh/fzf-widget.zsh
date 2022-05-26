@@ -17,7 +17,11 @@ fzf-ghq-widget() {
       BUFFER="tmux new -A -c $(ghq root)/$dir -s $session"
     else
       if tmux has -t $session 2>/dev/null; then
-        BUFFER="tmux switch -t $session"
+        if [ $(tmux display -p '#{session_name}') != $session ]; then
+          BUFFER="tmux switch -t $session"
+        else
+          BUFFER="cd $(ghq root)/$dir"
+        fi
       else
         BUFFER="tmux new -d -c $(ghq root)/$dir -s $session && tmux switch -t $session"
       fi
