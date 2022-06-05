@@ -63,4 +63,4 @@ command -v bat > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=
 
 [ -f ~/.config/zsh/fzf-git.zsh ] && source ~/.config/zsh/fzf-git.zsh
 
-[ -f ~/.config/zsh/fzf-widget.zsh ] && source ~/.config/zsh/fzf-widget.zsh
+[ -f ~/.config/zsh/widget.zsh ] && source ~/.config/zsh/widget.zsh

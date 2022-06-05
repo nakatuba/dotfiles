@@ -12,20 +12,7 @@ bindkey '^]' fzf-cdr-widget
 fzf-ghq-widget() {
   local dir=$(ghq list | fzf --height 40% --reverse)
   if [ -n "$dir" ]; then
-    local session=$(basename $dir)
-    if [ -z "$TMUX" ]; then
-      BUFFER="tmux new -A -c $(ghq root)/$dir -s $session"
-    else
-      if tmux has -t $session 2>/dev/null; then
-        if [ $(tmux display -p '#{session_name}') != $session ]; then
-          BUFFER="tmux switch -t $session"
-        else
-          BUFFER="cd $(ghq root)/$dir"
-        fi
-      else
-        BUFFER="tmux new -d -c $(ghq root)/$dir -s $session && tmux switch -t $session"
-      fi
-    fi
+    BUFFER="cd $(ghq root)/$dir"
     zle accept-line
   fi
   zle reset-prompt
@@ -33,7 +20,7 @@ fzf-ghq-widget() {
 zle     -N     fzf-ghq-widget
 bindkey '^g^g' fzf-ghq-widget
 
-fzf-git-checkout-widget() {
+git-checkout-widget() {
   git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
   local branch=$(git branch -v | grep -v '^\*' | sed 's/^  *//' | fzf --height 40% --reverse | awk '{print $1}')
   if [ -n "$branch" ]; then
@@ -42,10 +29,18 @@ fzf-git-checkout-widget() {
   fi
   zle reset-prompt
 }
-zle     -N     fzf-git-checkout-widget
-bindkey '^g^o' fzf-git-checkout-widget
+zle     -N     git-checkout-widget
+bindkey '^g^o' git-checkout-widget
 
-fzf-tmux-attach-widget() {
+tmux-new-widget() {
+  [ -z "$TMUX" ] || return
+  BUFFER="tmux new -A -s $(basename $PWD)"
+  zle accept-line
+}
+zle     -N   tmux-new-widget
+bindkey '^o' tmux-new-widget
+
+tmux-attach-widget() {
   [ -z "$TMUX" ] || return
   local session=$(tmux list-sessions 2>/dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
   if [ -n "$session" ]; then
@@ -54,5 +49,5 @@ fzf-tmux-attach-widget() {
   fi
   zle reset-prompt
 }
-zle     -N   fzf-tmux-attach-widget
-bindkey '^s' fzf-tmux-attach-widget
+zle     -N   tmux-attach-widget
+bindkey '^s' tmux-attach-widget
