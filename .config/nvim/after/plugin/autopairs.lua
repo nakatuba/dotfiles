@@ -1,8 +1,7 @@
 require('nvim-autopairs').setup {
-  map_cr = true
+  map_c_h = true,
+  map_c_w = true
 }
-
-vim.api.nvim_set_keymap('i' , '<C-h>', 'v:lua.MPairs.autopairs_bs()', { expr = true, noremap = true })
 
 local npairs = require('nvim-autopairs')
 local Rule = require('nvim-autopairs.rule')
