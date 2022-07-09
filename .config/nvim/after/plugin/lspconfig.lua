@@ -1,15 +1,22 @@
 local on_attach = function(client, bufnr)
   require('lspsaga').init_lsp_saga {
+    finder_action_keys = {
+      open = '<CR>',
+      vsplit = '<C-v>',
+      split = '<C-x>',
+      tabe = '<C-t>',
+      quit = '<Esc>'
+    },
     code_action_keys = {
       quit = '<Esc>'
     },
-    rename_action_keys = {
-      quit = '<Esc>'
-    }
+    rename_action_quit = '<Esc>'
   }
 
   local opts = { noremap = true, silent = true }
 
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd',         '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',         '<cmd>Lspsaga lsp_finder<CR>',           opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',          opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K',          '<cmd>Lspsaga hover_doc<CR>',            opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<CR>',               opts)
@@ -18,7 +25,7 @@ local on_attach = function(client, bufnr)
 
   vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   vim.api.nvim_command [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
-  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
+  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_line_diagnostics]]
 end
 
 require('lspconfig').tsserver.setup {

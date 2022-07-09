@@ -49,15 +49,6 @@ require('telescope').setup {
     },
     oldfiles = {
       sorting_strategy = 'ascending'
-    },
-    lsp_references = {
-      sorting_strategy = 'ascending'
-    },
-    diagnostics = {
-      sorting_strategy = 'ascending'
-    },
-    lsp_definitions = {
-      sorting_strategy = 'ascending'
     }
   }
 }

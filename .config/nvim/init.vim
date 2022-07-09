@@ -3,7 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'sainnhe/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'tami5/lspsaga.nvim'
+Plug 'glepnir/lspsaga.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -91,9 +91,6 @@ nnoremap <silent> <Leader>f        :Telescope find_files<CR>
 nnoremap <silent> <Leader>g        :Telescope live_grep<CR>
 nnoremap <silent> <Leader><Leader> :Telescope buffers<CR>
 nnoremap <silent> <Leader>h        :Telescope oldfiles<CR>
-nnoremap <silent> gr               :Telescope lsp_references<CR>
-nnoremap <silent> <Leader>d        :Telescope diagnostics<CR>
-nnoremap <silent> gd               :Telescope lsp_definitions<CR>
 nnoremap <silent> <C-g><C-f>       :Telescope git_status<CR>
 
 vnoremap <silent> <Leader>f y:Telescope find_files default_text=<C-r>"<CR>
