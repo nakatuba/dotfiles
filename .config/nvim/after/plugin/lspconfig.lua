@@ -1,18 +1,6 @@
-local on_attach = function(client, bufnr)
-  require('lspsaga').init_lsp_saga {
-    finder_action_keys = {
-      open = '<CR>',
-      vsplit = '<C-v>',
-      split = '<C-x>',
-      tabe = '<C-t>',
-      quit = '<Esc>'
-    },
-    code_action_keys = {
-      quit = '<Esc>'
-    },
-    rename_action_quit = '<Esc>'
-  }
+if not pcall(require, 'lspconfig') then return end
 
+local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true }
 
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd',         '<cmd>lua vim.lsp.buf.definition()<CR>', opts)

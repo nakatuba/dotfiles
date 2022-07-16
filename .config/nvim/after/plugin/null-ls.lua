@@ -1,3 +1,5 @@
+if not pcall(require, 'null-ls') then return end
+
 require('null-ls').setup {
   diagnostics_format = '[#{c}] #{m} (#{s})',
   sources = {

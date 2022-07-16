@@ -1,3 +1,5 @@
+if not pcall(require, 'neo-tree') then return end
+
 require('neo-tree').setup {
   use_default_mappings = false,
   window = {

@@ -1,3 +1,5 @@
+if not pcall(require, 'nvim-autopairs') then return end
+
 require('nvim-autopairs').setup {
   map_c_h = true,
   map_c_w = true

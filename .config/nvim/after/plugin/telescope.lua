@@ -1,3 +1,5 @@
+if not pcall(require, 'telescope') then return end
+
 local actions = require('telescope.actions')
 local action_layout = require('telescope.actions.layout')
 
