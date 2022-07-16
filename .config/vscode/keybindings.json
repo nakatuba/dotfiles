@@ -1,0 +1,17 @@
+[
+    {
+        "key": "ctrl+a",
+        "command": "-vscode-neovim.ctrl-a-insert",
+        "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    }
+]

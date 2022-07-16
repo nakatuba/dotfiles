@@ -1,0 +1,18 @@
+{
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.formatting.provider": "black",
+    "python.linting.flake8Args": [
+        "--ignore=E501,W503"
+    ],
+    "python.linting.flake8Enabled": true,
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/vscode/init.vim",
+    "workbench.list.automaticKeyboardNavigation": false,
+    "editor.scrollBeyondLastLine": false
+}

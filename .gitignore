@@ -2,5 +2,6 @@
 !.config/git/
 !.config/nvim/
 !.config/skhd/
+!.config/vscode/
 !.config/yabai/
 !.config/zsh/
