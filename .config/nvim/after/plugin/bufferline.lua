@@ -12,7 +12,7 @@ require('bufferline').setup {
   }
 }
 
-vim.keymap.set('n', '<C-p>', "<cmd>BufferLineCyclePrev<CR>")
-vim.keymap.set('n', '<C-n>', "<cmd>BufferLineCycleNext<CR>")
-vim.keymap.set('n', '<M-p>', "<cmd>BufferLineMovePrev<CR>")
-vim.keymap.set('n', '<M-n>', "<cmd>BufferLineMoveNext<CR>")
+vim.keymap.set('n', '<C-p>', '<cmd>BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<C-n>', '<cmd>BufferLineCycleNext<CR>')
+vim.keymap.set('n', '<M-p>', '<cmd>BufferLineMovePrev<CR>')
+vim.keymap.set('n', '<M-n>', '<cmd>BufferLineMoveNext<CR>')
