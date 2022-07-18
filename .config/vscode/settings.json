@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Sonokai",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "[python]": {
         "editor.formatOnSave": true,
