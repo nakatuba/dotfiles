@@ -22,6 +22,7 @@ Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'phaazon/hop.nvim'
 Plug 'b0o/incline.nvim'
+Plug 'gbprod/substitute.nvim'
 Plug 'kwkarlwang/bufresize.nvim'
 Plug 'caenrique/swap-buffers.nvim'
 Plug 'declancm/maximize.nvim'
@@ -34,8 +35,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-operator-user'
-Plug 'kana/vim-operator-replace'
 Plug 'psliwka/vim-smoothie'
 Plug 'ojroques/vim-oscyank'
 
@@ -72,7 +71,6 @@ let mapleader = "\<Space>"
 
 map s <C-w>
 map q <Nop>
-map _ <Plug>(operator-replace)
 
 " Emacs key bindings
 noremap! <C-f> <Right>
