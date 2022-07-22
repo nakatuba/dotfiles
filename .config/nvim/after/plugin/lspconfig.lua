@@ -13,7 +13,7 @@ local on_attach = function(client, bufnr)
 
   vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   vim.api.nvim_command [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
-  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_line_diagnostics]]
+  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
 end
 
 require('lspconfig').tsserver.setup {
