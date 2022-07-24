@@ -37,6 +37,7 @@ Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'psliwka/vim-smoothie'
+Plug 'tommcdo/vim-exchange'
 Plug 'ojroques/vim-oscyank'
 
 call plug#end()
