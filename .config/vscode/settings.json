@@ -14,5 +14,6 @@
     "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/vscode/init.vim",
     "workbench.list.automaticKeyboardNavigation": false,
-    "editor.scrollBeyondLastLine": false
+    "editor.scrollBeyondLastLine": false,
+    "editor.smoothScrolling": true
 }
