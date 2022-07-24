@@ -8,8 +8,8 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',          opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K',          '<cmd>Lspsaga hover_doc<CR>',            opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<CR>',               opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d',         '<cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d',         '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', opts)
 
   vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
   vim.api.nvim_command [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
