@@ -1,4 +1,4 @@
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin()
 
 Plug 'phaazon/hop.nvim'
 Plug 'gbprod/substitute.nvim'

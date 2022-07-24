@@ -1,4 +1,4 @@
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin()
 
 Plug 'sainnhe/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
