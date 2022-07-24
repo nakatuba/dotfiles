@@ -7,6 +7,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'tommcdo/vim-exchange'
 
 call plug#end()
 
@@ -17,6 +18,7 @@ let mapleader = "\<Space>"
 map s <C-w>
 map q <Nop>
 
-nnoremap gd <cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
-nnoremap gr <cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
-nnoremap K  <cmd>call VSCodeNotify('editor.action.showHover')<CR>
+nnoremap gd          <cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+nnoremap gr          <cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
+nnoremap K           <cmd>call VSCodeNotify('editor.action.showHover')<CR>
+nnoremap <Leader>rn  <cmd>call VSCodeNotify('editor.action.rename')<CR>
