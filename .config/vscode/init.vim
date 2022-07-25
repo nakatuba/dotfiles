@@ -18,6 +18,8 @@ let mapleader = "\<Space>"
 map s <C-w>
 map q <Nop>
 
+nnoremap u           <cmd>call VSCodeNotify('undo')<CR>
+nnoremap <C-r>       <cmd>call VSCodeNotify('redo')<CR>
 nnoremap gd          <cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
 nnoremap gr          <cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
 nnoremap K           <cmd>call VSCodeNotify('editor.action.showHover')<CR>
