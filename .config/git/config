@@ -3,7 +3,7 @@
   email = nakatuba0626@gmail.com
 
 [init]
-  defaultBranch = master
+  defaultBranch = main
 
 [fetch]
   prune = true
