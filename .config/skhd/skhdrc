@@ -14,6 +14,12 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+# move window
+ctrl + cmd - left  : yabai -m window --warp west
+ctrl + cmd - down  : yabai -m window --warp south
+ctrl + cmd - up    : yabai -m window --warp north
+ctrl + cmd - right : yabai -m window --warp east
+
 # rotate tree
 ctrl + cmd - r : yabai -m space --rotate 90
 
