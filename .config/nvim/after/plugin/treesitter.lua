@@ -1,7 +1,7 @@
 if not pcall(require, 'nvim-treesitter') then return end
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { 'html', 'css', 'javascript', 'python', 'go', 'vue' },
+  ensure_installed = { 'html', 'css', 'javascript', 'typescript', 'tsx', 'python', 'go', 'vue' },
   highlight = {
     enable = true
   },
