@@ -23,8 +23,11 @@ ctrl + cmd - right : yabai -m window --warp east
 # rotate tree
 ctrl + cmd - r : yabai -m space --rotate 90
 
+# toggle window fullscreen zoom
+ctrl + cmd - return : yabai -m window --toggle zoom-fullscreen
+
 # float / unfloat window and center on screen
 ctrl + cmd - space : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
 
 # toggle layout
-ctrl + cmd - return : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')
+ctrl + cmd - o : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')
