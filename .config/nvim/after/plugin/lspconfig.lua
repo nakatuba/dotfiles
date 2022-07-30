@@ -19,7 +19,10 @@ local on_attach = function(client, bufnr)
 end
 
 require('lspconfig').tsserver.setup {
-  on_attach = on_attach
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    client.resolved_capabilities.document_formatting = false
+  end
 }
 
 require('lspconfig').pyright.setup {
