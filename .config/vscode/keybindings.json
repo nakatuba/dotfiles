@@ -33,15 +33,5 @@
         "key": "space e",
         "command": "workbench.view.explorer",
         "when": "!inputFocus"
-    },
-    {
-        "key": "space e",
-        "command": "workbench.action.closeSidebar",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "escape",
-        "command": "workbench.action.closeSidebar",
-        "when": "filesExplorerFocus && !inputFocus"
     }
 ]
