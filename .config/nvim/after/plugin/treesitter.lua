@@ -9,24 +9,6 @@ require('nvim-treesitter.configs').setup {
     enable = true,
     disable = { 'python', 'go' }
   },
-  textobjects = {
-    select = {
-      enable = true,
-      keymaps = {
-        ['a,'] = '@parameter.outer',
-        ['i,'] = '@parameter.inner'
-      }
-    },
-    swap = {
-      enable = true,
-      swap_next = {
-        ['g>'] = '@parameter.inner'
-      },
-      swap_previous = {
-        ['g<'] = '@parameter.inner'
-      }
-    }
-  },
   autotag = {
     enable = true
   },
