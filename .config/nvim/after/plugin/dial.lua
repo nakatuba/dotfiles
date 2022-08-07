@@ -1,4 +1,4 @@
-if not pcall(require, 'dial.config') then return end
+if not pcall(require, 'dial.augend') then return end
 
 local augend = require('dial.augend')
 

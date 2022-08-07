@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'phaazon/hop.nvim'
+Plug 'monaqa/dial.nvim'
 Plug 'gbprod/substitute.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
