@@ -7,10 +7,14 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'glts/vim-textobj-comment'
 Plug 'tommcdo/vim-exchange'
 Plug 'machakann/vim-swap'
 
 call plug#end()
+
+let g:textobj_comment_no_default_key_mappings = 1
+let g:swap_no_default_key_mappings = 1
 
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | call setreg('*', getreg('"')) | endif
 
