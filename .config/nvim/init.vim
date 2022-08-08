@@ -53,6 +53,7 @@ set number
 set cursorline
 set scrolloff=5
 set nowrap
+set noswapfile
 set mouse=a
 set signcolumn=yes
 set tabstop=2
