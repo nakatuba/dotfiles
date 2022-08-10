@@ -40,6 +40,10 @@ require('lspconfig').pyright.setup {
   end
 }
 
+require('lspconfig').solargraph.setup {
+  on_attach = on_attach
+}
+
 require('lspconfig').gopls.setup {
   on_attach = on_attach,
   settings = {
