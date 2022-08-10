@@ -1,6 +1,5 @@
-if not pcall(require, 'dial.augend') then return end
-
-local augend = require('dial.augend')
+local status, augend = pcall(require, 'dial.augend')
+if not status then return end
 
 require('dial.config').augends:register_group {
   default = {

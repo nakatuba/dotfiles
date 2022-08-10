@@ -1,6 +1,5 @@
-if not pcall(require, 'cmp') then return end
-
-local cmp = require('cmp')
+local status, cmp = pcall(require, 'cmp')
+if not status then return end
 
 cmp.setup {
   snippet = {
