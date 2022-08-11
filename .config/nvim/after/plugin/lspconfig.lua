@@ -1,20 +1,18 @@
 if not pcall(require, 'lspconfig') then return end
 
 local on_attach = function(client, bufnr)
-  local opts = { noremap = true, silent = true }
+  vim.keymap.set('n', 'gd',         '<cmd>lua vim.lsp.buf.definition()<CR>',                    { buffer = bufnr })
+  vim.keymap.set('n', 'gr',         '<cmd>TroubleToggle lsp_references<CR>',                    { buffer = bufnr })
+  vim.keymap.set('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',                             { buffer = bufnr })
+  vim.keymap.set('n', 'K',          '<cmd>Lspsaga hover_doc<CR>',                               { buffer = bufnr })
+  vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>',                                  { buffer = bufnr })
+  vim.keymap.set('n', '<leader>d',  '<cmd>TroubleToggle document_diagnostics<CR>',              { buffer = bufnr })
+  vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
+  vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
 
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd',         '<cmd>lua vim.lsp.buf.definition()<CR>',                    opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr',         '<cmd>TroubleToggle lsp_references<CR>',                    opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',                             opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K',          '<cmd>Lspsaga hover_doc<CR>',                               opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>Lspsaga rename<CR>',                                  opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>d',  '<cmd>TroubleToggle document_diagnostics<CR>',              opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', opts)
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', opts)
-
-  vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-  vim.api.nvim_command [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
-  vim.api.nvim_command [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
+  vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+  vim.cmd [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
+  vim.cmd [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
 end
 
 require('lspconfig').tsserver.setup {
