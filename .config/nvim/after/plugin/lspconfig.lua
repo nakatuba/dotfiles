@@ -53,10 +53,19 @@ require('lspconfig').gopls.setup {
 }
 
 require('lspconfig').vuels.setup {
-  on_attach = on_attach,
+  on_attach = on_attach
+}
+
+require('lspconfig').sumneko_lua.setup {
+  on_attach = function(client, bufnr)
+    on_attach(client, bufnr)
+    client.resolved_capabilities.document_formatting = false
+  end,
   settings = {
-    vetur = {
-      ignoreProjectWarning = true
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
     }
   }
 }
