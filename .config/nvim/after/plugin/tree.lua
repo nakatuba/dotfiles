@@ -5,12 +5,8 @@ require('nvim-tree').setup {
     adaptive_size = true,
     mappings = {
       list = {
-        { key = 's',     action = '' },
-        { key = '<ESC>', action = 'close' }
+        { key = 's', action = '' }
       }
-    },
-    float = {
-      enable = true
     }
   },
   update_focused_file = {
