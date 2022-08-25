@@ -10,3 +10,5 @@ require('incline').setup {
     return res
   end
 }
+
+vim.keymap.set('n', '<leader>i',  "<cmd>lua require('incline').toggle()<CR>")
