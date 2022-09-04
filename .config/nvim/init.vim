@@ -27,6 +27,7 @@ Plug 'b0o/incline.nvim'
 Plug 'gbprod/substitute.nvim'
 Plug 'kwkarlwang/bufresize.nvim'
 Plug 'caenrique/swap-buffers.nvim'
+Plug 'declancm/maximize.nvim', { 'commit': '13c6782' }
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
