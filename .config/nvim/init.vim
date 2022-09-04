@@ -72,12 +72,11 @@ set splitright
 set updatetime=100
 set termguicolors
 
-colorscheme sonokai
-
-highlight VertSplit guifg=#e2e2e3
-
 autocmd BufEnter * checktime
+autocmd ColorScheme * highlight! link VertSplit Normal
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
+
+colorscheme sonokai
 
 let mapleader = "\<Space>"
 
