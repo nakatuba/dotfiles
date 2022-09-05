@@ -7,9 +7,6 @@ require('incline').setup {
     if vim.api.nvim_buf_get_option(props.buf, 'modified') then
       res = res .. ' [+]'
     end
-    if vim.t.maximized then
-      res = ' ' .. res
-    end
     return res
   end
 }
