@@ -10,6 +10,7 @@ require('telescope').setup {
       scroll_speed = 1,
       preview_width = 0.5
     },
+    cycle_layout_list = { 'vertical', 'horizontal' },
     vimgrep_arguments = {
       'rg',
       '--color=never',
@@ -30,7 +31,7 @@ require('telescope').setup {
         ['<C-j>'] = actions.preview_scrolling_down,
         ['<Tab>'] = actions.toggle_selection + actions.move_selection_next,
         ['<S-Tab>'] = actions.toggle_selection + actions.move_selection_previous,
-        ['<C-/>'] = action_layout.toggle_preview,
+        ['<C-/>'] = action_layout.cycle_layout_next,
         ['<Esc>'] = actions.close
       }
     }
