@@ -4,7 +4,6 @@ Plug 'sainnhe/sonokai'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'commit': '973402f' }
-Plug 'folke/trouble.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
