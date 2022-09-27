@@ -12,6 +12,9 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+# balance size of windows
+ctrl + cmd - 0x18 : yabai -m space --balance
+
 # rotate tree
 ctrl + cmd - r : yabai -m space --rotate 90
 
