@@ -22,6 +22,9 @@ autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | cal
 
 let mapleader = "\<Space>"
 
+set ignorecase
+set smartcase
+
 map s <C-w>
 map q <Nop>
 
