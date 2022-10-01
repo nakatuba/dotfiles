@@ -18,7 +18,7 @@ end
 require('lspconfig').tsserver.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.documentFormattingProvider = false
   end
 }
 
@@ -59,7 +59,7 @@ require('lspconfig').vuels.setup {
 require('lspconfig').sumneko_lua.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.documentFormattingProvider = false
   end,
   settings = {
     Lua = {
