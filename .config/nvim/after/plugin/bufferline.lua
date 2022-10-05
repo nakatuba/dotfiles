@@ -2,13 +2,16 @@ if not pcall(require, 'bufferline') then return end
 
 require('bufferline').setup {
   options = {
+    indicator = {
+      style = 'none'
+    },
     diagnostics = 'nvim_lsp',
     offsets = {
       {
         filetype = 'NvimTree',
         text = 'File Explorer',
-        highlight = 'Directory',
-        text_align = 'left'
+        text_align = 'left',
+        separator = true
       }
     }
   }
