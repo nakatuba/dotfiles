@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'sainnhe/sonokai'
+Plug 'navarasu/onedark.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'commit': '973402f' }
@@ -69,7 +70,7 @@ set updatetime=100
 set termguicolors
 
 autocmd BufEnter * checktime
-autocmd ColorScheme * highlight! link VertSplit Normal
+autocmd ColorScheme sonokai highlight! link VertSplit Normal
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
 
 colorscheme sonokai
