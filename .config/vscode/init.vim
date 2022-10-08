@@ -37,11 +37,12 @@ noremap! <C-a> <Home>
 noremap! <C-e> <End>
 noremap! <C-d> <Del>
 
-nnoremap u           <cmd>call VSCodeNotify('undo')<CR>
-nnoremap <C-r>       <cmd>call VSCodeNotify('redo')<CR>
-nnoremap gd          <cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
-nnoremap gr          <cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
-nnoremap K           <cmd>call VSCodeNotify('editor.action.showHover')<CR>
-nnoremap <Leader>rn  <cmd>call VSCodeNotify('editor.action.rename')<CR>
-nnoremap <Leader>e   <cmd>call VSCodeNotify('workbench.view.explorer')<CR>
-nnoremap <Leader>f   <cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
+nnoremap u          <cmd>call VSCodeNotify('undo')<CR>
+nnoremap <C-r>      <cmd>call VSCodeNotify('redo')<CR>
+nnoremap gd         <cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+nnoremap gr         <cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
+nnoremap K          <cmd>call VSCodeNotify('editor.action.showHover')<CR>
+nnoremap <Leader>rn <cmd>call VSCodeNotify('editor.action.rename')<CR>
+nnoremap <Leader>ca <cmd>call VSCodeNotify('editor.action.quickFix')<CR>
+nnoremap <Leader>f  <cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
+nnoremap <Leader>e  <cmd>call VSCodeNotify('workbench.view.explorer')<CR>
