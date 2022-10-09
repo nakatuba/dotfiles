@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'sainnhe/sonokai'
-Plug 'navarasu/onedark.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim', { 'commit': '973402f' }
