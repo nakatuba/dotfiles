@@ -45,4 +45,5 @@ nnoremap K          <cmd>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap <Leader>rn <cmd>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <Leader>ca <cmd>call VSCodeNotify('editor.action.quickFix')<CR>
 nnoremap <Leader>f  <cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
+nnoremap <Leader>b  <cmd>call VSCodeNotify('workbench.action.showAllEditors')<CR>
 nnoremap <Leader>e  <cmd>call VSCodeNotify('workbench.view.explorer')<CR>

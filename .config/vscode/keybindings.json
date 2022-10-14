@@ -44,6 +44,11 @@
         "when": "!inputFocus"
     },
     {
+        "key": "space b",
+        "command": "workbench.action.showAllEditors",
+        "when": "!inputFocus"
+    },
+    {
         "key": "space e",
         "command": "workbench.view.explorer",
         "when": "!inputFocus"
