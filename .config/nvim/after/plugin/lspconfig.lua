@@ -11,7 +11,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
 
   vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
-  vim.cmd [[autocmd CursorHoldI <buffer> Lspsaga signature_help]]
+  vim.cmd [[autocmd CursorHoldI <buffer> lua vim.lsp.buf.signature_help()]]
   vim.cmd [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
 end
 
