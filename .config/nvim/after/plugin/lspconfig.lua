@@ -56,6 +56,10 @@ require('lspconfig').vuels.setup {
   on_attach = on_attach
 }
 
+require('lspconfig').vimls.setup {
+  on_attach = on_attach
+}
+
 require('lspconfig').sumneko_lua.setup {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
