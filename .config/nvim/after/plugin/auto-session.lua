@@ -14,3 +14,5 @@ require('auto-session').setup {
   auto_restore_enabled = false,
   pre_save_cmds = { _G.close_all_floating_wins }
 }
+
+vim.keymap.set('n', '<leader>s', '<cmd>RestoreSession<CR>')
