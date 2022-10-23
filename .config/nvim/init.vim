@@ -37,7 +37,6 @@ Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'inside/vim-textobj-jsxattr'
 Plug 'psliwka/vim-smoothie'
-Plug 'tommcdo/vim-exchange'
 Plug 'ojroques/vim-oscyank'
 Plug 'machakann/vim-swap'
 

@@ -10,7 +10,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'inside/vim-textobj-jsxattr'
-Plug 'tommcdo/vim-exchange'
 Plug 'machakann/vim-swap'
 
 call plug#end()
