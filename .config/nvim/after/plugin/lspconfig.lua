@@ -1,6 +1,8 @@
 if not pcall(require, 'lspconfig') then return end
 
 local on_attach = function(client, bufnr)
+  vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'single', focusable = false })
+
   vim.keymap.set('n', 'gd',         '<cmd>lua vim.lsp.buf.definition()<CR>',                    { buffer = bufnr })
   vim.keymap.set('n', 'gr',         '<cmd>Telescope lsp_references<CR>',                        { buffer = bufnr })
   vim.keymap.set('n', 'K',          '<cmd>Lspsaga hover_doc<CR>',                               { buffer = bufnr })
