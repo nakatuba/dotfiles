@@ -39,7 +39,6 @@ Plug 'inside/vim-textobj-jsxattr'
 Plug 'psliwka/vim-smoothie'
 Plug 'ojroques/vim-oscyank'
 Plug 'machakann/vim-swap'
-Plug 'szw/vim-maximizer'
 
 call plug#end()
 
@@ -48,7 +47,6 @@ let g:sonokai_diagnostic_virtual_text = 'colored'
 let g:sonokai_disable_terminal_colors = 1
 let g:textobj_comment_no_default_key_mappings = 1
 let g:swap_no_default_key_mappings = 1
-let g:maximizer_default_mapping_key = '<CR>'
 let g:oscyank_term = 'default'
 
 set number
