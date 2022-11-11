@@ -80,3 +80,7 @@ require('lspconfig').sumneko_lua.setup {
     }
   }
 }
+
+require('lspconfig').sqls.setup {
+  on_attach = on_attach
+}
