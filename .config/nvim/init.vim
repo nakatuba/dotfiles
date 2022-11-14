@@ -68,8 +68,6 @@ set updatetime=100
 set termguicolors
 
 autocmd BufEnter * checktime
-autocmd ColorScheme * highlight NormalFloat guibg=none
-autocmd ColorScheme sonokai highlight! link FloatBorder Green
 autocmd ColorScheme sonokai highlight! link VertSplit Normal
 autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
 
