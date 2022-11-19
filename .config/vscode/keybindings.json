@@ -52,5 +52,9 @@
         "key": "space e",
         "command": "workbench.view.explorer",
         "when": "!inputFocus"
+    },
+    {
+        "key": "ctrl+g ctrl+g",
+        "command": "extension.ghqOpen"
     }
 ]
