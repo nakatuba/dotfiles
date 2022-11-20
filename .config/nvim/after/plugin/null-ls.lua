@@ -7,7 +7,7 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint,
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.flake8.with {
-      extra_args = { '--ignore=E501,W503' },
+      extra_args = { '--ignore=E203, E266, E501, W503' },
       cwd = function(params)
         return vim.fn.fnamemodify(params.bufname, ':h')
       end
