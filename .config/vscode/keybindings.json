@@ -25,20 +25,6 @@
         "when": "editorTextFocus && neovim.mode == 'normal'"
     },
     {
-        "key": "alt+p",
-        "command": "moveActiveEditor",
-        "args": {
-            "to": "left"
-        }
-    },
-    {
-        "key": "alt+n",
-        "command": "moveActiveEditor",
-        "args": {
-            "to": "right"
-        }
-    },
-    {
         "key": "space f",
         "command": "workbench.action.quickOpen",
         "when": "!inputFocus"
