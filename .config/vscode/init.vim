@@ -24,8 +24,10 @@ let mapleader = "\<Space>"
 set ignorecase
 set smartcase
 
-map s <C-w>
-map q <Nop>
+map s       <C-w>
+map q       <Nop>
+map <Tab>   gt
+map <S-Tab> gT
 
 " Emacs key bindings
 noremap! <C-f> <Right>
