@@ -61,9 +61,6 @@ require('telescope').setup {
     },
     diagnostics = {
       sorting_strategy = 'ascending'
-    },
-    treesitter = {
-      sorting_strategy = 'ascending'
     }
   }
 }
@@ -74,4 +71,3 @@ vim.keymap.set('n', '<leader>b',  '<cmd>Telescope buffers<CR>')
 vim.keymap.set('n', '<leader>h',  '<cmd>Telescope oldfiles<CR>')
 vim.keymap.set('n', '<leader>r',  '<cmd>Telescope resume<CR>')
 vim.keymap.set('n', '<C-g><C-f>', '<cmd>Telescope git_status<CR>')
-vim.keymap.set('n', '<leader>t',  '<cmd>Telescope treesitter<CR>')
