@@ -5,6 +5,7 @@ require('lspsaga').init_lsp_saga {
     quit = '<Esc>'
   },
   rename_action_quit = '<Esc>',
+  rename_in_select = false,
   symbol_in_winbar = {
     in_custom = true,
     separator = ' > '

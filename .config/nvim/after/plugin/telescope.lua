@@ -7,7 +7,6 @@ require('telescope').setup {
   defaults = {
     scroll_strategy = 'limit',
     layout_config = {
-      scroll_speed = 1,
       preview_width = 0.5
     },
     cycle_layout_list = { 'vertical', 'horizontal' },
