@@ -46,4 +46,3 @@ nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR>
 nnoremap <Leader>f  <Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
 nnoremap <Leader>b  <Cmd>call VSCodeNotify('workbench.action.showAllEditors')<CR>
 nnoremap <Leader>e  <Cmd>call VSCodeNotify('workbench.view.explorer')<CR>
-nnoremap <CR>       <Cmd>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>
