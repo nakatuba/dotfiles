@@ -58,6 +58,9 @@ require('telescope').setup {
       sorting_strategy = 'ascending',
       show_line = false
     },
+    lsp_document_symbols = {
+      sorting_strategy = 'ascending'
+    },
     diagnostics = {
       sorting_strategy = 'ascending'
     }

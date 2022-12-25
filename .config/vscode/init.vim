@@ -43,6 +43,7 @@ nnoremap gr         <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
 nnoremap K          <Cmd>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap <Leader>rn <Cmd>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <Leader>ca <Cmd>call VSCodeNotify('editor.action.quickFix')<CR>
+nnoremap <Leader>s  <Cmd>call VSCodeNotify('workbench.action.gotoSymbol')<CR>
 nnoremap <Leader>f  <Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>
 nnoremap <Leader>b  <Cmd>call VSCodeNotify('workbench.action.showAllEditors')<CR>
 nnoremap <Leader>e  <Cmd>call VSCodeNotify('workbench.view.explorer')<CR>
