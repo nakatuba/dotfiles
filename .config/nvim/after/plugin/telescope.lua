@@ -54,6 +54,9 @@ require('telescope').setup {
     oldfiles = {
       sorting_strategy = 'ascending'
     },
+    colorscheme = {
+      enable_preview = true
+    },
     lsp_references = {
       sorting_strategy = 'ascending',
       show_line = false
@@ -71,4 +74,5 @@ vim.keymap.set('n', '<leader>f',  '<cmd>Telescope find_files<CR>')
 vim.keymap.set('n', '<leader>g',  '<cmd>Telescope live_grep<CR>')
 vim.keymap.set('n', '<leader>b',  '<cmd>Telescope buffers<CR>')
 vim.keymap.set('n', '<leader>h',  '<cmd>Telescope oldfiles<CR>')
+vim.keymap.set('n', '<leader>cs', '<cmd>Telescope colorscheme<CR>')
 vim.keymap.set('n', '<C-g><C-f>', '<cmd>Telescope git_status<CR>')
