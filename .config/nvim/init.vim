@@ -29,6 +29,7 @@ Plug 'declancm/maximize.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'Wansmer/treesj'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'rmagatti/auto-session'
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
