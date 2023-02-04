@@ -11,7 +11,7 @@ require('nvim-treesitter.configs').setup {
     'ruby',
     'go',
     'vue',
-    'markdown',
+    'markdown'
   },
   highlight = {
     enable = true
