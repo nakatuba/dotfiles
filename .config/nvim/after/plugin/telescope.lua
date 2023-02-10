@@ -57,6 +57,14 @@ require('telescope').setup {
     colorscheme = {
       enable_preview = true
     },
+    lsp_definitions = {
+      sorting_strategy = 'ascending',
+      show_line = false
+    },
+    lsp_implementations = {
+      sorting_strategy = 'ascending',
+      show_line = false
+    },
     lsp_references = {
       sorting_strategy = 'ascending',
       show_line = false

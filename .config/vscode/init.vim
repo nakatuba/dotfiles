@@ -39,6 +39,7 @@ noremap! <C-d> <Del>
 nnoremap u          <Cmd>call VSCodeNotify('undo')<CR>
 nnoremap <C-r>      <Cmd>call VSCodeNotify('redo')<CR>
 nnoremap gd         <Cmd>call VSCodeNotify('editor.action.revealDefinition')<CR>
+nnoremap gi         <Cmd>call VSCodeNotify('editor.action.goToImplementation')<CR>
 nnoremap gr         <Cmd>call VSCodeNotify('editor.action.goToReferences')<CR>
 nnoremap K          <Cmd>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap <Leader>rn <Cmd>call VSCodeNotify('editor.action.rename')<CR>
