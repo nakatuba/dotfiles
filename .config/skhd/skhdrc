@@ -22,4 +22,4 @@ ctrl + cmd - r : yabai -m space --rotate 90
 ctrl + cmd - return : yabai -m window --toggle zoom-fullscreen
 
 # float / unfloat window and center on screen
-ctrl + cmd - tab : yabai -m window --toggle float --grid 4:4:1:1:2:2
+ctrl + cmd - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
