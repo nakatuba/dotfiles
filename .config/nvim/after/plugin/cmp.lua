@@ -4,7 +4,7 @@ if not status then return end
 cmp.setup {
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      vim.fn['vsnip#anonymous'](args.body)
     end
   },
   mapping = cmp.mapping.preset.insert({
