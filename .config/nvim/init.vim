@@ -31,6 +31,7 @@ Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'Wansmer/treesj'
+Plug 'ojroques/nvim-osc52'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'rmagatti/auto-session'
 Plug 'iamcco/markdown-preview.nvim', { 'do': ':call mkdp#util#install()', 'for': 'markdown' }
@@ -42,7 +43,6 @@ Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'inside/vim-textobj-jsxattr'
 Plug 'psliwka/vim-smoothie'
-Plug 'ojroques/vim-oscyank'
 Plug 'machakann/vim-swap'
 
 call plug#end()
@@ -52,7 +52,6 @@ let g:sonokai_diagnostic_virtual_text = 'colored'
 let g:sonokai_disable_terminal_colors = 1
 let g:textobj_comment_no_default_key_mappings = 1
 let g:swap_no_default_key_mappings = 1
-let g:oscyank_term = 'default'
 
 set number
 set cursorline
@@ -73,7 +72,6 @@ set termguicolors
 
 autocmd BufEnter * checktime
 autocmd ColorScheme sonokai highlight! link VertSplit Normal
-autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankReg "' | endif
 
 colorscheme sonokai
 
