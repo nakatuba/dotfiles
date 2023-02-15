@@ -8,9 +8,7 @@ require('nvim-treesitter.configs').setup {
     'python',
     'ruby',
     'go',
-    'vue',
-    'markdown',
-    'markdown_inline'
+    'vue'
   },
   highlight = {
     enable = true
