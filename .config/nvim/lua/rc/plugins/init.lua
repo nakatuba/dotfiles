@@ -31,6 +31,15 @@ require('lazy').setup {
       require('rc.plugins.null-ls')
     end
   },
+  {
+    'williamboman/mason.nvim',
+    dependencies = {
+      'williamboman/mason-lspconfig.nvim',
+    },
+    config = function ()
+      require('rc.plugins.mason')
+    end
+  },
 
   -- Completion
   {

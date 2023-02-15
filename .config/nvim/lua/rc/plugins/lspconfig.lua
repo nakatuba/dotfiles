@@ -80,7 +80,3 @@ require('lspconfig').lua_ls.setup {
     }
   }
 }
-
-require('lspconfig').sqls.setup {
-  on_attach = on_attach
-}
