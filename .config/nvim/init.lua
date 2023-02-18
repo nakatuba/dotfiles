@@ -16,17 +16,17 @@ vim.opt.rtp:prepend(lazypath)
 
 if vim.g.vscode then
   require('lazy').setup {
-    require('plugins.dial'),
-    require('plugins.hop'),
-    require('plugins.substitute'),
-    require('plugins.treesj'),
-    require('plugins.vim-commentary'),
-    require('plugins.vim-repeat'),
-    require('plugins.vim-surround'),
-    require('plugins.vim-swap'),
-    require('plugins.vim-textobj-comment'),
-    require('plugins.vim-textobj-entire'),
-    require('plugins.vim-textobj-jsxattr')
+    { import = 'plugins.dial' },
+    { import = 'plugins.hop' },
+    { import = 'plugins.substitute' },
+    { import = 'plugins.treesj' },
+    { import = 'plugins.vim-commentary' },
+    { import = 'plugins.vim-repeat' },
+    { import = 'plugins.vim-surround' },
+    { import = 'plugins.vim-swap' },
+    { import = 'plugins.vim-textobj-comment' },
+    { import = 'plugins.vim-textobj-entire' },
+    { import = 'plugins.vim-textobj-jsxattr' }
   }
 
   vim.api.nvim_create_autocmd('TextYankPost', {
