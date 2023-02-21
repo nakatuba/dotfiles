@@ -11,6 +11,7 @@ path=(
 )
 
 fpath=(
+  $HOME/.asdf/completions(N-/)
   $HOME/.config/zsh/completions(N-/)
   $fpath
 )
@@ -33,8 +34,6 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
 [ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
@@ -43,6 +42,7 @@ zstyle ':chpwd:*' recent-dirs-max 1000
 
 source ~/.zprezto/init.zsh
 source ~/.p10k.zsh
+source ~/.asdf/asdf.sh
 source ~/.fzf.zsh
 source ~/.config/zsh/alias.zsh
 source ~/.config/zsh/bindkey.zsh
