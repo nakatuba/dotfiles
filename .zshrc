@@ -34,6 +34,8 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 [ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
