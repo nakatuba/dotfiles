@@ -7,7 +7,7 @@ return {
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = 'sonokai',
-      command = 'highlight! link VertSplit Normal'
+      command = 'highlight! link VertSplit Grey'
     })
   end
 }
