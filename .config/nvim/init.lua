@@ -50,7 +50,11 @@ if vim.g.vscode then
   vim.keymap.set('n', '<Leader>b',  function() vim.fn.VSCodeNotify('workbench.action.showAllEditors') end)
   vim.keymap.set('n', '<Leader>e',  function() vim.fn.VSCodeNotify('workbench.view.explorer') end)
 else
-  require('lazy').setup('plugins')
+  require('lazy').setup('plugins', {
+    change_detection = {
+      notify = false
+    }
+  })
 
   vim.cmd.colorscheme('sonokai')
 end
