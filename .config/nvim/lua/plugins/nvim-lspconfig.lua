@@ -15,9 +15,20 @@ return {
       vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
       vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
 
-      vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
-      vim.cmd [[autocmd CursorHoldI <buffer> lua vim.lsp.buf.signature_help()]]
-      vim.cmd [[autocmd CursorHold  <buffer> Lspsaga show_cursor_diagnostics]]
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        buffer = bufnr,
+        callback = function () vim.lsp.buf.format() end
+      })
+
+      vim.api.nvim_create_autocmd('CursorHoldI', {
+        buffer = bufnr,
+        callback = function () vim.lsp.buf.signature_help() end
+      })
+
+      vim.api.nvim_create_autocmd('CursorHold', {
+        buffer = bufnr,
+        command = 'Lspsaga show_cursor_diagnostics'
+      })
     end
 
     require('lspconfig').tsserver.setup {
