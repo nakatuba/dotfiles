@@ -5,14 +5,7 @@ return {
   },
   config = function ()
     require('mason-lspconfig').setup {
-      ensure_installed = {
-        'tsserver',
-        'pyright',
-        'gopls',
-        'vuels',
-        'vimls',
-        'lua_ls'
-      }
+      ensure_installed = { 'tsserver', 'pyright', 'gopls', 'vimls', 'lua_ls' }
     }
   end
 }

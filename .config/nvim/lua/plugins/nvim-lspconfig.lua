@@ -68,15 +68,6 @@ return {
       }
     }
 
-    require('lspconfig').vuels.setup {
-      on_attach = on_attach,
-      settings = {
-        vetur = {
-          ignoreProjectWarning = true
-        }
-      }
-    }
-
     require('lspconfig').vimls.setup {
       on_attach = on_attach
     }
