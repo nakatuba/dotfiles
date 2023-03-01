@@ -24,7 +24,6 @@ if vim.g.vscode then
     { import = 'plugins.vim-repeat' },
     { import = 'plugins.vim-surround' },
     { import = 'plugins.vim-swap' },
-    { import = 'plugins.vim-textobj-comment' },
     { import = 'plugins.vim-textobj-entire' },
     { import = 'plugins.vim-textobj-jsxattr' }
   }
