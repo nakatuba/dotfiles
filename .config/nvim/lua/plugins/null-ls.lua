@@ -23,7 +23,8 @@ return {
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
           end
-        }
+        },
+        null_ls.builtins.formatting.terraform_fmt
       }
     }
   end

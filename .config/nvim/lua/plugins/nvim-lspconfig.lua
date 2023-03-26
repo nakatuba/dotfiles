@@ -78,5 +78,9 @@ return {
         }
       }
     }
+
+    require('lspconfig').terraformls.setup {
+      on_attach = on_attach
+    }
   end
 }
