@@ -3,7 +3,7 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim'
   },
-  config = function ()
+  config = function()
     local actions = require('telescope.actions')
     local action_layout = require('telescope.actions.layout')
 

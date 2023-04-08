@@ -1,6 +1,6 @@
 return {
   'akinsho/bufferline.nvim',
-  config = function ()
+  config = function()
     require('bufferline').setup {
       options = {
         indicator = {

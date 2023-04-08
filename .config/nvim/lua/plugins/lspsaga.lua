@@ -1,6 +1,6 @@
 return {
   'glepnir/lspsaga.nvim',
-  config = function ()
+  config = function()
     require('lspsaga').init_lsp_saga {
       code_action_keys = {
         quit = '<Esc>'

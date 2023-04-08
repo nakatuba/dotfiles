@@ -1,6 +1,6 @@
 return {
   'rmagatti/auto-session',
-  config = function ()
+  config = function()
     function _G.close_all_floating_wins()
       for _, win in ipairs(vim.api.nvim_list_wins()) do
         local config = vim.api.nvim_win_get_config(win)

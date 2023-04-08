@@ -1,6 +1,6 @@
 return {
   'kwkarlwang/bufresize.nvim',
-  config = function ()
+  config = function()
     require('bufresize').setup()
   end
 }

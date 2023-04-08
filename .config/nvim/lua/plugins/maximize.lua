@@ -1,6 +1,6 @@
 return {
   'declancm/maximize.nvim',
-  config = function ()
+  config = function()
     require('maximize').setup {
       default_keymaps = false
     }

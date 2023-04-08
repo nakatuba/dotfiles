@@ -6,7 +6,7 @@ return {
     'hrsh7th/cmp-path',
     'hrsh7th/vim-vsnip'
   },
-  config = function ()
+  config = function()
     local cmp = require('cmp')
 
     cmp.setup {
