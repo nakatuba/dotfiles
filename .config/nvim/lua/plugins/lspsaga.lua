@@ -64,5 +64,6 @@ return {
         pattern = '*',
         callback = function() require('lspsaga.lspkind').gen_symbol_winbar_hi() end,
     })
-  end
+  end,
+  pin = true
 }

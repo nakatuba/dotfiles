@@ -1,6 +1,6 @@
 {
   "auto-session": { "branch": "main", "commit": "1d3dd70a2d48e0f3441128eb4fb0b437a0bf2cc4" },
-  "bufferline.nvim": { "branch": "main", "commit": "84b0822b2af478d0b4f7b0f9249ca218855331db" },
+  "bufferline.nvim": { "branch": "main", "commit": "ef4fdc5cea3473801dce89b5fdfe633380c80c65" },
   "bufresize.nvim": { "branch": "master", "commit": "3b19527ab936d6910484dcc20fb59bdb12322d8b" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "0e6b2ed705ddcff9738ec4ea838141654f12eeef" },
@@ -15,8 +15,8 @@
   "lspsaga.nvim": { "branch": "main", "commit": "b7b4777369b441341b2dcd45c738ea4167c11c9e" },
   "lualine.nvim": { "branch": "master", "commit": "c28a7427c3fb29322db136f0564ec58807b26747" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
-  "mason-lspconfig.nvim": { "branch": "main", "commit": "a5ca8b03972b347b74b2ad2f7f23f120a514593b" },
-  "mason.nvim": { "branch": "main", "commit": "bb0a624c77d6bee1bd2d4cb1ad1748b8df4292b6" },
+  "mason-lspconfig.nvim": { "branch": "main", "commit": "a8d5db8f227b9b236d1c54a9c6234bc033825ce7" },
+  "mason.nvim": { "branch": "main", "commit": "2311d9d883eb709ad9979a726a38c5ce1343b63c" },
   "maximize.nvim": { "branch": "master", "commit": "97bfc171775c404396f8248776347ebe64474fe7" },
   "null-ls.nvim": { "branch": "main", "commit": "5855128178fa78293acdfb5b4e41ef046779240b" },
   "nvim-autopairs": { "branch": "master", "commit": "0fd6519d44eac3a6736aafdb3fe9da916c3701d4" },

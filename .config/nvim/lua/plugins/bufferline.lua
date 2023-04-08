@@ -6,6 +6,7 @@ return {
         indicator = {
           style = 'none'
         },
+        buffer_close_icon = '',
         diagnostics = 'nvim_lsp',
         offsets = {
           {
