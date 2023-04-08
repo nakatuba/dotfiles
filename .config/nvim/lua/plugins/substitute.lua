@@ -1,27 +1,27 @@
 return {
   'gbprod/substitute.nvim',
-  config = function ()
+  config = function()
     require('substitute').setup()
 
-    vim.keymap.set('n', 'gs', function ()
+    vim.keymap.set('n', 'gs', function()
       if vim.env.TMUX then
         require('tmux').sync_registers()
       end
       require('substitute').operator()
     end)
-    vim.keymap.set('n', 'gss', function ()
+    vim.keymap.set('n', 'gss', function()
       if vim.env.TMUX then
         require('tmux').sync_registers()
       end
       require('substitute').line()
     end)
-    vim.keymap.set('n', 'gS', function ()
+    vim.keymap.set('n', 'gS', function()
       if vim.env.TMUX then
         require('tmux').sync_registers()
       end
       require('substitute').eol()
     end)
-    vim.keymap.set('x', 'gs', function ()
+    vim.keymap.set('x', 'gs', function()
       if vim.env.TMUX then
         require('tmux').sync_registers()
       end

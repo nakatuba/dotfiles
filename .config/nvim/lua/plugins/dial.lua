@@ -1,6 +1,6 @@
 return {
   'monaqa/dial.nvim',
-  config = function ()
+  config = function()
     local augend = require('dial.augend')
 
     require('dial.config').augends:register_group {

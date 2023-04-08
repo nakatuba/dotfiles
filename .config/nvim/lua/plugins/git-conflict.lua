@@ -1,6 +1,6 @@
 return {
   'akinsho/git-conflict.nvim',
-  config = function ()
+  config = function()
     require('git-conflict').setup()
   end
 }

@@ -1,6 +1,6 @@
 return {
   'windwp/nvim-autopairs',
-  config = function ()
+  config = function()
     require('nvim-autopairs').setup {
       map_c_h = true,
       map_c_w = true
@@ -11,7 +11,7 @@ return {
 
     npairs.add_rules {
       Rule(' ', ' ')
-        :with_pair(function (opts)
+        :with_pair(function(opts)
           local pair = opts.line:sub(opts.col - 1, opts.col)
           return vim.tbl_contains({ '()', '[]', '{}' }, pair)
         end),

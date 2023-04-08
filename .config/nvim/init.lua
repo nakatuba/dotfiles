@@ -29,7 +29,7 @@ if vim.g.vscode then
   }
 
   vim.api.nvim_create_autocmd('TextYankPost', {
-    callback = function ()
+    callback = function()
       if vim.v.event.operator == 'y' and vim.v.event.regname == '' then
         vim.fn.setreg('*', vim.fn.getreg('"'))
       end

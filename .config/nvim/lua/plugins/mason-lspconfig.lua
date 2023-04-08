@@ -4,7 +4,7 @@ return {
     'williamboman/mason.nvim',
     'neovim/nvim-lspconfig'
   },
-  config = function ()
+  config = function()
     require('mason-lspconfig').setup {
       ensure_installed = { 'tsserver', 'pyright', 'gopls', 'vimls', 'lua_ls', 'terraformls' }
     }
