@@ -1,6 +1,8 @@
 return {
   'neovim/nvim-lspconfig',
   config = function()
+    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { focusable = false })
+
     local on_attach = function(client, bufnr)
       vim.keymap.set('n', 'gd',         '<cmd>Telescope lsp_definitions<CR>',                       { buffer = bufnr })
       vim.keymap.set('n', 'gi',         '<cmd>Telescope lsp_implementations<CR>',                   { buffer = bufnr })
@@ -16,6 +18,11 @@ return {
       vim.api.nvim_create_autocmd('BufWritePre', {
         buffer = bufnr,
         callback = function() vim.lsp.buf.format() end
+      })
+
+      vim.api.nvim_create_autocmd('CursorHoldI', {
+        buffer = bufnr,
+        callback = function() vim.lsp.buf.signature_help() end
       })
 
       vim.api.nvim_create_autocmd('CursorHold', {
