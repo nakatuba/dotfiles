@@ -9,7 +9,7 @@ return {
 
     require('telescope').setup {
       defaults = {
-        scroll_strategy = 'limit',
+        sorting_strategy = 'ascending',
         layout_config = {
           preview_width = 0.5
         },
@@ -44,40 +44,24 @@ return {
         find_files = {
           find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
         },
-        live_grep = {
-          sorting_strategy = 'ascending'
-        },
         buffers = {
-          sorting_strategy = 'ascending',
           mappings = {
             i = {
               ['<C-d>'] = actions.delete_buffer
             }
           }
         },
-        oldfiles = {
-          sorting_strategy = 'ascending'
-        },
         colorscheme = {
           enable_preview = true
         },
         lsp_definitions = {
-          sorting_strategy = 'ascending',
           show_line = false
         },
         lsp_implementations = {
-          sorting_strategy = 'ascending',
           show_line = false
         },
         lsp_references = {
-          sorting_strategy = 'ascending',
           show_line = false
-        },
-        lsp_document_symbols = {
-          sorting_strategy = 'ascending'
-        },
-        diagnostics = {
-          sorting_strategy = 'ascending'
         }
       }
     }
