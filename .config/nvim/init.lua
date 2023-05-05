@@ -44,7 +44,6 @@ if vim.g.vscode then
   vim.keymap.set('n', 'K',          function() vim.fn.VSCodeNotify('editor.action.showHover') end)
   vim.keymap.set('n', '<Leader>rn', function() vim.fn.VSCodeNotify('editor.action.rename') end)
   vim.keymap.set('n', '<Leader>ca', function() vim.fn.VSCodeNotify('editor.action.quickFix') end)
-  vim.keymap.set('n', '<Leader>s',  function() vim.fn.VSCodeNotify('workbench.action.gotoSymbol') end)
   vim.keymap.set('n', '<Leader>f',  function() vim.fn.VSCodeNotify('workbench.action.quickOpen') end)
   vim.keymap.set('n', '<Leader>b',  function() vim.fn.VSCodeNotify('workbench.action.showAllEditors') end)
   vim.keymap.set('n', '<Leader>e',  function() vim.fn.VSCodeNotify('workbench.view.explorer') end)
