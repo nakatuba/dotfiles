@@ -2,6 +2,4 @@ yabai -m config layout bsp
 
 yabai -m rule --add app="^.*$"                                   manage=off
 yabai -m rule --add app="^Google Chrome$" title!="^$"            manage=on
-yabai -m rule --add app="^Sidekick$"      title!="^$"            manage=on
 yabai -m rule --add app="^iTerm2$"        title!="^Preferences$" manage=on
-yabai -m rule --add app="^Code$"          title!="^$"            manage=on
