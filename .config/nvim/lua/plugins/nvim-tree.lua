@@ -5,13 +5,15 @@ return {
   },
   config = function()
     require('nvim-tree').setup {
+      on_attach = function(bufnr)
+        local api = require('nvim-tree.api')
+
+        api.config.mappings.default_on_attach(bufnr)
+
+        vim.keymap.del('n', 's', { buffer = bufnr })
+      end,
       view = {
-        adaptive_size = true,
-        mappings = {
-          list = {
-            { key = 's', action = '' }
-          }
-        }
+        adaptive_size = true
       },
       update_focused_file = {
         enable = true
@@ -26,5 +28,16 @@ return {
     }
 
     vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
+
+    vim.api.nvim_create_autocmd('BufEnter', {
+      pattern = 'NvimTree*',
+      callback = function()
+        local api = require('nvim-tree.api')
+
+        if not api.tree.is_visible() then
+          api.tree.open()
+        end
+      end
+    })
   end
 }
