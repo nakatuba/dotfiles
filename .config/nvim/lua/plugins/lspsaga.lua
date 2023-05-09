@@ -52,17 +52,17 @@ return {
 
     vim.api.nvim_create_autocmd(events, {
         pattern = '*',
-        callback = function() config_winbar_or_statusline() end,
+        callback = function() config_winbar_or_statusline() end
     })
 
     vim.api.nvim_create_autocmd('User', {
         pattern = 'LspsagaUpdateSymbol',
-        callback = function() config_winbar_or_statusline() end,
+        callback = function() config_winbar_or_statusline() end
     })
 
     vim.api.nvim_create_autocmd('ColorScheme', {
         pattern = '*',
-        callback = function() require('lspsaga.lspkind').gen_symbol_winbar_hi() end,
+        callback = function() require('lspsaga.lspkind').gen_symbol_winbar_hi() end
     })
   end,
   pin = true
