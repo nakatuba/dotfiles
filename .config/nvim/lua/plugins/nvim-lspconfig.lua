@@ -3,6 +3,8 @@ return {
   config = function()
     vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { focusable = false })
 
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
     local on_attach = function(client, bufnr)
       vim.keymap.set('n', 'gd',         '<cmd>Telescope lsp_definitions<CR>',                       { buffer = bufnr })
       vim.keymap.set('n', 'gi',         '<cmd>Telescope lsp_implementations<CR>',                   { buffer = bufnr })
@@ -32,6 +34,7 @@ return {
     end
 
     require('lspconfig').tsserver.setup {
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -39,6 +42,7 @@ return {
     }
 
     require('lspconfig').pyright.setup {
+      capabilities = capabilities,
       on_attach = on_attach,
       settings = {
         python = {
@@ -54,10 +58,12 @@ return {
     }
 
     require('lspconfig').solargraph.setup {
+      capabilities = capabilities,
       on_attach = on_attach
     }
 
     require('lspconfig').gopls.setup {
+      capabilities = capabilities,
       on_attach = on_attach,
       settings = {
         gopls = {
@@ -69,10 +75,12 @@ return {
     }
 
     require('lspconfig').vimls.setup {
+      capabilities = capabilities,
       on_attach = on_attach
     }
 
     require('lspconfig').lua_ls.setup {
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -87,6 +95,7 @@ return {
     }
 
     require('lspconfig').terraformls.setup {
+      capabilities = capabilities,
       on_attach = on_attach
     }
   end

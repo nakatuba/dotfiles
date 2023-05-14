@@ -16,6 +16,7 @@ return {
           vim.fn['vsnip#anonymous'](args.body)
         end
       },
+      preselect = cmp.PreselectMode.None,
       mapping = {
         ['<C-Space>'] = function()
           if cmp.visible() then
