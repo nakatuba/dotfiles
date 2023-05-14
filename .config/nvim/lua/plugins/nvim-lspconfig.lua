@@ -21,10 +21,12 @@ return {
         callback = function() vim.lsp.buf.format() end
       })
 
-      vim.api.nvim_create_autocmd('CursorHoldI', {
-        buffer = bufnr,
-        callback = function() vim.lsp.buf.signature_help() end
-      })
+      if client.supports_method('textDocument/signatureHelp') then
+        vim.api.nvim_create_autocmd('CursorHoldI', {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.signature_help() end
+        })
+      end
 
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
@@ -91,6 +93,11 @@ return {
           }
         }
       }
+    }
+
+    require('lspconfig').marksman.setup {
+      capabilities = capabilities,
+      on_attach = on_attach
     }
 
     require('lspconfig').terraformls.setup {
