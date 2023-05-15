@@ -8,6 +8,6 @@ return {
       use_default_keymaps = false
     }
 
-    vim.keymap.set('n', '<leader>m', '<cmd>TSJToggle<CR>')
+    vim.keymap.set('n', 'gm', '<cmd>TSJToggle<CR>')
   end
 }
