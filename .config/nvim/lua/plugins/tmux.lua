@@ -9,5 +9,13 @@ return {
         enable_default_keybindings = false
       }
     }
+
+    vim.api.nvim_create_autocmd('FocusGained', {
+      callback = function ()
+        if vim.env.TMUX then
+          require('tmux').sync_registers()
+        end
+      end
+    })
   end
 }
