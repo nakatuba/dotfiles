@@ -52,3 +52,5 @@ source-safe ~/.config/zsh/completion.zsh
 source-safe ~/.config/zsh/fzf-config.zsh
 source-safe ~/.config/zsh/fzf-git.zsh
 source-safe ~/.config/zsh/fzf-widget.zsh
+
+export ZK_NOTEBOOK_DIR="$(ghq root)/github.com/nakatuba/notes"
