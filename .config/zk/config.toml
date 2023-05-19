@@ -6,3 +6,7 @@ filename = "{{format-date now 'timestamp'}}"
 
 [tool]
 fzf-preview = "bat -p --color always {-1}"
+
+[alias]
+clean = 'cd $ZK_NOTEBOOK_DIR && make clean'
+save = 'cd $ZK_NOTEBOOK_DIR && make save'
