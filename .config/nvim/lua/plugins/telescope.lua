@@ -23,6 +23,7 @@ return {
           '--column',
           '--smart-case',
           '--hidden',
+          '--follow',
           '--glob',
           '!.git'
         },
@@ -42,7 +43,7 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
+          find_command = { 'rg', '--files', '--color', 'never', '--hidden', '--follow', '--glob', '!.git' }
         },
         buffers = {
           mappings = {
