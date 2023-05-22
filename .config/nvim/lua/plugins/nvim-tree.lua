@@ -5,6 +5,7 @@ return {
   },
   config = function()
     require('nvim-tree').setup {
+      sync_root_with_cwd = true,
       on_attach = function(bufnr)
         local api = require('nvim-tree.api')
 
@@ -16,9 +17,13 @@ return {
         adaptive_size = true
       },
       update_focused_file = {
-        enable = true
+        enable = true,
+        update_root = true
       },
       actions = {
+        change_dir = {
+          enable = false
+        },
         open_file = {
           window_picker = {
             enable = false
