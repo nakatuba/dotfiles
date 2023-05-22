@@ -43,7 +43,7 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = { 'rg', '--files', '--color', 'never', '--hidden', '--follow', '--glob', '!.git' }
+          find_command = { 'fd', '--type', 'f', '--hidden', '--follow', '--exclude', '.git' }
         },
         buffers = {
           mappings = {
