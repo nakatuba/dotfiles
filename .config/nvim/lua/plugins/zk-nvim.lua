@@ -6,7 +6,11 @@ return {
     }
 
     require('zk.commands').add('ZkSave', function()
-      vim.fn.system('zk save')
+      local path = vim.fn.expand('%:p')
+      local root = require('zk.util').notebook_root(path)
+      if root then
+        vim.fn.system('cd ' .. root .. ' && ./save.sh ' .. path)
+      end
     end)
 
     vim.keymap.set('n', '<leader>nn', '<cmd>ZkNew<CR>')
