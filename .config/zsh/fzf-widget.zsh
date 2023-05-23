@@ -34,7 +34,7 @@ bindkey '^g^o' git-checkout-widget
 
 tmux-new-widget() {
   [ -n "$TMUX" ] && return
-  BUFFER="tmux new -A -s $(basename $PWD) nvim"
+  BUFFER="tmux new -A -s $(basename $PWD)"
   zle accept-line
 }
 zle     -N   tmux-new-widget
