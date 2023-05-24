@@ -28,7 +28,7 @@ return {
 
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
-        command = 'Lspsaga show_cursor_diagnostics'
+        command = 'Lspsaga show_cursor_diagnostics ++unfocus'
       })
     end
 
