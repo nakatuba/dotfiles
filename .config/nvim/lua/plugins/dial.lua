@@ -2,32 +2,45 @@ return {
   'monaqa/dial.nvim',
   config = function()
     local augend = require('dial.augend')
-    local common = {
+    local default = {
       augend.integer.alias.decimal,
       augend.integer.alias.hex,
       augend.date.alias['%Y/%m/%d'],
       augend.date.alias['%Y-%m-%d'],
       augend.date.alias['%m/%d'],
-      augend.date.alias['%H:%M']
+      augend.date.alias['%H:%M'],
+      augend.constant.alias.bool
     }
 
     require('dial.config').augends:register_group {
-      default = {
-        unpack(common),
-        augend.constant.alias.bool
-      }
+      default = default
     }
 
     require('dial.config').augends:on_filetype {
       python = {
-        unpack(common),
+        unpack(default),
         augend.constant.new {
           elements = { 'True', 'False' }
         }
       },
       markdown = {
-        unpack(common),
-        augend.misc.alias.markdown_header
+        unpack(default),
+        augend.misc.alias.markdown_header,
+        augend.user.new {
+          find = function(line, cursor)
+            local s, e = line:find('- %[[ x]%]')
+            if s and line:sub(1, s - 1):match('^%s*$') then
+              return { from = s, to = e }
+            end
+          end,
+          add = function(text, addend, cursor)
+            if text == '- [ ]' then
+              return { text = '- [x]', cursor = 4 }
+            elseif text == '- [x]' then
+              return { text = '- [ ]', cursor = 4 }
+            end
+          end
+        }
       }
     }
 
