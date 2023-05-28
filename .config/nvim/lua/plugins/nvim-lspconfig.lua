@@ -34,11 +34,38 @@ return {
       })
     end
 
-    require('lspconfig').tsserver.setup {
+    require('lspconfig').gopls.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        gopls = {
+          analyses = {
+            staticcheck = true
+          }
+        }
+      }
+    }
+
+    require('lspconfig').lua_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
+      end,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' }
+          }
+        }
+      }
+    }
+
+    require('lspconfig').marksman.setup {
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        client.server_capabilities.completionProvider = false
       end
     }
 
@@ -63,16 +90,17 @@ return {
       on_attach = on_attach
     }
 
-    require('lspconfig').gopls.setup {
+    require('lspconfig').terraformls.setup {
       capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        gopls = {
-          analyses = {
-            staticcheck = true
-          }
-        }
-      }
+      on_attach = on_attach
+    }
+
+    require('lspconfig').tsserver.setup {
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+      end
     }
 
     require('lspconfig').vimls.setup {
@@ -80,30 +108,7 @@ return {
       on_attach = on_attach
     }
 
-    require('lspconfig').lua_ls.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-      end,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
-    }
-
-    require('lspconfig').marksman.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.completionProvider = false
-      end,
-    }
-
-    require('lspconfig').terraformls.setup {
+    require('lspconfig').yamlls.setup {
       capabilities = capabilities,
       on_attach = on_attach
     }

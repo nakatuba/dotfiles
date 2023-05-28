@@ -6,7 +6,17 @@ return {
   },
   config = function()
     require('mason-lspconfig').setup {
-      ensure_installed = { 'tsserver', 'pyright', 'gopls', 'vimls', 'lua_ls', 'marksman', 'terraformls' }
+      ensure_installed = {
+        'gopls',
+        'lua_ls',
+        'marksman',
+        'pyright',
+        'solargraph',
+        'terraformls',
+        'tsserver',
+        'vimls',
+        'yamlls'
+      }
     }
   end
 }
