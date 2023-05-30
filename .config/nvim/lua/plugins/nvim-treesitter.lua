@@ -17,8 +17,7 @@ return {
         'ruby',
         'terraform',
         'tsx',
-        'typescript',
-        'yaml'
+        'typescript'
       },
       highlight = {
         enable = true

@@ -14,8 +14,7 @@ return {
         'solargraph',
         'terraformls',
         'tsserver',
-        'vimls',
-        'yamlls'
+        'vimls'
       }
     }
   end

@@ -5,6 +5,14 @@ return {
 
     null_ls.setup {
       diagnostics_format = '[#{c}] #{m} (#{s})',
+      on_attach = function(client, bufnr)
+        if client.supports_method('textDocument/formatting') then
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = bufnr,
+            callback = function() vim.lsp.buf.format() end
+          })
+        end
+      end,
       sources = {
         -- javascript
         null_ls.builtins.diagnostics.eslint,

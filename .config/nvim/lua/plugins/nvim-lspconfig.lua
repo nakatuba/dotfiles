@@ -16,10 +16,12 @@ return {
       vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
       vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
 
-      vim.api.nvim_create_autocmd('BufWritePre', {
-        buffer = bufnr,
-        callback = function() vim.lsp.buf.format() end
-      })
+      if client.supports_method('textDocument/formatting') then
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.format() end
+        })
+      end
 
       if client.supports_method('textDocument/signatureHelp') then
         vim.api.nvim_create_autocmd('CursorHoldI', {
@@ -104,11 +106,6 @@ return {
     }
 
     require('lspconfig').vimls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
-    }
-
-    require('lspconfig').yamlls.setup {
       capabilities = capabilities,
       on_attach = on_attach
     }
