@@ -10,7 +10,7 @@ return {
       vim.keymap.set('n', 'gi',         '<cmd>Telescope lsp_implementations<CR>',                   { buffer = bufnr })
       vim.keymap.set('n', 'gr',         '<cmd>Telescope lsp_references<CR>',                        { buffer = bufnr })
       vim.keymap.set('n', 'K',          '<cmd>Lspsaga hover_doc<CR>',                               { buffer = bufnr })
-      vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>',                                  { buffer = bufnr })
+      vim.keymap.set('n', '<leader>rn', '<cmd>Lspsaga rename<CR>A',                                 { buffer = bufnr })
       vim.keymap.set('n', '<leader>ca', '<cmd>Lspsaga code_action<CR>',                             { buffer = bufnr })
       vim.keymap.set('n', '<leader>d',  '<cmd>Telescope diagnostics<CR>',                           { buffer = bufnr })
       vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
@@ -28,7 +28,7 @@ return {
 
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
-        command = 'Lspsaga show_cursor_diagnostics ++unfocus'
+        callback = function() vim.diagnostic.open_float(nil, { focusable = false, scope = 'cursor' }) end
       })
     end
 
