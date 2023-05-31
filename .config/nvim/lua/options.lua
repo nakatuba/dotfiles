@@ -14,3 +14,6 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.updatetime = 100
 vim.opt.termguicolors = true
+
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0
