@@ -7,6 +7,9 @@ return {
           quit = '<Esc>'
         }
       },
+      diagnostic = {
+        on_insert = false
+      },
       rename = {
         quit = '<Esc>',
         in_select = false
