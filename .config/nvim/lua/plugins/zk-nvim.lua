@@ -1,6 +1,8 @@
 return {
   'mickael-menu/zk-nvim',
   config = function()
+    vim.env.ZK_NOTEBOOK_DIR = vim.fn.expand('~/ghq/github.com/nakatuba/notes')
+
     require('zk').setup {
       picker = 'telescope'
     }
