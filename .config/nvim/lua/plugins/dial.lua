@@ -9,10 +9,7 @@ return {
       augend.date.alias['%Y-%m-%d'],
       augend.date.alias['%m/%d'],
       augend.date.alias['%H:%M'],
-      augend.constant.alias.bool,
-      augend.case.new {
-        types = { 'camelCase', 'snake_case', 'PascalCase', 'SCREAMING_SNAKE_CASE' },
-      }
+      augend.constant.alias.bool
     }
 
     require('dial.config').augends:register_group {
