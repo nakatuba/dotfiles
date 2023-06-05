@@ -21,6 +21,7 @@ if vim.g.vscode then
     { import = 'plugins.substitute' },
     { import = 'plugins.treesj' },
     { import = 'plugins.vim-commentary' },
+    { import = 'plugins.vim-operator-convert-case' },
     { import = 'plugins.vim-repeat' },
     { import = 'plugins.vim-surround' },
     { import = 'plugins.vim-swap' },
