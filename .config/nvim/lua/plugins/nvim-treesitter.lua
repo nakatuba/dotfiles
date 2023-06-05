@@ -7,24 +7,24 @@ return {
   config = function()
     require('nvim-treesitter.configs').setup {
       ensure_installed = {
-        'html',
         'css',
-        'javascript',
-        'typescript',
-        'tsx',
-        'python',
-        'ruby',
         'go',
+        'html',
+        'javascript',
         'markdown',
         'markdown_inline',
-        'terraform'
+        'python',
+        'ruby',
+        'terraform',
+        'tsx',
+        'typescript'
       },
       highlight = {
         enable = true
       },
       indent = {
         enable = true,
-        disable = { 'python', 'ruby', 'go' }
+        disable = { 'go', 'python', 'ruby' }
       },
       autotag = {
         enable = true

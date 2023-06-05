@@ -16,15 +16,19 @@ return {
       vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
       vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
 
-      vim.api.nvim_create_autocmd('BufWritePre', {
-        buffer = bufnr,
-        callback = function() vim.lsp.buf.format() end
-      })
+      if client.supports_method('textDocument/formatting') then
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.format() end
+        })
+      end
 
-      vim.api.nvim_create_autocmd('CursorHoldI', {
-        buffer = bufnr,
-        callback = function() vim.lsp.buf.signature_help() end
-      })
+      if client.supports_method('textDocument/signatureHelp') then
+        vim.api.nvim_create_autocmd('CursorHoldI', {
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.signature_help() end
+        })
+      end
 
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
@@ -32,11 +36,38 @@ return {
       })
     end
 
-    require('lspconfig').tsserver.setup {
+    require('lspconfig').gopls.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = {
+        gopls = {
+          analyses = {
+            staticcheck = true
+          }
+        }
+      }
+    }
+
+    require('lspconfig').lua_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
+      end,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { 'vim' }
+          }
+        }
+      }
+    }
+
+    require('lspconfig').marksman.setup {
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        client.server_capabilities.completionProvider = false
       end
     }
 
@@ -61,39 +92,20 @@ return {
       on_attach = on_attach
     }
 
-    require('lspconfig').gopls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        gopls = {
-          analyses = {
-            staticcheck = true
-          }
-        }
-      }
-    }
-
-    require('lspconfig').vimls.setup {
+    require('lspconfig').terraformls.setup {
       capabilities = capabilities,
       on_attach = on_attach
     }
 
-    require('lspconfig').lua_ls.setup {
+    require('lspconfig').tsserver.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
-      end,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
+      end
     }
 
-    require('lspconfig').terraformls.setup {
+    require('lspconfig').vimls.setup {
       capabilities = capabilities,
       on_attach = on_attach
     }
