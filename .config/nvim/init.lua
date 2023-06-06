@@ -37,6 +37,8 @@ if vim.g.vscode then
     end
   })
 
+  vim.keymap.set('n', 'j',          function() vim.fn.VSCodeNotify('cursorMove', { to = 'down', by = 'wrappedLine', value = vim.v.count1 }) end)
+  vim.keymap.set('n', 'k',          function() vim.fn.VSCodeNotify('cursorMove', { to = 'up',   by = 'wrappedLine', value = vim.v.count1 }) end)
   vim.keymap.set('n', 'u',          function() vim.fn.VSCodeNotify('undo') end)
   vim.keymap.set('n', '<C-r>',      function() vim.fn.VSCodeNotify('redo') end)
   vim.keymap.set('n', 'gd',         function() vim.fn.VSCodeNotify('editor.action.revealDefinition') end)
