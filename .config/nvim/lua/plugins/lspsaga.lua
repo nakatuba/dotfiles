@@ -12,8 +12,9 @@ return {
         in_select = false
       },
       outline = {
+        auto_resize = true,
         keys = {
-          expand_or_jump = '<CR>'
+          expand_or_jump = { 'o', '<CR>' }
         }
       },
       symbol_in_winbar = {
