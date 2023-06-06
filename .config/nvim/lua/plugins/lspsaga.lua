@@ -7,9 +7,6 @@ return {
           quit = '<Esc>'
         }
       },
-      diagnostic = {
-        on_insert = false
-      },
       rename = {
         quit = '<Esc>',
         in_select = false
@@ -25,6 +22,5 @@ return {
     }
 
     vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>')
-  end,
-  version = '*'
+  end
 }
