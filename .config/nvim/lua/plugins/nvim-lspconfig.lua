@@ -32,7 +32,7 @@ return {
 
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
-        command = 'Lspsaga show_cursor_diagnostics ++unfocus'
+        callback = function() vim.diagnostic.open_float(nil, { focusable = false, scope = 'cursor' }) end
       })
     end
 
