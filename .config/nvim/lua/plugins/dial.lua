@@ -2,29 +2,38 @@ return {
   'monaqa/dial.nvim',
   config = function()
     local augend = require('dial.augend')
-    local default = {
-      augend.integer.alias.decimal,
-      augend.integer.alias.hex,
-      augend.date.alias['%Y/%m/%d'],
-      augend.date.alias['%Y-%m-%d'],
-      augend.date.alias['%m/%d'],
-      augend.date.alias['%H:%M'],
-      augend.constant.alias.bool
-    }
 
     require('dial.config').augends:register_group {
-      default = default
+      default = {
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.date.alias['%Y/%m/%d'],
+        augend.date.alias['%Y-%m-%d'],
+        augend.date.alias['%m/%d'],
+        augend.date.alias['%H:%M'],
+        augend.constant.alias.bool
+      }
     }
 
     require('dial.config').augends:on_filetype {
       python = {
-        unpack(default),
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.date.alias['%Y/%m/%d'],
+        augend.date.alias['%Y-%m-%d'],
+        augend.date.alias['%m/%d'],
+        augend.date.alias['%H:%M'],
         augend.constant.new {
           elements = { 'True', 'False' }
         }
       },
       markdown = {
-        unpack(default),
+        augend.integer.alias.decimal,
+        augend.integer.alias.hex,
+        augend.date.alias['%Y/%m/%d'],
+        augend.date.alias['%Y-%m-%d'],
+        augend.date.alias['%m/%d'],
+        augend.date.alias['%H:%M'],
         augend.misc.alias.markdown_header,
         augend.user.new {
           find = function(line, cursor)
