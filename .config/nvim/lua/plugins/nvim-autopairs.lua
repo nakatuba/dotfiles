@@ -10,7 +10,7 @@ return {
     local Rule = require('nvim-autopairs.rule')
 
     npairs.add_rules {
-      Rule(' ', ' ', '-markdown')
+      Rule(' ', ' ')
         :with_pair(function(opts)
           local pair = opts.line:sub(opts.col - 1, opts.col)
           return vim.tbl_contains({ '()', '[]', '{}' }, pair)
