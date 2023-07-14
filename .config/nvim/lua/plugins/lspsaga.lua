@@ -8,17 +8,17 @@ return {
         }
       },
       rename = {
-        quit = '<Esc>',
-        in_select = false
-      },
-      outline = {
-        auto_resize = true,
+        in_select = false,
         keys = {
-          expand_or_jump = { 'o', '<CR>' }
+          quit = '<Esc>',
         }
       },
-      symbol_in_winbar = {
-        separator = ' > '
+      outline = {
+        layout = 'float',
+        keys = {
+          quit = '<Esc>',
+          jump = { 'o', '<CR>' }
+        }
       }
     }
 

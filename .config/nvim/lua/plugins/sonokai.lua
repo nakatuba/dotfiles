@@ -14,5 +14,10 @@ return {
       pattern = 'sonokai',
       command = 'highlight! link SagaBorder Green'
     })
+
+    vim.api.nvim_create_autocmd('ColorScheme', {
+      pattern = 'sonokai',
+      command = 'highlight! link SagaNormal Normal'
+    })
   end
 }
