@@ -12,12 +12,12 @@ return {
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = 'sonokai',
-      command = 'highlight! link SagaBorder Green'
-    })
-
-    vim.api.nvim_create_autocmd('ColorScheme', {
-      pattern = 'sonokai',
-      command = 'highlight! link SagaNormal Normal'
+      callback = function()
+        vim.keymap.set('n', '<leader>t', function()
+          vim.g.sonokai_transparent_background = not vim.g.sonokai_transparent_background
+          vim.cmd.colorscheme('sonokai')
+        end)
+      end
     })
   end
 }
