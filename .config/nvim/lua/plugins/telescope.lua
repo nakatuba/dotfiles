@@ -11,7 +11,9 @@ return {
       defaults = {
         sorting_strategy = 'ascending',
         layout_config = {
-          preview_width = 0.5
+          horizontal = {
+            preview_width = 0.5
+          }
         },
         cycle_layout_list = { 'vertical', 'horizontal' },
         vimgrep_arguments = {
