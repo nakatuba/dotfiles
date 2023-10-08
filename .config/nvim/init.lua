@@ -18,12 +18,11 @@ if vim.g.vscode then
   require('lazy').setup {
     { import = 'plugins.dial' },
     { import = 'plugins.hop' },
+    { import = 'plugins.nvim-surround' },
     { import = 'plugins.substitute' },
     { import = 'plugins.treesj' },
     { import = 'plugins.vim-commentary' },
     { import = 'plugins.vim-operator-convert-case' },
-    { import = 'plugins.vim-repeat' },
-    { import = 'plugins.vim-surround' },
     { import = 'plugins.vim-swap' },
     { import = 'plugins.vim-textobj-entire' },
     { import = 'plugins.vim-textobj-jsxattr' }
