@@ -2,17 +2,6 @@ return {
   'nvimdev/lspsaga.nvim',
   config = function()
     require('lspsaga').setup {
-      code_action = {
-        keys = {
-          quit = '<Esc>'
-        }
-      },
-      rename = {
-        in_select = false,
-        keys = {
-          quit = '<Esc>',
-        }
-      },
       outline = {
         layout = 'float',
         keys = {
@@ -24,12 +13,12 @@ return {
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = '*',
-      command = 'highlight! link SagaBorder TelescopeBorder'
+      command = 'highlight! link SagaBorder Blue'
     })
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = '*',
-      command = 'highlight! link SagaNormal TelescopeNormal'
+      command = 'highlight! link SagaNormal Normal'
     })
 
     vim.api.nvim_create_autocmd('ColorScheme', {
