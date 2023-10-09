@@ -3,9 +3,8 @@ return {
   config = function()
     require('lspsaga').setup {
       outline = {
-        layout = 'float',
+        win_width = math.floor(vim.o.columns * 0.25),
         keys = {
-          quit = '<Esc>',
           jump = { 'o', '<CR>' }
         }
       }
