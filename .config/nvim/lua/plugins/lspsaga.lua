@@ -2,6 +2,9 @@ return {
   'nvimdev/lspsaga.nvim',
   config = function()
     require('lspsaga').setup {
+      symbol_in_winbar = {
+        enable = false
+      },
       outline = {
         win_width = math.floor(vim.o.columns * 0.25),
         keys = {
@@ -18,16 +21,6 @@ return {
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = '*',
       command = 'highlight! link SagaNormal Normal'
-    })
-
-    vim.api.nvim_create_autocmd('ColorScheme', {
-      pattern = '*',
-      command = 'highlight! link SagaFileName Normal'
-    })
-
-    vim.api.nvim_create_autocmd('ColorScheme', {
-      pattern = '*',
-      command = 'highlight! link SagaFolderName Normal'
     })
 
     vim.keymap.set('n', '<leader>o', '<cmd>Lspsaga outline<CR>')
