@@ -1,6 +1,8 @@
 return {
   'rmagatti/auto-session',
   config = function()
+    vim.opt.sessionoptions:remove('folds')
+
     function _G.close_all_floating_wins()
       for _, win in ipairs(vim.api.nvim_list_wins()) do
         local config = vim.api.nvim_win_get_config(win)
@@ -16,6 +18,6 @@ return {
       pre_save_cmds = { _G.close_all_floating_wins }
     }
 
-    vim.keymap.set('n', '<leader>rs', '<cmd>RestoreSession<CR>')
+    vim.keymap.set('n', '<leader>rs', '<cmd>SessionRestore<CR>')
   end
 }
