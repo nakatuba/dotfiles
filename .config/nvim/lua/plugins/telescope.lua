@@ -55,9 +55,6 @@ return {
             }
           }
         },
-        colorscheme = {
-          enable_preview = true
-        },
         lsp_definitions = {
           show_line = false
         },
@@ -74,7 +71,6 @@ return {
     vim.keymap.set('n', '<leader>g',  '<cmd>Telescope live_grep<CR>')
     vim.keymap.set('n', '<leader>b',  '<cmd>Telescope buffers<CR>')
     vim.keymap.set('n', '<leader>h',  '<cmd>Telescope oldfiles<CR>')
-    vim.keymap.set('n', '<leader>cs', '<cmd>Telescope colorscheme<CR>')
     vim.keymap.set('n', '<C-g><C-f>', '<cmd>Telescope git_status<CR>')
   end
 }
