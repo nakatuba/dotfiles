@@ -10,3 +10,4 @@ if command -v exa > /dev/null; then
 fi
 
 command -v bat > /dev/null && alias cat='bat'
+command -v pgcli > /dev/null && alias psql='pgcli'
