@@ -9,10 +9,23 @@ return {
       layout = {
         max_width = 0.9,
         min_width = 30,
-        placement = 'edge',
-        preserve_equality = true
+        win_opts = {
+          winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
+        },
+        default_direction = 'float'
       },
-      attach_mode = 'global',
+      close_automatic_events = { 'unfocus', 'switch_buffer', 'unsupported' },
+      float = {
+        border = 'single',
+        relative = 'win',
+        override = function(conf, source_winid)
+          conf.anchor = 'NE'
+          conf.row = 0
+          conf.col = vim.fn.winwidth(source_winid)
+          conf.zindex = 50
+          return conf
+        end
+      },
       manage_folds = true,
       on_attach = function(bufnr)
         vim.keymap.set('n', '<C-k>', '<cmd>AerialPrev<CR>', { buffer = bufnr })
