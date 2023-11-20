@@ -9,15 +9,21 @@ return {
         }
       },
       select = {
-        backend = 'builtin',
-        builtin = {
-          relative = 'cursor',
-          win_options = {
-            winblend = 0,
-            winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
-          },
-          min_height = 0
-        }
+        get_config = function(opts)
+          if opts.kind == 'codeaction' then
+            return {
+              backend = 'builtin',
+              builtin = {
+                relative = 'cursor',
+                win_options = {
+                  winblend = 0,
+                  winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
+                },
+                min_height = 0
+              }
+            }
+          end
+        end
       }
     }
   end
