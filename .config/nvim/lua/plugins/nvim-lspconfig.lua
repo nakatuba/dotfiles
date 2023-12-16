@@ -89,7 +89,10 @@ return {
 
     require('lspconfig').solargraph.setup {
       capabilities = capabilities,
-      on_attach = on_attach
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+      end
     }
 
     require('lspconfig').terraformls.setup {
