@@ -5,7 +5,6 @@ return {
   },
   config = function()
     require('nvim-tree').setup {
-      sync_root_with_cwd = true,
       on_attach = function(bufnr)
         local api = require('nvim-tree.api')
 
@@ -13,8 +12,9 @@ return {
 
         vim.keymap.del('n', 's', { buffer = bufnr })
       end,
+      sync_root_with_cwd = true,
       view = {
-        adaptive_size = true
+        width = {}
       },
       update_focused_file = {
         enable = true,
