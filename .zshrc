@@ -41,14 +41,14 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 1000
 
-source-safe() { [ -f $1 ] && source $1 }
-source-safe ~/.zprezto/init.zsh
-source-safe ~/.p10k.zsh
-source-safe ~/.asdf/asdf.sh
-source-safe ~/.fzf.zsh
-source-safe ~/.config/zsh/alias.zsh
-source-safe ~/.config/zsh/bindkey.zsh
-source-safe ~/.config/zsh/completion.zsh
-source-safe ~/.config/zsh/fzf-config.zsh
-source-safe ~/.config/zsh/fzf-git.zsh
-source-safe ~/.config/zsh/fzf-widget.zsh
+source-if-exists() { [ -f $1 ] && source $1 }
+source-if-exists ~/.zprezto/init.zsh
+source-if-exists ~/.p10k.zsh
+source-if-exists ~/.asdf/asdf.sh
+source-if-exists ~/.fzf.zsh
+source-if-exists ~/.config/zsh/alias.zsh
+source-if-exists ~/.config/zsh/bindkey.zsh
+source-if-exists ~/.config/zsh/completion.zsh
+source-if-exists ~/.config/zsh/fzf-config.zsh
+source-if-exists ~/.config/zsh/fzf-git.zsh
+source-if-exists ~/.config/zsh/fzf-widget.zsh
