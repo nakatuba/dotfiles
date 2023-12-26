@@ -10,4 +10,5 @@ if command -v exa > /dev/null; then
 fi
 
 command -v bat > /dev/null && alias cat='bat'
+command -v mycli > /dev/null && alias mysql='mycli'
 command -v pgcli > /dev/null && alias psql='pgcli'
