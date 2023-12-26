@@ -31,3 +31,4 @@ vim.keymap.set('n', '<Leader>ca', function() vim.fn.VSCodeNotify('editor.action.
 vim.keymap.set('n', '<Leader>f',  function() vim.fn.VSCodeNotify('workbench.action.quickOpen') end)
 vim.keymap.set('n', '<Leader>b',  function() vim.fn.VSCodeNotify('workbench.action.showAllEditors') end)
 vim.keymap.set('n', '<Leader>e',  function() vim.fn.VSCodeNotify('workbench.view.explorer') end)
+vim.keymap.set('n', '<CR>',       function() vim.fn.VSCodeNotify('workbench.action.toggleEditorWidths') end)

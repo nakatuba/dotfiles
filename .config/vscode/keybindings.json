@@ -40,7 +40,8 @@
         "when": "!inputFocus"
     },
     {
-        "key": "ctrl+g ctrl+g",
-        "command": "extension.ghqOpen"
+        "key": "ctrl+f",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
     }
 ]
