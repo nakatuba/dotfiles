@@ -6,7 +6,11 @@ return {
   },
   config = function()
     require('mason-null-ls').setup {
-      ensure_installed = { 'prettier' }
+      ensure_installed = {
+        'phpcbf',
+        'phpcs',
+        'prettier'
+      }
     }
   end
 }

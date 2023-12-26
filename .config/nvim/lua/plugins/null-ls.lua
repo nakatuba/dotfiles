@@ -18,6 +18,14 @@ return {
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.formatting.prettier,
 
+        -- php
+        null_ls.builtins.diagnostics.phpcs.with {
+          extra_args = { '--standard=PSR12' }
+        },
+        null_ls.builtins.formatting.phpcbf.with {
+          extra_args = { '--standard=PSR12' }
+        },
+
         -- python
         null_ls.builtins.diagnostics.flake8.with {
           extra_args = { '--ignore=E203, E266, E501, W503' },

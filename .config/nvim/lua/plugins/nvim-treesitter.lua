@@ -13,6 +13,7 @@ return {
         'javascript',
         'markdown',
         'markdown_inline',
+        'php',
         'python',
         'ruby',
         'terraform',

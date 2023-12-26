@@ -10,6 +10,7 @@ return {
         'gopls',
         'lua_ls',
         'marksman',
+        'phpactor',
         'pyright',
         'solargraph',
         'terraformls',
