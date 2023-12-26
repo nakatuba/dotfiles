@@ -9,11 +9,6 @@ return {
       pattern = 'sonokai',
       callback = function()
         vim.api.nvim_set_hl(0, 'VertSplit', { link = 'Grey' })
-
-        vim.keymap.set('n', '<leader>t', function()
-          vim.g.sonokai_transparent_background = not vim.g.sonokai_transparent_background
-          vim.cmd.colorscheme('sonokai')
-        end)
       end
     })
   end
