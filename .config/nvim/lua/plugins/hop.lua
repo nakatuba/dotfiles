@@ -3,6 +3,6 @@ return {
   config = function()
     require('hop').setup()
 
-    vim.keymap.set('', '<leader>w', '<cmd>HopWord<CR>')
+    vim.keymap.set('', '<leader>w', '<cmd>HopWordMW<CR>')
   end
 }
