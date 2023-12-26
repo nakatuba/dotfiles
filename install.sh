@@ -9,6 +9,4 @@ ln -s ~/dotfiles/.zshrc ~
 
 mkdir -p ~/.config
 
-ln -s ~/dotfiles/.config/git ~/.config
-ln -s ~/dotfiles/.config/nvim ~/.config
-ln -s ~/dotfiles/.config/zsh ~/.config
+ln -s ~/dotfiles/.config/* ~/.config
