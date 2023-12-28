@@ -13,7 +13,6 @@ path=(
 )
 
 fpath=(
-  $HOME/.asdf/completions(N-/)
   $HOME/.config/zsh/completions(N-/)
   $fpath
 )
