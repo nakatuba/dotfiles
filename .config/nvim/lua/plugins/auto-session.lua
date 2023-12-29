@@ -16,6 +16,6 @@ return {
       pre_save_cmds = { _G.close_all_floating_wins }
     }
 
-    vim.keymap.set('n', '<leader>rs', '<cmd>SessionRestore<CR>')
+    vim.keymap.set('n', '<leader>sr', '<cmd>SessionRestore<CR>')
   end
 }
