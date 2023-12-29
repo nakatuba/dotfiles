@@ -7,6 +7,7 @@ fi
 if command -v exa > /dev/null; then
   alias ll='exa --icons -l'
   alias la='exa --icons -la'
+  alias tree='exa --icons --tree'
 fi
 
 command -v bat > /dev/null && alias cat='bat'
