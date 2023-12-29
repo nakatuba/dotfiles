@@ -6,7 +6,7 @@ fzf-zoxide-widget() {
   fi
   zle reset-prompt
 }
-zle     -N   fzf-zoxide-widget
+zle -N fzf-zoxide-widget
 bindkey '^]' fzf-zoxide-widget
 
 fzf-ghq-widget() {
@@ -17,7 +17,7 @@ fzf-ghq-widget() {
   fi
   zle reset-prompt
 }
-zle     -N     fzf-ghq-widget
+zle -N fzf-ghq-widget
 bindkey '^g^g' fzf-ghq-widget
 
 git-checkout-widget() {
@@ -29,7 +29,7 @@ git-checkout-widget() {
   fi
   zle reset-prompt
 }
-zle     -N     git-checkout-widget
+zle -N git-checkout-widget
 bindkey '^g^o' git-checkout-widget
 
 tmux-new-widget() {
@@ -37,7 +37,7 @@ tmux-new-widget() {
   BUFFER="tmux new -A -s $(basename $PWD)"
   zle accept-line
 }
-zle     -N   tmux-new-widget
+zle -N tmux-new-widget
 bindkey '^o' tmux-new-widget
 
 tmux-attach-widget() {
@@ -49,5 +49,5 @@ tmux-attach-widget() {
   fi
   zle reset-prompt
 }
-zle     -N   tmux-attach-widget
+zle -N tmux-attach-widget
 bindkey '^s' tmux-attach-widget
