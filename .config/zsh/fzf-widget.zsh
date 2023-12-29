@@ -1,13 +1,13 @@
-fzf-cdr-widget() {
-  local dir=$(cdr -l | sed 's/^[^ ][^ ]*  *//' | fzf --height 40% --reverse)
+fzf-zoxide-widget() {
+  local dir=$(zoxide query --list | fzf --height 40% --reverse)
   if [ -n "$dir" ]; then
     BUFFER="cd $dir"
     zle accept-line
   fi
   zle reset-prompt
 }
-zle     -N   fzf-cdr-widget
-bindkey '^]' fzf-cdr-widget
+zle     -N   fzf-zoxide-widget
+bindkey '^]' fzf-zoxide-widget
 
 fzf-ghq-widget() {
   local dir=$(ghq list | fzf --height 40% --reverse)

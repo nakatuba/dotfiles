@@ -36,18 +36,12 @@ export PATH="$PATH:$GOPATH/bin"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-add-zsh-hook chpwd chpwd_recent_dirs
-zstyle ':chpwd:*' recent-dirs-max 1000
-
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
 source-if-exists ~/.p10k.zsh
 source-if-exists ~/.asdf/asdf.sh
 source-if-exists ~/.fzf.zsh
-source-if-exists ~/.config/zsh/alias.zsh
-source-if-exists ~/.config/zsh/bindkey.zsh
-source-if-exists ~/.config/zsh/completion.zsh
-source-if-exists ~/.config/zsh/fzf-config.zsh
-source-if-exists ~/.config/zsh/fzf-git.zsh
-source-if-exists ~/.config/zsh/fzf-widget.zsh
+
+for file in ~/.config/zsh/**/*.zsh; do
+  source $file
+done
