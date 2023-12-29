@@ -34,12 +34,11 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
 source-if-exists ~/.p10k.zsh
 source-if-exists ~/.asdf/asdf.sh
+source-if-exists ~/.cargo/env
 source-if-exists ~/.fzf.zsh
 
 for file in ~/.config/zsh/**/*.zsh; do
