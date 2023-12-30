@@ -41,6 +41,6 @@ source-if-exists ~/.asdf/asdf.sh
 source-if-exists ~/.cargo/env
 source-if-exists ~/.fzf.zsh
 
-for file in ~/.config/zsh/**/*.zsh; do
+for file in ~/.config/zsh/*.zsh; do
   source $file
 done
