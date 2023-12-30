@@ -1,4 +1,3 @@
-ln -s ~/dotfiles/.p10k.zsh ~
 ln -s ~/dotfiles/.tmux.conf ~
 ln -s ~/dotfiles/.zlogin ~
 ln -s ~/dotfiles/.zlogout ~

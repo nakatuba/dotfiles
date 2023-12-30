@@ -36,7 +36,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
-source-if-exists ~/.p10k.zsh
 source-if-exists ~/.asdf/asdf.sh
 source-if-exists ~/.cargo/env
 source-if-exists ~/.fzf.zsh
