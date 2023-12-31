@@ -1,14 +1,20 @@
-ln -s ~/dotfiles/.tmux.conf ~
-ln -s ~/dotfiles/.zlogin ~
-ln -s ~/dotfiles/.zlogout ~
-ln -s ~/dotfiles/.zpreztorc ~
-ln -s ~/dotfiles/.zprofile ~
-ln -s ~/dotfiles/.zshenv ~
-ln -s ~/dotfiles/.zshrc ~
+#!/bin/bash
+
+set -eu
+
+DOTFILES=$(cd $(dirname $0) && pwd)
+
+ln -s $DOTFILES/.tmux.conf ~
+ln -s $DOTFILES/.zlogin ~
+ln -s $DOTFILES/.zlogout ~
+ln -s $DOTFILES/.zpreztorc ~
+ln -s $DOTFILES/.zprofile ~
+ln -s $DOTFILES/.zshenv ~
+ln -s $DOTFILES/.zshrc ~
 
 mkdir -p ~/.config
 
-ln -s ~/dotfiles/.config/* ~/.config
+ln -s $DOTFILES/.config/* ~/.config
 
 # Install prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
