@@ -1,7 +1,7 @@
 fzf-zoxide-widget() {
   local dir=$(zoxide query --list | fzf --height 40% --reverse)
   if [ -n "$dir" ]; then
-    BUFFER="cd $dir"
+    BUFFER="cd ${(q)dir}"
     zle accept-line
   fi
   zle reset-prompt
