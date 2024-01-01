@@ -23,12 +23,22 @@ git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 if [ "$(uname)" = "Darwin" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
+
+  ln -s $DOTFILES/.Brewfile ~
+  brew bundle --global
 fi
 
 # Install asdf
 if [ "$(uname)" = "Linux" ]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
   source ~/.asdf/asdf.sh
+
+  ln -s $DOTFILES/.tool-versions ~
+  cat ~/.tool-versions | while read plugin version; do
+    asdf plugin add $plugin
+    asdf install $plugin $version
+    asdf global $plugin $version
+  done
 fi
 
 # Install cargo
