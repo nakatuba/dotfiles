@@ -4,17 +4,17 @@ set -eu
 
 DOTFILES=$(cd $(dirname $0) && pwd)
 
-ln -s $DOTFILES/.tmux.conf ~
-ln -s $DOTFILES/.zlogin ~
-ln -s $DOTFILES/.zlogout ~
-ln -s $DOTFILES/.zpreztorc ~
-ln -s $DOTFILES/.zprofile ~
-ln -s $DOTFILES/.zshenv ~
-ln -s $DOTFILES/.zshrc ~
+ln -sf $DOTFILES/.tmux.conf ~
+ln -sf $DOTFILES/.zlogin ~
+ln -sf $DOTFILES/.zlogout ~
+ln -sf $DOTFILES/.zpreztorc ~
+ln -sf $DOTFILES/.zprofile ~
+ln -sf $DOTFILES/.zshenv ~
+ln -sf $DOTFILES/.zshrc ~
 
 mkdir -p ~/.config
 
-ln -s $DOTFILES/.config/* ~/.config
+ln -sf $DOTFILES/.config/* ~/.config
 
 # Install prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
@@ -24,7 +24,7 @@ if [ "$(uname)" = "Darwin" ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
-  ln -s $DOTFILES/.Brewfile ~
+  ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
 fi
 
@@ -33,7 +33,7 @@ if [ "$(uname)" = "Linux" ]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf
   source ~/.asdf/asdf.sh
 
-  ln -s $DOTFILES/.tool-versions ~
+  ln -sf $DOTFILES/.tool-versions ~
   cat ~/.tool-versions | while read plugin version; do
     asdf plugin add $plugin
     asdf install $plugin $version
