@@ -27,7 +27,6 @@ fi
 if [ "$(uname)" = "Darwin" ]; then
   if command -v brew > /dev/null; then
     brew update
-    brew upgrade
   else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
