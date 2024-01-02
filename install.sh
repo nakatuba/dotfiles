@@ -12,6 +12,13 @@ ln -sf $DOTFILES/.zprofile ~
 ln -sf $DOTFILES/.zshenv ~
 ln -sf $DOTFILES/.zshrc ~
 
+if [ "$(uname)" = "Darwin" ]; then
+  ln -sf $DOTFILES/macos/.Brewfile ~
+  ln -sf $DOTFILES/macos/.tool-versions ~
+elif [ "$(uname)" = "Linux" ]; then
+  ln -sf $DOTFILES/linux/.tool-versions ~
+fi
+
 mkdir -p ~/.config
 
 ln -sf $DOTFILES/.config/* ~/.config
@@ -32,27 +39,24 @@ if [ "$(uname)" = "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
-  ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
 fi
 
 # Install asdf
-if [ "$(uname)" = "Linux" ]; then
-  if command -v asdf > /dev/null; then
-    asdf update
-    asdf plugin update --all
-  else
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-    source ~/.asdf/asdf.sh
-  fi
-
-  ln -sf $DOTFILES/.tool-versions ~
-  cat ~/.tool-versions | while read plugin version; do
-    asdf plugin add $plugin
-    asdf install $plugin $version
-    asdf global $plugin $version
-  done
+if command -v asdf > /dev/null; then
+  asdf update
+  asdf plugin update --all
+else
+  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+  source ~/.asdf/asdf.sh
 fi
+
+# Install asdf plugins
+cat ~/.tool-versions | while read plugin version; do
+  asdf plugin add $plugin
+  asdf install $plugin $version
+  asdf global $plugin $version
+done
 
 # Install cargo
 if command -v rustup > /dev/null; then
@@ -121,9 +125,7 @@ fi
 goenv install --skip-existing 1.20.0
 goenv global 1.20.0
 
-# Install pipx
-pip install --upgrade pip
-pip install pipx
+# Install pipx packages
 pipx install git+https://github.com/nakatuba/pgcli.git
 pipx install mycli neovim-remote poetry powerline-status trash-cli
 pipx reinstall-all
