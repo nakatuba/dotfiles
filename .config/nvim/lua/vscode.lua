@@ -5,6 +5,7 @@ require('lazy').setup {
   { import = 'plugins.nvim-surround' },
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },
+  { import = 'plugins.vim-easy-align' },
   { import = 'plugins.vim-operator-convert-case' },
   { import = 'plugins.vim-swap' },
   { import = 'plugins.vim-textobj-comment' },
