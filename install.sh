@@ -65,6 +65,8 @@ else
   curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
   source ~/.cargo/env
 fi
+
+# Install cargo packages
 cargo install bat exa fd-find ripgrep tealdeer zoxide
 
 # Install fzf
@@ -85,45 +87,10 @@ else
   export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
 fi
+
+# Install python
 pyenv install --skip-existing 3.11.7
 pyenv global 3.11.7
-
-# Install nodenv
-if command -v nodenv > /dev/null; then
-  nodenv update
-else
-  git clone https://github.com/nodenv/nodenv.git ~/.nodenv
-  git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
-  git clone https://github.com/nodenv/nodenv-update.git ~/.nodenv/plugins/nodenv-update
-  export PATH="$HOME/.nodenv/bin:$PATH"
-  eval "$(nodenv init -)"
-fi
-nodenv install --skip-existing 20.10.0
-nodenv global 20.10.0
-
-# Install rbenv
-if command -v rbenv > /dev/null; then
-  (cd "$(rbenv root)" && git pull)
-  (cd "$(rbenv root)"/plugins/ruby-build && git pull)
-else
-  git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-  git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-rbenv install --skip-existing 3.1.4
-rbenv global 3.1.4
-
-# Install goenv
-if command -v goenv > /dev/null; then
-  (cd "$(goenv root)" && git pull)
-else
-  git clone https://github.com/go-nv/goenv.git ~/.goenv
-  export PATH="$HOME/.goenv/bin:$PATH"
-  eval "$(goenv init -)"
-fi
-goenv install --skip-existing 1.20.0
-goenv global 1.20.0
 
 # Install pipx packages
 pipx install git+https://github.com/nakatuba/pgcli.git
