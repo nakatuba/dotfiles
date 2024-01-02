@@ -1,10 +1,10 @@
 require('lazy').setup {
+  { import = 'plugins.Comment' },
   { import = 'plugins.dial' },
   { import = 'plugins.hop' },
   { import = 'plugins.nvim-surround' },
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },
-  { import = 'plugins.vim-commentary' },
   { import = 'plugins.vim-operator-convert-case' },
   { import = 'plugins.vim-swap' },
   { import = 'plugins.vim-textobj-comment' },
