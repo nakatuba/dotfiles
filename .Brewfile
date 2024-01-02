@@ -10,6 +10,8 @@ brew "ghq"
 brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew "marp-cli"
+brew "neofetch"
 brew "neovim"
 brew "tmux"
 
