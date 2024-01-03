@@ -4,19 +4,14 @@ set -eu
 
 DOTFILES=$(cd $(dirname $0) && pwd)
 
+ln -sf $DOTFILES/.Brewfile ~
+ln -sf $DOTFILES/.tool-versions ~
 ln -sf $DOTFILES/.zlogin ~
 ln -sf $DOTFILES/.zlogout ~
 ln -sf $DOTFILES/.zpreztorc ~
 ln -sf $DOTFILES/.zprofile ~
 ln -sf $DOTFILES/.zshenv ~
 ln -sf $DOTFILES/.zshrc ~
-
-if [ "$(uname)" = "Darwin" ]; then
-  ln -sf $DOTFILES/macos/.Brewfile ~
-  ln -sf $DOTFILES/macos/.tool-versions ~
-elif [ "$(uname)" = "Linux" ]; then
-  ln -sf $DOTFILES/linux/.tool-versions ~
-fi
 
 mkdir -p ~/.config
 
