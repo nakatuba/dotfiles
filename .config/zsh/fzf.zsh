@@ -7,3 +7,8 @@ if command -v fd > /dev/null; then
 fi
 
 command -v bat > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
+
+if asdf where fzf > /dev/null 2>&1; then
+  source "$(asdf where fzf)/shell/completion.zsh"
+  source "$(asdf where fzf)/shell/key-bindings.zsh"
+fi
