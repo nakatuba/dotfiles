@@ -4,7 +4,6 @@ set -eu
 
 DOTFILES=$(cd $(dirname $0) && pwd)
 
-ln -sf $DOTFILES/.Brewfile ~
 ln -sf $DOTFILES/.tool-versions ~
 ln -sf $DOTFILES/.zlogin ~
 ln -sf $DOTFILES/.zlogout ~
@@ -33,6 +32,7 @@ if [ "$(uname)" = "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
+  ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
 fi
 
