@@ -4,7 +4,6 @@ set -eu
 
 DOTFILES=$(cd $(dirname $0) && pwd)
 
-ln -sf $DOTFILES/.tmux.conf ~
 ln -sf $DOTFILES/.zlogin ~
 ln -sf $DOTFILES/.zlogout ~
 ln -sf $DOTFILES/.zpreztorc ~
