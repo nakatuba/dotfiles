@@ -3,14 +3,14 @@ is_in_git_repo() {
 }
 
 fzf-down() {
-  fzf --height 50% --min-height 20 --border --bind 'ctrl-/:change-preview-window(up|)' "$@"
+  fzf --height 50% --min-height 20 --border --bind ctrl-/:toggle-preview "$@"
 }
 
 _gf() {
   is_in_git_repo || return
   git -c color.status=always status --short |
   fzf-down -m --ansi --nth 2..,.. \
-    --preview 'git ls-files --error-unmatch {-1} > /dev/null 2>&1 && git diff --color=always -- {-1} | sed 1,4d || bat -n --color=always {-1}' |
+    --preview 'git diff --color=always -- {-1} | sed 1,4d' |
   cut -c4- | sed 's/.* -> //'
 }
 
