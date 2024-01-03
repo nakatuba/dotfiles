@@ -90,6 +90,7 @@ fi
 # Install python
 pyenv install --skip-existing 3.11.7
 pyenv global 3.11.7
+pip install --upgrade pip
 
 # Install pipx packages
 pipx install git+https://github.com/nakatuba/pgcli.git
