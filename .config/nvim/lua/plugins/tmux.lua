@@ -11,7 +11,7 @@ return {
     }
 
     vim.api.nvim_create_autocmd('FocusGained', {
-      callback = function ()
+      callback = function()
         if vim.env.TMUX then
           require('tmux').sync_registers()
         end
