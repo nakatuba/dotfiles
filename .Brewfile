@@ -9,4 +9,5 @@ brew "koekeishiya/formulae/yabai"
 brew "tmux"
 
 cask "google-cloud-sdk"
+cask "karabiner-elements"
 cask "vagrant"
