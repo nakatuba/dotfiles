@@ -14,8 +14,7 @@ return {
         'pyright',
         'solargraph',
         'terraformls',
-        'tsserver',
-        'vimls'
+        'tsserver'
       }
     }
   end

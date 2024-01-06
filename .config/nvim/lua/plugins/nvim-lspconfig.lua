@@ -112,10 +112,5 @@ return {
         client.server_capabilities.documentFormattingProvider = false
       end
     }
-
-    require('lspconfig').vimls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
-    }
   end
 }
