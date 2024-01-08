@@ -14,17 +14,6 @@ return {
             text_align = 'left',
             separator = true
           }
-        },
-        groups = {
-          items = {
-            {
-              name = 'Notes',
-              auto_close = true,
-              matcher = function(buf)
-                return require('zk.util').notebook_root(buf.path)
-              end
-            }
-          }
         }
       }
     }
