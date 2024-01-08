@@ -1,6 +1,7 @@
 require('lazy').setup {
   { import = 'plugins.Comment' },
   { import = 'plugins.dial' },
+  { import = 'plugins.gx' },
   { import = 'plugins.hop' },
   { import = 'plugins.nvim-surround' },
   { import = 'plugins.substitute' },
