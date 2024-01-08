@@ -6,14 +6,7 @@ return {
         win_options = {
           winblend = 0,
           winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
-        },
-        get_config = function()
-          if vim.bo.filetype == 'NvimTree' then
-            return {
-              enabled = false
-            }
-          end
-        end
+        }
       },
       select = {
         get_config = function(opts)
