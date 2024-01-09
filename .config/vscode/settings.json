@@ -5,7 +5,7 @@
     "[python]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
+            "source.organizeImports": "explicit"
         }
     },
     "python.formatting.provider": "black",
@@ -13,7 +13,10 @@
         "--ignore=E501,W503"
     ],
     "python.linting.flake8Enabled": true,
-    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/Users/nakagawatsubasa/.asdf/shims/nvim",
     "editor.scrollBeyondLastLine": false,
-    "editor.smoothScrolling": true
+    "editor.smoothScrolling": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
