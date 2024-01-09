@@ -6,6 +6,7 @@ return {
   },
   config = function()
     require('barbecue').setup {
+      show_navic = false,
       theme = {
         dirname = {}
       }
