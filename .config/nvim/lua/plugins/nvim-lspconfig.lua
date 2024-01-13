@@ -48,6 +48,11 @@ return {
       }
     }
 
+    require('lspconfig').intelephense.setup {
+      capabilities = capabilities,
+      on_attach = on_attach
+    }
+
     require('lspconfig').lua_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
@@ -69,11 +74,6 @@ return {
         on_attach(client, bufnr)
         client.server_capabilities.completionProvider = false
       end
-    }
-
-    require('lspconfig').phpactor.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
     }
 
     require('lspconfig').pyright.setup {

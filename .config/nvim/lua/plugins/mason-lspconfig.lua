@@ -8,9 +8,9 @@ return {
     require('mason-lspconfig').setup {
       ensure_installed = {
         'gopls',
+        'intelephense',
         'lua_ls',
         'marksman',
-        'phpactor',
         'pyright',
         'solargraph',
         'terraformls',
