@@ -2,4 +2,3 @@ yabai -m config layout bsp
 
 yabai -m rule --add app="^.*$"                                         manage=off
 yabai -m rule --add app="^Google Chrome$" subrole="^AXStandardWindow$" manage=on
-yabai -m rule --add app="^iTerm2$"        subrole="^AXStandardWindow$" manage=on
