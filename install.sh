@@ -80,6 +80,6 @@ pyenv global 3.11.7
 pip install --upgrade pip
 
 # Install pipx packages
+pipx install --include-deps ansible
 pipx install git+https://github.com/nakatuba/pgcli.git
 pipx install mycli neovim-remote poetry powerline-status trash-cli
-pipx reinstall-all
