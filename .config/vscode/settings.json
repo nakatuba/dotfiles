@@ -14,6 +14,7 @@
     ],
     "python.linting.flake8Enabled": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/Users/nakagawatsubasa/.asdf/shims/nvim",
+    "editor.minimap.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "editor.smoothScrolling": true,
     "extensions.experimental.affinity": {
