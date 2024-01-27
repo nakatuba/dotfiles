@@ -70,10 +70,7 @@ return {
 
     require('lspconfig').marksman.setup {
       capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.completionProvider = false
-      end
+      on_attach = on_attach
     }
 
     require('lspconfig').pyright.setup {
