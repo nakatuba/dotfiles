@@ -21,6 +21,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end
 })
 
+vim.keymap.set('n', 'j',          function() require('vscode-neovim').call('cursorMove', { args = { to = 'down', by = 'wrappedLine', value = vim.v.count1 }}) end)
+vim.keymap.set('n', 'k',          function() require('vscode-neovim').call('cursorMove', { args = { to = 'up',   by = 'wrappedLine', value = vim.v.count1 }}) end)
 vim.keymap.set('n', 'u',          function() require('vscode-neovim').call('undo') end)
 vim.keymap.set('n', '<C-r>',      function() require('vscode-neovim').call('redo') end)
 vim.keymap.set('n', 'gd',         function() require('vscode-neovim').call('editor.action.revealDefinition') end)
@@ -32,4 +34,12 @@ vim.keymap.set('n', '<Leader>ca', function() require('vscode-neovim').call('edit
 vim.keymap.set('n', '<Leader>f',  function() require('vscode-neovim').call('workbench.action.quickOpen') end)
 vim.keymap.set('n', '<Leader>b',  function() require('vscode-neovim').call('workbench.action.showAllEditors') end)
 vim.keymap.set('n', '<Leader>e',  function() require('vscode-neovim').call('workbench.view.explorer') end)
+vim.keymap.set('n', 'ss',         function() require('vscode-neovim').call('workbench.action.splitEditorDown') end)
+vim.keymap.set('n', 'sv',         function() require('vscode-neovim').call('workbench.action.splitEditorRight') end)
+vim.keymap.set('n', 'sh',         function() require('vscode-neovim').call('workbench.action.navigateLeft') end)
+vim.keymap.set('n', 'sj',         function() require('vscode-neovim').call('workbench.action.navigateDown') end)
+vim.keymap.set('n', 'sk',         function() require('vscode-neovim').call('workbench.action.navigateUp') end)
+vim.keymap.set('n', 'sl',         function() require('vscode-neovim').call('workbench.action.navigateRight') end)
+vim.keymap.set('n', 'sq',         function() require('vscode-neovim').call('workbench.action.closeEditorsInGroup') end)
+vim.keymap.set('n', 'so',         function() require('vscode-neovim').call('workbench.action.closeEditorsInOtherGroups') end)
 vim.keymap.set('n', '<CR>',       function() require('vscode-neovim').call('workbench.action.toggleEditorWidths') end)

@@ -1,7 +1,10 @@
 {
-    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.scrollBeyondLastLine": false,
+    "editor.smoothScrolling": true,
     "files.simpleDialog.enable": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
+    "workbench.startupEditor": "none",
     "[python]": {
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
@@ -14,9 +17,6 @@
     ],
     "python.linting.flake8Enabled": true,
     "vscode-neovim.neovimExecutablePaths.darwin": "/Users/nakagawatsubasa/.asdf/shims/nvim",
-    "editor.minimap.enabled": false,
-    "editor.scrollBeyondLastLine": false,
-    "editor.smoothScrolling": true,
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     }

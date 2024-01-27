@@ -40,6 +40,51 @@
         "when": "!inputFocus"
     },
     {
+        "key": "s s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s v",
+        "command": "workbench.action.splitEditorRight",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s h",
+        "command": "workbench.action.navigateLeft",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s j",
+        "command": "workbench.action.navigateDown",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s k",
+        "command": "workbench.action.navigateUp",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s l",
+        "command": "workbench.action.navigateRight",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s q",
+        "command": "workbench.action.closeEditorsInGroup",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "s o",
+        "command": "workbench.action.closeEditorsInOtherGroups",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "workbench.action.toggleEditorWidths",
+        "when": "!inputFocus"
+    },
+    {
         "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"

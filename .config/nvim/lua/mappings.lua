@@ -1,9 +1,9 @@
 vim.g.mapleader = ' '
 
-vim.keymap.set('', 'j', 'gj',    { remap = true })
-vim.keymap.set('', 'k', 'gk',    { remap = true })
-vim.keymap.set('', 'q', '<Nop>', { remap = true })
-vim.keymap.set('', 's', '<C-w>', { remap = true })
+vim.keymap.set('', 'j', 'gj')
+vim.keymap.set('', 'k', 'gk')
+vim.keymap.set('', 'q', '<Nop>')
+vim.keymap.set('', 's', '<C-w>')
 
 -- Emacs key bindings
 vim.keymap.set('!', '<C-f>', '<Right>')
