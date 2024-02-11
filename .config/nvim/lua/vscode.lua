@@ -42,4 +42,5 @@ vim.keymap.set('n', 'sk',         function() require('vscode-neovim').call('work
 vim.keymap.set('n', 'sl',         function() require('vscode-neovim').call('workbench.action.navigateRight') end)
 vim.keymap.set('n', 'sq',         function() require('vscode-neovim').call('workbench.action.closeEditorsInGroup') end)
 vim.keymap.set('n', 'so',         function() require('vscode-neovim').call('workbench.action.closeEditorsInOtherGroups') end)
+vim.keymap.set('n', 's=',         function() require('vscode-neovim').call('workbench.action.evenEditorWidths') end)
 vim.keymap.set('n', '<CR>',       function() require('vscode-neovim').call('workbench.action.toggleEditorWidths') end)

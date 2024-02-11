@@ -10,6 +10,11 @@
         "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
     },
     {
+        "key": "ctrl+f",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
+    },
+    {
         "key": "ctrl+space",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
@@ -17,12 +22,32 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "ctrl+n",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "alt+h",
+        "command": "workbench.action.moveActiveEditorGroupLeft",
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.moveActiveEditorGroupDown",
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.moveActiveEditorGroupUp",
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.moveActiveEditorGroupRight",
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "space f",
@@ -42,12 +67,12 @@
     {
         "key": "s s",
         "command": "workbench.action.splitEditorDown",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !sideBarFocus"
     },
     {
         "key": "s v",
         "command": "workbench.action.splitEditorRight",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !sideBarFocus"
     },
     {
         "key": "s h",
@@ -72,21 +97,21 @@
     {
         "key": "s q",
         "command": "workbench.action.closeEditorsInGroup",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !sideBarFocus"
     },
     {
         "key": "s o",
         "command": "workbench.action.closeEditorsInOtherGroups",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !sideBarFocus"
+    },
+    {
+        "key": "s =",
+        "command": "workbench.action.evenEditorWidths",
+        "when": "!inputFocus && !sideBarFocus"
     },
     {
         "key": "enter",
         "command": "workbench.action.toggleEditorWidths",
-        "when": "!inputFocus"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
+        "when": "!inputFocus && !sideBarFocus"
     }
 ]
