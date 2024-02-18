@@ -12,6 +12,10 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+# resize window
+ctrl + cmd - 0x2B : yabai -m window --ratio rel:-0.1
+ctrl + cmd - 0x2F : yabai -m window --ratio rel:0.1
+
 # balance size of windows
 ctrl + cmd - 0x18 : yabai -m space --balance
 
