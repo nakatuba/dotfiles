@@ -1,5 +1,5 @@
 return {
-  'jose-elias-alvarez/null-ls.nvim',
+  'nvimtools/none-ls.nvim',
   config = function()
     local null_ls = require('null-ls')
 
@@ -17,14 +17,6 @@ return {
         -- javascript
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.formatting.prettier,
-
-        -- php
-        null_ls.builtins.diagnostics.phpcs.with {
-          extra_args = { '--standard=PSR12' }
-        },
-        null_ls.builtins.formatting.phpcbf.with {
-          extra_args = { '--standard=PSR12' }
-        },
 
         -- python
         null_ls.builtins.diagnostics.flake8.with {
