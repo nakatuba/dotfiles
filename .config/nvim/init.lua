@@ -18,6 +18,10 @@ if vim.g.vscode then
   require('vscode')
 else
   require('lazy').setup('plugins', {
+    dev = {
+      path = '~/ghq/github.com/nakatuba',
+      patterns = { 'nakatuba' }
+    },
     change_detection = {
       notify = false
     }
