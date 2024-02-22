@@ -1,3 +1,5 @@
+command -v bat > /dev/null && alias cat='bat'
+
 if command -v exa > /dev/null; then
   alias ll='exa --icons -l'
   alias la='exa --icons -la'
@@ -12,7 +14,3 @@ fi
 if command -v nvr > /dev/null; then
   [ -n "$NVIM" ] && alias nvim='nvr -l'
 fi
-
-command -v bat > /dev/null && alias cat='bat'
-command -v mycli > /dev/null && alias mysql='mycli'
-command -v pgcli > /dev/null && alias psql='pgcli'
