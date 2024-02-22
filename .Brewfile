@@ -3,7 +3,6 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 
 brew "cloud-sql-proxy"
-brew "cocoapods"
 brew "composer"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
