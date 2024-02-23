@@ -16,7 +16,9 @@ return {
       sources = {
         -- javascript
         null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.prettier.with {
+          disabled_filetypes = { 'json' }
+        },
 
         -- python
         null_ls.builtins.diagnostics.flake8.with {
