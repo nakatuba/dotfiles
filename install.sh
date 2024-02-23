@@ -34,6 +34,9 @@ if [ "$(uname)" = "Darwin" ]; then
 
   ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
+
+  ln -sf ~/.config/vscode/* ~/Library/Application\ Support/Code/User
+  defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 fi
 
 # Install asdf
