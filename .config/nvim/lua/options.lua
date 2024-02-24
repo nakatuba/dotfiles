@@ -14,6 +14,9 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.updatetime = 100
 vim.opt.termguicolors = true
+vim.opt.foldlevel = 99
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
