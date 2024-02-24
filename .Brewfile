@@ -6,6 +6,7 @@ brew "cloud-sql-proxy"
 brew "composer"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew "neofetch"
 brew "tmux"
 
 cask "android-studio"
