@@ -17,7 +17,7 @@ return {
         -- javascript
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.formatting.prettier.with {
-          disabled_filetypes = { 'json' }
+          disabled_filetypes = { 'json', 'yaml' }
         },
 
         -- python
