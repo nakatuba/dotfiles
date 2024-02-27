@@ -9,7 +9,7 @@ return {
     end
 
     require('notes').setup {
-      dir = '~/ghq/github.com/nakatuba/notes'
+      dir = '~/Dropbox/notes'
     }
 
     vim.keymap.set('n', '<leader>nn', require('notes').new)
