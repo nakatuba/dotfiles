@@ -4,7 +4,6 @@ set -eu
 
 DOTFILES=$(cd $(dirname $0) && pwd)
 
-ln -sf $DOTFILES/.tool-versions ~
 ln -sf $DOTFILES/.zlogin ~
 ln -sf $DOTFILES/.zlogout ~
 ln -sf $DOTFILES/.zpreztorc ~
@@ -14,17 +13,17 @@ ln -sf $DOTFILES/.zshrc ~
 
 mkdir -p ~/.config
 
-ln -sf $DOTFILES/.config/* ~/.config
+ln -sf $DOTFILES/.config/git ~/.config
+ln -sf $DOTFILES/.config/nvim ~/.config
+ln -sf $DOTFILES/.config/tmux ~/.config
+ln -sf $DOTFILES/.config/zsh ~/.config
 
-# Install prezto
-if [ -d ~/.zprezto ]; then
-  (cd ~/.zprezto && git pull && git submodule sync --recursive && git submodule update --init --recursive)
-else
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
-fi
-
-# Install homebrew
 if [ "$(uname)" = "Darwin" ]; then
+  ln -sf $DOTFILES/.config/karabiner ~/.config
+  ln -sf $DOTFILES/.config/skhd ~/.config
+  ln -sf $DOTFILES/.config/yabai ~/.config
+
+  # Install homebrew
   if command -v brew > /dev/null; then
     brew update
   else
@@ -32,11 +31,21 @@ if [ "$(uname)" = "Darwin" ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
+  # Install homebrew packages
   ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
 
-  ln -sf ~/.config/vscode/* ~/Library/Application\ Support/Code/User
+  # Setup vscode
+  ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User
+  ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Code/User
   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+fi
+
+# Install prezto
+if [ -d ~/.zprezto ]; then
+  (cd ~/.zprezto && git pull && git submodule sync --recursive && git submodule update --init --recursive)
+else
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 fi
 
 # Install asdf
@@ -49,6 +58,7 @@ else
 fi
 
 # Install asdf plugins
+ln -sf $DOTFILES/.tool-versions ~
 cat ~/.tool-versions | while read plugin version; do
   asdf plugin add $plugin
   asdf install $plugin $version
