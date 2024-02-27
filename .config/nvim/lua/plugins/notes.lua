@@ -14,5 +14,12 @@ return {
 
     vim.keymap.set('n', '<leader>nn', require('notes').new)
     vim.keymap.set('n', '<leader>no', require('notes').open)
+
+    vim.api.nvim_create_autocmd('FileType', {
+      pattern = 'markdown',
+      callback = function()
+        vim.keymap.set('i', '[[', require('notes').insert_link)
+      end
+    })
   end
 }
