@@ -89,7 +89,8 @@ fi
 
 # Install python
 pyenv install --skip-existing 3.11.7
-pyenv global 3.11.7
+pyenv install --skip-existing 2.7.18
+pyenv global 3.11.7 2.7.18
 pip install --upgrade pip
 
 # Install pipx packages
