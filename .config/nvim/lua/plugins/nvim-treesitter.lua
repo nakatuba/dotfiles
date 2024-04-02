@@ -18,7 +18,8 @@ return {
         'ruby',
         'terraform',
         'tsx',
-        'typescript'
+        'typescript',
+        'vue'
       },
       highlight = {
         enable = true

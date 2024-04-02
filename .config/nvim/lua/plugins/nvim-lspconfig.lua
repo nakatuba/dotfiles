@@ -109,5 +109,10 @@ return {
         client.server_capabilities.documentFormattingProvider = false
       end
     }
+
+    require('lspconfig').vuels.setup {
+      capabilities = capabilities,
+      on_attach = on_attach
+    }
   end
 }
