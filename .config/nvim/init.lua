@@ -20,7 +20,7 @@ if vim.g.vscode then
 else
   require('lazy').setup('plugins', {
     dev = {
-      path = '~/ghq/github.com/nakatuba',
+      path = vim.fn.stdpath('config') .. '/dev',
       patterns = { 'nakatuba' }
     },
     change_detection = {

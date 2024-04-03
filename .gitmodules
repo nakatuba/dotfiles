@@ -1,0 +1,3 @@
+[submodule ".config/nvim/dev/notes.nvim"]
+	path = .config/nvim/dev/notes.nvim
+	url = https://github.com/nakatuba/notes.nvim

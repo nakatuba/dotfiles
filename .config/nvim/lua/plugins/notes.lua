@@ -4,10 +4,6 @@ return {
     'nvim-telescope/telescope.nvim'
   },
   config = function()
-    if not pcall(require, 'notes') then
-      return
-    end
-
     require('notes').setup {
       dir = '~/Dropbox/notes'
     }
