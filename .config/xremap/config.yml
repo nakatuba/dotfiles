@@ -1,0 +1,146 @@
+modmap:
+  - name: AT Translated Set 2 keyboard
+    device:
+      only: /dev/input/event4
+    remap:
+      CapsLock: Ctrl_L
+      Alt_L:
+        held: Super_L
+        alone: Muhenkan
+      Alt_R:
+        held: Super_R
+        alone: Henkan
+      Super_L: Alt_L
+      SysRq: Alt_R
+
+  - name: PFU Limited HHKB-Hybrid
+    device:
+      only: /dev/input/event16
+    remap:
+      Super_L:
+        held: Super_L
+        alone: Muhenkan
+      Super_R:
+        held: Super_R
+        alone: Henkan
+
+keymap:
+  - name: CopyQ hotkey
+    remap:
+      Super-Shift-v:
+        launch: ['copyq', 'toggle']
+
+  - name: Allow keys
+    remap:
+      Super_R-h: left
+      Super_R-j: down
+      Super_R-k: up
+      Super_R-l: right
+
+  - name: Getting around the desktop
+    remap:
+      Ctrl-Super_R-h: Super-PageUp
+      Ctrl-Super_R-l: Super-PageDown
+      Ctrl-Shift-Super_R-h: Super-Shift-PageUp
+      Ctrl-Shift-Super_R-l: Super-Shift-PageDown
+
+  - name: Common editing shortcuts
+    application:
+      not: [gnome-terminal-server, org.wezfurlong.wezterm]
+    remap:
+      Super-a: Ctrl-a
+      Super-x: Ctrl-x
+      Super-c: Ctrl-c
+      Super-v: Ctrl-v
+      Super-z: Ctrl-z
+
+  - name: Common editing shortcuts in the Terminal
+    application:
+      only: [gnome-terminal-server, org.wezfurlong.wezterm]
+    remap:
+      Super-c: Ctrl-Shift-c
+      Super-v: Ctrl-Shift-v
+
+  - name: Emacs key bindings
+    application:
+      not: [gnome-terminal-server, org.wezfurlong.wezterm]
+    remap:
+      # Key Bindings (control+keys)
+      C-d: delete
+      C-h: backspace
+      C-i: tab
+      C-leftbrace: esc
+      C-m: enter
+      C-b: left
+      C-f: right
+      C-n: down
+      C-p: up
+      C-v: pagedown
+      C-a: home
+      C-e: end
+      C-k: [Shift-end, delete]
+      # Key Bindings (option+keys)
+      M-v: pageup
+      M-b: C-left
+      M-f: C-right
+      M-d: C-delete
+      # Bash Style Key Bindings
+      C-w: C-backspace
+      C-u: [Shift-home, backspace]
+
+  - name: Google Chrome
+    application:
+      only: Google-chrome
+    remap:
+      # Tab & window shortcuts
+      Super-n: Ctrl-n
+      Super-Shift-n: Ctrl-Shift-n
+      Super-t: Ctrl-t
+      Super-Shift-t: Ctrl-Shift-t
+      Super-Shift-rightbrace: Ctrl-tab
+      Super-Shift-leftbrace: Ctrl-Shift-tab
+      Super-1: Ctrl-1
+      Super-2: Ctrl-2
+      Super-3: Ctrl-3
+      Super-4: Ctrl-4
+      Super-5: Ctrl-5
+      Super-6: Ctrl-6
+      Super-7: Ctrl-7
+      Super-8: Ctrl-8
+      Super-9: Ctrl-9
+      Super-9: Ctrl-9
+      Super-leftbrace: Alt-left
+      Super-rightbrace: Alt-right
+      Super-w: Ctrl-w
+      Super-Shift-w: Ctrl-Shift-w
+      # Google Chrome feature shortcuts
+      Super-Shift-b: Ctrl-Shift-b
+      Super-Alt-b: Ctrl-Shift-o
+      Super-y: Ctrl-h
+      Super-Shift-j: Ctrl-j
+      Super-f: Ctrl-f
+      Super-g: Ctrl-g
+      Super-Shift-g: Ctrl-Shift-g
+      Super-Alt-i: Ctrl-Shift-j
+      # Address bar shortcuts
+      Super-l: Ctrl-l
+      # Webpage shortcuts
+      Super-p: Ctrl-p
+      Super-s: Ctrl-s
+      Super-r: Ctrl-r
+      Super-Shift-r: Ctrl-Shift-r
+      Super-o: Ctrl-o
+      Super-Alt-u: Ctrl-u
+      Super-d: Ctrl-d
+      Super-Shift-d: Ctrl-Shift-d
+      Super-equal: Ctrl-equal
+      Super-minus: Ctrl-minus
+      Super-0: Ctrl-0
+      Super-Shift-h: Alt-Home
+
+  - name: Slack
+    application:
+      only: [Google-chrome, Slack]
+    remap:
+      Super-k: Ctrl-k
+      Super-enter: Ctrl-enter
