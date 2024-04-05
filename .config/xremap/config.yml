@@ -37,6 +37,13 @@ keymap:
       Super_R-k: up
       Super_R-l: right
 
+  - name: Resize windows
+    remap:
+      Super_L-Super_R-h: Super-left
+      Super_L-Super_R-j: Super-down
+      Super_L-Super_R-k: Super-up
+      Super_L-Super_R-l: Super-right
+
   - name: Getting around the desktop
     remap:
       Ctrl-Super_R-h: Super-PageUp
