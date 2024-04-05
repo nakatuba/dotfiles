@@ -1,4 +1,4 @@
-command -v bat > /dev/null && alias cat='bat'
+command -v bat > /dev/null && alias cat='bat -p'
 
 if command -v exa > /dev/null; then
   alias ll='exa --icons -l'
