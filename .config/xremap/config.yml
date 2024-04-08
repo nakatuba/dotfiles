@@ -1,7 +1,7 @@
 modmap:
   - name: AT Translated Set 2 keyboard
     device:
-      only: /dev/input/event4
+      only: AT Translated Set 2 keyboard
     remap:
       CapsLock: Ctrl_L
       Alt_L:
@@ -15,7 +15,7 @@ modmap:
 
   - name: PFU Limited HHKB-Hybrid
     device:
-      only: /dev/input/event16
+      only: PFU Limited HHKB-Hybrid
     remap:
       Super_L:
         held: Super_L
