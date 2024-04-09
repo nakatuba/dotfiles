@@ -3,7 +3,9 @@ modmap:
     device:
       only: AT Translated Set 2 keyboard
     remap:
-      CapsLock: Ctrl_L
+      CapsLock:
+        held: Ctrl_L
+        alone: CapsLock
       Alt_L:
         held: Super_L
         alone: Muhenkan
@@ -17,6 +19,9 @@ modmap:
     device:
       only: PFU Limited HHKB-Hybrid
     remap:
+      Ctrl_L:
+        held: Ctrl_L
+        alone: CapsLock
       Super_L:
         held: Super_L
         alone: Muhenkan
@@ -29,6 +34,24 @@ keymap:
     remap:
       Super-Shift-v:
         launch: ['copyq', 'toggle']
+
+  - name: Show Wezterm
+    application:
+      not: org.wezfurlong.wezterm
+    remap:
+      CapsLock:
+        remap:
+          CapsLock:
+            launch: ['wmctrl', '-x', '-a', 'org.wezfurlong.wezterm']
+
+  - name: Hide Wezterm
+    application:
+      only: org.wezfurlong.wezterm
+    remap:
+      CapsLock:
+        remap:
+          CapsLock:
+            Super-h
 
   - name: Allow keys
     remap:
@@ -68,6 +91,18 @@ keymap:
       Super-c: Ctrl-Shift-c
       Super-v: Ctrl-Shift-v
 
+  - name: Forge
+    remap:
+      Ctrl-Super_L-h: Ctrl-Super-h
+      Ctrl-Super_L-j: Ctrl-Super-j
+      Ctrl-Super_L-k: Ctrl-Super-k
+      Ctrl-Super_L-l: Ctrl-Super-l
+      Alt-Shift-h: Alt-Shift-h
+      Alt-Shift-j: Alt-Shift-j
+      Alt-Shift-k: Alt-Shift-k
+      Alt-Shift-l: Alt-Shift-l
+      Ctrl-Super_L-e: Ctrl-Super-e
+
   - name: Emacs key bindings
     application:
       not: [gnome-terminal-server, org.wezfurlong.wezterm]
@@ -94,6 +129,12 @@ keymap:
       # Bash Style Key Bindings
       C-w: C-backspace
       C-u: [Shift-home, backspace]
+
+  - name: Esc key in vim
+    application:
+      only: [gnome-terminal-server, org.wezfurlong.wezterm]
+    remap:
+      C-leftbrace: [Muhenkan, esc]
 
   - name: Google Chrome
     application:
