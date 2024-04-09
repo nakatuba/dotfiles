@@ -9,8 +9,9 @@ return {
       dir = '~/Dropbox/notes'
     }
 
-    vim.keymap.set('n', '<leader>nn', require('notes').new)
-    vim.keymap.set('n', '<leader>no', require('notes').open)
+    vim.keymap.set('n', '<leader>nn', require('notes').new_note)
+    vim.keymap.set('n', '<leader>no', require('notes').open_note)
+    vim.keymap.set('n', '<leader>ng', require('notes').search_notes)
 
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'markdown',
