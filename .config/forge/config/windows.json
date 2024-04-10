@@ -1,0 +1,8 @@
+{
+    "overrides": [
+        {
+            "wmClass": "copyq.copyq",
+            "mode": "float"
+        }
+    ]
+}
