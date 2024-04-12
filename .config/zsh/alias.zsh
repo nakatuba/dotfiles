@@ -8,12 +8,9 @@ fi
 
 if command -v nvim > /dev/null; then
   alias vi='nvim'
+  alias vim='nvim'
+fi
 
-  if command -v tmux > /dev/null; then
-    [ -n "$TMUX" ] || alias vi='tmux new -A -s $(basename $PWD) nvim'
-  fi
-
-  if command -v nvr > /dev/null; then
-    [ -n "$NVIM" ] && alias vi='nvr -l'
-  fi
+if command -v nvr > /dev/null; then
+  [ -n "$NVIM" ] && alias nvim='nvr -l'
 fi
