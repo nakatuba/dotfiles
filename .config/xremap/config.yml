@@ -97,10 +97,6 @@ keymap:
       Ctrl-Super_L-j: Ctrl-Super-j
       Ctrl-Super_L-k: Ctrl-Super-k
       Ctrl-Super_L-l: Ctrl-Super-l
-      Alt-Shift-h: Alt-Shift-h
-      Alt-Shift-j: Alt-Shift-j
-      Alt-Shift-k: Alt-Shift-k
-      Alt-Shift-l: Alt-Shift-l
       Ctrl-Super_L-e: Ctrl-Super-e
 
   - name: Emacs key bindings
