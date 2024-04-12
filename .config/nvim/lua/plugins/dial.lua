@@ -34,7 +34,22 @@ return {
         augend.date.alias['%Y-%m-%d'],
         augend.date.alias['%m/%d'],
         augend.date.alias['%H:%M'],
-        augend.misc.alias.markdown_header
+        augend.misc.alias.markdown_header,
+        augend.user.new {
+          find = function(line, cursor)
+            local s, e = line:find('- %[[ x]%]')
+            if s and line:sub(1, s - 1):match('^%s*$') then
+              return { from = s, to = e }
+            end
+          end,
+          add = function(text, addend, cursor)
+            if text == '- [ ]' then
+              return { text = '- [x]', cursor = 4 }
+            elseif text == '- [x]' then
+              return { text = '- [ ]', cursor = 4 }
+            end
+          end
+        }
       }
     }
 
