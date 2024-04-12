@@ -10,6 +10,8 @@ return {
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'markdown',
       callback = function()
+        vim.keymap.set('n', '<leader>cl', '<cmd>MkdnCreateLink<CR>', { buffer = true })
+
         vim.keymap.set('i', '<CR>', '<cmd>MkdnNewListItem<CR>',            { buffer = true })
         vim.keymap.set('n', 'o',    '<cmd>MkdnNewListItemBelowInsert<CR>', { buffer = true })
         vim.keymap.set('n', 'O',    '<cmd>MkdnNewListItemAboveInsert<CR>', { buffer = true })
