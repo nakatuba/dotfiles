@@ -4,6 +4,7 @@ tap "koekeishiya/formulae"
 
 brew "cloud-sql-proxy"
 brew "composer"
+brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "neofetch"
