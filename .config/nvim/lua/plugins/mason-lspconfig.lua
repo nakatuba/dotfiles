@@ -9,6 +9,7 @@ return {
       ensure_installed = {
         'gopls',
         'intelephense',
+        'jsonls',
         'lua_ls',
         'marksman',
         'pyright',

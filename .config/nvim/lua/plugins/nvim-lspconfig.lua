@@ -53,6 +53,14 @@ return {
       on_attach = on_attach
     }
 
+    require('lspconfig').jsonls.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      init_options = {
+        provideFormatter = false
+      }
+    }
+
     require('lspconfig').lua_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
