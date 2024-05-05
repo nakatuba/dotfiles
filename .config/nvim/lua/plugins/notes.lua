@@ -6,7 +6,7 @@ return {
   },
   config = function()
     require('notes').setup {
-      dir = '~/Dropbox/notes'
+      dir = '~/Dropbox/Apps/remotely-save/notes',
     }
 
     vim.keymap.set('n', '<leader>nn', require('notes').new_note)
