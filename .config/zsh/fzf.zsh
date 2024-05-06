@@ -1,3 +1,4 @@
+export RUNEWIDTH_EASTASIAN=0
 export FZF_DEFAULT_OPTS='--bind ctrl-j:preview-down,ctrl-k:preview-up'
 
 if command -v fd > /dev/null; then
