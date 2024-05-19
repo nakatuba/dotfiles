@@ -5,7 +5,7 @@ ghq 1.4.2
 github-cli 2.40.1
 golang 1.21.5
 lua 5.1.5
-neovim 0.9.5
+neovim 0.10.0
 nodejs 21.5.0
 pipx 1.5.0
 ruby 3.1.4

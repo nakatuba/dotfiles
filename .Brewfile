@@ -8,6 +8,7 @@ brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "neofetch"
+brew "neovim"
 brew "tmux"
 
 cask "1password"

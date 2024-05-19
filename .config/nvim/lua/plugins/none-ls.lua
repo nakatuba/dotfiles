@@ -1,5 +1,8 @@
 return {
   'nvimtools/none-ls.nvim',
+  dependencies = {
+    'nvimtools/none-ls-extras.nvim'
+  },
   config = function()
     local null_ls = require('null-ls')
 
@@ -15,13 +18,13 @@ return {
       end,
       sources = {
         -- javascript
-        null_ls.builtins.diagnostics.eslint,
+        require('none-ls.diagnostics.eslint'),
         null_ls.builtins.formatting.prettier.with {
           disabled_filetypes = { 'json', 'yaml' }
         },
 
         -- python
-        null_ls.builtins.diagnostics.flake8.with {
+        require('none-ls.diagnostics.flake8').with {
           extra_args = { '--ignore=E203,E266,E501,W503' },
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
