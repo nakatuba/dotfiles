@@ -1,5 +1,5 @@
 return {
-  'beauwilliams/focus.nvim',
+  'nvim-focus/focus.nvim',
   config = function()
     require('focus').setup {
       autoresize = false,
@@ -7,5 +7,6 @@ return {
     }
 
     vim.keymap.set('n', '<CR>', '<cmd>FocusMaxOrEqual<CR>')
-  end
+  end,
+  commit = '3d9df42'
 }

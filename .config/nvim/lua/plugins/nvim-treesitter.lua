@@ -1,8 +1,7 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    'windwp/nvim-ts-autotag',
-    'JoosepAlviste/nvim-ts-context-commentstring'
+    'windwp/nvim-ts-autotag'
   },
   config = function()
     require('nvim-treesitter.configs').setup {
@@ -30,9 +29,6 @@ return {
         disable = { 'go', 'python', 'ruby' }
       },
       autotag = {
-        enable = true
-      },
-      context_commentstring = {
         enable = true
       }
     }
