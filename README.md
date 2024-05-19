@@ -5,7 +5,7 @@
 1. Download
 
 ```
-git clone --recursive https://github.com/nakatuba/dotfiles.git
+git clone https://github.com/nakatuba/dotfiles.git
 cd dotfiles
 ```
 
