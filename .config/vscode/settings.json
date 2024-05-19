@@ -15,7 +15,7 @@
     "flake8.args": [
         "--ignore=E203,E266,E501,W503"
     ],
-    "vscode-neovim.neovimExecutablePaths.darwin": "/Users/nakagawatsubasa/.asdf/shims/nvim",
+    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
     }
