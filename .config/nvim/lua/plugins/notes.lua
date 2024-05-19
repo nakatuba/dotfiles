@@ -11,7 +11,6 @@ return {
 
     vim.keymap.set('n', '<leader>nn', require('notes').new_note)
     vim.keymap.set('n', '<leader>no', require('notes').open_note)
-
     vim.keymap.set('n', '<leader>ng', function()
       require('telescope.builtin').live_grep {
         cwd = require('notes').config.dir
@@ -22,7 +21,7 @@ return {
       pattern = 'markdown',
       callback = function()
         if vim.startswith(vim.fn.expand('%:p'), vim.fn.expand(require('notes').config.dir)) then
-          vim.keymap.set('i', '[[', require('notes').insert_link, { buffer = true })
+          vim.keymap.set('n', '<leader>il', require('notes').insert_link, { buffer = true })
         end
       end
     })
