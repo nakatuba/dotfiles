@@ -3,8 +3,8 @@ ctrl + cmd - h : yabai -m window --focus west  || yabai -m display --focus west
 ctrl + cmd - j : yabai -m window --focus south || yabai -m display --focus south
 ctrl + cmd - k : yabai -m window --focus north || yabai -m display --focus north
 ctrl + cmd - l : yabai -m window --focus east  || yabai -m display --focus east
-ctrl + cmd - p : yabai -m window --focus prev  || yabai -m window  --focus last
-ctrl + cmd - n : yabai -m window --focus next  || yabai -m window  --focus first
+ctrl + cmd - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+ctrl + cmd - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
 
 # swap window
 shift + alt - h : yabai -m window --swap west
@@ -22,11 +22,11 @@ ctrl + cmd - 0x18 : yabai -m space --balance
 # rotate tree
 ctrl + cmd - r : yabai -m space --rotate 90
 
-# toggle window fullscreen zoom
-ctrl + cmd - return : yabai -m window --toggle zoom-fullscreen
-
 # toggle window split type
 ctrl + cmd - e : yabai -m window --toggle split
 
 # float / unfloat window and center on screen
 ctrl + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# change layout of desktop
+ctrl + cmd - return : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')
