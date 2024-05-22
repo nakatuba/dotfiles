@@ -35,7 +35,17 @@ if [ "$(uname)" = "Darwin" ]; then
   ln -sf $DOTFILES/.Brewfile ~
   brew bundle --global
 
+  # Setup hammerspoon
+  mkdir -p ~/.hammerspoon
+  ln -sf $DOTFILES/.config/hammerspoon/init.lua ~/.hammerspoon
+  if [ -d ~/.hammerspoon/stackline ]; then
+    (cd ~/.hammerspoon/stackline && git pull)
+  else
+    git clone https://github.com/AdamWagner/stackline.git ~/.hammerspoon/stackline
+  fi
+
   # Setup vscode
+  mkdir -p ~/Library/Application\ Support/Code/User
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User
   ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Code/User
   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
