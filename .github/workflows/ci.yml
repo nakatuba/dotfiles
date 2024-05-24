@@ -14,3 +14,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ./install.sh
+        env:
+          HOMEBREW_BUNDLE_MAS_SKIP: "Amphetamine Xcode"
