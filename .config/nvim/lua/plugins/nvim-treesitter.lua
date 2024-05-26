@@ -1,7 +1,8 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    'windwp/nvim-ts-autotag'
+    'windwp/nvim-ts-autotag',
+    'JoosepAlviste/nvim-ts-context-commentstring'
   },
   config = function()
     require('nvim-treesitter.configs').setup {
@@ -23,6 +24,13 @@ return {
       },
       highlight = {
         enable = true
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          node_incremental = '<Tab>',
+          node_decremental = '<S-Tab>'
+        }
       },
       indent = {
         enable = true,
