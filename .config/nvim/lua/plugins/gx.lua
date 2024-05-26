@@ -5,5 +5,7 @@ return {
   },
   config = function()
     require('gx').setup()
+
+    vim.keymap.set({'n', 'x'}, 'gx', '<cmd>Browse<CR>')
   end
 }
