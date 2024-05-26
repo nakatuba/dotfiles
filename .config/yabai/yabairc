@@ -6,5 +6,6 @@ yabai -m config right_padding  10
 yabai -m config window_gap     10
 yabai -m config auto_balance   on
 
-yabai -m rule --add app="^.*$"                                         manage=off
-yabai -m rule --add app="^Google Chrome$" subrole="^AXStandardWindow$" manage=on
+yabai -m rule --add app="^.*$"                                               manage=off
+yabai -m rule --add app="^Google Chrome$"                                    manage=on
+yabai -m rule --add app="^Google Chrome$" title="ピクチャー イン ピクチャー" manage=off
