@@ -50,7 +50,10 @@ return {
 
     require('lspconfig').intelephense.setup {
       capabilities = capabilities,
-      on_attach = on_attach
+      on_attach = on_attach,
+      init_options = {
+        globalStoragePath = vim.fn.expand('~/.local/share/intelephense')
+      }
     }
 
     require('lspconfig').jsonls.setup {
