@@ -41,5 +41,11 @@ return {
         map({'o', 'x'}, 'ih', ':<C-u>Gitsigns select_hunk<CR>')
       end
     }
+
+    vim.api.nvim_create_autocmd('FocusGained', {
+      callback = function()
+        require('gitsigns').refresh()
+      end
+    })
   end
 }
