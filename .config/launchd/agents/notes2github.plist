@@ -6,7 +6,7 @@
   <string>notes2github</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/local/bin/notes2github.sh</string>
+    <string>/usr/local/bin/notes2github</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>

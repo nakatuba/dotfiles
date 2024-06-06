@@ -46,7 +46,7 @@ if [ "$(uname)" = "Darwin" ]; then
 
   # Setup launchd
   sudo mkdir -p /usr/local/bin
-  sudo ln -sf $DOTFILES/scripts/notes2github.sh /usr/local/bin
+  sudo ln -sf $DOTFILES/scripts/notes2github /usr/local/bin
   mkdir -p ~/Library/LaunchAgents
   ln -sf $DOTFILES/.config/launchd/agents/notes2github.plist ~/Library/LaunchAgents
   launchctl unload ~/Library/LaunchAgents/notes2github.plist
