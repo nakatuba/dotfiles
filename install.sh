@@ -44,6 +44,14 @@ if [ "$(uname)" = "Darwin" ]; then
     git clone https://github.com/AdamWagner/stackline.git ~/.hammerspoon/stackline
   fi
 
+  # Setup launchd
+  sudo mkdir -p /usr/local/bin
+  sudo ln -sf $DOTFILES/scripts/notes2github.sh /usr/local/bin
+  mkdir -p ~/Library/LaunchAgents
+  ln -sf $DOTFILES/.config/launchd/agents/notes2github.plist ~/Library/LaunchAgents
+  launchctl unload ~/Library/LaunchAgents/notes2github.plist
+  launchctl load ~/Library/LaunchAgents/notes2github.plist
+
   # Setup vscode
   mkdir -p ~/Library/Application\ Support/Code/User
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User
