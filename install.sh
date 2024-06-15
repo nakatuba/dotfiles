@@ -115,6 +115,7 @@ pip install --upgrade pip
 pipx install --include-deps ansible
 pipx install git+https://github.com/nakatuba/pgcli.git
 pipx install mycli neovim-remote poetry powerline-status trash-cli
+pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
 
 # Clone my repositories
 ghq get https://github.com/nakatuba/notes.nvim.git
