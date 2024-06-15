@@ -1,5 +1,6 @@
-export RUNEWIDTH_EASTASIAN=0
-export FZF_DEFAULT_OPTS='--bind ctrl-j:preview-down,ctrl-k:preview-up'
+export RUNEWIDTH_EASTASIAN=0  # https://github.com/junegunn/fzf/issues/3258
+
+export FZF_DEFAULT_OPTS='--cycle --bind ctrl-j:preview-down,ctrl-k:preview-up'
 
 if command -v fd > /dev/null; then
   export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
