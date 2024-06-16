@@ -45,12 +45,12 @@ if [ "$(uname)" = "Darwin" ]; then
   fi
 
   # Setup launchd
-  sudo mkdir -p /usr/local/bin
-  sudo ln -sf $DOTFILES/scripts/notes2github /usr/local/bin
   mkdir -p ~/Library/LaunchAgents
-  ln -sf $DOTFILES/.config/launchd/agents/notes2github.plist ~/Library/LaunchAgents
-  launchctl unload ~/Library/LaunchAgents/notes2github.plist
-  launchctl load ~/Library/LaunchAgents/notes2github.plist
+  ln -sf $DOTFILES/.config/launchd/agents/*.plist ~/Library/LaunchAgents
+  for plist in $DOTFILES/.config/launchd/agents/*.plist; do
+    launchctl unload ~/Library/LaunchAgents/$(basename $plist)
+    launchctl load ~/Library/LaunchAgents/$(basename $plist)
+  done
 
   # Setup vscode
   mkdir -p ~/Library/Application\ Support/Code/User

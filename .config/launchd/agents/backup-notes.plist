@@ -3,10 +3,12 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>notes2github</string>
+  <string>backup-notes</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/local/bin/notes2github</string>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>$HOME/Dropbox/Apps/remotely-save/notes/scripts/backup.sh</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
