@@ -1,0 +1,42 @@
+let mapleader = " "
+
+set ReplaceWithRegister
+set argtextobj
+set commentary
+set easymotion
+set surround
+set textobj-entire
+set vim-exchange
+
+let g:argtextobj_pairs="[:],(:),<:>"
+let g:EasyMotion_do_mapping = 0
+
+noremap j gj
+noremap k gk
+noremap q <Nop>
+noremap s <C-w>
+
+" Emacs key bindings
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-a> <HOME>
+inoremap <C-e> <END>
+inoremap <C-d> <Del>
+
+nmap gs  <Plug>ReplaceWithRegisterOperator
+nmap gss <Plug>ReplaceWithRegisterLine
+xmap gs  <Plug>ReplaceWithRegisterVisual
+
+omap i, <Plug>InnerArgument
+xmap i, <Plug>InnerArgument
+omap a, <Plug>OuterArgument
+xmap a, <Plug>OuterArgument
+
+map <leader>w <Plug>(easymotion-bd-w)
+
+map <leader>f <Action>(GotoFile)
+map <leader>g <Action>(FindInPath)
+map <leader>b <Action>(Switcher)
+map <leader>h <Action>(RecentFiles)
