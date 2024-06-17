@@ -7,6 +7,7 @@ brew "composer"
 brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew "mas"
 brew "neofetch"
 brew "neovim"
 brew "tmux"
@@ -25,6 +26,7 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 cask "google-drive"
 cask "hammerspoon"
+cask "intellij-idea"
 cask "iterm2"
 cask "karabiner-elements"
 cask "keyboardcleantool"
@@ -41,6 +43,7 @@ cask "vmware-fusion"
 cask "zoom"
 
 mas "Amphetamine", id: 937984704
+mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 
 vscode "asvetliakov.vscode-neovim"
