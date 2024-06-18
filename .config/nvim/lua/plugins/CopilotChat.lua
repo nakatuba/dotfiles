@@ -48,10 +48,7 @@ return {
       },
       mappings = {
         close = {
-          normal = '<Esc>',
-        },
-        submit_prompt = {
-          insert = '<C-CR>'
+          normal = '<Esc>'
         }
       }
     }
@@ -59,6 +56,7 @@ return {
     require('CopilotChat.integrations.cmp').setup()
 
     vim.keymap.set({'n', 'x', 'i'}, '<C-/>', '<cmd>CopilotChatToggle<CR>')
+    vim.keymap.set({'n', 'x', 'i'}, '<C-_>', '<cmd>CopilotChatToggle<CR>')
   end,
   branch = 'canary'
 }
