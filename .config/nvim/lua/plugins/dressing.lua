@@ -5,7 +5,7 @@ return {
       input = {
         win_options = {
           winblend = 0,
-          winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
+          winhighlight = 'NormalFloat:Normal,FloatBorder:Blue,FloatTitle:Title'
         }
       },
       select = {
@@ -17,7 +17,7 @@ return {
                 relative = 'cursor',
                 win_options = {
                   winblend = 0,
-                  winhighlight = 'NormalFloat:Normal,FloatBorder:Blue'
+                  winhighlight = 'NormalFloat:Normal,FloatBorder:Blue,FloatTitle:Title'
                 },
                 min_height = 0
               }
