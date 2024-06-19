@@ -73,6 +73,6 @@ return {
     vim.keymap.set('n', '<leader>h',  '<cmd>Telescope oldfiles<CR>')
     vim.keymap.set('n', '<C-g><C-f>', '<cmd>Telescope git_status<CR>')
     vim.keymap.set('n', '<C-g><C-b>', '<cmd>Telescope git_branches<CR>')
-    vim.keymap.set('n', '<C-g><C-h>', '<cmd>Telescope git_commits<CR>')
+    vim.keymap.set('n', '<C-g><C-h>', '<cmd>Telescope git_bcommits<CR>')
   end
 }
