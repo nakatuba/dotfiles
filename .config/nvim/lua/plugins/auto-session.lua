@@ -16,6 +16,12 @@ return {
       pre_save_cmds = { _G.close_all_floating_wins }
     }
 
-    vim.keymap.set('n', '<leader>s', '<cmd>SessionRestore<CR>')
+    vim.api.nvim_create_autocmd('VimEnter', {
+      callback = function()
+        if vim.fn.argc() == 0 then
+          vim.keymap.set('n', '<leader>s', '<cmd>SessionRestore<CR>', { buffer = true })
+        end
+      end
+    })
   end
 }

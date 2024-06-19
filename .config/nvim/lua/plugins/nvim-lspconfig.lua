@@ -12,6 +12,7 @@ return {
       vim.keymap.set('n', 'K',          '<cmd>lua vim.lsp.buf.hover()<CR>',                         { buffer = bufnr })
       vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>',                        { buffer = bufnr })
       vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>',                   { buffer = bufnr })
+      vim.keymap.set('n', '<leader>s',  '<cmd>Telescope lsp_document_symbols<CR>',                  { buffer = bufnr })
       vim.keymap.set('n', '<leader>d',  '<cmd>Telescope diagnostics<CR>',                           { buffer = bufnr })
       vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
       vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
