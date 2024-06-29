@@ -1,7 +1,6 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
-    'windwp/nvim-ts-autotag',
     'JoosepAlviste/nvim-ts-context-commentstring'
   },
   config = function()
@@ -35,9 +34,6 @@ return {
       indent = {
         enable = true,
         disable = { 'go', 'python', 'ruby' }
-      },
-      autotag = {
-        enable = true
       }
     }
   end,
