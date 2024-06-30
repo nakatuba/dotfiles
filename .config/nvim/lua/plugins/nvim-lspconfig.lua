@@ -1,5 +1,8 @@
 return {
   'neovim/nvim-lspconfig',
+  dependencies = {
+    'nanotee/sqls.nvim'
+  },
   config = function()
     vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { focusable = false })
 
@@ -114,6 +117,14 @@ return {
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
+      end
+    }
+
+    require('lspconfig').sqls.setup {
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        require('sqls').on_attach(client, bufnr)
       end
     }
 
