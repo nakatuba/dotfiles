@@ -9,7 +9,6 @@ return {
     local select = require('CopilotChat.select')
 
     require('CopilotChat').setup {
-      debug = true,
       auto_insert_mode = true,
       selection = function(source)
         return select.visual(source) or select.buffer(source)
@@ -54,9 +53,6 @@ return {
     }
 
     require('CopilotChat.integrations.cmp').setup()
-
-    vim.keymap.set({'n', 'x', 'i'}, '<C-/>', '<cmd>CopilotChatToggle<CR>')
-    vim.keymap.set({'n', 'x', 'i'}, '<C-_>', '<cmd>CopilotChatToggle<CR>')
   end,
   branch = 'canary'
 }
