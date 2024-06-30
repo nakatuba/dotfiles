@@ -17,6 +17,7 @@ return {
         'php',
         'python',
         'ruby',
+        'sql',
         'terraform',
         'tsx',
         'typescript',
