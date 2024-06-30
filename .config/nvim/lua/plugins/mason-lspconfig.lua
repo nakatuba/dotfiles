@@ -14,6 +14,7 @@ return {
         'marksman',
         'pyright',
         'solargraph',
+        'sqls',
         'terraformls',
         'tsserver',
         'vuels'
