@@ -25,6 +25,10 @@ inoremap <C-a> <HOME>
 inoremap <C-e> <END>
 inoremap <C-d> <Del>
 
+" Copy to system clipboard
+nnoremap y "*y
+xnoremap y "*y
+
 nmap gs  <Plug>ReplaceWithRegisterOperator
 nmap gss <Plug>ReplaceWithRegisterLine
 xmap gs  <Plug>ReplaceWithRegisterVisual
@@ -40,3 +44,5 @@ map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
 map <leader>b <Action>(Switcher)
 map <leader>h <Action>(RecentFiles)
+
+imap <C-f> <Action>(copilot.applyInlays)
