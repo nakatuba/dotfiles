@@ -7,10 +7,14 @@ return {
   config = function()
     require('notes').setup {
       dir = '~/Dropbox/Apps/remotely-save/notes',
+      daily_notes = {
+        dir = '~/Dropbox/Apps/remotely-save/notes/daily'
+      }
     }
 
     vim.keymap.set('n', '<leader>nn', require('notes').new_note)
     vim.keymap.set('n', '<leader>no', require('notes').open_note)
+    vim.keymap.set('n', '<leader>nd', require('notes').open_daily_note)
     vim.keymap.set('n', '<leader>ng', function()
       require('telescope.builtin').live_grep {
         cwd = require('notes').config.dir
