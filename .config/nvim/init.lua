@@ -1,6 +1,6 @@
-require('autocmds')
-require('keymaps')
-require('options')
+require('config.autocmds')
+require('config.keymaps')
+require('config.options')
 
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 if vim.g.vscode then
-  require('vscode')
+  require('config.vscode')
 else
   require('lazy').setup('plugins', {
     dev = {
