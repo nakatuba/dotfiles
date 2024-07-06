@@ -44,11 +44,6 @@ return {
       },
       window = {
         layout = 'float'
-      },
-      mappings = {
-        close = {
-          normal = '<Esc>'
-        }
       }
     }
 
