@@ -44,5 +44,3 @@ map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
 map <leader>b <Action>(Switcher)
 map <leader>h <Action>(RecentFiles)
-
-imap <C-f> <Action>(copilot.applyInlays)
