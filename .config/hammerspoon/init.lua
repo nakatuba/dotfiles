@@ -1,7 +1,7 @@
 local stackline = require('stackline')
+local conf = require('stackline.conf')
 
-stackline:init {
-  paths = {
-    yabai = '/opt/homebrew/bin/yabai'
-  }
-}
+conf.paths.yabai = '/opt/homebrew/bin/yabai'
+conf.appearance.showIcons = false
+
+stackline:init()
