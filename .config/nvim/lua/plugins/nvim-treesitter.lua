@@ -11,6 +11,7 @@ return {
         'html',
         'javascript',
         'json',
+        'kotlin',
         'markdown',
         'markdown_inline',
         'php',

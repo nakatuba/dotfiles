@@ -66,6 +66,11 @@ return {
       }
     }
 
+    require('lspconfig').kotlin_language_server.setup {
+      capabilities = capabilities,
+      on_attach = on_attach
+    }
+
     require('lspconfig').lua_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)

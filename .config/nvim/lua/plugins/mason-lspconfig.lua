@@ -10,6 +10,7 @@ return {
         'gopls',
         'intelephense',
         'jsonls',
+        'kotlin_language_server',
         'lua_ls',
         'marksman',
         'pyright',
