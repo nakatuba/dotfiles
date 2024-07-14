@@ -117,5 +117,9 @@ pipx install git+https://github.com/nakatuba/pgcli.git
 pipx install mycli neovim-remote poetry powerline-status trash-cli
 pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
 
+# Install tmux plugins
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+~/.config/tmux/plugins/tpm/bin/install_plugins
+
 # Clone my repositories
 ghq get https://github.com/nakatuba/notes.nvim.git
