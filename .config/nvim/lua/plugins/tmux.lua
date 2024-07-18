@@ -3,12 +3,18 @@ return {
   config = function()
     require('tmux').setup {
       navigation = {
+        cycle_navigation = false,
         enable_default_keybindings = false
       },
       resize = {
         enable_default_keybindings = false
       }
     }
+
+    vim.keymap.set('n', 'sh', require('tmux').move_left)
+    vim.keymap.set('n', 'sj', require('tmux').move_bottom)
+    vim.keymap.set('n', 'sk', require('tmux').move_top)
+    vim.keymap.set('n', 'sl', require('tmux').move_right)
 
     vim.api.nvim_create_autocmd('FocusGained', {
       callback = function()
