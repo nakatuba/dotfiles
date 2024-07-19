@@ -1,5 +1,6 @@
 let mapleader = " "
 
+set NERDTree
 set ReplaceWithRegister
 set argtextobj
 set commentary
@@ -10,6 +11,10 @@ set vim-exchange
 
 let g:argtextobj_pairs="[:],(:),<:>"
 let g:EasyMotion_do_mapping = 0
+
+set ignorecase
+set incsearch
+set smartcase
 
 noremap j gj
 noremap k gk
@@ -44,3 +49,6 @@ map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
 map <leader>b <Action>(Switcher)
 map <leader>h <Action>(RecentFiles)
+
+map <C-p> <Action>(PreviousTab)
+map <C-n> <Action>(NextTab)
