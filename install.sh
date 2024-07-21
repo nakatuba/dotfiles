@@ -118,7 +118,11 @@ pipx install mycli neovim-remote poetry powerline-status trash-cli
 pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
 
 # Install tmux plugins
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+if [ -d ~/.config/tmux/plugins/tpm ]; then
+  (cd ~/.config/tmux/plugins/tpm && git pull)
+else
+  git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+fi
 ~/.config/tmux/plugins/tpm/bin/install_plugins
 
 # Clone my repositories
