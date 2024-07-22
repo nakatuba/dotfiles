@@ -7,7 +7,7 @@ set commentary
 set easymotion
 set surround
 set textobj-entire
-set vim-exchange
+set exchange
 
 let g:argtextobj_pairs="[:],(:),<:>"
 let g:EasyMotion_do_mapping = 0
@@ -34,6 +34,8 @@ inoremap <C-d> <Del>
 nnoremap y "*y
 xnoremap y "*y
 
+map <leader>e :NERDTree<CR>
+
 nmap gs  <Plug>ReplaceWithRegisterOperator
 nmap gss <Plug>ReplaceWithRegisterLine
 xmap gs  <Plug>ReplaceWithRegisterVisual
@@ -44,6 +46,8 @@ omap a, <Plug>OuterArgument
 xmap a, <Plug>OuterArgument
 
 map <leader>w <Plug>(easymotion-bd-w)
+
+map <C-s>s <Action>(RecentProjectListGroup)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
@@ -61,16 +65,19 @@ map <leader>d  <Action>(ActivateProblemsViewToolWindow)
 map [d         <Action>(GotoPreviousError)
 map ]d         <Action>(GotoNextError)
 
+map ghr <Action>(Vcs.RollbackChangedLines)
+map ghp <Action>(VcsShowCurrentChangeMarker)
+map [c  <Action>(VcsShowPrevChangeMarker)
+map ]c  <Action>(VcsShowNextChangeMarker)
+
 map <C-p> <Action>(PreviousTab)
 map <C-n> <Action>(NextTab)
-map <M-o> <Action>(Back)
-map <M-i> <Action>(Forward)
+map <M-p> <Action>(com.mnw.tabmover.actions.MoveTabUpAction)
+map <M-n> <Action>(com.mnw.tabmover.actions.MoveTabDownAction)
 map <M-h> <Action>(TabShiftActions.ShiftLeft)
 map <M-j> <Action>(TabShiftActions.ShiftDown)
 map <M-k> <Action>(TabShiftActions.ShiftUp)
 map <M-l> <Action>(TabShiftActions.ShiftRight)
-map <M-p> <Action>(com.mnw.tabmover.actions.MoveTabUpAction)
-map <M-n> <Action>(com.mnw.tabmover.actions.MoveTabDownAction)
-map <CR>  <Action>(MaximizeEditorInSplit)
+map <CR>  <Action>(TabShiftActions.ToggleMaximizeRestore)
 
-imap <C-f> <Action>(copilot.applyInlays)
+imap <C-f> <Action>(copilot.applyInlays)<Right>
