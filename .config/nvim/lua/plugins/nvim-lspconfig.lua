@@ -68,7 +68,13 @@ return {
 
     require('lspconfig').kotlin_language_server.setup {
       capabilities = capabilities,
-      on_attach = on_attach
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        client.server_capabilities.documentFormattingProvider = false
+      end,
+      init_options = {
+        storagePath = vim.fn.expand('~/.local/share/kotlin-language-server')
+      }
     }
 
     require('lspconfig').lua_ls.setup {
