@@ -41,13 +41,12 @@ return {
         CommitStaged = {
           prompt = config.prompts.CommitStaged.prompt .. ' Please answer in Japanese.'
         }
-      },
-      window = {
-        layout = 'float'
       }
     }
 
     require('CopilotChat.integrations.cmp').setup()
+
+    vim.keymap.set({'n', 'x'}, '<leader>cc', '<cmd>CopilotChat<CR>')
   end,
   branch = 'canary'
 }
