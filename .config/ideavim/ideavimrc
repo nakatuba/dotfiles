@@ -69,6 +69,8 @@ map ]d         <Action>(GotoNextError)
 
 map ghr <Action>(Vcs.RollbackChangedLines)
 map ghp <Action>(VcsShowCurrentChangeMarker)
+map ghb <Action>(Annotate)
+map ghd <Action>(Compare.SameVersion)
 map [c  <Action>(VcsShowPrevChangeMarker)
 map ]c  <Action>(VcsShowNextChangeMarker)
 
