@@ -36,7 +36,7 @@ nnoremap Y "*y$
 xnoremap y "*y
 xnoremap Y "*Y
 
-map <leader>e :NERDTree<CR>
+map <leader>e :NERDTreeFind<CR>
 
 nmap gs  <Plug>ReplaceWithRegisterOperator
 nmap gss <Plug>ReplaceWithRegisterLine
@@ -50,6 +50,9 @@ xmap a, <Plug>OuterArgument
 map <leader>w <Plug>(easymotion-bd-w)
 
 map <C-s>s <Action>(RecentProjectListGroup)
+map <C-p>  <Action>(PreviousTab)
+map <C-n>  <Action>(NextTab)
+map su     <Action>(ReopenClosedTab)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
@@ -74,8 +77,6 @@ map ghd <Action>(Compare.SameVersion)
 map [c  <Action>(VcsShowPrevChangeMarker)
 map ]c  <Action>(VcsShowNextChangeMarker)
 
-map <C-p> <Action>(PreviousTab)
-map <C-n> <Action>(NextTab)
 map <M-p> <Action>(com.mnw.tabmover.actions.MoveTabUpAction)
 map <M-n> <Action>(com.mnw.tabmover.actions.MoveTabDownAction)
 map <M-h> <Action>(TabShiftActions.ShiftLeft)
