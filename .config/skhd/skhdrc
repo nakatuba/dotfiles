@@ -12,6 +12,10 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
+# send window to desktop
+shift + ctrl - left  : yabai -m window --space prev
+shift + ctrl - right : yabai -m window --space next
+
 # resize window
 ctrl + cmd - 0x2B : yabai -m window --ratio rel:-0.2
 ctrl + cmd - 0x2F : yabai -m window --ratio rel:0.2
