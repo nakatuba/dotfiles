@@ -77,8 +77,11 @@ map ghd <Action>(Compare.SameVersion)
 map [c  <Action>(VcsShowPrevChangeMarker)
 map ]c  <Action>(VcsShowNextChangeMarker)
 
+map <C-g><C-o> <Action>(uk.co.ben_gibson.git.link.ui.actions.menu.BrowserAction)
+
 map <M-p> <Action>(com.mnw.tabmover.actions.MoveTabUpAction)
 map <M-n> <Action>(com.mnw.tabmover.actions.MoveTabDownAction)
+
 map <M-h> <Action>(TabShiftActions.ShiftLeft)
 map <M-j> <Action>(TabShiftActions.ShiftDown)
 map <M-k> <Action>(TabShiftActions.ShiftUp)
