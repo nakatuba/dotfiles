@@ -30,6 +30,20 @@
         "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
     },
     {
+        "key": "alt+p",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "left"
+        }
+    },
+    {
+        "key": "alt+n",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "right"
+        }
+    },
+    {
         "key": "alt+h",
         "command": "workbench.action.moveActiveEditorGroupLeft",
         "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
