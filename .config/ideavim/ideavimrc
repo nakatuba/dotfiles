@@ -49,10 +49,12 @@ xmap a, <Plug>OuterArgument
 
 map <leader>w <Plug>(easymotion-bd-w)
 
-map <C-s>s <Action>(RecentProjectListGroup)
-map <C-p>  <Action>(PreviousTab)
-map <C-n>  <Action>(NextTab)
-map su     <Action>(ReopenClosedTab)
+map <C-s>s    <Action>(RecentProjectListGroup)
+map <C-n>     <Action>(NextTab)
+map <C-p>     <Action>(PreviousTab)
+map <D-S-t>   <Action>(ReopenClosedTab)
+map sq        <Action>(CloseAllEditors)
+map <leader>z <Action>(ToggleDistractionFreeMode)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
