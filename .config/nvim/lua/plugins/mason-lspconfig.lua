@@ -17,6 +17,7 @@ return {
         'solargraph',
         'terraformls',
         'tsserver',
+        'typos_lsp',
         'vuels'
       }
     }
