@@ -7,6 +7,7 @@ return {
   config = function()
     require('mason-null-ls').setup {
       ensure_installed = {
+        'cspell',
         'prettier'
       }
     }

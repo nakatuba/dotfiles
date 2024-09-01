@@ -1,0 +1,13 @@
+{
+  "allowCompoundWords": true,
+  "dictionaries": [
+    "user",
+    "vim"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "user",
+      "path": "~/.config/cspell/user.txt"
+    }
+  ]
+}
