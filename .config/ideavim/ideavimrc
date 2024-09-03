@@ -53,6 +53,8 @@ map <C-s>s    <Action>(RecentProjectListGroup)
 map <C-n>     <Action>(NextTab)
 map <C-p>     <Action>(PreviousTab)
 map <D-S-t>   <Action>(ReopenClosedTab)
+map <C-k>     <Action>(MethodUp)
+map <C-j>     <Action>(MethodDown)
 map sq        <Action>(CloseAllEditors)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
@@ -78,8 +80,6 @@ map ghb <Action>(Annotate)
 map ghd <Action>(Compare.SameVersion)
 map [c  <Action>(VcsShowPrevChangeMarker)
 map ]c  <Action>(VcsShowNextChangeMarker)
-
-map <C-g><C-o> <Action>(uk.co.ben_gibson.git.link.ui.actions.menu.BrowserAction)
 
 map <M-p> <Action>(com.mnw.tabmover.actions.MoveTabUpAction)
 map <M-n> <Action>(com.mnw.tabmover.actions.MoveTabDownAction)
