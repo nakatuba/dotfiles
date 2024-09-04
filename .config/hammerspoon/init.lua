@@ -1,7 +1,10 @@
-local stackline = require('stackline')
-local conf = require('stackline.conf')
+local ctrlDoublePress = require('ctrlDoublePress')
 
-conf.paths.yabai = '/opt/homebrew/bin/yabai'
-conf.appearance.showIcons = false
-
-stackline:init()
+ctrlDoublePress.action = function()
+  local app = hs.application.find('WezTerm')
+  if app:isFrontmost() then
+    app:hide()
+  else
+    app:activate()
+  end
+end

@@ -37,12 +37,7 @@ if [ "$(uname)" = "Darwin" ]; then
 
   # Setup hammerspoon
   mkdir -p ~/.hammerspoon
-  ln -sf $DOTFILES/.config/hammerspoon/init.lua ~/.hammerspoon
-  if [ -d ~/.hammerspoon/stackline ]; then
-    (cd ~/.hammerspoon/stackline && git pull)
-  else
-    git clone https://github.com/AdamWagner/stackline.git ~/.hammerspoon/stackline
-  fi
+  ln -sf $DOTFILES/.config/hammerspoon/* ~/.hammerspoon
 
   # Setup launchd
   mkdir -p ~/Library/LaunchAgents
