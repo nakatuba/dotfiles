@@ -20,6 +20,7 @@ ln -sf $DOTFILES/.config/zsh ~/.config
 
 if [ "$(uname)" = "Darwin" ]; then
   ln -sf $DOTFILES/.config/karabiner ~/.config
+  ln -sf $DOTFILES/.config/sketchybar ~/.config
   ln -sf $DOTFILES/.config/skhd ~/.config
   ln -sf $DOTFILES/.config/yabai ~/.config
 
