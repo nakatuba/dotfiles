@@ -1,5 +1,11 @@
 local wezterm = require('wezterm')
+local mux = wezterm.mux
 local config = wezterm.config_builder()
+
+wezterm.on('gui-startup', function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():toggle_fullscreen()
+end)
 
 config.font = wezterm.font('MesloLGS NF')
 config.keys = require('keys')

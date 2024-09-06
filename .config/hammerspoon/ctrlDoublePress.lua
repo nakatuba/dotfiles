@@ -6,7 +6,7 @@ local events   = eventtap.event.types
 
 local module   = {}
 
--- Save this in your Hammerspoon configuration directiorn (~/.hammerspoon/) 
+-- Save this in your Hammerspoon configuration directiorn (~/.hammerspoon/)
 -- You either override timeFrame and action here or after including this file from another, e.g.
 --
 -- ctrlDoublePress = require("ctrlDoublePress")
