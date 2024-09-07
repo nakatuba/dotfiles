@@ -53,6 +53,9 @@ if [ "$(uname)" = "Darwin" ]; then
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User
   ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Code/User
   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+  # Setup sketchybar
+  curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/sketchybar-app-font.ttf -o ~/Library/Fonts/sketchybar-app-font.ttf
 fi
 
 # Install prezto
