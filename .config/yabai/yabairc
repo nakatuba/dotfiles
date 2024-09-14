@@ -1,11 +1,12 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-yabai -m config layout         bsp
-yabai -m config auto_balance   on
+yabai -m config layout       bsp
+yabai -m config auto_balance on
 
-yabai -m rule --add app="^.*$"                                                  manage=off
-yabai -m rule --add app="^Google Chrome$" title!="^ピクチャー イン ピクチャー$" manage=on
+yabai -m rule --add app="^.*$"            manage=off
+yabai -m rule --add app="^Google Chrome$" manage=on
+yabai -m rule --add app="^WezTerm$"       manage=on
 
 yabai -m signal --add event=mission_control_exit action='echo "refresh"         | nc -U /tmp/yabai-indicator.socket'
 yabai -m signal --add event=display_added        action='echo "refresh"         | nc -U /tmp/yabai-indicator.socket'
