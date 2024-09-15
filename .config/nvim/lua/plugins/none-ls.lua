@@ -1,7 +1,8 @@
 return {
   'nvimtools/none-ls.nvim',
   dependencies = {
-    'nvimtools/none-ls-extras.nvim'
+    'nvimtools/none-ls-extras.nvim',
+    'davidmh/cspell.nvim'
   },
   config = function()
     local null_ls = require('null-ls')
@@ -17,6 +18,14 @@ return {
         end
       end,
       sources = {
+        require('cspell').diagnostics.with {
+          extra_args = { '--config', '~/.config/cspell/cspell.json' },
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity.HINT
+          end
+        },
+        require('cspell').code_actions,
+
         -- javascript
         require('none-ls.diagnostics.eslint'),
         null_ls.builtins.formatting.prettier.with {

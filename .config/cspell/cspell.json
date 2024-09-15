@@ -1,0 +1,7 @@
+{
+  "allowCompoundWords": true,
+  "dictionaries": [
+    "python",
+    "vim"
+  ]
+}

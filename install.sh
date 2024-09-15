@@ -13,6 +13,7 @@ ln -sf $DOTFILES/.zshrc ~
 
 mkdir -p ~/.config
 
+ln -sf $DOTFILES/.config/cspell ~/.config
 ln -sf $DOTFILES/.config/git ~/.config
 ln -sf $DOTFILES/.config/nvim ~/.config
 ln -sf $DOTFILES/.config/tmux ~/.config
