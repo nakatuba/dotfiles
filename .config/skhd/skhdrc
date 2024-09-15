@@ -19,6 +19,16 @@ ctrl + cmd - 0x2F : yabai -m window --ratio rel:0.2
 # balance size of windows
 ctrl + cmd - 0x18 : yabai -m space --balance
 
+# create desktop
+ctrl + cmd - c : yabai -m space --create && \
+                 index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
+                 yabai -m space "${index}" --move $(yabai -m query --spaces --space | jq '.index + 1')
+
+# destroy desktop
+ctrl + cmd - d : index="$(yabai -m query --spaces --space | jq '.index')" && \
+                 (yabai -m space --focus prev || yabai -m space --focus next) && \
+                 yabai -m space --destroy "${index}"
+
 # fast focus desktop
 ctrl + cmd - tab : yabai -m space --focus recent
 ctrl - left      : yabai -m space --focus prev
