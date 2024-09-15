@@ -1,3 +1,7 @@
+if not hs.ipc.cliStatus('/opt/homebrew') then
+  hs.ipc.cliInstall('/opt/homebrew')
+end
+
 local stackline = require('stackline')
 local conf = require('stackline.conf')
 
