@@ -136,14 +136,6 @@ return {
       end
     }
 
-    require('lspconfig').typos_lsp.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      init_options = {
-        diagnosticSeverity = 'Hint'
-      }
-    }
-
     require('lspconfig').vuels.setup {
       capabilities = capabilities,
       on_attach = on_attach
