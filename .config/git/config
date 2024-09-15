@@ -21,4 +21,4 @@
   st = status
 
 [include]
-  path = ~/.local/config/git/config
+  path = ~/.local/share/git/config
