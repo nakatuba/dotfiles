@@ -17,6 +17,11 @@ return {
     action = wezterm.action.EmitEvent('toggle-opacity')
   },
   {
+    key = 'Enter',
+    mods = 'SUPER',
+    action = wezterm.action.ToggleFullScreen,
+  },
+  {
     key = '/',
     mods = 'CTRL',
     action = wezterm.action { SendString = '\x1f' }
