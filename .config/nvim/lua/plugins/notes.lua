@@ -17,8 +17,10 @@ return {
       }
     }
 
-    vim.keymap.set('n', '<leader>no', require('notes').open_note)
-    vim.keymap.set('n', '<leader>nd', require('notes').open_daily_note)
+    vim.keymap.set('n', '<leader>nn',  require('notes').new_note)
+    vim.keymap.set('n', '<leader>no',  require('notes').open_note)
+    vim.keymap.set('n', '<leader>ndn', require('notes').new_daily_note)
+    vim.keymap.set('n', '<leader>ndo', require('notes').open_daily_note)
 
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'markdown',
