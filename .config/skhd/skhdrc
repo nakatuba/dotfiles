@@ -60,5 +60,8 @@ ctrl + cmd - e : yabai -m window --toggle split
 # float / unfloat window and center on screen
 ctrl + cmd - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
+# toggle window opacity
+ctrl + cmd - u : yabai -m window --opacity $(yabai -m query --windows --window | jq 'if .opacity == 1.0 then 0.8 else 1.0 end')
+
 # change layout of desktop
 ctrl + cmd - return : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "stack" else "bsp" end')
