@@ -2,6 +2,10 @@ return {
   'aserowy/tmux.nvim',
   config = function()
     require('tmux').setup {
+      copy_sync = {
+        sync_registers_keymap_put = false,
+        sync_registers_keymap_reg = false
+      },
       navigation = {
         cycle_navigation = false,
         enable_default_keybindings = false
