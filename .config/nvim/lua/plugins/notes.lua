@@ -1,3 +1,8 @@
+local path = vim.fn.expand('~/ghq/github.com/nakatuba/notes.nvim')
+if not vim.loop.fs_stat(path) then
+  vim.fn.system('ghq get https://github.com/nakatuba/notes.nvim.git')
+end
+
 return {
   'nakatuba/notes.nvim',
   dependencies = {
@@ -12,7 +17,6 @@ return {
       }
     }
 
-    vim.keymap.set('n', '<leader>nn', require('notes').new_note)
     vim.keymap.set('n', '<leader>no', require('notes').open_note)
     vim.keymap.set('n', '<leader>nd', require('notes').open_daily_note)
 

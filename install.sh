@@ -125,6 +125,3 @@ else
   git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 fi
 ~/.config/tmux/plugins/tpm/bin/install_plugins
-
-# Clone my repositories
-ghq get https://github.com/nakatuba/notes.nvim.git
