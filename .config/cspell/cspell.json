@@ -2,6 +2,13 @@
   "allowCompoundWords": true,
   "dictionaries": [
     "python",
+    "user",
     "vim"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "user",
+      "path": "./dict/user.txt"
+    }
   ]
 }

@@ -1,0 +1,13 @@
+karabiner
+mycli
+nakatuba
+pgcli
+prezto
+shellenv
+skhd
+sonokai
+wezterm
+yabai
+zoxide
+zprezto
+zpreztorc

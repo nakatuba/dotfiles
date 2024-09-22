@@ -14,8 +14,8 @@ return {
           cwd = cwd,
           on_exit = function()
             job:new({
-              command = 'cspell',
-              args = { 'link', 'add', '@cspell/dict-vim' },
+              command = 'npx',
+              args = { 'cspell', 'link', 'add', '@cspell/dict-vim' },
               cwd = cwd
             }):start()
           end
