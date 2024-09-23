@@ -7,7 +7,6 @@ wezterm.on('gui-startup', function(cmd)
   window:gui_window():toggle_fullscreen()
 end)
 
-config.adjust_window_size_when_changing_font_size = false
 config.font = wezterm.font('MesloLGS NF')
 config.hide_tab_bar_if_only_one_tab = true
 config.keys = require('keys')
