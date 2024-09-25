@@ -8,7 +8,8 @@
   "dictionaryDefinitions": [
     {
       "name": "user",
-      "path": "./dict/user.txt"
+      "path": "./dict/user.txt",
+      "addWords": true
     }
   ]
 }

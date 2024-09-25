@@ -9,7 +9,16 @@ return {
       cspell_config_dirs = {
         '~/.config/cspell',
         '~/.local/share/cspell'
-      }
+      },
+      on_add_to_dictionary = function(payload)
+        local job = require('plenary.job')
+
+        job:new({
+          command = 'sort',
+          args = { payload.dictionary_path, '-o', payload.dictionary_path },
+          cwd = vim.fs.dirname(payload.cspell_config_path)
+        }):start()
+      end
     }
 
     require('null-ls').setup {
