@@ -1,3 +1,4 @@
+local M = {}
 local wezterm = require('wezterm')
 
 wezterm.on('toggle-opacity', function(window, pane)
@@ -10,7 +11,7 @@ wezterm.on('toggle-opacity', function(window, pane)
   window:set_config_overrides(overrides)
 end)
 
-return {
+M.keys = {
   {
     key = 'u',
     mods = 'SUPER',
@@ -22,8 +23,15 @@ return {
     action = wezterm.action.ToggleFullScreen,
   },
   {
+    key = 'c',
+    mods = 'SUPER|SHIFT',
+    action = wezterm.action.ActivateCopyMode,
+  },
+  {
     key = '/',
     mods = 'CTRL',
     action = wezterm.action { SendString = '\x1f' }
   }
 }
+
+return M
