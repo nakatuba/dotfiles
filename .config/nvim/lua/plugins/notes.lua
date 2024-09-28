@@ -32,6 +32,7 @@ return {
     vim.keymap.set('n', '<leader>nd', require('notes').open_daily_note)
 
     vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('notes', { clear = true }),
       pattern = 'markdown',
       callback = function()
         if vim.startswith(vim.fn.expand('%:p'), vim.fn.expand(require('notes').config.dir)) then

@@ -8,6 +8,7 @@ return {
     }
 
     vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('mkdnflow', { clear = true }),
       pattern = 'markdown',
       callback = function()
         vim.keymap.set('n', '<leader>cl', '<cmd>MkdnCreateLink<CR>', { buffer = true })

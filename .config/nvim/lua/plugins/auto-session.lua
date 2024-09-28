@@ -17,6 +17,7 @@ return {
     }
 
     vim.api.nvim_create_autocmd('VimEnter', {
+      group = vim.api.nvim_create_augroup('auto-session', { clear = true }),
       callback = function()
         if vim.fn.argc() == 0 then
           vim.keymap.set('n', '<leader>s', '<cmd>SessionRestore<CR>', { buffer = true })

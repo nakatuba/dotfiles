@@ -11,6 +11,7 @@ return {
     }
 
     vim.api.nvim_create_autocmd('FileType', {
+      group = vim.api.nvim_create_augroup('img-clip', { clear = true }),
       pattern = 'markdown',
       callback = function()
         vim.keymap.set('n', '<leader>p', '<cmd>PasteImage<CR>', { buffer = true })
