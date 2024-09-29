@@ -4,7 +4,7 @@ sudo yabai --load-sa
 yabai -m config layout       bsp
 yabai -m config auto_balance on
 
-yabai -m rule --add app="^.*$"            manage=off
+yabai -m rule --add app="^.*$"            manage=off sub-layer=below
 yabai -m rule --add app="^Google Chrome$" manage=on
 
 yabai -m signal --add event=mission_control_exit action='echo "refresh"         | nc -U /tmp/yabai-indicator.socket'
