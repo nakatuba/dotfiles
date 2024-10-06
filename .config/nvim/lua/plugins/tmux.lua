@@ -21,7 +21,6 @@ return {
     vim.keymap.set('n', 'sl', require('tmux').move_right)
 
     vim.api.nvim_create_autocmd('FocusGained', {
-      group = vim.api.nvim_create_augroup('tmux_sync_registers', { clear = true }),
       callback = function()
         if vim.env.TMUX then
           require('tmux').sync_registers()

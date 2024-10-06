@@ -43,7 +43,6 @@ return {
     }
 
     vim.api.nvim_create_autocmd('FocusGained', {
-      group = vim.api.nvim_create_augroup('gitsigns', { clear = true }),
       callback = function()
         require('gitsigns').refresh()
       end

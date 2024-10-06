@@ -35,7 +35,6 @@ return {
     vim.keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<CR>')
 
     vim.api.nvim_create_autocmd('BufEnter', {
-      group = vim.api.nvim_create_augroup('nvim-tree', { clear = true }),
       pattern = 'NvimTree*',
       callback = function()
         local api = require('nvim-tree.api')

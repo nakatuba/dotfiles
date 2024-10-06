@@ -6,7 +6,6 @@ return {
   end,
   config = function()
     vim.api.nvim_create_autocmd('FileType', {
-      group = vim.api.nvim_create_augroup('markdown-preview', { clear = true }),
       pattern = 'markdown',
       callback = function()
         vim.keymap.set('n', '<leader>mp', '<cmd>MarkdownPreview<CR>', { buffer = true })

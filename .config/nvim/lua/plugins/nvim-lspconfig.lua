@@ -19,7 +19,6 @@ return {
 
       if client.supports_method('textDocument/formatting') then
         vim.api.nvim_create_autocmd('BufWritePre', {
-          group = vim.api.nvim_create_augroup('formatting', { clear = true }),
           buffer = bufnr,
           callback = function() vim.lsp.buf.format() end
         })
@@ -27,14 +26,12 @@ return {
 
       if client.supports_method('textDocument/signatureHelp') then
         vim.api.nvim_create_autocmd('CursorHoldI', {
-          group = vim.api.nvim_create_augroup('signature_help', { clear = true }),
           buffer = bufnr,
           callback = function() vim.lsp.buf.signature_help() end
         })
       end
 
       vim.api.nvim_create_autocmd('CursorHold', {
-        group = vim.api.nvim_create_augroup('diagnostic', { clear = true }),
         buffer = bufnr,
         callback = function() vim.diagnostic.open_float(nil, { focusable = false, scope = 'cursor' }) end
       })
