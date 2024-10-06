@@ -18,6 +18,16 @@ M.keys = {
     action = wezterm.action.ActivateCopyMode
   },
   {
+    key = '[',
+    mods = 'SUPER',
+    action = wezterm.action.ActivatePaneDirection 'Prev'
+  },
+  {
+    key = ']',
+    mods = 'SUPER',
+    action = wezterm.action.ActivatePaneDirection 'Next'
+  },
+  {
     key = 'u',
     mods = 'SUPER',
     action = wezterm.action.EmitEvent 'toggle-opacity'
@@ -26,6 +36,16 @@ M.keys = {
     key = '/',
     mods = 'CTRL',
     action = wezterm.action.SendString '\x1f'
+  },
+  {
+    key = 'd',
+    mods = 'SUPER',
+    action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
+  },
+  {
+    key = 'd',
+    mods = 'SUPER|SHIFT',
+    action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
   },
   {
     key = 'Enter',
