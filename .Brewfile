@@ -46,7 +46,7 @@ cask "vagrant"
 cask "vagrant-vmware-utility"
 cask "visual-studio-code"
 cask "vmware-fusion"
-cask "wezterm@nightly"
+cask "wezterm"
 cask "zoom"
 
 mas "Amphetamine", id: 937984704

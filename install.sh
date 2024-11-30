@@ -14,8 +14,10 @@ ln -sf $DOTFILES/.zshrc ~
 mkdir -p ~/.config
 
 ln -sf $DOTFILES/.config/git ~/.config
+ln -sf $DOTFILES/.config/ideavim ~/.config
 ln -sf $DOTFILES/.config/nvim ~/.config
 ln -sf $DOTFILES/.config/tmux ~/.config
+ln -sf $DOTFILES/.config/wezterm ~/.config
 ln -sf $DOTFILES/.config/zsh ~/.config
 
 if [ "$(uname)" = "Darwin" ]; then
