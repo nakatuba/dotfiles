@@ -33,7 +33,6 @@ zle -N git-checkout-widget
 bindkey '^g^o' git-checkout-widget
 
 tmux-new-widget() {
-  [ -n "$TMUX" ] && return
   BUFFER="tmux new -A -s $(basename $PWD)"
   zle accept-line
 }
@@ -41,7 +40,6 @@ zle -N tmux-new-widget
 bindkey '^o' tmux-new-widget
 
 tmux-attach-widget() {
-  [ -n "$TMUX" ] && return
   local session=$(tmux list-sessions 2>/dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
   if [ -n "$session" ]; then
     BUFFER="tmux attach -t $session"
