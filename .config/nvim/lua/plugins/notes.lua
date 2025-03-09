@@ -6,8 +6,7 @@ end
 return {
   'nakatuba/notes.nvim',
   dependencies = {
-    'nvim-telescope/telescope.nvim',
-    'vhyrro/luarocks.nvim'
+    'nvim-telescope/telescope.nvim'
   },
   config = function()
     require('notes').setup {
