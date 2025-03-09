@@ -32,21 +32,12 @@ return {
         Tests = {
           prompt = config.prompts.Tests.prompt .. ' Please answer in Japanese.'
         },
-        FixDiagnostic = {
-          prompt = config.prompts.FixDiagnostic.prompt .. ' Please answer in Japanese.'
-        },
         Commit = {
           prompt = config.prompts.Commit.prompt .. ' Please answer in Japanese.'
-        },
-        CommitStaged = {
-          prompt = config.prompts.CommitStaged.prompt .. ' Please answer in Japanese.'
         }
       }
     }
 
-    require('CopilotChat.integrations.cmp').setup()
-
     vim.keymap.set({'n', 'x'}, '<leader>cc', '<cmd>CopilotChat<CR>')
-  end,
-  branch = 'canary'
+  end
 }
