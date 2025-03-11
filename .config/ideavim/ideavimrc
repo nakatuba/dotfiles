@@ -60,7 +60,8 @@ map <D-=>   <Action>(EditorIncreaseFontSizeGlobal)
 map <D-->   <Action>(EditorDecreaseFontSizeGlobal)
 map <D-0>   <Action>(EditorResetFontSizeGlobal)
 map sq      <Action>(CloseAllEditors)
-map <Esc>   <Action>(HideAllWindows)
+
+nmap <Esc> <Action>(HideAllWindows)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
