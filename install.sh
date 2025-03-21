@@ -60,6 +60,12 @@ if [ "$(uname)" = "Darwin" ]; then
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User
   ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Code/User
   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+  # Setup cursor
+  mkdir -p ~/Library/Application\ Support/Cursor/User
+  ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Cursor/User
+  ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Cursor/User
+  defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 fi
 
 # Install prezto
