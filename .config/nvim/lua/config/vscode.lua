@@ -7,6 +7,7 @@ require('lazy').setup {
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },
   { import = 'plugins.vim-operator-convert-case' },
+  { import = 'plugins.vim-sort-motion' },
   { import = 'plugins.vim-swap' },
   { import = 'plugins.vim-textobj-comment' },
   { import = 'plugins.vim-textobj-entire' },
