@@ -4,6 +4,7 @@ require('lazy').setup {
   { import = 'plugins.gx' },
   { import = 'plugins.hop' },
   { import = 'plugins.nvim-surround' },
+  { import = 'plugins.nvim-treesitter' },
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },
   { import = 'plugins.vim-operator-convert-case' },

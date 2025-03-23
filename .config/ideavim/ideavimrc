@@ -5,9 +5,9 @@ set ReplaceWithRegister
 set argtextobj
 set commentary
 set easymotion
+set exchange
 set surround
 set textobj-entire
-set exchange
 
 let g:argtextobj_pairs="[:],(:),<:>"
 let g:EasyMotion_do_mapping = 0
@@ -62,6 +62,10 @@ map <D-0>   <Action>(EditorResetFontSizeGlobal)
 map sq      <Action>(CloseAllEditors)
 
 nmap <Esc> <Action>(HideAllWindows)
+
+xmap <Tab>   <Action>(EditorSelectWord)
+xmap <C-i>   <Action>(EditorSelectWord)
+xmap <S-Tab> <Action>(EditorUnSelectWord)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
