@@ -6,6 +6,7 @@ set argtextobj
 set commentary
 set easymotion
 set exchange
+set functiontextobj
 set surround
 set textobj-entire
 

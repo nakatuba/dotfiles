@@ -1,6 +1,7 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   dependencies = {
+    'nvim-treesitter/nvim-treesitter-textobjects',
     'JoosepAlviste/nvim-ts-context-commentstring'
   },
   config = function()
@@ -37,6 +38,16 @@ return {
       indent = {
         enable = true,
         disable = { 'go', 'python', 'ruby' }
+      },
+      textobjects = {
+        select = {
+          enable = true,
+          lookahead = true,
+          keymaps = {
+            ['af'] = '@function.outer',
+            ['if'] = '@function.inner'
+          }
+        }
       }
     }
   end,
