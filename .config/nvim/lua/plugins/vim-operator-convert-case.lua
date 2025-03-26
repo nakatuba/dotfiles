@@ -4,6 +4,6 @@ return {
     'kana/vim-operator-user'
   },
   config = function()
-    vim.keymap.set('n', ',cc', '<cmd>ConvertCaseLoop<CR>')
+    vim.keymap.set('n', '<leader>cc', '<cmd>ConvertCaseLoop<CR>')
   end
 }

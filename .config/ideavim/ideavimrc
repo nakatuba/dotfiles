@@ -62,12 +62,6 @@ map <D-->   <Action>(EditorDecreaseFontSizeGlobal)
 map <D-0>   <Action>(EditorResetFontSizeGlobal)
 map sq      <Action>(CloseAllEditors)
 
-nmap <Esc> <Action>(HideAllWindows)
-
-xmap <Tab>   <Action>(EditorSelectWord)
-xmap <C-i>   <Action>(EditorSelectWord)
-xmap <S-Tab> <Action>(EditorUnSelectWord)
-
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
 map <leader>b <Action>(Switcher)
@@ -100,6 +94,10 @@ map <M-k> <Action>(TabShiftActions.ShiftUp)
 map <M-l> <Action>(TabShiftActions.ShiftRight)
 map <CR>  <Action>(TabShiftActions.ToggleMaximizeRestore)
 
-map <leader>cc <Action>(copilot.chat.show)
+nmap <Esc> <Action>(HideAllWindows)
 
 imap <C-f> <Action>(copilot.applyInlays)<Right>
+
+xmap <Tab>   <Action>(EditorSelectWord)
+xmap <C-i>   <Action>(EditorSelectWord)
+xmap <S-Tab> <Action>(EditorUnSelectWord)
