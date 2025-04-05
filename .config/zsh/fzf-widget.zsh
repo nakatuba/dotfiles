@@ -20,6 +20,28 @@ fzf-ghq-widget() {
 zle -N fzf-ghq-widget
 bindkey '^g^g' fzf-ghq-widget
 
+fzf-ssh-widget() {
+  local host=$(grep '^Host ' ~/.ssh/config | awk '{print $2}' | fzf --height 40% --reverse)
+  if [ -n "$host" ]; then
+    BUFFER="ssh $host"
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle -N fzf-ssh-widget
+bindkey '^[s' fzf-ssh-widget
+
+fzf-mycli-widget() {
+  local dsn=$(mycli --list-dsn | fzf --height 40% --reverse)
+  if [ -n "$dsn" ]; then
+    BUFFER="mycli $dsn"
+    zle accept-line
+  fi
+  zle reset-prompt
+}
+zle -N fzf-mycli-widget
+bindkey '^[m' fzf-mycli-widget
+
 git-checkout-widget() {
   git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
   local branch=$(git branch -v | grep -v '^\*' | sed 's/^  *//' | fzf --height 40% --reverse | awk '{print $1}')
