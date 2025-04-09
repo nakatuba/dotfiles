@@ -6,8 +6,10 @@ return {
   config = function()
     require('render-markdown').setup {
       heading = {
-        sign = false,
         icons = {}
+      },
+      sign = {
+        enabled = false
       }
     }
 
