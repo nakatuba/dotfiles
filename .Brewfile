@@ -1,15 +1,13 @@
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "koekeishiya/formulae"
 
 brew "cloud-sql-proxy"
 brew "composer"
+brew "fastfetch"
 brew "imagemagick"
 brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "mas"
-brew "neofetch"
 brew "neovim"
 brew "pngpaste"
 brew "tmux"
@@ -38,9 +36,9 @@ cask "iterm2"
 cask "jupyter-notebook-viewer"
 cask "karabiner-elements"
 cask "keyboardcleantool"
-cask "kindle"
 cask "logi-options+"
 cask "monitorcontrol"
+cask "obsidian"
 cask "popclip"
 cask "postman"
 cask "rectangle"
@@ -49,14 +47,13 @@ cask "thorium"
 cask "tunnelbear"
 cask "utm"
 cask "vagrant"
-cask "vagrant-vmware-utility"
 cask "visual-studio-code"
 cask "vlc"
-cask "vmware-fusion"
 cask "wezterm"
 cask "zoom"
 
 mas "Amphetamine", id: 937984704
+mas "Kindle", id: 302584613
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 
