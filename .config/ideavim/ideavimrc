@@ -93,6 +93,7 @@ map <M-j> <Action>(TabShiftActions.ShiftDown)
 map <M-k> <Action>(TabShiftActions.ShiftUp)
 map <M-l> <Action>(TabShiftActions.ShiftRight)
 map <CR>  <Action>(TabShiftActions.ToggleMaximizeRestore)
+map s=    <Action>(tabshifter.Actions.EqualSizeSplit)
 
 nmap <Esc> <Action>(HideAllWindows)
 
