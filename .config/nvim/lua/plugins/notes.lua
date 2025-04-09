@@ -5,11 +5,15 @@ return {
   },
   config = function()
     require('notes').setup {
-      dir = '~/Dropbox/Apps/remotely-save/notes'
+      dir = '~/Dropbox/Apps/remotely-save/notes',
+      daily_notes = {
+        dir = '~/Dropbox/Apps/remotely-save/notes/daily'
+      }
     }
 
     vim.keymap.set('n', '<leader>nn', require('notes').new_note)
     vim.keymap.set('n', '<leader>no', require('notes').open_note)
+    vim.keymap.set('n', '<leader>nd', require('notes').new_daily_note)
 
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'markdown',
