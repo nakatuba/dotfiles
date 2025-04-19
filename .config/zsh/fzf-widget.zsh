@@ -28,8 +28,6 @@ fzf-ssh-widget() {
   fi
   zle reset-prompt
 }
-zle -N fzf-ssh-widget
-bindkey '^[s' fzf-ssh-widget
 
 fzf-mycli-widget() {
   local dsn=$(mycli --list-dsn | fzf --height 40% --reverse)
@@ -39,8 +37,19 @@ fzf-mycli-widget() {
   fi
   zle reset-prompt
 }
-zle -N fzf-mycli-widget
-bindkey '^[m' fzf-mycli-widget
+
+fzf-completion-notrigger() {
+  local tokens=(${(z)LBUFFER})
+  if [ "${#tokens}" -eq 1 ] && [ "${tokens[1]}" = "ssh" ] && [ "${LBUFFER[-1]}" = " " ]; then
+    fzf-ssh-widget
+  elif [ "${#tokens}" -eq 1 ] && [ "${tokens[1]}" = "mycli" ] && [ "${LBUFFER[-1]}" = " " ]; then
+    fzf-mycli-widget
+  else
+    zle fzf-completion
+  fi
+}
+zle -N fzf-completion-notrigger
+bindkey '^i' fzf-completion-notrigger
 
 git-checkout-widget() {
   git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
