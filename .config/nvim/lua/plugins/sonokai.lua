@@ -8,7 +8,7 @@ return {
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = 'sonokai',
       callback = function()
-        vim.api.nvim_set_hl(0, 'VertSplit', { link = 'Grey' })
+        vim.api.nvim_set_hl(0, 'WinSeparator', { link = 'Grey' })
       end
     })
   end
