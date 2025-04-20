@@ -20,5 +20,5 @@ return {
     vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', { bg = '#2f494f' })
     vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', { bg = '#372f4f' })
   end,
-  ft = { 'markdown' }
+  ft = { 'markdown', 'Avante' }
 }
