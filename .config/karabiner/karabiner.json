@@ -107,6 +107,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -131,7 +132,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -171,6 +173,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -195,7 +198,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -235,6 +239,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -259,7 +264,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -344,6 +350,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -368,7 +375,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -408,6 +416,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -432,7 +441,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -472,6 +482,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -496,7 +507,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -536,6 +548,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -560,7 +573,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -600,6 +614,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -624,7 +639,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -786,6 +802,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -810,7 +827,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -850,6 +868,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -874,7 +893,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -919,6 +939,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -943,7 +964,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -988,6 +1010,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -1012,7 +1035,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1145,6 +1169,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -1169,7 +1194,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1239,6 +1265,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -1263,7 +1290,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -1308,6 +1336,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.googlecode\\.iterm2$",
                                             "^com\\.github\\.wez\\.wezterm$",
+                                            "^com\\.mitchellh\\.ghostty$",
                                             "^co\\.zeit\\.hyperterm$",
                                             "^co\\.zeit\\.hyper$",
                                             "^io\\.alacritty$",
@@ -1332,7 +1361,8 @@
                                             "^org\\.macports\\.X11$",
                                             "^com\\.sublimetext\\.",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.jetbrains\\.intellij"
+                                            "^com\\.todesktop\\.230313mzl4w4u92$",
+                                            "^com\\.jetbrains\\.intellij$"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }

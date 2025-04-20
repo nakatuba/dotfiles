@@ -5,9 +5,10 @@ set ReplaceWithRegister
 set argtextobj
 set commentary
 set easymotion
+set exchange
+set functiontextobj
 set surround
 set textobj-entire
-set exchange
 
 let g:argtextobj_pairs="[:],(:),<:>"
 let g:EasyMotion_do_mapping = 0
@@ -60,7 +61,6 @@ map <D-=>   <Action>(EditorIncreaseFontSizeGlobal)
 map <D-->   <Action>(EditorDecreaseFontSizeGlobal)
 map <D-0>   <Action>(EditorResetFontSizeGlobal)
 map sq      <Action>(CloseAllEditors)
-map <Esc>   <Action>(HideAllWindows)
 
 map <leader>f <Action>(GotoFile)
 map <leader>g <Action>(FindInPath)
@@ -93,7 +93,12 @@ map <M-j> <Action>(TabShiftActions.ShiftDown)
 map <M-k> <Action>(TabShiftActions.ShiftUp)
 map <M-l> <Action>(TabShiftActions.ShiftRight)
 map <CR>  <Action>(TabShiftActions.ToggleMaximizeRestore)
+map s=    <Action>(tabshifter.Actions.EqualSizeSplit)
 
-map <leader>cc <Action>(copilot.chat.show)
+nmap <Esc> <Action>(HideAllWindows)
 
 imap <C-f> <Action>(copilot.applyInlays)<Right>
+
+xmap <Tab>   <Action>(EditorSelectWord)
+xmap <C-i>   <Action>(EditorSelectWord)
+xmap <S-Tab> <Action>(EditorUnSelectWord)

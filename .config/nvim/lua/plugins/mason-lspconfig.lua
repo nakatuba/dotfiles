@@ -16,7 +16,7 @@ return {
         'pyright',
         'solargraph',
         'terraformls',
-        'tsserver',
+        'ts_ls',
         'typos_lsp',
         'vuels'
       }

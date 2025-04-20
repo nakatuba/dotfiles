@@ -11,29 +11,16 @@ return {
         augend.date.alias['%Y-%m-%d'],
         augend.date.alias['%m/%d'],
         augend.date.alias['%H:%M'],
-        augend.constant.alias.bool
+        augend.constant.new {
+          elements = { 'true', 'false' },
+          preserve_case = true
+        }
       }
     }
 
     require('dial.config').augends:on_filetype {
-      python = {
-        augend.integer.alias.decimal,
-        augend.integer.alias.hex,
-        augend.date.alias['%Y/%m/%d'],
-        augend.date.alias['%Y-%m-%d'],
-        augend.date.alias['%m/%d'],
-        augend.date.alias['%H:%M'],
-        augend.constant.new {
-          elements = { 'True', 'False' }
-        }
-      },
       markdown = {
-        augend.integer.alias.decimal,
-        augend.integer.alias.hex,
-        augend.date.alias['%Y/%m/%d'],
-        augend.date.alias['%Y-%m-%d'],
-        augend.date.alias['%m/%d'],
-        augend.date.alias['%H:%M'],
+        unpack(require('dial.config').augends:get('default')),
         augend.misc.alias.markdown_header,
         augend.user.new {
           find = function(line, cursor)

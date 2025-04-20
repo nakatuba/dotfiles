@@ -85,6 +85,9 @@ return {
       end,
       settings = {
         Lua = {
+          runtime = {
+            version = 'LuaJIT'
+          },
           diagnostics = {
             globals = { 'vim' }
           }
@@ -128,7 +131,7 @@ return {
       on_attach = on_attach
     }
 
-    require('lspconfig').tsserver.setup {
+    require('lspconfig').ts_ls.setup {
       capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
