@@ -58,6 +58,7 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 
 vscode "asvetliakov.vscode-neovim"
+vscode "bmewburn.vscode-intelephense-client"
 vscode "github.copilot"
 vscode "golang.go"
 vscode "iamhyc.overleaf-workshop"

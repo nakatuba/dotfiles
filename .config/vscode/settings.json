@@ -5,6 +5,10 @@
     "files.simpleDialog.enable": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "workbench.startupEditor": "none",
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true
+    },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
