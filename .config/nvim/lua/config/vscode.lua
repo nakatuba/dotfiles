@@ -34,6 +34,7 @@ vim.keymap.set('n', 'K',          function() require('vscode').call('editor.acti
 vim.keymap.set('n', '<Leader>rn', function() require('vscode').call('editor.action.rename') end)
 vim.keymap.set('n', '<Leader>ca', function() require('vscode').call('editor.action.quickFix') end)
 vim.keymap.set('n', '<Leader>f',  function() require('vscode').call('workbench.action.quickOpen') end)
+vim.keymap.set('n', '<Leader>g',  function() require('vscode').call('workbench.action.findInFiles') end)
 vim.keymap.set('n', '<Leader>b',  function() require('vscode').call('workbench.action.showAllEditors') end)
 vim.keymap.set('n', '<Leader>e',  function() require('vscode').call('workbench.view.explorer') end)
 vim.keymap.set('n', 'ss',         function() require('vscode').call('workbench.action.splitEditorDown') end)
