@@ -21,7 +21,7 @@ zle -N fzf-ghq-widget
 bindkey '^g^g' fzf-ghq-widget
 
 fzf-ssh-widget() {
-  local host=$(grep '^Host ' ~/.ssh/config | awk '{print $2}' | fzf --height 40% --reverse)
+  local host=$(__fzf_list_hosts | fzf --height 40% --reverse)
   if [ -n "$host" ]; then
     BUFFER="ssh $host"
     zle accept-line
