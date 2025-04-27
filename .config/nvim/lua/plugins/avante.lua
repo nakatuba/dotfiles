@@ -10,6 +10,9 @@ return {
     require('avante').setup {
       behaviour = {
         auto_apply_diff_after_generation = true
+      },
+      hints = {
+        enabled = false
       }
     }
 
