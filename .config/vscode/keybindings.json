@@ -129,11 +129,6 @@
         "when": "!inputFocus && !sideBarFocus"
     },
     {
-        "key": "enter",
-        "command": "workbench.action.toggleEditorWidths",
-        "when": "!inputFocus && !sideBarFocus"
-    },
-    {
         "key": "ctrl+p",
         "command": "search.action.focusPreviousSearchResult",
         "when": "hasSearchResult || inSearchEditor"
