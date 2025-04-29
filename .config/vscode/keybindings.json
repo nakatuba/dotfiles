@@ -54,14 +54,16 @@
         "command": "moveActiveEditor",
         "args": {
             "to": "left"
-        }
+        },
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+n",
         "command": "moveActiveEditor",
         "args": {
             "to": "right"
-        }
+        },
+        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+h",
