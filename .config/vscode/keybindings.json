@@ -10,6 +10,26 @@
         "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
     },
     {
+        "key": "ctrl+s s",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+s h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+s j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+s k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+s l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
         "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
