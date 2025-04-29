@@ -53,3 +53,10 @@ vim.keymap.set('n', 'sq',         function() vscode.action('workbench.action.clo
 vim.keymap.set('n', 'so',         function() vscode.action('workbench.action.closeEditorsInOtherGroups') end)
 vim.keymap.set('n', 's=',         function() vscode.action('workbench.action.evenEditorWidths') end)
 vim.keymap.set('n', '<CR>',       function() vscode.action('workbench.action.toggleEditorWidths') end)
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  callback = function()
+    vim.keymap.set('n', '<leader>mp', function() vscode.action('markdown.showPreviewToSide') end, { buffer = true })
+  end
+})
