@@ -30,11 +30,6 @@
         "command": "workbench.action.navigateRight"
     },
     {
-        "key": "ctrl+f",
-        "command": "editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
-    },
-    {
         "key": "ctrl+space",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
@@ -159,5 +154,10 @@
         "key": "ctrl+n",
         "command": "search.action.focusNextSearchResult",
         "when": "hasSearchResult || inSearchEditor"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     }
 ]
