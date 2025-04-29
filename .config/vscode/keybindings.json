@@ -37,12 +37,12 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "ctrl+n",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+p",
@@ -50,7 +50,7 @@
         "args": {
             "to": "left"
         },
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+n",
@@ -58,27 +58,27 @@
         "args": {
             "to": "right"
         },
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+h",
         "command": "workbench.action.moveActiveEditorGroupLeft",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+j",
         "command": "workbench.action.moveActiveEditorGroupDown",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+k",
         "command": "workbench.action.moveActiveEditorGroupUp",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+l",
         "command": "workbench.action.moveActiveEditorGroupRight",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "space f",
@@ -103,47 +103,47 @@
     {
         "key": "s s",
         "command": "workbench.action.splitEditorDown",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s v",
         "command": "workbench.action.splitEditorRight",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s h",
         "command": "workbench.action.navigateLeft",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s j",
         "command": "workbench.action.navigateDown",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s k",
         "command": "workbench.action.navigateUp",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s l",
         "command": "workbench.action.navigateRight",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s q",
         "command": "workbench.action.closeEditorsInGroup",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s o",
         "command": "workbench.action.closeEditorsInOtherGroups",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s =",
         "command": "workbench.action.evenEditorWidths",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "ctrl+p",
@@ -159,5 +159,20 @@
         "key": "ctrl+f",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.acceptCursorTabSuggestion",
+        "when": "cpp.shouldAcceptTab"
     }
 ]

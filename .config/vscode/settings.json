@@ -4,6 +4,7 @@
     "editor.smoothScrolling": true,
     "files.simpleDialog.enable": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
+    "workbench.activityBar.orientation": "vertical",
     "workbench.startupEditor": "none",
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
