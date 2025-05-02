@@ -174,5 +174,10 @@
         "key": "tab",
         "command": "-editor.action.acceptCursorTabSuggestion",
         "when": "cpp.shouldAcceptTab"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-composer.createNew",
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
     }
 ]
