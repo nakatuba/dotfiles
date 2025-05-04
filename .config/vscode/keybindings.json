@@ -114,6 +114,11 @@
         "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "!inputFocus"
+    },
+    {
         "key": "space f",
         "command": "workbench.action.quickOpen",
         "when": "!inputFocus"
@@ -129,9 +134,17 @@
         "when": "!inputFocus"
     },
     {
-        "key": "space e",
-        "command": "workbench.view.explorer",
-        "when": "!inputFocus"
+        "key": "ctrl+g ctrl+f",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+g ctrl+b",
+        "command": "git.checkout"
+    },
+    {
+        "key": "ctrl+g ctrl+h",
+        "command": "gitlens.showQuickFileHistory"
     },
     {
         "key": "s s",

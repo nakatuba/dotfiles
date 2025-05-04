@@ -61,6 +61,7 @@ mas "Xcode", id: 497799835
 
 vscode "asvetliakov.vscode-neovim"
 vscode "bmewburn.vscode-intelephense-client"
+vscode "eamodio.gitlens"
 vscode "github.copilot"
 vscode "golang.go"
 vscode "iamhyc.overleaf-workshop"
