@@ -31,6 +31,14 @@
         "when": "editorHoverFocused"
     },
     {
+        "key": "shift+cmd+left backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+          "text": "\u0015"
+        }
+    },
+    {
         "key": "alt+backspace",
         "command": "vscode-neovim.send",
         "when": "editorTextFocus && neovim.mode != 'insert'",
@@ -41,6 +49,14 @@
         "command": "vscode-neovim.send",
         "when": "editorTextFocus && neovim.mode == 'insert'",
         "args": "<C-w>"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+          "text": "\u0017"
+        }
     },
     {
         "key": "ctrl+s s",
@@ -66,6 +82,11 @@
         "key": "ctrl+space",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+p",
@@ -136,15 +157,17 @@
     {
         "key": "ctrl+g ctrl+f",
         "command": "workbench.view.scm",
-        "when": "workbench.scm.active"
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+g ctrl+b",
-        "command": "git.checkout"
+        "command": "git.checkout",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+g ctrl+h",
-        "command": "gitlens.showQuickFileHistory"
+        "command": "gitlens.showQuickFileHistory",
+        "when": "!terminalFocus"
     },
     {
         "key": "s s",
