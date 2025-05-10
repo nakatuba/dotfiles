@@ -47,7 +47,11 @@ return {
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
           end
-        }
+        },
+
+        -- textlint
+        require('null-ls').builtins.diagnostics.textlint,
+        require('null-ls').builtins.formatting.textlint
       }
     }
   end
