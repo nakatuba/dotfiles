@@ -7,8 +7,6 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.statusBar.enabled": false,
     "search.mode": "reuseEditor",
-    "search.searchEditor.focusResultsOnSearch": true,
-    "search.searchOnType": false,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "workbench.activityBar.orientation": "vertical",
     "workbench.startupEditor": "none",

@@ -215,19 +215,14 @@
         "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
-        "key": "shift+n",
+        "key": "ctrl+p",
         "command": "search.action.focusPreviousSearchResult",
-        "when": "editorTextFocus && inSearchEditor && neovim.mode != 'insert'"
+        "when": "inSearchEditor"
     },
     {
-        "key": "n",
+        "key": "ctrl+n",
         "command": "search.action.focusNextSearchResult",
-        "when": "editorTextFocus && inSearchEditor && neovim.mode != 'insert'"
-    },
-    {
-        "key": "/",
-        "command": "search.action.focusQueryEditorWidget",
-        "when": "editorTextFocus && inSearchEditor && neovim.mode != 'insert'"
+        "when": "inSearchEditor"
     },
     {
         "key": "ctrl+f",
