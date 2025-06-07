@@ -6,6 +6,16 @@
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.statusBar.enabled": false,
+    "gotoNextPreviousMember.symbolKinds": [
+        "class",
+        "constructor",
+        "enum",
+        "function",
+        "interface",
+        "method",
+        "module",
+        "struct"
+    ],
     "search.mode": "reuseEditor",
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "workbench.activityBar.orientation": "vertical",
@@ -20,6 +30,10 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         }
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
     "flake8.args": [
         "--ignore=E203,E266,E501,W503"

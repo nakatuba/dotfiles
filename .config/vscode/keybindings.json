@@ -232,12 +232,7 @@
     {
         "key": "ctrl+f",
         "command": "editor.action.acceptCursorTabSuggestion",
-        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
-    },
-    {
-        "key": "tab",
-        "command": "editor.action.acceptCursorTabSuggestion",
-        "when": "cpp.shouldAcceptTab && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+        "when": "cpp.shouldAcceptTab"
     },
     {
         "key": "tab",
