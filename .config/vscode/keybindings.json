@@ -223,25 +223,5 @@
         "key": "ctrl+n",
         "command": "search.action.focusNextSearchResult",
         "when": "inSearchEditor"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "editor.action.acceptCursorTabSuggestion",
-        "when": "cpp.shouldAcceptTab"
-    },
-    {
-        "key": "tab",
-        "command": "-editor.action.acceptCursorTabSuggestion",
-        "when": "cpp.shouldAcceptTab"
-    },
-    {
-        "key": "cmd+n",
-        "command": "-composer.createNew",
-        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
     }
 ]
