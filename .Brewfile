@@ -1,6 +1,7 @@
 tap "koekeishiya/formulae"
 
 brew "cloud-sql-proxy"
+brew "cocoapods"
 brew "composer"
 brew "fastfetch"
 brew "imagemagick"
