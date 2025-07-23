@@ -16,3 +16,4 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 keybind = ctrl+i=text:\x09
+keybind = shift+enter=text:\n
