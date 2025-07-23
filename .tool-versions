@@ -1,14 +1,13 @@
 act 0.2.57
 awscli 2.17.48
-cocoapods 1.15.2
 fzf 0.53.0
 gcloud 493.0.0
 ghq 1.4.2
 github-cli 2.40.1
-golang 1.21.5
+golang 1.24.4
 java corretto-21.0.3.9.1
-neovim 0.10.4
+neovim 0.11.3
 nodejs 21.5.0
 pipx 1.5.0
-ruby 3.3.1
+ruby 3.4.4
 terraform 1.6.6

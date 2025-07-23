@@ -2,17 +2,81 @@
     {
         "key": "ctrl+a",
         "command": "-vscode-neovim.ctrl-a-insert",
-        "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+        "when": "editorTextFocus && neovim.mode == 'insert'"
     },
     {
         "key": "ctrl+d",
         "command": "-editor.action.outdentLines",
-        "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+        "when": "editorTextFocus && neovim.mode == 'insert'"
     },
     {
-        "key": "ctrl+f",
-        "command": "editor.action.inlineSuggest.commit",
-        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus"
+        "key": "shift+cmd+left backspace",
+        "command": "vscode-neovim.ctrl-u",
+        "when": "editorTextFocus && neovim.mode != 'insert'"
+    },
+    {
+        "key": "shift+cmd+left backspace",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.mode == 'insert'",
+        "args": "<C-u>"
+    },
+    {
+        "key": "shift+cmd+left backspace",
+        "command": "list.focusPageUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+left backspace",
+        "command": "editor.action.pageUpHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "shift+cmd+left backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+          "text": "\u0015"
+        }
+    },
+    {
+        "key": "alt+backspace",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.mode != 'insert'",
+        "args": "<C-w>"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.mode == 'insert'",
+        "args": "<C-w>"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "workbench.action.terminal.sendSequence",
+        "when": "terminalFocus",
+        "args": {
+          "text": "\u0017"
+        }
+    },
+    {
+        "key": "ctrl+s s",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+s h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+s j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+s k",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "ctrl+s l",
+        "command": "workbench.action.navigateRight"
     },
     {
         "key": "ctrl+space",
@@ -20,52 +84,73 @@
         "when": "terminal.active"
     },
     {
+        "key": "cmd+enter",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
         "key": "ctrl+p",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "ctrl+n",
         "command": "workbench.action.nextEditorInGroup",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+p",
         "command": "moveActiveEditor",
         "args": {
             "to": "left"
-        }
+        },
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+n",
         "command": "moveActiveEditor",
         "args": {
             "to": "right"
-        }
+        },
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+h",
         "command": "workbench.action.moveActiveEditorGroupLeft",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+j",
         "command": "workbench.action.moveActiveEditorGroupDown",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+k",
         "command": "workbench.action.moveActiveEditorGroupUp",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
     },
     {
         "key": "alt+l",
         "command": "workbench.action.moveActiveEditorGroupRight",
-        "when": "!inputFocus && !sideBarFocus || editorTextFocus && neovim.mode == 'normal'"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.view.explorer",
+        "when": "!inputFocus"
     },
     {
         "key": "space f",
         "command": "workbench.action.quickOpen",
+        "when": "!inputFocus"
+    },
+    {
+        "key": "space g",
+        "command": "workbench.action.findInFiles",
         "when": "!inputFocus"
     },
     {
@@ -74,58 +159,73 @@
         "when": "!inputFocus"
     },
     {
-        "key": "space e",
-        "command": "workbench.view.explorer",
-        "when": "!inputFocus"
+        "key": "ctrl+g ctrl+f",
+        "command": "workbench.view.scm",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+g ctrl+b",
+        "command": "git.checkout",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+g ctrl+h",
+        "command": "gitlens.showQuickFileHistory",
+        "when": "!terminalFocus"
     },
     {
         "key": "s s",
         "command": "workbench.action.splitEditorDown",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s v",
         "command": "workbench.action.splitEditorRight",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s h",
         "command": "workbench.action.navigateLeft",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s j",
         "command": "workbench.action.navigateDown",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s k",
         "command": "workbench.action.navigateUp",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s l",
         "command": "workbench.action.navigateRight",
-        "when": "!inputFocus"
+        "when": "!inputFocus && !composerFocused"
     },
     {
         "key": "s q",
         "command": "workbench.action.closeEditorsInGroup",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s o",
         "command": "workbench.action.closeEditorsInOtherGroups",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
         "key": "s =",
         "command": "workbench.action.evenEditorWidths",
-        "when": "!inputFocus && !sideBarFocus"
+        "when": "!inputFocus && !sideBarFocus && !composerFocused"
     },
     {
-        "key": "enter",
-        "command": "workbench.action.toggleEditorWidths",
-        "when": "!inputFocus && !sideBarFocus"
+        "key": "ctrl+p",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.action.focusNextSearchResult",
+        "when": "inSearchEditor"
     }
 ]
