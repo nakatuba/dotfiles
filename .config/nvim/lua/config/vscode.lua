@@ -37,7 +37,7 @@ vim.keymap.set('n', '<leader>g',  function() vscode.action('workbench.action.fin
 vim.keymap.set('n', '<leader>b',  function() vscode.action('workbench.action.showAllEditors') end)
 vim.keymap.set('n', 'gd',         function() vscode.action('editor.action.revealDefinition') end)
 vim.keymap.set('n', 'gi',         function() vscode.action('editor.action.goToImplementation') end)
-vim.keymap.set('n', 'gr',         function() vscode.action('editor.action.goToReferences') end)
+vim.keymap.set('n', 'gr',         function() vscode.action('editor.action.goToReferences') end, { nowait = true })
 vim.keymap.set('n', 'K',          function() vscode.action('editor.action.showHover') end)
 vim.keymap.set('n', '<leader>rn', function() vscode.action('editor.action.rename') end)
 vim.keymap.set('n', '<leader>ca', function() vscode.action('editor.action.quickFix') end)
