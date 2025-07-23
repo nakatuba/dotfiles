@@ -1,4 +1,5 @@
 {
+    "editor.accessibilitySupport": "on",
     "editor.minimap.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "editor.smoothScrolling": true,
