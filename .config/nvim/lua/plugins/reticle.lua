@@ -1,4 +1,6 @@
 return {
   'tummetott/reticle.nvim',
-  opts = {}
+  config = function()
+    require('reticle').setup()
+  end
 }
