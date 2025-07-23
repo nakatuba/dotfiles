@@ -11,7 +11,6 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 brew "mas"
 brew "neovim"
-brew "pandoc"
 brew "pngpaste"
 brew "tmux"
 
