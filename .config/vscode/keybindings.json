@@ -89,6 +89,10 @@
         "when": "terminalFocus"
     },
     {
+        "key": "cmd+0",
+        "command": "workbench.action.zoomReset"
+    },
+    {
         "key": "ctrl+p",
         "command": "workbench.action.previousEditorInGroup",
         "when": "!inputFocus && !sideBarFocus && !composerFocused || editorTextFocus && neovim.mode == 'normal'"
