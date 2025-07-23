@@ -13,17 +13,12 @@ return {
         vim.keymap.del('n', 's', { buffer = bufnr })
       end,
       sync_root_with_cwd = true,
-      view = {
-        width = {}
-      },
+      respect_buf_cwd = true,
       update_focused_file = {
         enable = true,
         update_root = true
       },
       actions = {
-        change_dir = {
-          enable = false
-        },
         open_file = {
           window_picker = {
             enable = false
