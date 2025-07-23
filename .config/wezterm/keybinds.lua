@@ -51,6 +51,11 @@ M.keys = {
     key = 'Enter',
     mods = 'SUPER',
     action = wezterm.action.ToggleFullScreen
+  },
+  {
+    key = 'Enter',
+    mods = 'SHIFT',
+    action = wezterm.action.SendString '\n'
   }
 }
 
