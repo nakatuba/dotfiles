@@ -6,5 +6,7 @@ return {
         enable = true
       }
     }
+
+    vim.keymap.set('n', '<CR>', require('snacks').zen.zoom)
   end
 }
