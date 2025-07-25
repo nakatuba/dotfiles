@@ -11,7 +11,7 @@ return {
           {
             filetype = 'NvimTree',
             text = 'File Explorer',
-            text_align = 'left',
+            highlight = 'Directory',
             separator = true
           }
         }
