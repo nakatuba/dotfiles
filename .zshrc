@@ -26,7 +26,6 @@ eval "$(pyenv virtualenv-init -)"
 
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
-source-if-exists ~/.cargo/env
 
 for file in ~/.config/zsh/*.zsh; do
   source $file
