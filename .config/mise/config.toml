@@ -1,8 +1,10 @@
 [tools]
 act = "latest"
 aws-cli = "latest"
+claude = "latest"
 fzf = "latest"
 gcloud = "latest"
+gemini-cli = "latest"
 ghq = "latest"
 github-cli = "latest"
 go = "latest"
@@ -13,6 +15,7 @@ pipx = "latest"
 ruby = "latest"
 terraform = "latest"
 usage = "latest"
+yarn = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
