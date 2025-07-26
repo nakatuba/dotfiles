@@ -16,6 +16,7 @@ mkdir -p ~/.config
 ln -sf $DOTFILES/.config/ghostty ~/.config
 ln -sf $DOTFILES/.config/git ~/.config
 ln -sf $DOTFILES/.config/ideavim ~/.config
+ln -sf $DOTFILES/.config/mise ~/.config
 ln -sf $DOTFILES/.config/nvim ~/.config
 ln -sf $DOTFILES/.config/tmux ~/.config
 ln -sf $DOTFILES/.config/wezterm ~/.config
@@ -75,22 +76,16 @@ else
   git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 fi
 
-# Install asdf
-if command -v asdf > /dev/null; then
-  asdf update
-  asdf plugin update --all
+# Install mise
+if command -v mise > /dev/null; then
+  mise self-update
 else
-  git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-  source ~/.asdf/asdf.sh
+  curl https://mise.run | sh
+  export PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Install asdf plugins
-ln -sf $DOTFILES/.tool-versions ~
-cat ~/.tool-versions | while read plugin version; do
-  asdf plugin add $plugin
-  asdf install $plugin $version
-  asdf global $plugin $version
-done
+# Install mise tools
+mise install
 
 # Install cargo
 if command -v rustup > /dev/null; then
@@ -127,10 +122,12 @@ pipx install mycli neovim-remote poetry powerline-status trash-cli
 pipx install git+https://github.com/nakatuba/pgcli.git
 pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
 
-# Install tmux plugins
+# Install tmux plugin manager
 if [ -d ~/.config/tmux/plugins/tpm ]; then
   (cd ~/.config/tmux/plugins/tpm && git pull)
 else
   git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 fi
+
+# Install tmux plugins
 ~/.config/tmux/plugins/tpm/bin/install_plugins
