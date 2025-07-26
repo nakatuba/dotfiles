@@ -87,16 +87,8 @@ fi
 # Install mise tools
 mise install
 
-# Install cargo
-if command -v rustup > /dev/null; then
-  rustup update
-else
-  curl https://sh.rustup.rs -sSf | sh -s -- -y --no-modify-path
-  source ~/.cargo/env
-fi
-
 # Install cargo packages
-cargo install bat exa fd-find ripgrep tealdeer zoxide
+cargo install bat exa fd-find ripgrep tealdeer tokei zoxide
 
 # Install pyenv
 if command -v pyenv > /dev/null; then
