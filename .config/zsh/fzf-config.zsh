@@ -1,5 +1,3 @@
-export RUNEWIDTH_EASTASIAN=0  # https://github.com/junegunn/fzf/issues/3258
-
 export FZF_DEFAULT_OPTS='--cycle --bind ctrl-j:preview-down,ctrl-k:preview-up'
 
 if command -v fd > /dev/null; then
@@ -10,7 +8,4 @@ fi
 
 command -v bat > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
 
-if asdf where fzf > /dev/null 2>&1; then
-  source "$(asdf where fzf)/shell/completion.zsh"
-  source "$(asdf where fzf)/shell/key-bindings.zsh"
-fi
+command -v fzf > /dev/null && source <(fzf --zsh)

@@ -1,0 +1,18 @@
+[tools]
+act = "latest"
+aws-cli = "latest"
+fzf = "latest"
+gcloud = "latest"
+ghq = "latest"
+github-cli = "latest"
+go = "latest"
+java = "latest"
+neovim = "latest"
+node = "latest"
+pipx = "latest"
+ruby = "latest"
+terraform = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = []
+trusted_config_paths = ["~/dotfiles", "~/ghq"]
