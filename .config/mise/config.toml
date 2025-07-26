@@ -12,6 +12,7 @@ node = "latest"
 pipx = "latest"
 ruby = "latest"
 terraform = "latest"
+usage = "latest"
 
 [settings]
 trusted_config_paths = ['~/dotfiles', '~/ghq']
