@@ -12,6 +12,7 @@ node = "latest"
 pipx = "latest"
 ruby = "latest"
 terraform = "latest"
+usage = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
