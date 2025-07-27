@@ -20,7 +20,6 @@ pipx = "latest"
 ruby = "3.3.9"
 rust = "latest"
 terraform = "latest"
-tmux = "latest"
 usage = "latest"
 yarn = "latest"
 
