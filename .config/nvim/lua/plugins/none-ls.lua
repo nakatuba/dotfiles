@@ -50,8 +50,12 @@ return {
         },
 
         -- textlint
-        require('null-ls').builtins.diagnostics.textlint,
-        require('null-ls').builtins.formatting.textlint
+        require('null-ls').builtins.diagnostics.textlint.with {
+          only_local = 'node_modules/.bin'
+        },
+        require('null-ls').builtins.formatting.textlint.with {
+          only_local = 'node_modules/.bin'
+        }
       }
     }
   end
