@@ -8,6 +8,7 @@ brew "koekeishiya/formulae/yabai"
 brew "mas"
 brew "neovim"
 brew "pngpaste"
+brew "tmux"
 
 cask "1password"
 cask "adobe-acrobat-reader"
