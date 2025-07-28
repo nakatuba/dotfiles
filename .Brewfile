@@ -55,6 +55,7 @@ mas "Amphetamine", id: 937984704
 mas "Kindle", id: 302584613
 mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
+mas "Perplexity", id: 6714467650
 
 vscode "asvetliakov.vscode-neovim"
 vscode "bmewburn.vscode-intelephense-client"
