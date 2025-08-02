@@ -2,6 +2,7 @@ tap "koekeishiya/formulae"
 
 brew "composer"
 brew "fastlane"
+brew "imagemagick"
 brew "jq"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
