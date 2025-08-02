@@ -90,23 +90,6 @@ mise install
 # Install cargo packages
 cargo install bat exa fd-find ripgrep tealdeer tokei zoxide
 
-# Install pyenv
-if command -v pyenv > /dev/null; then
-  pyenv update
-else
-  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-  git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-  git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-
-# Install python
-pyenv install --skip-existing 3.11.7
-pyenv install --skip-existing 2.7.18
-pyenv global 3.11.7 2.7.18
-pip install --upgrade pip
-
 # Install pipx packages
 pipx install --include-deps ansible
 pipx install 'markitdown[all]'
