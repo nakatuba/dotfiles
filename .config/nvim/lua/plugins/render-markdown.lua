@@ -8,6 +8,10 @@ return {
       heading = {
         icons = {}
       },
+      code = {
+        border = 'thin',
+        inline_pad = 1
+      },
       sign = {
         enabled = false
       }
