@@ -13,6 +13,7 @@ ghq = "latest"
 github-cli = "latest"
 go = "latest"
 java = "latest"
+jq = "latest"
 neovim = "latest"
 node = "latest"
 pipx = "latest"
@@ -23,6 +24,7 @@ rust = "latest"
 terraform = "latest"
 usage = "latest"
 yarn = "latest"
+yq = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
