@@ -3,8 +3,6 @@ return {
   config = function()
     vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { focusable = false })
 
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
     local on_attach = function(client, bufnr)
       vim.keymap.set('n', 'gd',         '<cmd>Telescope lsp_definitions<CR>',                       { buffer = bufnr })
       vim.keymap.set('n', 'gi',         '<cmd>Telescope lsp_implementations<CR>',                   { buffer = bufnr })
@@ -24,13 +22,6 @@ return {
         })
       end
 
-      if client.supports_method('textDocument/signatureHelp') then
-        vim.api.nvim_create_autocmd('CursorHoldI', {
-          buffer = bufnr,
-          callback = function() vim.lsp.buf.signature_help() end
-        })
-      end
-
       vim.api.nvim_create_autocmd('CursorHold', {
         buffer = bufnr,
         callback = function() vim.diagnostic.open_float(nil, { focusable = false, scope = 'cursor' }) end
@@ -38,7 +29,6 @@ return {
     end
 
     require('lspconfig').gopls.setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       settings = {
         gopls = {
@@ -50,7 +40,6 @@ return {
     }
 
     require('lspconfig').intelephense.setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       init_options = {
         globalStoragePath = vim.fn.expand('~/.local/share/intelephense'),
@@ -59,7 +48,6 @@ return {
     }
 
     require('lspconfig').jsonls.setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       init_options = {
         provideFormatter = false
@@ -67,7 +55,6 @@ return {
     }
 
     require('lspconfig').kotlin_language_server.setup {
-      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -78,7 +65,6 @@ return {
     }
 
     require('lspconfig').lua_ls.setup {
-      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -96,12 +82,10 @@ return {
     }
 
     require('lspconfig').marksman.setup {
-      capabilities = capabilities,
       on_attach = on_attach
     }
 
     require('lspconfig').pyright.setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       settings = {
         python = {
@@ -119,7 +103,6 @@ return {
     }
 
     require('lspconfig').solargraph.setup {
-      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -127,12 +110,10 @@ return {
     }
 
     require('lspconfig').terraformls.setup {
-      capabilities = capabilities,
       on_attach = on_attach
     }
 
     require('lspconfig').ts_ls.setup {
-      capabilities = capabilities,
       on_attach = function(client, bufnr)
         on_attach(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -140,7 +121,6 @@ return {
     }
 
     require('lspconfig').typos_lsp.setup {
-      capabilities = capabilities,
       on_attach = on_attach,
       init_options = {
         diagnosticSeverity = 'Hint'
@@ -148,7 +128,6 @@ return {
     }
 
     require('lspconfig').vuels.setup {
-      capabilities = capabilities,
       on_attach = on_attach
     }
   end
