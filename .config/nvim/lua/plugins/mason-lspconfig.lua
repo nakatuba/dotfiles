@@ -1,7 +1,7 @@
 return {
-  'williamboman/mason-lspconfig.nvim',
+  'mason-org/mason-lspconfig.nvim',
   dependencies = {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     'neovim/nvim-lspconfig'
   },
   config = function()
@@ -9,15 +9,12 @@ return {
       ensure_installed = {
         'gopls',
         'intelephense',
-        'jsonls',
-        'kotlin_language_server',
         'lua_ls',
         'marksman',
         'pyright',
         'solargraph',
         'terraformls',
         'ts_ls',
-        'typos_lsp',
         'vuels'
       }
     }
