@@ -22,6 +22,7 @@ ruby = "latest"
 rust = "latest"
 terraform = "latest"
 usage = "latest"
+uv = "latest"
 yarn = "latest"
 yq = "latest"
 
