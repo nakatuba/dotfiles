@@ -3,17 +3,7 @@ return {
   config = function()
     require('snacks').setup {
       image = {
-        enabled = true
-      },
-      input = {
-        win = {
-          row = function()
-            return math.floor((vim.o.lines - 3) / 2)
-          end,
-          keys = {
-            i_esc = { '<Esc>', 'cancel', mode = 'i' }
-          }
-        }
+        enable = true
       },
       picker = {
         sources = {
