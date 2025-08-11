@@ -3,7 +3,7 @@ return {
   config = function()
     require('snacks').setup {
       image = {
-        enable = true
+        enabled = true
       },
       picker = {
         sources = {
