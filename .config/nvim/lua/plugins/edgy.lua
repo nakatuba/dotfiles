@@ -5,16 +5,22 @@ return {
       left = {
         {
           ft = 'NvimTree',
-          size = { width = 0.2 }
+          size = { width = 40 }
         }
       },
       bottom = {
         {
           ft = 'toggleterm',
-          size = { height = 0.3 },
+          size = { height = 20 },
           filter = function(buf, win)
             return vim.api.nvim_win_get_config(win).relative == ''
           end
+        }
+      },
+      right = {
+        {
+          ft = 'aerial',
+          size = { width = 40 }
         }
       },
       animate = {
