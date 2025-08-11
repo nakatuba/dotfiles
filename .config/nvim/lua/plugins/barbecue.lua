@@ -9,7 +9,7 @@ return {
       show_modified = true,
       show_navic = false,
       theme = {
-        dirname = {}
+        dirname = { bold = true }
       }
     }
   end
