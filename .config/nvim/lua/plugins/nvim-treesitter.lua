@@ -11,8 +11,6 @@ return {
         'go',
         'html',
         'javascript',
-        'json',
-        'kotlin',
         'markdown',
         'markdown_inline',
         'php',
