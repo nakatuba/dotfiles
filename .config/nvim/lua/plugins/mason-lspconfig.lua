@@ -15,7 +15,7 @@ return {
         'solargraph',
         'terraformls',
         'ts_ls',
-        'vuels'
+        'vue_ls'
       }
     }
   end
