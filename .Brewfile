@@ -58,6 +58,7 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 mas "Perplexity", id: 6714467650
 
+vscode "anthropic.claude-code"
 vscode "asvetliakov.vscode-neovim"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "eamodio.gitlens"
@@ -74,3 +75,4 @@ vscode "ms-vscode-remote.vscode-remote-extensionpack"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "openai.chatgpt"
 vscode "usernamehw.errorlens"
+vscode "vue.volar"
