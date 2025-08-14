@@ -9,6 +9,7 @@ return {
       ensure_installed = {
         'gopls',
         'intelephense',
+        'kotlin_lsp',
         'lua_ls',
         'marksman',
         'pyright',
