@@ -89,6 +89,17 @@ return {
             picker:set_layout(preset == 'default' and 'vertical' or 'default')
           end
         }
+      },
+      terminal = {
+        win = {
+          wo = {
+            winbar = '',
+            winhighlight = 'NormalFloat:Normal'
+          },
+          on_win = function()
+            vim.cmd.wincmd('=')
+          end
+        }
       }
     }
 
