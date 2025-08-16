@@ -6,6 +6,7 @@ fullscreen = true
 macos-non-native-fullscreen = visible-menu
 macos-option-as-alt = true
 quit-after-last-window-closed = true
+term = xterm-256color
 
 font-family = MesloLGS NF
 font-feature = -dlig
