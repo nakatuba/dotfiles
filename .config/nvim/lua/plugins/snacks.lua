@@ -111,8 +111,6 @@ return {
     vim.keymap.set('n', '<C-g><C-b>', function() require('snacks').picker.git_branches() end)
     vim.keymap.set('n', '<C-g><C-h>', function() require('snacks').picker.git_log_file() end)
 
-    vim.keymap.set('n', '<CR>', function() require('snacks').zen.zoom() end)
-
     vim.api.nvim_create_autocmd('ColorScheme', {
       callback = function()
         vim.api.nvim_set_hl(0, 'SnacksPickerDir', { link = 'SnacksPicker' })
