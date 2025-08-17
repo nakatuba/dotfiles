@@ -13,6 +13,7 @@ ln -sf $DOTFILES/.zshrc ~
 
 mkdir -p ~/.config
 
+ln -sf $DOTFILES/.config/claude ~/.config
 ln -sf $DOTFILES/.config/ghostty ~/.config
 ln -sf $DOTFILES/.config/git ~/.config
 ln -sf $DOTFILES/.config/ideavim ~/.config

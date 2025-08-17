@@ -24,6 +24,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+export CLAUDE_CONFIG_DIR="$HOME/.config/claude"
+
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
 
