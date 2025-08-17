@@ -21,10 +21,12 @@ return {
       picker = {
         sources = {
           files = {
-            hidden = true
+            hidden = true,
+            follow = true
           },
           grep = {
-            hidden = true
+            hidden = true,
+            follow = true
           },
           lsp_declarations = {
             jump = {
