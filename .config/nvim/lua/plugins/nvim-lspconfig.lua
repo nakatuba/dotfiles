@@ -1,155 +1,51 @@
 return {
   'neovim/nvim-lspconfig',
+  dependencies = {
+    'folke/snacks.nvim'
+  },
   config = function()
-    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { focusable = false })
+    vim.diagnostic.config {
+      virtual_text = true,
+      float = {
+        scope = 'cursor'
+      }
+    }
 
-    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    vim.api.nvim_create_autocmd('LspAttach', {
+      callback = function(args)
+        vim.keymap.set('n', 'gd',         function() require('snacks').picker.lsp_definitions()     end, { buffer = args.buf })
+        vim.keymap.set('n', 'gi',         function() require('snacks').picker.lsp_implementations() end, { buffer = args.buf })
+        vim.keymap.set('n', 'gr',         function() require('snacks').picker.lsp_references()      end, { buffer = args.buf, nowait = true })
+        vim.keymap.set('n', 'K',          function() vim.lsp.buf.hover()                            end, { buffer = args.buf })
+        vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename()                           end, { buffer = args.buf })
+        vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action()                      end, { buffer = args.buf })
+        vim.keymap.set('n', '<leader>s',  function() require('snacks').picker.lsp_symbols()         end, { buffer = args.buf })
+        vim.keymap.set('n', '<leader>d',  function() require('snacks').picker.diagnostics()         end, { buffer = args.buf })
 
-    local on_attach = function(client, bufnr)
-      vim.keymap.set('n', 'gd',         '<cmd>Telescope lsp_definitions<CR>',                       { buffer = bufnr })
-      vim.keymap.set('n', 'gi',         '<cmd>Telescope lsp_implementations<CR>',                   { buffer = bufnr })
-      vim.keymap.set('n', 'gr',         '<cmd>Telescope lsp_references<CR>',                        { buffer = bufnr, nowait = true })
-      vim.keymap.set('n', 'K',          '<cmd>lua vim.lsp.buf.hover()<CR>',                         { buffer = bufnr })
-      vim.keymap.set('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>',                        { buffer = bufnr })
-      vim.keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>',                   { buffer = bufnr })
-      vim.keymap.set('n', '<leader>s',  '<cmd>Telescope lsp_document_symbols<CR>',                  { buffer = bufnr })
-      vim.keymap.set('n', '<leader>d',  '<cmd>Telescope diagnostics<CR>',                           { buffer = bufnr })
-      vim.keymap.set('n', '[d',         '<cmd>lua vim.diagnostic.goto_prev({ float = false })<CR>', { buffer = bufnr })
-      vim.keymap.set('n', ']d',         '<cmd>lua vim.diagnostic.goto_next({ float = false })<CR>', { buffer = bufnr })
-
-      if client.supports_method('textDocument/formatting') then
-        vim.api.nvim_create_autocmd('BufWritePre', {
-          buffer = bufnr,
-          callback = function() vim.lsp.buf.format() end
+        vim.api.nvim_create_autocmd('CursorHold', {
+          buffer = args.buf,
+          callback = function()
+            vim.diagnostic.open_float { focusable = false }
+          end
         })
-      end
 
-      if client.supports_method('textDocument/signatureHelp') then
-        vim.api.nvim_create_autocmd('CursorHoldI', {
-          buffer = bufnr,
-          callback = function() vim.lsp.buf.signature_help() end
-        })
-      end
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if not client then
+          return
+        end
 
-      vim.api.nvim_create_autocmd('CursorHold', {
-        buffer = bufnr,
-        callback = function() vim.diagnostic.open_float(nil, { focusable = false, scope = 'cursor' }) end
-      })
-    end
+        if vim.tbl_contains({ 'lua_ls', 'solargraph', 'ts_ls', 'vue_ls' }, client.name) then
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end
 
-    require('lspconfig').gopls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        gopls = {
-          analyses = {
-            staticcheck = true
-          }
-        }
-      }
-    }
-
-    require('lspconfig').intelephense.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      init_options = {
-        globalStoragePath = vim.fn.expand('~/.local/share/intelephense'),
-        licenceKey = vim.fn.expand('~/.config/intelephense/licence.txt')
-      }
-    }
-
-    require('lspconfig').jsonls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      init_options = {
-        provideFormatter = false
-      }
-    }
-
-    require('lspconfig').kotlin_language_server.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-      end,
-      init_options = {
-        storagePath = vim.fn.expand('~/.local/share/kotlin-language-server')
-      }
-    }
-
-    require('lspconfig').lua_ls.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-      end,
-      settings = {
-        Lua = {
-          runtime = {
-            version = 'LuaJIT'
-          },
-          diagnostics = {
-            globals = { 'vim' }
-          }
-        }
-      }
-    }
-
-    require('lspconfig').marksman.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
-    }
-
-    require('lspconfig').pyright.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        python = {
-          analysis = {
-            autoImportCompletions = false,
-            useLibraryCodeForTypes = false
-          }
-        }
-      },
-      before_init = function(_, config)
-        if vim.env.VIRTUAL_ENV then
-          config.settings.python.pythonPath = require('lspconfig').util.path.join(vim.env.VIRTUAL_ENV, 'bin', 'python')
+        if client:supports_method('textDocument/formatting') then
+          vim.api.nvim_create_autocmd('BufWritePre', {
+            buffer = args.buf,
+            callback = function() vim.lsp.buf.format() end
+          })
         end
       end
-    }
-
-    require('lspconfig').solargraph.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-      end
-    }
-
-    require('lspconfig').terraformls.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
-    }
-
-    require('lspconfig').ts_ls.setup {
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
-        client.server_capabilities.documentFormattingProvider = false
-      end
-    }
-
-    require('lspconfig').typos_lsp.setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      init_options = {
-        diagnosticSeverity = 'Hint'
-      }
-    }
-
-    require('lspconfig').vuels.setup {
-      capabilities = capabilities,
-      on_attach = on_attach
-    }
+    })
   end
 }

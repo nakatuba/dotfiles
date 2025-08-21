@@ -13,6 +13,12 @@ return {
             text = 'File Explorer',
             highlight = 'Directory',
             separator = true
+          },
+          {
+            filetype = 'aerial',
+            text = 'Outline',
+            highlight = 'Directory',
+            separator = true
           }
         }
       }
