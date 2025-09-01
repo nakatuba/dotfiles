@@ -13,10 +13,7 @@ return {
       }
     }
 
-    vim.keymap.set('n', '<M-Esc>',    '<cmd>ClaudeCode<CR>')
     vim.keymap.set('n', '<leader>as', '<cmd>ClaudeCodeAdd %<CR>')
     vim.keymap.set('x', '<leader>as', '<cmd>ClaudeCodeSend<CR>')
-    vim.keymap.set('n', '<leader>aa', '<cmd>ClaudeCodeDiffAccept<CR>')
-    vim.keymap.set('n', '<leader>ad', '<cmd>ClaudeCodeDiffDeny<CR>')
   end
 }
