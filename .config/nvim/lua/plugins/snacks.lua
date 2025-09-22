@@ -54,6 +54,13 @@ return {
             }
           }
         },
+        layouts = {
+          vertical = {
+            layout = {
+              width = 0.8
+            }
+          }
+        },
         formatters = {
           file = {
             truncate = 100
