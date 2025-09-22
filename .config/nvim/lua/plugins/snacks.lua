@@ -54,6 +54,13 @@ return {
             }
           }
         },
+        layouts = {
+          vertical = {
+            layout = {
+              width = 0.8
+            }
+          }
+        },
         formatters = {
           file = {
             truncate = 100
@@ -73,8 +80,8 @@ return {
               ['<C-b>'] = false,
               ['<C-d>'] = false,
               ['<C-f>'] = false,
-              ['<C-j>'] = { 'preview_scroll_down', mode = 'i' },
-              ['<C-k>'] = { 'preview_scroll_up', mode = 'i' },
+              ['<M-v>'] = { 'preview_scroll_up', mode = 'i' },
+              ['<C-v>'] = { 'preview_scroll_down', mode = 'i' },
               ['<C-u>'] = false,
               ['<C-/>'] = { 'toggle_layout', mode = 'i' },
               ['<C-_>'] = { 'toggle_layout', mode = 'i' },
