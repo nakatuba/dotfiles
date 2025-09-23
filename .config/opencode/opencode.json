@@ -3,10 +3,9 @@
   "theme": "system",
   "keybinds": {
     "app_exit": "ctrl+d",
-    "messages_page_up": "alt+v",
-    "messages_page_down": "ctrl+v",
-    "messages_first": "alt+<",
-    "messages_last": "alt+>",
-    "input_paste": "none"
+    "messages_half_page_up": "shift+up",
+    "messages_half_page_down": "shift+down",
+    "messages_first": "shift+left",
+    "messages_last": "shift+right"
   }
 }
