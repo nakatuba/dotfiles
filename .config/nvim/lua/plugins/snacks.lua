@@ -81,8 +81,10 @@ return {
               ['<C-d>'] = false,
               ['<C-f>'] = false,
               ['<C-u>'] = false,
-              ['<C-k>'] = { 'preview_scroll_up', mode = 'i' },
-              ['<C-j>'] = { 'preview_scroll_down', mode = 'i' },
+              ['<S-Up>'] = { 'preview_scroll_up', mode = 'i' },
+              ['<S-Down>'] = { 'preview_scroll_down', mode = 'i' },
+              ['<S-Left>'] = { 'preview_scroll_top', mode = 'i' },
+              ['<S-Right>'] = { 'preview_scroll_bottom', mode = 'i' },
               ['<C-/>'] = { 'toggle_layout', mode = 'i' },
               ['<C-_>'] = { 'toggle_layout', mode = 'i' },
               ['<Esc>'] = { 'close', mode = 'i' }
@@ -90,6 +92,20 @@ return {
           }
         },
         actions = {
+          preview_scroll_top = function(picker)
+            if picker.preview.win:valid() then
+              vim.api.nvim_win_call(picker.preview.win.win, function()
+                vim.cmd('normal! gg')
+              end)
+            end
+          end,
+          preview_scroll_bottom = function(picker)
+            if picker.preview.win:valid() then
+              vim.api.nvim_win_call(picker.preview.win.win, function()
+                vim.cmd('normal! G')
+              end)
+            end
+          end,
           toggle_layout = function(picker)
             local preset = picker.resolved_layout.preset
             if type(preset) == 'function' then
