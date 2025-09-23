@@ -80,9 +80,9 @@ return {
               ['<C-b>'] = false,
               ['<C-d>'] = false,
               ['<C-f>'] = false,
-              ['<M-v>'] = { 'preview_scroll_up', mode = 'i' },
-              ['<C-v>'] = { 'preview_scroll_down', mode = 'i' },
               ['<C-u>'] = false,
+              ['<C-k>'] = { 'preview_scroll_up', mode = 'i' },
+              ['<C-j>'] = { 'preview_scroll_down', mode = 'i' },
               ['<C-/>'] = { 'toggle_layout', mode = 'i' },
               ['<C-_>'] = { 'toggle_layout', mode = 'i' },
               ['<Esc>'] = { 'close', mode = 'i' }
