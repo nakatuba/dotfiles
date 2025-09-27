@@ -28,6 +28,15 @@ return {
             hidden = true,
             follow = true
           },
+          buffers = {
+            win = {
+              input = {
+                keys = {
+                  ['<C-d>'] = { 'bufdelete', mode = 'i' }
+                }
+              }
+            }
+          },
           lsp_declarations = {
             jump = {
               reuse_win = false
