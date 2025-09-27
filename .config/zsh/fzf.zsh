@@ -1,4 +1,4 @@
-export FZF_DEFAULT_OPTS="--cycle --bind 'shift-up:preview-half-page-up,shift-down:preview-half-page-down,shift-left:preview-top,shift-right:preview-bottom'"
+export FZF_DEFAULT_OPTS="--cycle --bind 'ctrl-k:preview-half-page-up,ctrl-j:preview-half-page-down'"
 
 if command -v fd > /dev/null; then
   export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
