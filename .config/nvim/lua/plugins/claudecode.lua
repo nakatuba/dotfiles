@@ -12,8 +12,5 @@ return {
         }
       }
     }
-
-    vim.keymap.set('n', '<leader>as', '<cmd>ClaudeCodeAdd %<CR>')
-    vim.keymap.set('x', '<leader>as', '<cmd>ClaudeCodeSend<CR>')
   end
 }
