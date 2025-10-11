@@ -20,6 +20,11 @@ return {
     vim.keymap.set('n', 'sk', require('tmux').move_top)
     vim.keymap.set('n', 'sl', require('tmux').move_right)
 
+    vim.keymap.set({'n', 'i', 'x', 't'}, '<C-s>h', require('tmux').move_left)
+    vim.keymap.set({'n', 'i', 'x', 't'}, '<C-s>j', require('tmux').move_bottom)
+    vim.keymap.set({'n', 'i', 'x', 't'}, '<C-s>k', require('tmux').move_top)
+    vim.keymap.set({'n', 'i', 'x', 't'}, '<C-s>l', require('tmux').move_right)
+
     vim.api.nvim_create_autocmd('FocusGained', {
       callback = function()
         if vim.env.TMUX then
