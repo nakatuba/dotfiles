@@ -21,6 +21,10 @@ return {
         {
           ft = 'aerial',
           size = { width = 40 }
+        },
+        {
+          ft = 'opencode_terminal',
+          size = { width = 80 }
         }
       },
       animate = {
