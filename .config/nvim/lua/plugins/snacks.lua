@@ -114,9 +114,6 @@ return {
             winbar = '',
             winhighlight = 'NormalFloat:Normal'
           },
-          keys = {
-            term_normal = false
-          },
           on_win = function()
             vim.cmd.wincmd('=')
           end

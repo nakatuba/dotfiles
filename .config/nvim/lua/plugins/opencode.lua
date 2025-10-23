@@ -5,23 +5,11 @@ return {
   },
   config = function()
     vim.g.opencode_opts = {
-      terminal = {
-        win = {
-          enter = true
-        }
-      },
-      on_send = function()
-        local win = require('snacks.terminal').get(
-          require('opencode.config').opts.terminal.cmd,
-          require('opencode.config').opts.terminal
-        )
-        if win then
-          win:show():focus()
-        end
+      on_opencode_not_found = function()
+        vim.system({ 'tmux', 'split-window', '-h', 'opencode' })
       end
     }
 
-    vim.keymap.set({'n', 't'}, '<C-.>', function() require('opencode').toggle() end)
     vim.keymap.set('n', '<leader>as', function() require('opencode').prompt('@buffer') end)
     vim.keymap.set('x', '<leader>as', function() require('opencode').prompt('@selection') end)
   end
