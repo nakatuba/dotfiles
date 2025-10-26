@@ -92,6 +92,7 @@ return {
               ['<C-u>'] = false,
               ['<C-k>'] = { 'preview_scroll_up', mode = 'i' },
               ['<C-j>'] = { 'preview_scroll_down', mode = 'i' },
+              ['<C-x>'] = { 'edit_split', mode = 'i' },
               ['<C-/>'] = { 'toggle_layout', mode = 'i' },
               ['<C-_>'] = { 'toggle_layout', mode = 'i' },
               ['<Esc>'] = { 'close', mode = 'i' }
