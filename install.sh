@@ -89,7 +89,8 @@ fi
 mise install
 
 # Install cargo packages
-cargo install bat exa fd-find ripgrep tealdeer tokei zoxide
+cargo install bat eza fd-find ripgrep tealdeer tokei zoxide
+cargo install bottom --locked
 
 # Install pyenv
 if command -v pyenv > /dev/null; then
