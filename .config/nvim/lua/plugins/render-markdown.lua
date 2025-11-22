@@ -5,9 +5,6 @@ return {
   },
   config = function()
     require('render-markdown').setup {
-      heading = {
-        icons = {}
-      },
       code = {
         border = 'thin',
         inline_pad = 1
