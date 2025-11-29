@@ -3,8 +3,8 @@
   "theme": "system",
   "keybinds": {
     "app_exit": "ctrl+d,<leader>q",
-    "messages_page_up": "alt+v",
-    "messages_page_down": "ctrl+v",
+    "messages_half_page_up": "alt+v",
+    "messages_half_page_down": "ctrl+v",
     "messages_first": "alt+<",
     "messages_last": "alt+>",
     "input_paste": "none"
