@@ -13,6 +13,8 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
+      - run: |
+          sudo rm -rf /Users/runner/Library/Android
       - run: ./install.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
