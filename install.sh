@@ -24,7 +24,6 @@ ln -sf $DOTFILES/.config/wezterm ~/.config
 ln -sf $DOTFILES/.config/zsh ~/.config
 
 if [ "$(uname)" = "Darwin" ]; then
-  ln -sf $DOTFILES/.config/doom ~/.config
   ln -sf $DOTFILES/.config/karabiner ~/.config
   ln -sf $DOTFILES/.config/skhd ~/.config
   ln -sf $DOTFILES/.config/yabai ~/.config
@@ -69,10 +68,6 @@ if [ "$(uname)" = "Darwin" ]; then
   ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Cursor/User
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Cursor/User
   defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
-
-  # Setup doomemacs
-  git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
-  ~/.config/emacs/bin/doom install
 fi
 
 # Install prezto
