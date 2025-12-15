@@ -1,9 +1,10 @@
 command -v bat > /dev/null && alias cat='bat -p'
+command -v btm > /dev/null && alias top='btm -b'
 
-if command -v exa > /dev/null; then
-  alias ll='exa --icons -l'
-  alias la='exa --icons -la'
-  alias tree='exa --icons --tree'
+if command -v eza > /dev/null; then
+  alias ll='eza -l'
+  alias la='eza -la'
+  alias tree='eza --tree'
 fi
 
 if command -v nvim > /dev/null; then

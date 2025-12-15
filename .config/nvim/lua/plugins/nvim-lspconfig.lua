@@ -13,6 +13,15 @@ return {
 
     vim.api.nvim_create_autocmd('LspAttach', {
       callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if not client then
+          return
+        end
+
+        if client.name == 'GitHub Copilot' then
+          return
+        end
+
         vim.keymap.set('n', 'gd',         function() require('snacks').picker.lsp_definitions()     end, { buffer = args.buf })
         vim.keymap.set('n', 'gi',         function() require('snacks').picker.lsp_implementations() end, { buffer = args.buf })
         vim.keymap.set('n', 'gr',         function() require('snacks').picker.lsp_references()      end, { buffer = args.buf, nowait = true })
@@ -28,11 +37,6 @@ return {
             vim.diagnostic.open_float { focusable = false }
           end
         })
-
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        if not client then
-          return
-        end
 
         if vim.tbl_contains({ 'lua_ls', 'solargraph', 'ts_ls', 'vue_ls' }, client.name) then
           client.server_capabilities.documentFormattingProvider = false
