@@ -1,3 +1,10 @@
+(setq org-directory "~/ghq/github.com/nakatuba/org")
+(setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
