@@ -2,6 +2,11 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
+
 (use-package evil
   :ensure t
   :init
