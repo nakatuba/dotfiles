@@ -18,4 +18,5 @@ jobs:
       - run: ./install.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HOMEBREW_BUNDLE_BREW_SKIP: "emacs-plus"
           HOMEBREW_BUNDLE_MAS_SKIP: "Amphetamine Kindle WireGuard Xcode"
