@@ -1,13 +1,10 @@
-(setq org-directory "~/ghq/github.com/nakatuba/org")
-(setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+;;; init.el -*- lexical-binding: t; -*-
 
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c c") 'org-capture)
-
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+(eval-and-compile
+  (customize-set-variable
+   'package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                       ("melpa" . "https://melpa.org/packages/")))
+  (package-initialize))
 
 (use-package doom-themes
   :ensure t
@@ -26,3 +23,11 @@
   (define-key evil-insert-state-map (kbd "C-u") 'evil-delete-back-to-indentation)
   (define-key evil-insert-state-map (kbd "C-w") 'evil-delete-backward-word)
   (define-key evil-normal-state-map (kbd "s") 'evil-window-map))
+
+(use-package org
+  :bind (("C-c a" . org-agenda)
+         ("C-c c" . org-capture))
+  :config
+  (setq org-directory "~/ghq/github.com/nakatuba/org")
+  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
+  (setq org-default-notes-file (concat org-directory "/notes.org")))
