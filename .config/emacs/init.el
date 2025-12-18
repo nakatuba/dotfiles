@@ -40,3 +40,8 @@
   (setq org-directory "~/ghq/github.com/nakatuba/org")
   (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
   (setq org-default-notes-file (concat org-directory "/notes.org")))
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode))
