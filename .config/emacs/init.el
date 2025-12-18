@@ -11,6 +11,15 @@
   :config
   (load-theme 'doom-one t))
 
+(use-package doom-modeline
+  :ensure t
+  :config
+  (doom-modeline-mode 1))
+
+(use-package nerd-icons
+  :custom
+  (nerd-icons-font-family "MesloLGS NF"))
+
 (use-package evil
   :ensure t
   :init
