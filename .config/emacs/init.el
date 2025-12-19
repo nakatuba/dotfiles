@@ -22,12 +22,19 @@
   (setq evil-disable-insert-state-bindings t)
   (setq evil-split-window-below t)
   (setq evil-vsplit-window-right t)
+  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
   (define-key evil-insert-state-map (kbd "C-u") 'evil-delete-back-to-indentation)
   (define-key evil-insert-state-map (kbd "C-w") 'evil-delete-backward-word)
   (define-key evil-normal-state-map (kbd "s") 'evil-window-map))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 (use-package org
   :bind (("C-c a" . org-agenda)
@@ -36,6 +43,14 @@
   (setq org-directory "~/ghq/github.com/nakatuba/org")
   (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
   (setq org-default-notes-file (concat org-directory "/notes.org")))
+
+(use-package evil-org
+  :ensure t
+  :after org
+  :hook (org-mode . (lambda () (evil-org-mode)))
+  :config
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))
 
 (use-package vertico
   :ensure t
