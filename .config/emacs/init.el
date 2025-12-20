@@ -6,6 +6,11 @@
                        ("melpa" . "https://melpa.org/packages/")))
   (package-initialize))
 
+(use-package emacs
+  :config
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1))
+
 (use-package doom-themes
   :ensure t
   :config
