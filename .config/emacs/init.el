@@ -54,14 +54,17 @@
 
 (use-package vertico
   :ensure t
+  :functions (vertico--metadata-get evil-delete-backward-word)
+  :preface
+  (defun my-vertico-delete-backward-word ()
+    (interactive)
+    (if (eq 'file (vertico--metadata-get 'category))
+        (vertico-directory-up)
+      (evil-delete-backward-word)))
   :bind (:map vertico-map
          ("C-h" . delete-backward-char)
          ("C-u" . evil-delete-back-to-indentation)
-         ("C-w" . (lambda ()
-                    (interactive)
-                    (if (eq 'file (vertico--metadata-get 'category))
-                        (vertico-directory-up)
-                      (evil-delete-backward-word)))))
+         ("C-w" . my-vertico-delete-backward-word))
   :init
   (vertico-mode))
 
