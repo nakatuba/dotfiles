@@ -23,6 +23,10 @@
 
 (use-package evil
   :ensure t
+  :preface
+  (defun my-evil-disable-clipboard (orig-fun &rest args)
+    (let ((select-enable-clipboard nil))
+      (apply orig-fun args)))
   :init
   (setq evil-disable-insert-state-bindings t)
   (setq evil-split-window-below t)
@@ -33,7 +37,9 @@
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
   (define-key evil-insert-state-map (kbd "C-u") 'evil-delete-back-to-indentation)
   (define-key evil-insert-state-map (kbd "C-w") 'evil-delete-backward-word)
-  (define-key evil-normal-state-map (kbd "s") 'evil-window-map))
+  (define-key evil-normal-state-map (kbd "s") 'evil-window-map)
+  (advice-add 'evil-delete :around #'my-evil-disable-clipboard)
+  (advice-add 'evil-change :around #'my-evil-disable-clipboard))
 
 (use-package evil-collection
   :after evil
@@ -50,11 +56,17 @@
   (setq org-default-notes-file (concat org-directory "/notes.org")))
 
 (use-package evil-org
-  :ensure t
   :after org
-  :hook (org-mode . (lambda () (evil-org-mode)))
+  :ensure t
+  :hook (org-mode . evil-org-mode)
   :config
-  (require 'evil-org-agenda)
+  (advice-add 'evil-org-delete-char :around #'my-evil-disable-clipboard)
+  (advice-add 'evil-org-delete-backward-char :around #'my-evil-disable-clipboard))
+
+(use-package evil-org-agenda
+  :after org-agenda
+  :functions evil-org-agenda-set-keys
+  :config
   (evil-org-agenda-set-keys))
 
 (use-package vertico
