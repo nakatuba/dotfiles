@@ -8,8 +8,11 @@
 
 (use-package emacs
   :config
+  (menu-bar-mode -1)
   (scroll-bar-mode -1)
-  (tool-bar-mode -1))
+  (tool-bar-mode -1)
+  (unless (display-graphic-p)
+    (set-face-background 'default "unspecified-bg")))
 
 (use-package doom-themes
   :ensure t
