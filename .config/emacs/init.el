@@ -49,6 +49,12 @@
   :config
   (evil-collection-init))
 
+(use-package evil-terminal-cursor-changer
+  :unless (display-graphic-p)
+  :ensure t
+  :config
+  (evil-terminal-cursor-changer-activate))
+
 (use-package org
   :bind (:map evil-normal-state-map
          ("SPC n a" . org-agenda)
