@@ -50,8 +50,9 @@
   (evil-collection-init))
 
 (use-package org
-  :bind (("C-c a" . org-agenda)
-         ("C-c c" . org-capture))
+  :bind (:map evil-normal-state-map
+         ("SPC n a" . org-agenda)
+         ("SPC n n" . org-capture))
   :config
   (setq org-directory "~/ghq/github.com/nakatuba/org")
   (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
