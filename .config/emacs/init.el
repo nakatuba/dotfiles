@@ -4,7 +4,8 @@
   (customize-set-variable
    'package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                        ("melpa" . "https://melpa.org/packages/")))
-  (package-initialize))
+  (package-initialize)
+  (setq evil-want-keybinding nil))
 
 (use-package emacs
   :config
@@ -39,7 +40,6 @@
   (setq evil-split-window-below t)
   (setq evil-vsplit-window-right t)
   (setq evil-want-Y-yank-to-eol t)
-  (setq evil-want-keybinding nil)
   :config
   (evil-mode 1)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
