@@ -14,6 +14,10 @@
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg")))
 
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+
 (use-package doom-themes
   :ensure t
   :config
@@ -28,7 +32,7 @@
   :ensure t
   :preface
   (defun my-evil-disable-clipboard (orig-fun &rest args)
-    (let ((select-enable-clipboard nil))
+    (let ((interprogram-cut-function nil))
       (apply orig-fun args)))
   :init
   (setq evil-disable-insert-state-bindings t)
