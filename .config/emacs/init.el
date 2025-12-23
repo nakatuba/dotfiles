@@ -15,6 +15,10 @@
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg")))
 
+(use-package autorevert
+  :config
+  (global-auto-revert-mode 1))
+
 (use-package clipetty
   :ensure t
   :hook (after-init . global-clipetty-mode))
@@ -61,6 +65,24 @@
   :ensure t
   :config
   (evil-terminal-cursor-changer-activate))
+
+(use-package flycheck
+  :ensure t
+  :hook (after-init . global-flycheck-mode)
+  :bind (:map evil-normal-state-map
+         ("[ d" . flycheck-previous-error)
+         ("] d" . flycheck-next-error)))
+
+(use-package flycheck-popup-tip
+  :after flycheck
+  :ensure t
+  :hook (flycheck-mode . flycheck-popup-tip-mode))
+
+(use-package add-node-modules-path
+  :ensure t
+  :hook (org-mode . add-node-modules-path)
+  :custom
+  (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
 (use-package org
   :bind (:map evil-normal-state-map

@@ -13,9 +13,11 @@ return {
 
         -- markdown
         require('null-ls').builtins.diagnostics.textlint.with {
+          extra_filetypes = { 'org' },
           only_local = 'node_modules/.bin'
         },
         require('null-ls').builtins.formatting.textlint.with {
+          extra_filetypes = { 'org' },
           only_local = 'node_modules/.bin'
         },
 
