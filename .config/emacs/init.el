@@ -15,6 +15,21 @@
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg")))
 
+(use-package add-node-modules-path
+  :ensure t
+  :hook (org-mode . add-node-modules-path)
+  :custom
+  (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
+
+(use-package apheleia
+  :ensure t
+  :config
+  (apheleia-global-mode 1)
+  (setf (alist-get 'textlint apheleia-formatters)
+        '("textlint" "--fix" inplace))
+  (setf (alist-get 'org-mode apheleia-mode-alist)
+        '(textlint)))
+
 (use-package autorevert
   :config
   (global-auto-revert-mode 1))
@@ -77,12 +92,6 @@
   :after flycheck
   :ensure t
   :hook (flycheck-mode . flycheck-popup-tip-mode))
-
-(use-package add-node-modules-path
-  :ensure t
-  :hook (org-mode . add-node-modules-path)
-  :custom
-  (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
 (use-package org
   :bind (:map evil-normal-state-map
