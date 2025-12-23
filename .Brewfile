@@ -2,7 +2,7 @@ tap "d12frosted/emacs-plus"
 tap "koekeishiya/formulae"
 
 brew "composer"
-brew "emacs-plus"
+brew "d12frosted/emacs-plus/emacs-plus@30"
 brew "fastlane"
 brew "ffmpeg"
 brew "imagemagick"
