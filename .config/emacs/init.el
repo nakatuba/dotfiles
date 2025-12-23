@@ -95,8 +95,11 @@
 
 (use-package pdf-tools
   :ensure t
+  :custom
+  (pdf-view-display-size 'fit-page)
+  (pdf-view-selection-style 'glyph)
   :config
-  (pdf-loader-install))
+  (pdf-tools-install))
 
 (use-package evil-org
   :after org
