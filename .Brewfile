@@ -1,6 +1,7 @@
 tap "d12frosted/emacs-plus"
 tap "koekeishiya/formulae"
 
+brew "automake"
 brew "composer"
 brew "d12frosted/emacs-plus/emacs-plus@30"
 brew "fastlane"
@@ -12,7 +13,9 @@ brew "koekeishiya/formulae/yabai"
 brew "mas"
 brew "mermaid-cli"
 brew "neovim"
+brew "pkgconf"
 brew "pngpaste"
+brew "poppler"
 brew "tmux"
 
 cask "1password"

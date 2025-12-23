@@ -93,6 +93,11 @@
   (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
   (setq org-default-notes-file (concat org-directory "/notes.org")))
 
+(use-package pdf-tools
+  :ensure t
+  :config
+  (pdf-loader-install))
+
 (use-package evil-org
   :after org
   :ensure t
