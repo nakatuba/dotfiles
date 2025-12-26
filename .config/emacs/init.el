@@ -77,6 +77,8 @@
 (use-package evil-collection
   :after evil
   :ensure t
+  :custom
+  (evil-collection-key-blacklist '("s"))
   :config
   (evil-collection-init))
 
@@ -120,6 +122,10 @@
   (good-scroll-mode 1)
   (advice-add 'scroll-up :around #'my-good-scroll-up)
   (advice-add 'scroll-down :around #'my-good-scroll-down))
+
+(use-package nov
+  :ensure t
+  :mode ("\\.epub\\'" . nov-mode))
 
 (use-package org
   :bind (:map evil-normal-state-map
