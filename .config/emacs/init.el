@@ -8,6 +8,10 @@
   (setq evil-want-keybinding nil))
 
 (use-package emacs
+  :custom
+  (auto-save-default nil)
+  (create-lockfiles nil)
+  (make-backup-files nil)
   :config
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
