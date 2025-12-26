@@ -58,6 +58,7 @@
   (setq evil-disable-insert-state-bindings t)
   (setq evil-split-window-below t)
   (setq evil-vsplit-window-right t)
+  (setq evil-want-C-u-scroll t)
   (setq evil-want-Y-yank-to-eol t)
   :config
   (evil-mode 1)
@@ -93,6 +94,29 @@
   :ensure t
   :hook (flycheck-mode . flycheck-popup-tip-mode))
 
+(use-package good-scroll
+  :ensure t
+  :functions (good-scroll--window-usable-height good-scroll-move)
+  :preface
+  (defun good-scroll--convert-line-to-step (line)
+    (cond ((integerp line) (* line (line-pixel-height)))
+          ((or (null line) (memq '- line))
+           (- (good-scroll--window-usable-height)
+              (* next-screen-context-lines (line-pixel-height))))
+          ((line-pixel-height))))
+  (defun my-good-scroll-up (fn &optional arg)
+    (if good-scroll-mode
+        (good-scroll-move (good-scroll--convert-line-to-step arg))
+      (funcall fn arg)))
+  (defun my-good-scroll-down (fn &optional arg)
+    (if good-scroll-mode
+        (good-scroll-move (- (good-scroll--convert-line-to-step arg)))
+      (funcall fn arg)))
+  :config
+  (good-scroll-mode 1)
+  (advice-add 'scroll-up :around #'my-good-scroll-up)
+  (advice-add 'scroll-down :around #'my-good-scroll-down))
+
 (use-package org
   :bind (:map evil-normal-state-map
          ("SPC n a" . org-agenda)
@@ -123,6 +147,13 @@
   :functions evil-org-agenda-set-keys
   :config
   (evil-org-agenda-set-keys))
+
+(use-package ultra-scroll
+  :ensure t
+  :custom
+  (scroll-conservatively 101)
+  :config
+  (ultra-scroll-mode 1))
 
 (use-package vertico
   :ensure t
