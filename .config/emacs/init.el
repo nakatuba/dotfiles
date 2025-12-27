@@ -141,6 +141,15 @@
   (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
   (setq org-default-notes-file (concat org-directory "/notes.org")))
 
+(use-package org-appear
+  :ensure t
+  :hook (org-mode . org-appear-mode)
+  :custom
+  (org-appear-autolinks t))
+
+(use-package org-cliplink
+  :ensure t)
+
 (use-package pdf-tools
   :ensure t
   :custom
