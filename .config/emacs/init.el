@@ -19,39 +19,6 @@
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg")))
 
-(use-package add-node-modules-path
-  :ensure t
-  :hook (org-mode . add-node-modules-path)
-  :custom
-  (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
-
-(use-package apheleia
-  :ensure t
-  :config
-  (apheleia-global-mode 1)
-  (setf (alist-get 'textlint apheleia-formatters)
-        '("textlint" "--fix" inplace))
-  (setf (alist-get 'org-mode apheleia-mode-alist)
-        '(textlint)))
-
-(use-package autorevert
-  :config
-  (global-auto-revert-mode 1))
-
-(use-package clipetty
-  :ensure t
-  :hook (after-init . global-clipetty-mode))
-
-(use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-one t))
-
-(use-package doom-modeline
-  :ensure t
-  :config
-  (doom-modeline-mode 1))
-
 (use-package evil
   :ensure t
   :preface
@@ -74,11 +41,49 @@
   (advice-add 'evil-delete :around #'my-evil-disable-clipboard)
   (advice-add 'evil-change :around #'my-evil-disable-clipboard))
 
+(use-package add-node-modules-path
+  :ensure t
+  :hook (org-mode . add-node-modules-path)
+  :custom
+  (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
+
+(use-package apheleia
+  :ensure t
+  :config
+  (apheleia-global-mode 1)
+  (setf (alist-get 'textlint apheleia-formatters)
+        '("textlint" "--fix" inplace))
+  (setf (alist-get 'org-mode apheleia-mode-alist)
+        '(textlint)))
+
+(use-package autorevert
+  :config
+  (global-auto-revert-mode 1))
+
+(use-package avy
+  :ensure t
+  :bind (:map evil-normal-state-map
+         ("SPC w" . avy-goto-word-0)))
+
+(use-package clipetty
+  :ensure t
+  :hook (after-init . global-clipetty-mode))
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
+
+(use-package doom-modeline
+  :ensure t
+  :config
+  (doom-modeline-mode 1))
+
 (use-package evil-collection
   :after evil
   :ensure t
   :custom
-  (evil-collection-key-blacklist '("s"))
+  (evil-collection-key-blacklist '("SPC" "s"))
   :config
   (evil-collection-init))
 
