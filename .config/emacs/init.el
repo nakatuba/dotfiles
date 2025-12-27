@@ -144,7 +144,10 @@
 
 (use-package nov
   :ensure t
-  :mode ("\\.epub\\'" . nov-mode))
+  :mode ("\\.epub\\'" . nov-mode)
+  :hook (nov-mode . visual-line-mode)
+  :custom
+  (nov-text-width t))
 
 (use-package org
   :bind (:map evil-normal-state-map
@@ -206,3 +209,9 @@
   :ensure t
   :init
   (marginalia-mode))
+
+(use-package visual-fill-column
+  :ensure t
+  :hook (visual-line-mode . visual-fill-column-for-vline)
+  :custom
+  (visual-fill-column-center-text t))
