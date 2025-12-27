@@ -69,15 +69,15 @@
   :ensure t
   :hook (after-init . global-clipetty-mode))
 
-(use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-one t))
-
 (use-package doom-modeline
   :ensure t
   :config
   (doom-modeline-mode 1))
+
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
 
 (use-package evil-collection
   :after evil
@@ -86,6 +86,20 @@
   (evil-collection-key-blacklist '("SPC" "s"))
   :config
   (evil-collection-init))
+
+(use-package evil-org
+  :after org
+  :ensure t
+  :hook (org-mode . evil-org-mode)
+  :config
+  (advice-add 'evil-org-delete-char :around #'my-evil-disable-clipboard)
+  (advice-add 'evil-org-delete-backward-char :around #'my-evil-disable-clipboard))
+
+(use-package evil-org-agenda
+  :after org-agenda
+  :functions evil-org-agenda-set-keys
+  :config
+  (evil-org-agenda-set-keys))
 
 (use-package evil-terminal-cursor-changer
   :unless (display-graphic-p)
@@ -157,20 +171,6 @@
   (pdf-view-selection-style 'glyph)
   :config
   (pdf-tools-install))
-
-(use-package evil-org
-  :after org
-  :ensure t
-  :hook (org-mode . evil-org-mode)
-  :config
-  (advice-add 'evil-org-delete-char :around #'my-evil-disable-clipboard)
-  (advice-add 'evil-org-delete-backward-char :around #'my-evil-disable-clipboard))
-
-(use-package evil-org-agenda
-  :after org-agenda
-  :functions evil-org-agenda-set-keys
-  :config
-  (evil-org-agenda-set-keys))
 
 (use-package ultra-scroll
   :ensure t
