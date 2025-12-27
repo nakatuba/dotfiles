@@ -166,11 +166,12 @@
 
 (use-package pdf-tools
   :ensure t
+  :mode ("\\.pdf\\'" . pdf-view-mode)
+  :bind (:map pdf-view-mode-map
+         ("s-c" . pdf-view-kill-ring-save))
   :custom
   (pdf-view-display-size 'fit-page)
-  (pdf-view-selection-style 'glyph)
-  :config
-  (pdf-tools-install))
+  (pdf-view-selection-style 'glyph))
 
 (use-package ultra-scroll
   :ensure t
