@@ -28,6 +28,7 @@
   :init
   (setq evil-disable-insert-state-bindings t)
   (setq evil-split-window-below t)
+  (setq evil-undo-system 'undo-redo)
   (setq evil-vsplit-window-right t)
   (setq evil-want-C-u-scroll t)
   (setq evil-want-Y-yank-to-eol t)
@@ -153,10 +154,10 @@
   :bind (:map evil-normal-state-map
          ("SPC n a" . org-agenda)
          ("SPC n n" . org-capture))
-  :config
-  (setq org-directory "~/ghq/github.com/nakatuba/org")
-  (setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
-  (setq org-default-notes-file (concat org-directory "/notes.org")))
+  :custom
+  (org-directory "~/ghq/github.com/nakatuba/org")
+  (org-agenda-files (directory-files-recursively org-directory "\\.org$"))
+  (org-default-notes-file (concat org-directory "/notes.org")))
 
 (use-package org-appear
   :ensure t
