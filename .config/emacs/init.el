@@ -91,8 +91,13 @@
 (use-package evil-org
   :after org
   :ensure t
+  :functions evil-define-minor-mode-key
   :hook (org-mode . evil-org-mode)
   :config
+  (evil-define-key 'normal 'evil-org-mode (kbd "M-h") 'windmove-swap-states-left)
+  (evil-define-key 'normal 'evil-org-mode (kbd "M-j") 'windmove-swap-states-down)
+  (evil-define-key 'normal 'evil-org-mode (kbd "M-k") 'windmove-swap-states-up)
+  (evil-define-key 'normal 'evil-org-mode (kbd "M-l") 'windmove-swap-states-right)
   (advice-add 'evil-org-delete-char :around #'my-evil-disable-clipboard)
   (advice-add 'evil-org-delete-backward-char :around #'my-evil-disable-clipboard))
 
@@ -192,6 +197,11 @@
   (pdf-view-display-size 'fit-page)
   (pdf-view-selection-style 'glyph))
 
+(use-package project
+  :bind (:map evil-normal-state-map
+         ("SPC f" . project-find-file)
+         ("SPC g" . project-find-regexp)))
+
 (use-package ultra-scroll
   :ensure t
   :custom
@@ -231,3 +241,10 @@
   :hook (visual-line-mode . visual-fill-column-for-vline)
   :custom
   (visual-fill-column-center-text t))
+
+(use-package windmove
+  :bind (:map evil-normal-state-map
+         ("M-h" . windmove-swap-states-left)
+         ("M-j" . windmove-swap-states-down)
+         ("M-k" . windmove-swap-states-up)
+         ("M-l" . windmove-swap-states-right)))
