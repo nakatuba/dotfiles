@@ -3,4 +3,5 @@ eln-cache/
 elpa/
 *.elc
 nov-places
+org-roam.db
 projects

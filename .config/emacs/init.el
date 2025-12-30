@@ -168,6 +168,21 @@
 (use-package org-cliplink
   :ensure t)
 
+(use-package org-roam
+  :ensure t
+  :custom
+  (org-roam-directory org-directory)
+  (org-roam-node-display-template (concat "${type:15} ${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  :config
+  (cl-defmethod org-roam-node-type ((node org-roam-node))
+    (condition-case nil
+        (file-name-nondirectory
+         (directory-file-name
+          (file-name-directory
+           (file-relative-name (org-roam-node-file node) org-roam-directory))))
+      (error "")))
+  (org-roam-db-autosync-mode))
+
 (use-package pdf-tools
   :ensure t
   :mode ("\\.pdf\\'" . pdf-view-mode)
