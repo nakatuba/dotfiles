@@ -229,7 +229,8 @@
   :ensure t
   :custom
   (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles partial-completion)))))
+  (completion-category-overrides '((file (styles partial-completion))))
+  (orderless-matching-styles '(orderless-literal orderless-regexp orderless-flex)))
 
 (use-package marginalia
   :ensure t
