@@ -82,6 +82,13 @@
   :ensure t
   :hook (after-init . global-clipetty-mode))
 
+(use-package consult
+  :ensure t
+  :bind (:map evil-normal-state-map
+         ("SPC b" . consult-buffer)
+         ("SPC g" . consult-ripgrep)
+         ("SPC h" . consult-recent-file)))
+
 (use-package doom-modeline
   :ensure t
   :config
@@ -160,12 +167,23 @@
   (advice-add 'scroll-up :around #'my-good-scroll-up)
   (advice-add 'scroll-down :around #'my-good-scroll-down))
 
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
 (use-package nov
   :ensure t
   :mode ("\\.epub\\'" . nov-mode)
   :hook (nov-mode . visual-line-mode)
   :custom
   (nov-text-width t))
+
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles partial-completion)))))
 
 (use-package org
   :bind (:map evil-normal-state-map
@@ -211,8 +229,10 @@
 
 (use-package project
   :bind (:map evil-normal-state-map
-         ("SPC f" . project-find-file)
-         ("SPC g" . project-find-regexp)))
+         ("SPC f" . project-find-file)))
+
+(use-package recentf
+  :hook (after-init . recentf-mode))
 
 (use-package ultra-scroll
   :ensure t
@@ -236,17 +256,6 @@
          ("C-w" . my-vertico-delete-backward-word))
   :init
   (vertico-mode))
-
-(use-package orderless
-  :ensure t
-  :custom
-  (completion-styles '(orderless basic))
-  (completion-category-overrides '((file (styles partial-completion)))))
-
-(use-package marginalia
-  :ensure t
-  :init
-  (marginalia-mode))
 
 (use-package visual-fill-column
   :ensure t
