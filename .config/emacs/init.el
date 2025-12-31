@@ -66,6 +66,18 @@
   :bind (:map evil-normal-state-map
          ("SPC w" . avy-goto-word-0)))
 
+(use-package citar
+  :after org
+  :ensure t
+  :custom
+  (citar-bibliography (concat org-directory "/references.bib")))
+
+(use-package citar-org-roam
+  :after (citar org-roam)
+  :ensure t
+  :config
+  (citar-org-roam-mode))
+
 (use-package clipetty
   :ensure t
   :hook (after-init . global-clipetty-mode))
