@@ -89,6 +89,9 @@
          ("SPC g" . consult-ripgrep)
          ("SPC h" . consult-recent-file)))
 
+(use-package djvu
+  :ensure t)
+
 (use-package doom-modeline
   :ensure t
   :config
@@ -202,6 +205,11 @@
 
 (use-package org-cliplink
   :ensure t)
+
+(use-package org-noter
+  :ensure t
+  :custom
+  (org-noter-notes-search-path (list org-directory)))
 
 (use-package org-roam
   :ensure t
