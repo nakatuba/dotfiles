@@ -223,8 +223,17 @@
 
 (use-package org-roam
   :ensure t
+  :bind (:map evil-normal-state-map
+         ("SPC n o" . org-roam-node-find))
   :custom
   (org-roam-directory org-directory)
+  (org-roam-capture-templates
+   '(("l" "Literature Note" plain "%?"
+      :target (file+head "literature/%<%Y%m%d%H%M%S>.org" "#+title: ${title}\n")
+      :unnarrowed t)
+     ("p" "Permanent Note" plain "%?"
+      :target (file+head "permanent/%<%Y%m%d%H%M%S>.org" "#+title: ${title}\n")
+      :unnarrowed t)))
   (org-roam-node-display-template (concat "${type:15} ${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   :config
   (cl-defmethod org-roam-node-type ((node org-roam-node))
