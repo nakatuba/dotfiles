@@ -173,6 +173,13 @@
   (advice-add 'scroll-up :around #'my-good-scroll-up)
   (advice-add 'scroll-down :around #'my-good-scroll-down))
 
+(use-package helpful
+  :ensure t
+  :bind (([remap describe-function] . helpful-callable)
+         ([remap describe-command]  . helpful-command)
+         ([remap describe-variable] . helpful-variable)
+         ([remap describe-key]      . helpful-key)))
+
 (use-package marginalia
   :ensure t
   :init
