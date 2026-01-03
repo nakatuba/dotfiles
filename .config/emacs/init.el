@@ -16,6 +16,7 @@
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
+  (set-face-font 'default "MesloLGS NF")
   (unless (display-graphic-p)
     (set-face-background 'default "unspecified-bg")))
 
@@ -306,6 +307,25 @@
   :hook (visual-line-mode . visual-fill-column-for-vline)
   :custom
   (visual-fill-column-center-text t))
+
+(use-package vterm
+  :ensure t
+  :functions evil-define-key*
+  :config
+  (evil-define-key 'insert vterm-mode-map (kbd "<escape>") 'vterm--self-insert)
+  (evil-define-key 'insert vterm-mode-map (kbd "C-\\ C-n") 'evil-normal-state)
+  (evil-define-key 'insert vterm-mode-map (kbd "C-g") 'vterm--self-insert)
+  (evil-define-key 'insert vterm-mode-map (kbd "C-h") 'vterm--self-insert)
+  (evil-define-key 'insert vterm-mode-map (kbd "C-u") 'vterm--self-insert)
+  (evil-define-key 'insert vterm-mode-map (kbd "C-w") 'vterm--self-insert))
+
+(use-package vterm-toggle
+  :ensure t
+  :bind (("C-SPC" . vterm-toggle)
+         :map vterm-mode-map
+         ("C-SPC" . vterm-toggle))
+  :custom
+  (vterm-toggle-scope 'project))
 
 (use-package windmove
   :bind (:map evil-normal-state-map

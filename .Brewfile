@@ -2,6 +2,7 @@ tap "d12frosted/emacs-plus"
 tap "koekeishiya/formulae"
 
 brew "automake"
+brew "cmake"
 brew "composer"
 brew "d12frosted/emacs-plus/emacs-plus@30"
 brew "fastlane"
