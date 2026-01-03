@@ -272,6 +272,12 @@
 (use-package recentf
   :hook (after-init . recentf-mode))
 
+(use-package smartparens
+  :ensure t
+  :hook (after-init . smartparens-global-mode)
+  :config
+  (require 'smartparens-config))
+
 (use-package ultra-scroll
   :ensure t
   :custom
