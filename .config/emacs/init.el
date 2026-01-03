@@ -22,7 +22,7 @@
 (use-package evil
   :ensure t
   :preface
-  (defun my-evil-disable-clipboard (orig-fun &rest args)
+  (defun my-evil-without-clipboard (orig-fun &rest args)
     (let ((interprogram-cut-function nil)
           (interprogram-paste-function nil))
       (apply orig-fun args)))
@@ -40,10 +40,9 @@
   (define-key evil-insert-state-map (kbd "C-w") 'evil-delete-backward-word)
   (define-key evil-normal-state-map (kbd "q") nil)
   (define-key evil-normal-state-map (kbd "s") 'evil-window-map)
-  (advice-add 'evil-delete :around #'my-evil-disable-clipboard)
-  (advice-add 'evil-change :around #'my-evil-disable-clipboard)
-  (advice-add 'evil-paste-before :around #'my-evil-disable-clipboard)
-  (advice-add 'evil-paste-after :around #'my-evil-disable-clipboard))
+  (advice-add 'evil-delete :around #'my-evil-without-clipboard)
+  (advice-add 'evil-paste-before :around #'my-evil-without-clipboard)
+  (advice-add 'evil-paste-after :around #'my-evil-without-clipboard))
 
 (use-package add-node-modules-path
   :ensure t
@@ -113,6 +112,13 @@
   :config
   (evil-collection-init))
 
+(use-package evil-embrace
+  :ensure t
+  :config
+  (setq evil-embrace-show-help-p nil)
+  (add-hook 'org-mode-hook 'embrace-org-mode-hook)
+  (evil-embrace-enable-evil-surround-integration))
+
 (use-package evil-org
   :after org
   :ensure t
@@ -123,14 +129,19 @@
   (evil-define-key 'normal 'evil-org-mode (kbd "M-j") 'windmove-swap-states-down)
   (evil-define-key 'normal 'evil-org-mode (kbd "M-k") 'windmove-swap-states-up)
   (evil-define-key 'normal 'evil-org-mode (kbd "M-l") 'windmove-swap-states-right)
-  (advice-add 'evil-org-delete-char :around #'my-evil-disable-clipboard)
-  (advice-add 'evil-org-delete-backward-char :around #'my-evil-disable-clipboard))
+  (advice-add 'evil-org-delete-char :around #'my-evil-without-clipboard)
+  (advice-add 'evil-org-delete-backward-char :around #'my-evil-without-clipboard))
 
 (use-package evil-org-agenda
   :after org-agenda
   :functions evil-org-agenda-set-keys
   :config
   (evil-org-agenda-set-keys))
+
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 
 (use-package evil-terminal-cursor-changer
   :unless (display-graphic-p)
