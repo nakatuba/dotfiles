@@ -266,9 +266,30 @@
   (pdf-view-display-size 'fit-page)
   (pdf-view-selection-style 'glyph))
 
-(use-package project
+(use-package persp-projectile
+  :ensure t
   :bind (:map evil-normal-state-map
-         ("SPC f" . project-find-file)))
+         ("C-s s" . projectile-persp-switch-project)))
+
+(use-package perspective
+  :ensure t
+  :functions persp-switch
+  :hook (kill-emacs . persp-state-save)
+  :custom
+  (persp-state-default-file (concat user-emacs-directory "persp-state"))
+  (persp-suppress-no-prefix-key-warning t)
+  :init
+  (persp-mode)
+  (when (file-exists-p persp-state-default-file)
+    (persp-state-load persp-state-default-file))
+  (persp-switch "main"))
+
+(use-package projectile
+  :ensure t
+  :bind (:map evil-normal-state-map
+         ("SPC f" . projectile-find-file))
+  :config
+  (projectile-mode 1))
 
 (use-package recentf
   :hook (after-init . recentf-mode))
@@ -283,6 +304,13 @@
   :ensure t
   :bind (:map evil-normal-state-map
          ("SPC e" . treemacs)))
+
+(use-package treemacs-perspective
+  :after (treemacs perspective)
+  :ensure t
+  :functions treemacs-set-scope-type
+  :config
+  (treemacs-set-scope-type 'Perspectives))
 
 (use-package ultra-scroll
   :ensure t
