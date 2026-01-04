@@ -279,6 +279,11 @@
   :config
   (require 'smartparens-config))
 
+(use-package treemacs
+  :ensure t
+  :bind (:map evil-normal-state-map
+         ("SPC e" . treemacs)))
+
 (use-package ultra-scroll
   :ensure t
   :custom
