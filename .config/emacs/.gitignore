@@ -1,11 +1,3 @@
-.cache/
-auto-save-list/
-eln-cache/
-elpa/
-*.elc
-nov-places
-org-roam.db
-persp-state
-projectile-bookmarks.eld
-projects
-recentf
+*
+!.gitignore
+!init.el
