@@ -14,11 +14,13 @@ ln -sf $DOTFILES/.zshrc ~
 mkdir -p ~/.config
 
 ln -sf $DOTFILES/.config/claude ~/.config
+ln -sf $DOTFILES/.config/emacs ~/.config
 ln -sf $DOTFILES/.config/ghostty ~/.config
 ln -sf $DOTFILES/.config/git ~/.config
 ln -sf $DOTFILES/.config/ideavim ~/.config
 ln -sf $DOTFILES/.config/mise ~/.config
 ln -sf $DOTFILES/.config/nvim ~/.config
+ln -sf $DOTFILES/.config/opencode ~/.config
 ln -sf $DOTFILES/.config/tmux ~/.config
 ln -sf $DOTFILES/.config/wezterm ~/.config
 ln -sf $DOTFILES/.config/zsh ~/.config
