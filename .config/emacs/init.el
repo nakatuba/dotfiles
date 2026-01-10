@@ -294,6 +294,12 @@
 (use-package recentf
   :hook (after-init . recentf-mode))
 
+(use-package shackle
+  :ensure t
+  :hook (after-init . shackle-mode)
+  :custom
+  (shackle-rules '(("^\\*vterm" :regexp t :align below :size 0.3 :select t))))
+
 (use-package smartparens
   :ensure t
   :hook (after-init . smartparens-global-mode)
@@ -343,7 +349,10 @@
 
 (use-package vterm
   :ensure t
-  :functions evil-define-key*
+  :functions (evil-insert-state evil-define-key*)
+  :hook (vterm-mode . (lambda ()
+                        (setq-local evil-insert-state-cursor 'box)
+                        (evil-insert-state)))
   :config
   (evil-define-key 'insert vterm-mode-map (kbd "<escape>") 'vterm--self-insert)
   (evil-define-key 'insert vterm-mode-map (kbd "C-\\ C-n") 'evil-normal-state)
