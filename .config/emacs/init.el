@@ -10,8 +10,10 @@
 (use-package emacs
   :custom
   (auto-save-default nil)
+  (confirm-kill-processes nil)
   (create-lockfiles nil)
   (make-backup-files nil)
+  (ring-bell-function 'ignore)
   :config
   (menu-bar-mode -1)
   (scroll-bar-mode -1)
@@ -68,6 +70,20 @@
   :ensure t
   :bind (:map evil-normal-state-map
          ("SPC w" . avy-goto-word-0)))
+
+(use-package centaur-tabs
+  :demand t
+  :ensure t
+  :hook (vterm-mode . centaur-tabs-local-mode)
+  :bind (:map evil-normal-state-map
+         ("C-p" . centaur-tabs-backward)
+         ("C-n" . centaur-tabs-forward))
+  :custom
+  (centaur-tabs-cycle-scope 'tabs)
+  (centaur-tabs-set-icons t)
+  (centaur-tabs-set-modified-marker t)
+  :config
+  (centaur-tabs-mode t))
 
 (use-package citar
   :after org
@@ -155,7 +171,9 @@
   :hook (after-init . global-flycheck-mode)
   :bind (:map evil-normal-state-map
          ("[ d" . flycheck-previous-error)
-         ("] d" . flycheck-next-error)))
+         ("] d" . flycheck-next-error))
+  :custom
+  (flycheck-display-errors-delay 0.1))
 
 (use-package flycheck-popup-tip
   :after flycheck
@@ -310,6 +328,12 @@
   :ensure t
   :bind (:map evil-normal-state-map
          ("SPC e" . treemacs)))
+
+(use-package treemacs-nerd-icons
+  :after treemacs
+  :ensure t
+  :config
+  (treemacs-nerd-icons-config))
 
 (use-package treemacs-perspective
   :after (treemacs perspective)
