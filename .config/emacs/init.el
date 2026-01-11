@@ -74,12 +74,12 @@
 (use-package centaur-tabs
   :demand t
   :ensure t
-  :hook (vterm-mode . centaur-tabs-local-mode)
   :bind (:map evil-normal-state-map
          ("C-p" . centaur-tabs-backward)
          ("C-n" . centaur-tabs-forward))
   :custom
   (centaur-tabs-cycle-scope 'tabs)
+  (centaur-tabs-excluded-prefixes '("*" " *"))
   (centaur-tabs-set-icons t)
   (centaur-tabs-set-modified-marker t)
   :config
@@ -302,6 +302,17 @@
     (persp-state-load persp-state-default-file))
   (persp-switch "main"))
 
+(use-package popper
+  :ensure t
+  :hook (after-init . popper-mode)
+  :custom
+  (popper-display-control nil)
+  (popper-mode-line nil)
+  (popper-reference-buffers
+   '("\\*Agenda Commands\\*"
+     "\\*Org Select\\*"
+     "\\*vterm\\*")))
+
 (use-package projectile
   :ensure t
   :bind (:map evil-normal-state-map
@@ -316,7 +327,10 @@
   :ensure t
   :hook (after-init . shackle-mode)
   :custom
-  (shackle-rules '(("^\\*vterm" :regexp t :align below :size 0.3 :select t))))
+  (shackle-rules
+   '(("\\*Agenda Commands\\*" :regexp t :align t)
+     ("\\*Org Select\\*"      :regexp t :align t)
+     ("\\*vterm\\*"           :regexp t :align t :size 0.3))))
 
 (use-package smartparens
   :ensure t
