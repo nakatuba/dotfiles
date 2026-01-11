@@ -49,7 +49,7 @@
 
 (use-package add-node-modules-path
   :ensure t
-  :hook (org-mode . add-node-modules-path)
+  :hook (flycheck-mode . add-node-modules-path)
   :custom
   (add-node-modules-path-command '("echo \"$(npm root)/.bin\"")))
 
@@ -241,10 +241,18 @@
   :ensure t
   :hook (org-mode . org-appear-mode)
   :custom
-  (org-appear-autolinks t))
+  (org-appear-autolinks t)
+  (org-appear-autosubmarkers t)
+  (org-appear-autoentities t))
 
 (use-package org-cliplink
   :ensure t)
+
+(use-package org-modern
+  :ensure t
+  :custom
+  (org-hide-emphasis-markers t)
+  (org-pretty-entities t))
 
 (use-package org-noter
   :ensure t
