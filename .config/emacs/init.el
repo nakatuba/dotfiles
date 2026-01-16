@@ -38,6 +38,7 @@
   (setq evil-want-Y-yank-to-eol t)
   :config
   (evil-mode 1)
+  (defalias 'forward-evil-word 'forward-evil-symbol)
   (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
   (define-key evil-insert-state-map (kbd "C-u") 'evil-delete-back-to-indentation)
   (define-key evil-insert-state-map (kbd "C-w") 'evil-delete-backward-word)
@@ -69,7 +70,9 @@
 (use-package avy
   :ensure t
   :bind (:map evil-normal-state-map
-         ("SPC w" . avy-goto-word-0)))
+         ("SPC w" . avy-goto-word-0))
+  :custom
+  (avy-goto-word-0-regexp "\\_<\\(\\sw\\|\\s_\\)"))
 
 (use-package centaur-tabs
   :demand t
