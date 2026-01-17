@@ -204,6 +204,9 @@
   :config
   (evil-terminal-cursor-changer-activate))
 
+(use-package exato
+  :ensure t)
+
 (use-package flycheck
   :ensure t
   :hook (after-init . global-flycheck-mode)
