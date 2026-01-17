@@ -139,6 +139,17 @@
   (add-hook 'org-mode-hook 'embrace-org-mode-hook)
   (evil-embrace-enable-evil-surround-integration))
 
+(use-package evil-nerd-commenter
+  :ensure t
+  :bind (:map evil-normal-state-map
+         ("gc" . evilnc-comment-operator)
+         :map evil-visual-state-map
+         ("gc" . evilnc-comment-operator)
+         :map evil-inner-text-objects-map
+         ("c" . evilnc-inner-commenter)
+         :map evil-outer-text-objects-map
+         ("c" . evilnc-outer-commenter)))
+
 (use-package evil-org
   :after org
   :ensure t
