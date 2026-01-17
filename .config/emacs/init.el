@@ -169,6 +169,13 @@
   :config
   (evil-org-agenda-set-keys))
 
+(use-package evil-replace-with-register
+  :ensure t
+  :custom
+  (evil-replace-with-register-key (kbd "gs"))
+  :config
+  (evil-replace-with-register-install))
+
 (use-package evil-surround
   :ensure t
   :config
