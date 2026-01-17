@@ -124,6 +124,13 @@
   :config
   (load-theme 'doom-one t))
 
+(use-package evil-args
+  :ensure t
+  :bind (:map evil-inner-text-objects-map
+         ("," . evil-inner-arg)
+         :map evil-outer-text-objects-map
+         ("," . evil-outer-arg)))
+
 (use-package evil-collection
   :after evil
   :ensure t
