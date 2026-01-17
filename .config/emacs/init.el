@@ -12,6 +12,7 @@
   (auto-save-default nil)
   (confirm-kill-processes nil)
   (create-lockfiles nil)
+  (inhibit-startup-screen t)
   (make-backup-files nil)
   (ring-bell-function 'ignore)
   :config
@@ -345,16 +346,23 @@
 
 (use-package perspective
   :ensure t
-  :functions persp-switch
-  :hook (kill-emacs . persp-state-save)
+  :functions (persp-switch projectile-project-name projectile-project-p)
+  :preface
+  (defun my-persp-switch-on-startup ()
+    (require 'projectile)
+    (let ((default-directory command-line-default-directory))
+      (if (projectile-project-p)
+          (persp-switch (projectile-project-name))
+        (persp-switch persp-initial-frame-name))))
+  :hook ((emacs-startup . my-persp-switch-on-startup)
+         (kill-emacs . persp-state-save))
   :custom
   (persp-state-default-file (concat user-emacs-directory "persp-state"))
   (persp-suppress-no-prefix-key-warning t)
   :init
   (persp-mode)
   (when (file-exists-p persp-state-default-file)
-    (persp-state-load persp-state-default-file))
-  (persp-switch "main"))
+    (persp-state-load persp-state-default-file)))
 
 (use-package popper
   :ensure t
@@ -442,9 +450,11 @@
 (use-package vterm
   :ensure t
   :functions (evil-insert-state evil-define-key*)
-  :hook (vterm-mode . (lambda ()
-                        (setq-local evil-insert-state-cursor 'box)
-                        (evil-insert-state)))
+  :preface
+  (defun my-vterm-mode-setup ()
+    (setq-local evil-insert-state-cursor 'box)
+    (evil-insert-state))
+  :hook (vterm-mode . my-vterm-mode-setup)
   :config
   (evil-define-key 'insert vterm-mode-map (kbd "<escape>") 'vterm--self-insert)
   (evil-define-key 'insert vterm-mode-map (kbd "C-\\ C-n") 'evil-normal-state)
