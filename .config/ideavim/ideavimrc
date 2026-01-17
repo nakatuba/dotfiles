@@ -9,6 +9,7 @@ set exchange
 set functiontextobj
 set surround
 set textobj-entire
+set textobj-indent
 
 let g:argtextobj_pairs="[:],(:),<:>"
 let g:EasyMotion_do_mapping = 0

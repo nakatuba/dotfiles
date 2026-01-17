@@ -151,6 +151,11 @@
   :config
   (evil-exchange-cx-install))
 
+(use-package evil-indent-plus
+  :ensure t
+  :config
+  (evil-indent-plus-default-bindings))
+
 (use-package evil-lion
   :ensure t
   :config

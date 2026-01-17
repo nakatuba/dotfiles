@@ -7,6 +7,8 @@ require('lazy').setup {
   { import = 'plugins.nvim-treesitter' },
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },
+  { import = 'plugins.vim-indent-object' },
+  { import = 'plugins.vim-lion' },
   { import = 'plugins.vim-operator-convert-case' },
   { import = 'plugins.vim-sort-motion' },
   { import = 'plugins.vim-swap' },
