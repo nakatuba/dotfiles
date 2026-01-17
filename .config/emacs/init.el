@@ -144,6 +144,11 @@
   :config
   (evil-exchange-cx-install))
 
+(use-package evil-lion
+  :ensure t
+  :config
+  (evil-lion-mode))
+
 (use-package evil-nerd-commenter
   :ensure t
   :bind (:map evil-normal-state-map
