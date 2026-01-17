@@ -139,6 +139,11 @@
   (add-hook 'org-mode-hook 'embrace-org-mode-hook)
   (evil-embrace-enable-evil-surround-integration))
 
+(use-package evil-exchange
+  :ensure t
+  :config
+  (evil-exchange-cx-install))
+
 (use-package evil-nerd-commenter
   :ensure t
   :bind (:map evil-normal-state-map
