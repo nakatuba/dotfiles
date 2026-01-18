@@ -299,7 +299,8 @@
   :ensure t
   :custom
   (org-hide-emphasis-markers t)
-  (org-pretty-entities t))
+  (org-pretty-entities t)
+  (org-startup-with-inline-images t))
 
 (use-package org-noter
   :ensure t
