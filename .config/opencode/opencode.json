@@ -10,5 +10,10 @@
     "input_move_down": "down,ctrl+n",
     "history_previous": "up,ctrl+p",
     "history_next": "down,ctrl+n"
+  },
+  "permission": {
+    "external_directory": {
+      "~/ghq/*": "allow"
+    }
   }
 }
