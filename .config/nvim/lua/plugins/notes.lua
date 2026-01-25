@@ -18,7 +18,9 @@ return {
     vim.api.nvim_create_autocmd('FileType', {
       pattern = 'markdown',
       callback = function()
-        if vim.startswith(vim.fn.expand('%:p'), vim.fn.expand(require('notes').config.dir)) then
+        local file_path = vim.fn.resolve(vim.fn.expand('%:p'))
+        local notes_dir = vim.fn.resolve(vim.fn.expand(require('notes').config.dir))
+        if vim.startswith(file_path, notes_dir) then
           vim.keymap.set('i', '[[', require('notes').insert_link, { buffer = true })
         end
       end
