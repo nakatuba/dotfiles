@@ -9,6 +9,7 @@ quit-after-last-window-closed = true
 term = xterm-256color
 
 font-family = MesloLGS NF
+font-family = Noto Sans CJK JP
 font-feature = -dlig
 font-size = 12
 
