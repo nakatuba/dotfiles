@@ -8,7 +8,7 @@
   <array>
     <string>/bin/zsh</string>
     <string>-c</string>
-    <string>source ~/.zshrc && ~/Dropbox/Apps/remotely-save/notes/scripts/backup.sh</string>
+    <string>source ~/.zshrc && make -C ~/Dropbox/Apps/remotely-save/notes backup</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
