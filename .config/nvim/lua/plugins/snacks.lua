@@ -110,6 +110,9 @@ return {
           end
         }
       },
+      scope = {
+        enabled = true
+      },
       terminal = {
         win = {
           wo = {
