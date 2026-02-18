@@ -5,6 +5,19 @@ return {
       image = {
         enabled = true
       },
+      indent = {
+        enabled = true,
+        animate = {
+          enabled = false
+        },
+        scope = {
+          cursor = false,
+          only_current = true
+        },
+        filter = function(buf)
+          return vim.bo[buf].buftype == '' and vim.bo[buf].filetype ~= 'markdown'
+        end
+      },
       input = {
         win = {
           row = function()
@@ -143,8 +156,10 @@ return {
     vim.keymap.set('n', '<leader>z',        function() require('snacks').zen.zen() end)
 
     vim.api.nvim_create_autocmd('ColorScheme', {
+      pattern = 'sonokai',
       callback = function()
-        vim.api.nvim_set_hl(0, 'SnacksPickerDir', { link = 'SnacksPicker' })
+        vim.api.nvim_set_hl(0, 'SnacksIndentScope', { link = 'Grey' })
+        vim.api.nvim_set_hl(0, 'SnacksPickerDir',   { link = 'Normal' })
       end
     })
   end
