@@ -29,6 +29,8 @@ uv = "latest"
 yarn = "latest"
 yq = "latest"
 
+"github:d-kuro/gwq" = "latest"
+
 [settings]
 idiomatic_version_file_enable_tools = []
 trusted_config_paths = ["~/dotfiles", "~/ghq"]
