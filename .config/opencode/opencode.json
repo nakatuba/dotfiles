@@ -6,6 +6,18 @@
     }
   },
   "mcp": {
+    "dbhub": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@bytebase/dbhub@latest",
+        "--transport",
+        "stdio",
+        "--dsn",
+        "{env:DATABASE_URL}"
+      ],
+      "enabled": true
+    },
     "notion": {
       "type": "remote",
       "url": "https://mcp.notion.com/mcp",
@@ -17,5 +29,5 @@
       "enabled": true
     }
   },
-  "plugin": ["opencode-anthropic-auth@latest"]
+  "plugin": ["opencode-claude-auth@latest"]
 }
