@@ -29,5 +29,5 @@
       "enabled": true
     }
   },
-  "plugin": ["opencode-claude-auth@latest"]
+  "plugin": ["opencode-anthropic-oauth"]
 }
