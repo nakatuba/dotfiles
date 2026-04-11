@@ -1,18 +1,12 @@
 return {
-  'NickvanDyke/opencode.nvim',
+  'nickjvandyke/opencode.nvim',
   dependencies = {
     'folke/snacks.nvim'
   },
   config = function()
-    vim.g.opencode_opts = {
-      provider = {
-        enabled = 'tmux'
-      }
-    }
-
     local function focus_tmux_pane()
-      require('opencode.cli.server').get_port():next(function(port)
-        local lsof_result = vim.system({ 'lsof', '-i', ':' .. port, '-t' }):wait()
+      require('opencode.server').get():next(function(server)
+        local lsof_result = vim.system({ 'lsof', '-i', ':' .. server.port, '-t' }):wait()
         if lsof_result.code == 0 and lsof_result.stdout then
           local pid = lsof_result.stdout:match('%d+')
           if pid then
@@ -36,11 +30,11 @@ return {
     end
 
     vim.keymap.set('n', '<leader>as', function()
-      require('opencode').prompt('@buffer')
+      require('opencode').prompt('@buffer ')
       focus_tmux_pane()
     end)
     vim.keymap.set('x', '<leader>as', function()
-      require('opencode').prompt('@this')
+      require('opencode').prompt('@this ')
       focus_tmux_pane()
     end)
   end
