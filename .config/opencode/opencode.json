@@ -10,7 +10,11 @@
       "type": "local",
       "command": [
         "npx",
+        "-p",
+        "pg",
+        "-p",
         "@bytebase/dbhub@latest",
+        "dbhub",
         "--transport",
         "stdio",
         "--dsn",
@@ -26,6 +30,20 @@
     "playwright": {
       "type": "local",
       "command": ["npx", "@playwright/mcp@latest"],
+      "enabled": true
+    },
+    "serena": {
+      "type": "local",
+      "command": [
+        "uvx",
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context=ide",
+        "--project-from-cwd",
+        "--enable-web-dashboard=false"
+      ],
       "enabled": true
     }
   },
