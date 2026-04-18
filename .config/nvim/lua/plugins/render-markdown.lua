@@ -32,6 +32,8 @@ return {
       vim.api.nvim_set_hl(0, 'RenderMarkdownH4Bg', { fg = palette.green[1],  underline = true })
       vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', { fg = palette.blue[1],   underline = true })
       vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', { fg = palette.purple[1], underline = true })
+
+      vim.api.nvim_set_hl(0, 'RenderMarkdownInlineHighlight', { bg = palette.bg_yellow[1] })
     end
   end,
   ft = { 'markdown' }
