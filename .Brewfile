@@ -32,7 +32,7 @@ cask "claude"
 cask "cursor"
 cask "dbeaver-community"
 cask "deepl"
-cask "docker"
+cask "docker-desktop"
 cask "drawio"
 cask "dropbox"
 cask "font-meslo-for-powerlevel10k"
@@ -51,7 +51,7 @@ cask "keyboardcleantool"
 cask "logi-options+"
 cask "monitorcontrol"
 cask "obsidian"
-cask "ollama"
+cask "ollama-app"
 cask "popclip"
 cask "postman"
 cask "rectangle"
@@ -68,11 +68,6 @@ cask "vlc"
 cask "wezterm"
 cask "whichspace"
 cask "zoom"
-
-mas "Amphetamine", id: 937984704
-mas "Kindle", id: 302584613
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
 
 vscode "anthropic.claude-code"
 vscode "asvetliakov.vscode-neovim"
