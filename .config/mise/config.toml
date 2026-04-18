@@ -6,7 +6,6 @@ claude = "latest"
 cloud-sql-proxy = "latest"
 cocoapods = "latest"
 fastfetch = "latest"
-flutter = "latest"
 fzf = "latest"
 gcloud = "latest"
 gemini-cli = "latest"
@@ -15,6 +14,7 @@ github-cli = "latest"
 go = "latest"
 java = "corretto-21.0.8.9.1"
 jq = "latest"
+kustomize = "latest"
 neovim = "latest"
 node = "latest"
 opencode = "latest"
@@ -30,6 +30,7 @@ yarn = "latest"
 yq = "latest"
 
 "github:d-kuro/gwq" = "latest"
+"npm:@googleworkspace/cli" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
