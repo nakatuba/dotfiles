@@ -20,7 +20,7 @@
         "--dsn",
         "{env:DATABASE_URL}"
       ],
-      "enabled": true
+      "enabled": false
     },
     "notion": {
       "type": "remote",
