@@ -90,10 +90,6 @@ fi
 # Install mise tools
 mise install
 
-# Install cargo packages
-cargo install bat eza fd-find ripgrep tealdeer tokei zoxide
-cargo install bottom --locked
-
 # Install pyenv
 if command -v pyenv > /dev/null; then
   pyenv update
