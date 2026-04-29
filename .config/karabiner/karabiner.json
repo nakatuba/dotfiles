@@ -99,6 +99,25 @@
                         ]
                     },
                     {
+                        "description": "Ctrl+xを押したときに、英数キーも送信する（opencode用）",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "x",
+                                    "modifiers": { "mandatory": ["control"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "x",
+                                        "modifiers": ["control"]
+                                    },
+                                    { "key_code": "japanese_eisuu" }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Emacs key bindings [control+keys] (rev 11)",
                         "manipulators": [
                             {
