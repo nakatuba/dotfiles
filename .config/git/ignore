@@ -1,5 +1,5 @@
 .DS_Store
+.opencode/
 .python-version
-.serena
-mise.toml
-opencode.json
+.serena/
+mise.local.toml
