@@ -22,7 +22,13 @@ bindkey '^g^g' fzf-ghq-widget
 
 git-checkout-widget() {
   git rev-parse --is-inside-work-tree > /dev/null 2>&1 || return
-  local selected=$(git branch -v --color=always | grep -v '^\*' | fzf --ansi --height 40% --reverse)
+
+  if [[ "$(git rev-parse --git-dir)" == ".git" ]]; then
+    local selected=$(git branch -v --color=always | grep -v '^\*' | fzf --ansi --height 40% --reverse)
+  else
+    local selected=$(git branch -v --color=always | grep '^\+' | fzf --ansi --height 40% --reverse)
+  fi
+
   if [ -n "$selected" ]; then
     if [[ "$selected" == +* ]]; then
       local branch=$(echo "$selected" | awk '{print $2}')
