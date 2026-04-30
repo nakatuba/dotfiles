@@ -4,7 +4,7 @@
   "keybinds": {
     "messages_half_page_up": "alt+v",
     "messages_half_page_down": "ctrl+v",
-    "command_list": "",
+    "command_list": "<leader>p",
     "input_paste": "none",
     "input_move_up": "up,ctrl+p",
     "input_move_down": "down,ctrl+n",
