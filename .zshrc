@@ -19,11 +19,6 @@ fpath=(
 
 eval "$(mise activate zsh)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
 

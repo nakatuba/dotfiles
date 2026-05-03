@@ -90,26 +90,10 @@ fi
 # Install mise tools
 mise install
 
-# Install pyenv
-if command -v pyenv > /dev/null; then
-  pyenv update
-else
-  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-  git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
-  git clone https://github.com/pyenv/pyenv-update.git ~/.pyenv/plugins/pyenv-update
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-
-# Install python
-pyenv install --skip-existing 3.13.6
-pyenv global 3.13.6
-pip install --upgrade pip
-
 # Install pipx packages
 pipx install --include-deps ansible
 pipx install 'markitdown[all]'
-pipx install mycli neovim-remote powerline-status trash-cli
+pipx install mycli neovim-remote poetry powerline-status trash-cli uv
 pipx install git+https://github.com/nakatuba/pgcli.git
 pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
 
