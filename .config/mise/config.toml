@@ -16,16 +16,15 @@ gemini-cli = "latest"
 ghq = "latest"
 github-cli = "latest"
 go = "latest"
-java = "corretto-21.0.8.9.1"
 jq = "latest"
 kustomize = "latest"
-neovim = "0.11.7"
+neovim = "0.11"
 node = "latest"
 opencode = "latest"
 pipx = "latest"
 python = "3.13"
 ripgrep = "latest"
-ruby = "3.3.9"
+ruby = "3.3"
 rust = "latest"
 terraform = "latest"
 terragrunt = "latest"
@@ -35,10 +34,8 @@ usage = "latest"
 yarn = "latest"
 yq = "latest"
 zoxide = "latest"
-
 "github:d-kuro/gwq" = "latest"
 "npm:@googleworkspace/cli" = "latest"
 
 [settings]
-idiomatic_version_file_enable_tools = []
-trusted_config_paths = ["~/dotfiles", "~/ghq"]
+trusted_config_paths = ["~/dotfiles", "~/ghq", "~/worktrees"]
