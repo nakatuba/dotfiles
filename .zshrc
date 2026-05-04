@@ -17,7 +17,7 @@ fpath=(
   $fpath
 )
 
-eval "$(mise activate zsh)"
+command -v mise > /dev/null && eval "$(mise activate zsh)"
 
 source-if-exists() { [ -f $1 ] && source $1 }
 source-if-exists ~/.zprezto/init.zsh
