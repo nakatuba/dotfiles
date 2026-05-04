@@ -19,6 +19,3 @@
   br = branch
   ci = commit
   st = status
-
-[include]
-  path = ~/.local/share/git/config
