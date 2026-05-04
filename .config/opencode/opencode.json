@@ -5,7 +5,9 @@
       "git push *": "deny"
     },
     "external_directory": {
-      "~/ghq/*": "allow"
+      "~/dotfiles/**": "allow",
+      "~/ghq/**": "allow",
+      "~/worktrees/**": "allow"
     }
   },
   "mcp": {
