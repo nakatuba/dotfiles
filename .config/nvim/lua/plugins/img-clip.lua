@@ -8,13 +8,6 @@ return {
         prompt_for_file_name = false
       }
     }
-
-    vim.api.nvim_create_autocmd('FileType', {
-      pattern = 'markdown',
-      callback = function()
-        vim.keymap.set('n', '<leader>p', '<cmd>PasteImage<CR>', { buffer = true })
-      end
-    })
   end,
   ft = { 'markdown' }
 }
