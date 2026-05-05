@@ -17,6 +17,7 @@ brew "neovim"
 brew "pkgconf"
 brew "pngpaste"
 brew "poppler"
+brew "stow"
 brew "tmux"
 
 cask "1password"
