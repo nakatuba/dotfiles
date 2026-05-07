@@ -2,4 +2,6 @@
 
 ## Path Resolution
 
-When resolving `~` or `$HOME` in file paths, always derive the home directory from the `Working directory` provided in the `<env>` block (e.g. if `Working directory` is `/Users/foo/projects/bar`, then `~` is `/Users/foo`). Never guess or hallucinate the home directory path.
+- At the start of every session, run `pwd` to confirm the current working directory before performing any file operations.
+- All file paths MUST be based on the confirmed working directory. NEVER fabricate or infer paths from training data.
+- When resolving `~` or `$HOME`, extract the home directory from the working directory path (e.g. `/Users/foo/projects/bar` → `~` is `/Users/foo`).
