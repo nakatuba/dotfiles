@@ -38,4 +38,4 @@ zoxide = "latest"
 "npm:@googleworkspace/cli" = "latest"
 
 [settings]
-trusted_config_paths = ["~/dotfiles", "~/ghq", "~/worktrees"]
+trusted_config_paths = ["~/dotfiles", "~/ghq"]

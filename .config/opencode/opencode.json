@@ -6,8 +6,7 @@
     },
     "external_directory": {
       "~/dotfiles/**": "allow",
-      "~/ghq/**": "allow",
-      "~/worktrees/**": "allow"
+      "~/ghq/**": "allow"
     }
   },
   "mcp": {
