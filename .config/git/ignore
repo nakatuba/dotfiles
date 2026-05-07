@@ -1,5 +1,6 @@
 .DS_Store
 .gwq.toml
 .serena/
+AGENTS.local.md
 mise.local.toml
 opencode.json
