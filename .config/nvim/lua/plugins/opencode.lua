@@ -55,6 +55,11 @@ return {
             })
           end
         end
+      },
+      events = {
+        permissions = {
+          enabled = false
+        }
       }
     }
 
