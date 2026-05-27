@@ -21,6 +21,9 @@ return {
           only_local = 'node_modules/.bin'
         },
 
+        -- proto
+        require('null-ls').builtins.formatting.buf,
+
         -- python
         require('none-ls.diagnostics.flake8').with {
           extra_args = { '--ignore=E203,E266,E501,W503' },

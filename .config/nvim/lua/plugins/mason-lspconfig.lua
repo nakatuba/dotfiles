@@ -7,12 +7,12 @@ return {
   config = function()
     require('mason-lspconfig').setup {
       ensure_installed = {
-        'buf_ls',
         'gopls',
         'intelephense',
         'kotlin_lsp',
         'lua_ls',
         'marksman',
+        'protols',
         'pyright',
         'solargraph',
         'terraformls',
