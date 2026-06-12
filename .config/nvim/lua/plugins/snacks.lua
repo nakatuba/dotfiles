@@ -79,13 +79,19 @@ return {
         layouts = {
           vertical = {
             layout = {
-              width = 0.8
+              backdrop = false,
+              width = 0.8,
+              min_width = 80,
+              height = 0.8,
+              min_height = 30,
+              box = 'vertical',
+              border = true,
+              title = '{title} {live} {flags}',
+              title_pos = 'center',
+              { win = 'input', height = 1, border = 'bottom' },
+              { win = 'list', border = 'none' },
+              { win = 'preview', title = '{preview}', height = 0.5, border = 'top' }
             }
-          }
-        },
-        formatters = {
-          file = {
-            truncate = 100
           }
         },
         toggles = {
@@ -160,6 +166,7 @@ return {
       callback = function()
         vim.api.nvim_set_hl(0, 'SnacksIndentScope', { link = 'Grey' })
         vim.api.nvim_set_hl(0, 'SnacksPickerDir',   { link = 'Normal' })
+        vim.api.nvim_set_hl(0, 'SnacksTitle',       { link = 'Title' })
       end
     })
   end
