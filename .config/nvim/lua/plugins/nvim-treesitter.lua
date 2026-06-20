@@ -9,6 +9,7 @@ return {
         'css',
         'go',
         'html',
+        'java',
         'javascript',
         'kotlin',
         'markdown',
