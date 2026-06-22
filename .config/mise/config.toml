@@ -35,7 +35,8 @@ usage = "latest"
 yarn = "latest"
 yq = "latest"
 zoxide = "latest"
-"github:d-kuro/gwq" = "latest"
+"go:github.com/cweill/gotests/gotests" = "latest"
+"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 "npm:@googleworkspace/cli" = "latest"
 
 [settings]
