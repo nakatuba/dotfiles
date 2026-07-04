@@ -17,6 +17,7 @@ ln -sf $DOTFILES/.config/claude ~/.config
 ln -sf $DOTFILES/.config/emacs ~/.config
 ln -sf $DOTFILES/.config/ghostty ~/.config
 ln -sf $DOTFILES/.config/git ~/.config
+ln -sf $DOTFILES/.config/herdr ~/.config
 ln -sf $DOTFILES/.config/ideavim ~/.config
 ln -sf $DOTFILES/.config/mise ~/.config
 ln -sf $DOTFILES/.config/nvim ~/.config
