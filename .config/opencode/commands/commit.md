@@ -15,6 +15,7 @@ Follow these steps:
    - Follows the existing commit message style in this repository
    - Focuses on the "why" rather than the "what"
    - Is 1-2 sentences maximum
+   - Inserts a half-width space between full-width characters (e.g. Japanese) and half-width characters (e.g. alphanumerics), such as "修正 API のレスポンス"
 5. Create the commit with `git commit -m "..."`
 6. Run `git status` to verify the commit was successful
 7. Do NOT push to the remote repository
