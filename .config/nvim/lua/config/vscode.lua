@@ -5,6 +5,7 @@ require('lazy').setup {
   { import = 'plugins.hop' },
   { import = 'plugins.nvim-surround' },
   { import = 'plugins.nvim-treesitter' },
+  { import = 'plugins.nvim-treesitter-textobjects' },
   { import = 'plugins.nvim-ts-context-commentstring' },
   { import = 'plugins.substitute' },
   { import = 'plugins.treesj' },

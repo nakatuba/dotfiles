@@ -1,55 +1,28 @@
 return {
   'nvim-treesitter/nvim-treesitter',
-  dependencies = {
-    'nvim-treesitter/nvim-treesitter-textobjects'
-  },
   config = function()
-    require('nvim-treesitter.configs').setup {
-      ensure_installed = {
-        'css',
-        'go',
-        'html',
-        'java',
-        'javascript',
-        'kotlin',
-        'markdown',
-        'markdown_inline',
-        'php',
-        'proto',
-        'python',
-        'ruby',
-        'terraform',
-        'tsx',
-        'typescript',
-        'vue'
-      },
-      highlight = {
-        enable = true
-      },
-      incremental_selection = {
-        enable = true,
-        keymaps = {
-          init_selection = false,
-          node_incremental = '<Tab>',
-          scope_incremental = false,
-          node_decremental = '<S-Tab>'
-        }
-      },
-      indent = {
-        enable = true,
-        disable = { 'go', 'python', 'ruby' }
-      },
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ['af'] = '@function.outer',
-            ['if'] = '@function.inner'
-          }
-        }
-      }
+    require('nvim-treesitter').install {
+      'css',
+      'go',
+      'html',
+      'java',
+      'javascript',
+      'kotlin',
+      'php',
+      'proto',
+      'python',
+      'ruby',
+      'terraform',
+      'tsx',
+      'typescript',
+      'vue'
     }
+
+    vim.api.nvim_create_autocmd('FileType', {
+      callback = function()
+        pcall(vim.treesitter.start)
+      end
+    })
   end,
   build = ':TSUpdate'
 }
