@@ -1,6 +1,8 @@
+tap "asmvik/formulae", trusted: true
 tap "d12frosted/emacs-plus", trusted: true
-tap "koekeishiya/formulae", trusted: true
 
+brew "asmvik/formulae/skhd"
+brew "asmvik/formulae/yabai"
 brew "automake"
 brew "cmake"
 brew "composer"
@@ -8,8 +10,6 @@ brew "d12frosted/emacs-plus/emacs-plus@30"
 brew "ffmpeg"
 brew "imagemagick"
 brew "jq"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai"
 brew "mas"
 brew "mermaid-cli"
 brew "neovim"
