@@ -1,20 +1,17 @@
-[cd]
-launch_shell = false
+[worktree]
+basedir = "~/ghq"
+auto_mkdir = true
 
 [finder]
 preview = true
 
 [naming]
 template = '{{.Host}}/{{.Owner}}/{{.Repository}}={{.Branch}}'
+sanitize_chars = { "/" = "-", ":" = "-" }
 
-[naming.sanitize_chars]
-'/' = '-'
-':' = '-'
+[cd]
+launch_shell = false
 
 [ui]
 icons = true
 tilde_home = true
-
-[worktree]
-auto_mkdir = true
-basedir = '~/ghq'
