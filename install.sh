@@ -70,6 +70,8 @@ if [ "$(uname)" = "Darwin" ]; then
   mkdir -p ~/Library/Application\ Support/Cursor/User
   ln -sf $DOTFILES/.config/vscode/settings.json ~/Library/Application\ Support/Cursor/User
   ln -sf $DOTFILES/.config/vscode/keybindings.json ~/Library/Application\ Support/Cursor/User
+  mkdir -p ~/.cursor
+  ln -sf $DOTFILES/.config/cursor/mcp.json ~/.cursor
   defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 fi
 
@@ -107,3 +109,6 @@ fi
 
 # Install tmux plugins
 ~/.config/tmux/plugins/tpm/bin/install_plugins
+
+# Install cursor cli
+curl https://cursor.com/install -fsS | bash
