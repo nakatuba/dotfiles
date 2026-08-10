@@ -1,2 +1,10 @@
+onboarding = false
+
 [keys]
 prefix = "ctrl+s"
+detach = "prefix+d"
+split_vertical = "prefix+%"
+split_horizontal = "prefix+\""
+
+[ui]
+prompt_new_tab_name = false
