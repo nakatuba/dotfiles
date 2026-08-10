@@ -10,22 +10,6 @@
     }
   },
   "mcp": {
-    "dbhub": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-p",
-        "pg",
-        "-p",
-        "@bytebase/dbhub@latest",
-        "dbhub",
-        "--transport",
-        "stdio",
-        "--dsn",
-        "{env:DATABASE_URL}"
-      ],
-      "enabled": false
-    },
     "notion": {
       "type": "remote",
       "url": "https://mcp.notion.com/mcp",
@@ -51,6 +35,6 @@
       "enabled": true
     }
   },
-  "plugin": ["opencode-anthropic-oauth"],
+  "plugin": ["opencode-anthropic-oauth", "opencode-cursor-oauth"],
   "instructions": ["AGENTS.local.md"]
 }
