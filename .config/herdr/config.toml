@@ -8,3 +8,15 @@ split_horizontal = "prefix+\""
 
 [ui]
 prompt_new_tab_name = false
+
+[[keys.command]]
+key = "prefix+s"
+type = "popup"
+command = '''
+herdr workspace list |
+  jq -r '.result.workspaces[] | select(.focused | not) | "\(.workspace_id)\t\(.label)"' |
+  fzf --reverse --with-nth 2 |
+  cut -f 1 |
+  xargs herdr workspace focus > /dev/null
+'''
+description = "switch workspace"
