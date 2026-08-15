@@ -52,7 +52,7 @@ zle -N tmux-new-widget
 bindkey '^o' tmux-new-widget
 
 tmux-attach-widget() {
-  local session=$(tmux list-sessions 2>/dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
+  local session=$(tmux list-sessions 2> /dev/null | fzf --height 40% --reverse | cut -d ':' -f 1)
   if [ -n "$session" ]; then
     BUFFER="tmux attach -t $session"
     zle accept-line
