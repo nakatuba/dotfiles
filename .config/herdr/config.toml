@@ -20,3 +20,19 @@ herdr workspace list |
   xargs herdr workspace focus > /dev/null
 '''
 description = "switch workspace"
+
+[[keys.command]]
+key = "prefix+C"
+type = "popup"
+command = '''
+if repo=$(ghq list | fzf --reverse); then
+  label=$(basename "$repo" | tr . _)
+  workspace_id=$(herdr workspace list | jq -r --arg label "$label" 'first(.result.workspaces[] | select(.label == $label)).workspace_id')
+  if [ -n "$workspace_id" ]; then
+    herdr workspace focus "$workspace_id" > /dev/null
+  else
+    herdr workspace create --cwd "$(ghq root)/$repo" --label "$label" --focus > /dev/null
+  fi
+fi
+'''
+description = "create workspace"
