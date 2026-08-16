@@ -10,9 +10,9 @@ zle -N fzf-zoxide-widget
 bindkey '^]' fzf-zoxide-widget
 
 fzf-ghq-widget() {
-  local dir=$(ghq list | fzf --height 40% --reverse)
-  if [ -n "$dir" ]; then
-    BUFFER="cd $(ghq root)/$dir"
+  local repo=$(ghq list | fzf --height 40% --reverse)
+  if [ -n "$repo" ]; then
+    BUFFER="cd $(ghq root)/$repo"
     zle accept-line
   fi
   zle reset-prompt
