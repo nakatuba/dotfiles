@@ -68,6 +68,7 @@ cask "wezterm"
 cask "whichspace"
 cask "zoom"
 
+vscode "DrBlury.protobuf-vsc"
 vscode "anthropic.claude-code"
 vscode "asvetliakov.vscode-neovim"
 vscode "bmewburn.vscode-intelephense-client"
