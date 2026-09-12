@@ -16,6 +16,7 @@ brew "neovim"
 brew "pkgconf"
 brew "pngpaste"
 brew "poppler"
+brew "postgresql"
 brew "stow"
 brew "tmux"
 
