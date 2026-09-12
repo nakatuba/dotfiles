@@ -8,7 +8,11 @@ return {
       diagnostics_format = '[#{c}] #{m} (#{s})',
       sources = {
         -- javascript
-        require('none-ls.diagnostics.eslint'),
+        require('none-ls.diagnostics.eslint').with {
+          filter = function(diagnostic)
+            return diagnostic.severity == vim.diagnostic.severity.ERROR
+          end
+        },
         require('null-ls').builtins.formatting.prettier,
 
         -- markdown
