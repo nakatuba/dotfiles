@@ -1,5 +1,6 @@
 [tools]
 act = "latest"
+ansible = { version = "latest", expose = ["ansible-core"] }
 aws-cli = "latest"
 bat = "latest"
 bottom = "latest"
@@ -25,6 +26,7 @@ neovim = "latest"
 node = "latest"
 opencode = "latest"
 pipx = "latest"
+poetry = "latest"
 python = "3.13"
 ripgrep = "latest"
 ruby = "3.3"
@@ -35,12 +37,20 @@ tlrc = "latest"
 tokei = "latest"
 tree-sitter = "latest"
 usage = "latest"
+uv = "latest"
 yarn = "latest"
 yq = "latest"
 zoxide = "latest"
 "go:github.com/cweill/gotests/gotests" = "latest"
 "go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 "npm:@googleworkspace/cli" = "latest"
+"pipx:argcomplete" = "latest"
+"pipx:git+https://github.com/nakatuba/pgcli.git" = { version = "latest", with = ["psycopg_binary"] }
+"pipx:markitdown" = { version = "latest", extras = "all" }
+"pipx:mycli" = "latest"
+"pipx:neovim-remote" = "latest"
+"pipx:powerline-status" = "latest"
+"pipx:trash-cli" = "latest"
 
 [settings]
 trusted_config_paths = ["~/dotfiles", "~/ghq"]

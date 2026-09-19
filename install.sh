@@ -94,13 +94,6 @@ fi
 # Install mise tools
 mise install
 
-# Install pipx packages
-pipx install --include-deps ansible
-pipx install 'markitdown[all]'
-pipx install argcomplete mycli neovim-remote poetry powerline-status trash-cli uv
-pipx install git+https://github.com/nakatuba/pgcli.git
-pipx inject pgcli psycopg_binary  # https://github.com/dbcli/pgcli/issues/1413
-
 # Install tmux plugin manager
 if [ -d ~/.config/tmux/plugins/tpm ]; then
   (cd ~/.config/tmux/plugins/tpm && git pull)
