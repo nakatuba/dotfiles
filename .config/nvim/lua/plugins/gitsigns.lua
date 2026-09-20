@@ -41,9 +41,9 @@ return {
         end)
 
         map('n', 'ghS', gitsigns.stage_buffer)
-        map('n', 'ghu', gitsigns.undo_stage_hunk)
         map('n', 'ghR', gitsigns.reset_buffer)
         map('n', 'ghp', gitsigns.preview_hunk)
+        map('n', 'ghi', gitsigns.preview_hunk_inline)
 
         map('n', 'ghb', function()
           gitsigns.blame_line { full = true }
@@ -57,7 +57,10 @@ return {
 
         -- Text object
         map({'o', 'x'}, 'ih', gitsigns.select_hunk)
-      end
+      end,
+      preview_config = {
+        border = 'single'
+      }
     }
 
     vim.api.nvim_create_autocmd('FocusGained', {
