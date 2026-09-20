@@ -24,6 +24,7 @@ ln -sf $DOTFILES/.config/nvim ~/.config
 ln -sf $DOTFILES/.config/opencode ~/.config
 ln -sf $DOTFILES/.config/tmux ~/.config
 ln -sf $DOTFILES/.config/wezterm ~/.config
+ln -sf $DOTFILES/.config/workmux ~/.config
 ln -sf $DOTFILES/.config/zsh ~/.config
 
 if [ "$(uname)" = "Darwin" ]; then
@@ -105,7 +106,7 @@ fi
 curl https://cursor.com/install -fsS | bash
 
 # Setup AI agents
-for agent in claude cursor; do
+for agent in claude codex copilot cursor gemini; do
   mkdir -p ~/.$agent
   ln -sf $DOTFILES/.config/$agent/* ~/.$agent
 done

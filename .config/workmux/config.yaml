@@ -1,0 +1,6 @@
+mode: session
+nerdfont: false
+panes: []
+window_prefix: ""
+worktree_dir: "../"
+worktree_prefix: "{project}="

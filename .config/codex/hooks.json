@@ -1,14 +1,13 @@
 {
   "hooks": {
-    "Notification": [
+    "PermissionRequest": [
       {
         "hooks": [
           {
             "command": "workmux set-window-status waiting",
             "type": "command"
           }
-        ],
-        "matcher": "permission_prompt|elicitation_dialog"
+        ]
       }
     ],
     "PostToolUse": [
@@ -29,7 +28,7 @@
             "type": "command"
           }
         ],
-        "matcher": "startup|resume|clear|fork"
+        "matcher": "startup|resume|clear"
       }
     ],
     "Stop": [
@@ -37,6 +36,26 @@
         "hooks": [
           {
             "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
             "type": "command"
           }
         ]

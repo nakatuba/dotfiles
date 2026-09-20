@@ -1,5 +1,35 @@
 {
   "hooks": {
+    "AfterAgent": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status done",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "BeforeAgent": [
+      {
+        "hooks": [
+          {
+            "command": "workmux set-window-status working",
+            "type": "command"
+          }
+        ]
+      }
+    ],
     "Notification": [
       {
         "hooks": [
@@ -8,14 +38,14 @@
             "type": "command"
           }
         ],
-        "matcher": "permission_prompt|elicitation_dialog"
+        "matcher": "ToolPermission"
       }
     ],
-    "PostToolUse": [
+    "SessionEnd": [
       {
         "hooks": [
           {
-            "command": "workmux set-window-status working",
+            "command": "workmux set-window-status done",
             "type": "command"
           }
         ]
@@ -26,27 +56,6 @@
         "hooks": [
           {
             "command": "workmux register-agent",
-            "type": "command"
-          }
-        ],
-        "matcher": "startup|resume|clear|fork"
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "command": "workmux set-window-status done",
-            "type": "command"
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
-          {
-            "command": "workmux set-window-status working",
             "type": "command"
           }
         ]
