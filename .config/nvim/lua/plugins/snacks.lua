@@ -159,7 +159,9 @@ return {
     vim.keymap.set('n', '<C-g><C-f>', function() require('snacks').picker.git_status() end)
     vim.keymap.set('n', '<C-g><C-b>', function() require('snacks').picker.git_branches() end)
     vim.keymap.set('n', '<C-g><C-h>', function() require('snacks').picker.git_log_file() end)
-    vim.keymap.set('n', '<leader>z',  function() require('snacks').zen.zen() end)
+
+    vim.keymap.set('n', '<leader>z', function() require('snacks').zen.zen() end)
+    vim.keymap.set('n', '<CR>',      function() require('snacks').zen.zoom() end)
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = 'sonokai',
