@@ -15,6 +15,7 @@ return {
         'marksman',
         'protols',
         'pyright',
+        'rust_analyzer',
         'solargraph',
         'terraformls',
         'ts_ls',

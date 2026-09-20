@@ -12,6 +12,7 @@ return {
       'proto',
       'python',
       'ruby',
+      'rust',
       'terraform',
       'tsx',
       'typescript',
