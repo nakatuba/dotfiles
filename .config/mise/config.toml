@@ -43,7 +43,6 @@ yq = "latest"
 zoxide = "latest"
 "cargo:https://github.com/nakatuba/workmux" = "latest"
 "go:github.com/cweill/gotests/gotests" = "latest"
-"go:github.com/d-kuro/gwq/cmd/gwq" = "latest"
 "npm:@googleworkspace/cli" = "latest"
 "pipx:argcomplete" = "latest"
 "pipx:git+https://github.com/nakatuba/pgcli.git" = { version = "latest", with = ["psycopg_binary"] }
