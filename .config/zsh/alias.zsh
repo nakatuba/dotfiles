@@ -7,11 +7,11 @@ if command -v eza > /dev/null; then
   alias tree='eza --tree'
 fi
 
-if command -v nvim > /dev/null; then
-  alias vi='nvim'
-  alias vim='nvim'
-fi
+command -v nvim > /dev/null && alias vi='nvim'
 
 if command -v nvr > /dev/null; then
   [ -n "$NVIM" ] && alias nvim='nvr -l'
 fi
+
+command -v opencode > /dev/null && alias oc='opencode'
+command -v workmux > /dev/null && alias wm='workmux'
