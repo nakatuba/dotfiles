@@ -26,7 +26,7 @@ git-checkout-widget() {
   if [ -n "$selected" ]; then
     if [[ "$selected" == +* ]]; then
       local branch=$(echo "$selected" | awk '{print $2}')
-      BUFFER="gwq cd $branch"
+      BUFFER="cd $(workmux path $branch)"
     else
       local branch=$(echo "$selected" | awk '{print $1}')
       BUFFER="git checkout $branch"

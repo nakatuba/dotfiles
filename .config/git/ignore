@@ -1,7 +1,7 @@
 .DS_Store
 .cursor
-.gwq.toml
 .opencode
 .serena
+.workmux.yaml
 AGENTS.local.md
 mise.local.toml
