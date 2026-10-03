@@ -8,6 +8,10 @@ return {
     vim.keymap.set('n', 'gS',  require('substitute').eol)
     vim.keymap.set('x', 'gs',  require('substitute').visual)
 
+    vim.keymap.set('n', '<leader>r',  require('substitute.range').operator)
+    vim.keymap.set('x', '<leader>r',  require('substitute.range').visual)
+    vim.keymap.set('n', '<leader>rr', require('substitute.range').word)
+
     vim.keymap.set('n', 'cx',  require('substitute.exchange').operator)
     vim.keymap.set('n', 'cxx', require('substitute.exchange').line)
     vim.keymap.set('x', 'X',   require('substitute.exchange').visual)
