@@ -5,9 +5,6 @@ return {
     vim.g.sonokai_transparent_background = 2
     vim.g.sonokai_diagnostic_virtual_text = 'colored'
     vim.g.sonokai_disable_terminal_colors = 1
-    vim.g.sonokai_colors_override = {
-      bg_orange = { '#553e32', '130' }
-    }
 
     vim.api.nvim_create_autocmd('ColorScheme', {
       pattern = 'sonokai',
