@@ -12,7 +12,7 @@ return {
         'jdtls',
         'kotlin_lsp',
         'lua_ls',
-        'marksman',
+        'markdown_oxide',
         'protols',
         'pyright',
         'rust_analyzer',
