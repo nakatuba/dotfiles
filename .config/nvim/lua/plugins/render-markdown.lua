@@ -26,12 +26,12 @@ return {
       vim.api.nvim_set_hl(0, '@markup.raw.block.markdown',  { fg = palette.fg[1] })
       vim.api.nvim_set_hl(0, '@markup.raw.markdown_inline', { fg = palette.orange[1] })
 
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH1Bg', { fg = palette.red[1],    underline = true })
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH2Bg', { fg = palette.orange[1], underline = true })
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH3Bg', { fg = palette.yellow[1], underline = true })
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH4Bg', { fg = palette.green[1],  underline = true })
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', { fg = palette.blue[1],   underline = true })
-      vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', { fg = palette.purple[1], underline = true })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH1Bg', { bg = palette.bg_red[1] })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH2Bg', { bg = palette.bg_orange[1] })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH3Bg', { bg = palette.bg_yellow[1] })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH4Bg', { bg = palette.bg_green[1] })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH5Bg', { bg = palette.bg_blue[1] })
+      vim.api.nvim_set_hl(0, 'RenderMarkdownH6Bg', { bg = palette.bg_purple[1] })
 
       vim.api.nvim_set_hl(0, 'RenderMarkdownInlineHighlight', { bg = palette.bg_yellow[1] })
     end
