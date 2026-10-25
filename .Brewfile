@@ -4,6 +4,7 @@ tap "d12frosted/emacs-plus", trusted: true
 brew "asmvik/formulae/skhd"
 brew "asmvik/formulae/yabai"
 brew "automake"
+brew "bookokrat"
 brew "cmake"
 brew "composer"
 brew "d12frosted/emacs-plus/emacs-plus@30"
