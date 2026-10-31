@@ -1,0 +1,26 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "system"
+  },
+  "keybinds": {
+    "command.palette.show": "<leader>p",
+    "session.half.page.up": "alt+v",
+    "session.half.page.down": "ctrl+v",
+    "prompt.paste": "none",
+    "input.move.up": "up,ctrl+p",
+    "input.move.down": "down,ctrl+n",
+    "input.backspace": "ctrl+h,backspace,shift+backspace",
+    "prompt.history.previous": "up,ctrl+p",
+    "prompt.history.next": "down,ctrl+n"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "hide",
+    "scrollbar": false,
+    "thinking": "show"
+  },
+  "animations": true
+}
