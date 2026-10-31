@@ -35,6 +35,5 @@
       "enabled": true
     }
   },
-  "plugin": ["opencode-anthropic-oauth"],
   "instructions": ["AGENTS.local.md"]
 }
