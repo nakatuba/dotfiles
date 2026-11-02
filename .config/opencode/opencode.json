@@ -35,6 +35,6 @@
       "enabled": true
     }
   },
-  "plugins": ["cursor-opencode-provider"],
+  "plugin": ["opencode-anthropic-oauth", "cursor-opencode-provider"],
   "instructions": ["AGENTS.local.md"]
 }
