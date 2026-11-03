@@ -44,6 +44,7 @@ zoxide = "latest"
 "cargo:csvlens" = "latest"
 "cargo:https://github.com/nakatuba/workmux" = "latest"
 "go:github.com/cweill/gotests/gotests" = "latest"
+"go:github.com/joshmedeski/sesh/v2" = "latest"
 "npm:@googleworkspace/cli" = "latest"
 "pipx:argcomplete" = "latest"
 "pipx:git+https://github.com/nakatuba/pgcli.git" = { version = "latest", with = ["psycopg_binary"] }
