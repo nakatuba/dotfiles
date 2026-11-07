@@ -39,13 +39,7 @@ zle -N git-checkout-widget
 bindkey '^g^o' git-checkout-widget
 
 tmux-new-widget() {
-  local session=$(basename $PWD)
-  if [ -n "$TMUX" ]; then
-    tmux has-session -t $session 2> /dev/null || tmux new-session -d -s $session
-    BUFFER="tmux switch-client -t $session"
-  else
-    BUFFER="tmux new-session -A -s $session"
-  fi
+  BUFFER="tmux new -A -s $(basename $PWD)"
   zle accept-line
 }
 zle -N tmux-new-widget
