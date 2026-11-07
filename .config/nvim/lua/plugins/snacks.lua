@@ -50,6 +50,21 @@ return {
               }
             }
           },
+          git_log_file = {
+            actions = {
+              yank_commit = {
+                { action = 'yank', field = 'commit', reg = '+', notify = false },
+                'close'
+              }
+            },
+            win = {
+              input = {
+                keys = {
+                  ['<C-y>'] = { 'yank_commit', mode = 'i' }
+                }
+              }
+            }
+          },
           lsp_declarations = {
             jump = {
               reuse_win = false
