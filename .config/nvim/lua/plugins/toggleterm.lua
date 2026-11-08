@@ -3,7 +3,10 @@ return {
   config = function()
     require('toggleterm').setup {
       open_mapping = '<C-Space>',
-      direction = 'horizontal'
+      direction = 'float',
+      env = {
+        EDITOR = 'nvr -l'
+      }
     }
   end
 }
