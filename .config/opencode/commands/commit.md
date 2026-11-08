@@ -1,5 +1,6 @@
 ---
 description: Stage changes and create a git commit
+agent: build
 ---
 
 Look at the changes in this project by running `git status` and `git diff`.
