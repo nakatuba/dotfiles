@@ -45,7 +45,7 @@
   "sonokai": { "branch": "master", "commit": "b023c5280b16fe2366f5e779d8d2756b3e5ee9c3" },
   "substitute.nvim": { "branch": "main", "commit": "97f49d16f8eea7967d41db4f657dd63af53eeba1" },
   "swap-buffers.nvim": { "branch": "master", "commit": "eedf0b11abfb004f9e4fccd11aab5155c36c7eb3" },
-  "tmux.nvim": { "branch": "main", "commit": "b2f509311e4cbdc06a93c0da66a8b7b33aa6bec9" },
+  "tmux.nvim": { "branch": "main", "commit": "5971292e1322c1ae1c305bd6df58e6d1bf7527bb" },
   "toggleterm.nvim": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
   "treesj": { "branch": "main", "commit": "79aedb401bbdc7e4202f7881eab5f6feb2105b0a" },
   "vim-lion": { "branch": "master", "commit": "ce46593ecd60e6051fb6e4d3986d2fc9f5a618b1" },
