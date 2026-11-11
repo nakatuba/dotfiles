@@ -113,6 +113,7 @@ done
 curl https://cursor.com/install -fsS | bash
 mkdir -p ~/.cursor
 ln -sf $DOTFILES/.config/cursor/mcp.json ~/.cursor
+ln -sf $DOTFILES/.config/cursor/rules ~/.cursor
 ln -sf $DOTFILES/.config/cursor/skills ~/.cursor
 CLI_CONFIG=~/.cursor/cli-config.json
 [ -f $CLI_CONFIG ] || echo '{}' > $CLI_CONFIG
