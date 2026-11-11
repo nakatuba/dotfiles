@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": ["Shell(ls)"],
+    "deny": ["Shell(git:push*)", "Read(**/.env*)"]
+  },
+  "attribution": {
+    "attributeCommitsToAgent": false,
+    "attributePRsToAgent": false
+  }
+}

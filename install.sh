@@ -103,11 +103,18 @@ fi
 # Install tmux plugins
 ~/.config/tmux/plugins/tpm/bin/install_plugins
 
-# Install cursor cli
-curl https://cursor.com/install -fsS | bash
-
 # Setup AI agents
-for agent in claude codex copilot cursor gemini; do
+for agent in claude codex copilot gemini; do
   mkdir -p ~/.$agent
   ln -sf $DOTFILES/.config/$agent/* ~/.$agent
 done
+
+# Setup Cursor CLI
+curl https://cursor.com/install -fsS | bash
+mkdir -p ~/.cursor
+ln -sf $DOTFILES/.config/cursor/mcp.json ~/.cursor
+ln -sf $DOTFILES/.config/cursor/skills ~/.cursor
+CLI_CONFIG=~/.cursor/cli-config.json
+[ -f $CLI_CONFIG ] || echo '{}' > $CLI_CONFIG
+jq -s '.[0] * .[1]' $CLI_CONFIG $DOTFILES/.config/cursor/cli-config.json > $CLI_CONFIG.tmp
+mv $CLI_CONFIG.tmp $CLI_CONFIG
