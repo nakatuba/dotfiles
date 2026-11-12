@@ -1,6 +1,6 @@
 {
   "permissions": {
-    "allow": ["Shell(ls)"],
+    "allow": ["Shell(ls)", "Mcp(serena:*)", "Mcp(dbhub:search_objects)"],
     "deny": ["Shell(git:push*)", "Read(**/.env*)"]
   },
   "attribution": {
