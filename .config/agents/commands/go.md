@@ -1,5 +1,5 @@
 ---
-description: 直前の plan を build agent で実装する
+description: Implement the previously agreed plan with the build agent
 agent: build
 ---
 
