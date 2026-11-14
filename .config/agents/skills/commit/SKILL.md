@@ -1,6 +1,7 @@
 ---
+name: commit
 description: Stage changes and create a git commit
-agent: build
+disable-model-invocation: true
 ---
 
 `git status` と `git diff` を実行して、このプロジェクトの変更を確認してください。
