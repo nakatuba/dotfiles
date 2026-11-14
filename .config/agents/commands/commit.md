@@ -3,22 +3,23 @@ description: Stage changes and create a git commit
 agent: build
 ---
 
-Look at the changes in this project by running `git status` and `git diff`.
+`git status` と `git diff` を実行して、このプロジェクトの変更を確認してください。
 
-Follow these steps:
+## 手順
 
-1. Run `git diff --staged` to check for already staged changes, and `git status` to see the overall state
-2. Run `git log --oneline -5` to understand the recent commit message style
-3. If there are already staged changes, use ONLY those staged changes for the commit. Do NOT stage additional files.
-   If there are NO staged changes, stage the relevant changes with `git add`.
-   - Do NOT stage files that likely contain secrets (.env, credentials, etc.)
-4. Draft a concise commit message that:
-   - Follows the existing commit message style in this repository
-   - Focuses on the "why" rather than the "what"
-   - Is 1-2 sentences maximum
-   - Inserts a half-width space between full-width characters (e.g. Japanese) and half-width characters (e.g. alphanumerics), such as "修正 API のレスポンス"
-5. Create the commit with `git commit -m "..."`
-6. Run `git status` to verify the commit was successful
-7. Do NOT push to the remote repository
+1. `git diff --staged` でステージ済みの変更を確認し、`git status` で全体の状態を確認する
+2. `git log --oneline -5` を実行し、最近の commit メッセージの書き方をつかむ
+3. commit に使う変更を決める
+   - ステージ済みの変更がある場合は、その変更だけを使い、ほかのファイルを追加でステージしないこと
+   - ステージ済みの変更がない場合は、関係する変更を `git add` でステージする
+   - 秘密情報を含んでいそうなファイル（.env、credentials など）はステージしないこと
+4. 次の条件を満たす簡潔な commit メッセージを考える
+   - このリポジトリの既存の commit メッセージの書き方に合わせる
+   - 「何を」よりも「なぜ」に重点を置く
+   - 長くても 1〜2 文にする
+   - 全角文字（日本語など）と半角文字（英数字など）の間に半角スペースを入れる（例: 「修正 API のレスポンス」）
+5. `git commit -m "..."` で commit を作る
+6. `git status` を実行し、commit が成功したことを確認する
+7. リモートリポジトリに push しないこと
 
 $ARGUMENTS
