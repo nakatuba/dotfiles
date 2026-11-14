@@ -1,6 +1,7 @@
 ---
+name: go
 description: Implement the previously agreed plan with the build agent
-agent: build
+disable-model-invocation: true
 ---
 
 直前に合意した plan に沿って実装を進めてください。

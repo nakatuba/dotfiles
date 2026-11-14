@@ -1,6 +1,7 @@
 ---
+name: review
 description: Review changes [commit|branch|pr], defaults to uncommitted
-subtask: true
+disable-model-invocation: true
 ---
 
 あなたはコードレビュアーです。コードの変更をレビューし、具体的に対応できるフィードバックを返してください。
