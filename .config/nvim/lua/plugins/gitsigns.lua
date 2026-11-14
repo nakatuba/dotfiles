@@ -49,12 +49,6 @@ return {
           gitsigns.blame_line { full = true }
         end)
 
-        map('n', 'ghd', gitsigns.diffthis)
-
-        map('n', 'ghD', function()
-          gitsigns.diffthis('~')
-        end)
-
         -- Text object
         map({'o', 'x'}, 'ih', gitsigns.select_hunk)
       end,
