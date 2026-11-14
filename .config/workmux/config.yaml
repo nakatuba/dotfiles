@@ -1,6 +1,7 @@
 mode: session
 nerdfont: false
 panes: []
+prompt_file_only: true
 window_prefix: ""
 worktree_dir: "../"
 worktree_prefix: "{project}="
