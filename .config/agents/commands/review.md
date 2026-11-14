@@ -21,14 +21,14 @@ Based on the input provided, determine which type of review to perform:
    - Run: `git status --short` to identify untracked (net new) files
 
 2. **Commit hash** (40-char SHA or short hash): Review that specific commit
-   - Run: `git show <hash>`
+   - Run: `git show $ARGUMENTS`
 
 3. **Branch name**: Compare current branch to the specified branch
-   - Run: `git diff <branch>...HEAD`
+   - Run: `git diff $ARGUMENTS...HEAD`
 
 4. **PR URL or number** (contains "github.com" or "pull" or looks like a PR number): Review the pull request
-   - Run: `gh pr view <identifier>` to get PR context
-   - Run: `gh pr diff <identifier>` to get the diff
+   - Run: `gh pr view $ARGUMENTS` to get PR context
+   - Run: `gh pr diff $ARGUMENTS` to get the diff
 
 Use best judgement when processing input.
 
@@ -48,6 +48,7 @@ Use best judgement when processing input.
 ## What to Look For
 
 **Bugs** - Your primary focus.
+
 - Logic errors, off-by-one mistakes, incorrect conditionals
 - If-else guards: missing guards, incorrect branching, unreachable code paths
 - Edge cases: null/empty/undefined inputs, error conditions, race conditions
@@ -55,11 +56,13 @@ Use best judgement when processing input.
 - Broken error handling that swallows failures, throws unexpectedly or returns error types that are not caught.
 
 **Structure** - Does the code fit the codebase?
+
 - Does it follow existing patterns and conventions?
 - Are there established abstractions it should use but doesn't?
 - Excessive nesting that could be flattened with early returns or extraction
 
 **Performance** - Only flag if obviously problematic.
+
 - O(n²) on unbounded data, N+1 queries, blocking I/O on hot paths
 
 **Behavior Changes** - If a behavioral change is introduced, raise it (especially if it's possibly unintentional).
@@ -77,10 +80,9 @@ Use best judgement when processing input.
 
 **Don't be a zealot about style.** When checking code against conventions:
 
-- Verify the code is *actually* in violation. Don't complain about else statements if early returns are already being used correctly.
+- Verify the code is _actually_ in violation. Don't complain about else statements if early returns are already being used correctly.
 - Some "violations" are acceptable when they're the simplest option. A `let` statement is fine if the alternative is convoluted.
 - Excessive nesting is a legitimate concern regardless of other style choices.
-- Don't flag style preferences as issues unless they clearly violate established project conventions.
 
 ---
 
@@ -89,19 +91,18 @@ Use best judgement when processing input.
 Use these to inform your review:
 
 - **Explore agent** - Find how existing code handles similar problems. Check patterns, conventions, and prior art before claiming something doesn't fit.
+- **Available documentation and code-search tools** - Verify correct usage of libraries/APIs before flagging something as wrong.
+- **Web Search** - Research best practices if you're unsure about a pattern.
 
-If you're uncertain about something and can't verify it with these tools, say "確信が持てません" rather than flagging it as a definite issue.
+If you're uncertain about something and can't verify it with these tools, say "I'm not sure about X" rather than flagging it as a definite issue.
 
 ---
 
 ## Output
 
-**すべての出力は日本語（Japanese）で記述してください。**
-フィードバック、説明、レビュー結果、要約など、すべてを日本語で書いてください。
-
-1. バグがある場合は、なぜバグなのかを直接的かつ明確に説明する。
-2. 問題の重大度を正確に伝える。重大度を誇張しない。
-3. 批評では、バグが発生するシナリオ・環境・入力を明確に示す。
-4. トーンは事実に基づいた淡々としたものにする。非難的・過度に肯定的な表現は避ける。
-5. 読者がざっと読んでも問題を素早く理解できるように書く。
-6. お世辞は不要。「素晴らしい仕事です」「ありがとうございます」のような表現は避ける。
+1. If there is a bug, be direct and clear about why it is a bug.
+2. Clearly communicate severity of issues. Do not overstate severity.
+3. Critiques should clearly and explicitly communicate the scenarios, environments, or inputs that are necessary for the bug to arise. The comment should immediately indicate that the issue's severity depends on these factors.
+4. Your tone should be matter-of-fact and not accusatory or overly positive. It should read as a helpful AI assistant suggestion without sounding too much like a human reviewer.
+5. Write so the reader can quickly understand the issue without reading too closely.
+6. AVOID flattery, do not give any comments that are not helpful to the reader.
