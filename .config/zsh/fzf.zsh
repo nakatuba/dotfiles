@@ -9,3 +9,5 @@ fi
 command -v bat > /dev/null && export FZF_CTRL_T_OPTS="--preview 'bat -n --color=always {}'"
 
 command -v fzf > /dev/null && source <(fzf --zsh)
+
+source-if-exists ~/.config/fzf/fzf-git.sh
