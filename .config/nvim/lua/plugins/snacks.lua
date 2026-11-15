@@ -128,19 +128,25 @@ return {
               ['<C-k>'] = { 'preview_scroll_up', mode = 'i' },
               ['<C-j>'] = { 'preview_scroll_down', mode = 'i' },
               ['<C-x>'] = { 'edit_split', mode = 'i' },
-              ['<C-/>'] = { 'toggle_layout', mode = 'i' },
-              ['<C-_>'] = { 'toggle_layout', mode = 'i' },
+              ['<C-/>'] = { 'cycle_preview', mode = 'i' },
+              ['<C-_>'] = { 'cycle_preview', mode = 'i' },
               ['<Esc>'] = { 'close', mode = 'i' }
             }
           }
         },
         actions = {
-          toggle_layout = function(picker)
+          cycle_preview = function(picker)
             local preset = picker.resolved_layout.preset
             if type(preset) == 'function' then
               preset = preset(picker.opts.source)
             end
-            picker:set_layout(preset == 'default' and 'vertical' or 'default')
+            if preset == 'default' then
+              picker:set_layout('vertical')
+            elseif not picker.layout:is_hidden('preview') then
+              picker:toggle('preview', { enable = false })
+            else
+              picker:set_layout('default')
+            end
           end
         }
       },
