@@ -9,6 +9,7 @@ return {
       sources = {
         -- javascript
         require('none-ls.diagnostics.eslint').with {
+          only_local = 'node_modules/.bin',
           filter = function(diagnostic)
             return diagnostic.severity == vim.diagnostic.severity.ERROR
           end
@@ -31,16 +32,19 @@ return {
         -- python
         require('none-ls.diagnostics.flake8').with {
           extra_args = { '--ignore=E203,E266,E501,W503' },
+          only_local = '.venv/bin',
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
           end
         },
         require('null-ls').builtins.formatting.black.with {
+          only_local = '.venv/bin',
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
           end
         },
         require('null-ls').builtins.formatting.isort.with {
+          only_local = '.venv/bin',
           cwd = function(params)
             return vim.fn.fnamemodify(params.bufname, ':h')
           end
