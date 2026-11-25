@@ -1,7 +1,7 @@
 [tools]
 act = "latest"
 ansible = { version = "latest", expose = ["ansible-core"] }
-aws-cli = "latest"
+aws-cli = { version = "latest", symlink_bins = "true" }
 bat = "latest"
 bottom = "latest"
 buf = "latest"
@@ -26,6 +26,7 @@ neovim = "latest"
 node = "latest"
 opencode = "1.19.5"
 pipx = "latest"
+pnpm = "latest"
 poetry = "latest"
 python = "3.13"
 ripgrep = "latest"
