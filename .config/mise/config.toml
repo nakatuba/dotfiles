@@ -47,6 +47,7 @@ zoxide = "latest"
 "go:github.com/cweill/gotests/gotests" = "latest"
 "go:github.com/joshmedeski/sesh/v2" = "latest"
 "npm:@googleworkspace/cli" = "latest"
+"npm:@mermaid-js/mermaid-cli" = { version = "latest", allow_builds = ["puppeteer"], trust_policy_excludes = ["chromium-bidi"] }
 "pipx:argcomplete" = "latest"
 "pipx:git+https://github.com/nakatuba/pgcli.git" = { version = "latest", with = ["psycopg_binary"] }
 "pipx:markitdown" = { version = "latest", extras = "all" }
